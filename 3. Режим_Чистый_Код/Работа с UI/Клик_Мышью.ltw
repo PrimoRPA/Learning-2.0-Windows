@@ -48,8 +48,8 @@ public class PrimoScript
 	  //Данный элемент может использовать,как и для браузерных приложений, так и десктопных.
 	  //Чтобы посмотреть работу бразуера используйте if (true)
 	  //Чтобы посмотреть работу бразуера используйте if (false)
-     if (false){
-	 //Открываем браузер, а странице "https://www.google.com/"
+     if (true){
+	 //Открываем браузер, а странице "https://cbr.ru/currency_base/monthly/?UniDbQuery.Posted=True&amp;UniDbQuery.To=01.2010"
      //Для работы данного компонента вам нужно установить расширение.
      //Чтобы это сделать воспользуйтесь гайдом:
      //https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chrome
@@ -57,20 +57,18 @@ public class PrimoScript
      //*Мы использовали Google Chrome, в настройках можно выбрать другой браузер, 
      //но в таком случае можно использовть установку другого расширения. 
      //Браузер IE установки расширения не требует
-     LTools.WebBrowser.BrowserApp app = LTools.WebBrowser.BrowserApp.Open(wf, LTools.WebBrowser.Model.BrowserTypes.Chrome, "https://www.google.com/");
-	//В поисковой строке пишем привет
-     app.TextInput("{\"SearchFrames\":false,\"Attributes\":[{\"Key\":\"title\",\"Value\":\"Search\"}]}", "Привет", 10000);
+     LTools.WebBrowser.BrowserApp app = LTools.WebBrowser.BrowserApp.Open(wf, LTools.WebBrowser.Model.BrowserTypes.Chrome, "https://cbr.ru/currency_base/monthly/?UniDbQuery.Posted=True&amp;UniDbQuery.To=01.2010");
+	 app.Click("{\"Tag\":\"BUTTON\",\"Text\":\"Январь 2010\",\"SearchFrames\":false,\"Attributes\":[]}",10000,LTools.Desktop.Model.MouseButtons.BUTTON_LEFT);
+     
 	 }else{
 	   //Запускаем приложение MyCRM. Оно будет расположено в дополнительных материалах
        System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, @"D:\Citizen\ДобавлениеНовыхКлиентовCRM\MyCRM.exe","", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
 
         LTools.Desktop.DesktopApp appAttached = LTools.Desktop.DesktopApp.Init(wf, "", "My CRM (Sample App)", 10000, false, LTools.Desktop.Model.DesktopTypes.UIAUTOMATION);
+        appAttached.Click("{\"Name\":\"Company \",\"ControlType\":\"ControlType.TabItem\",\"AUIProperties\":[{\"Key\":\"Text\",\"Value\":\"Company \"}],\"TextSearchMode\":0,\"IsRoot\":false,\"IsQuickSearch\":true,\"IsApplet\":false,\"DesktopType\":0}",LTools.Desktop.Model.MouseButtons.BUTTON_LEFT, LTools.Desktop.Model.KeyboardKeys.NONE, 10000);
+        
 
-        appAttached.TextInput("{\"AutomationID\":\"textBoxPeopleComments\",\"ControlType\":\"ControlType.Edit\",\"AUIProperties\":[],\"TextSearchMode\":0,\"IsRoot\":false,\"IsQuickSearch\":true,\"IsApplet\":false,\"DesktopType\":0}", "Привет", 10000);
-
-	 }
-	
-
+	 }   
     }
 }</Value>
             </SerializationItem>

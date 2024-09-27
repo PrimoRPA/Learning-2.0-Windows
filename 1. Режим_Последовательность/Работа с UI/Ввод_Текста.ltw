@@ -21,9 +21,7 @@
                 <Value xsi:type="xsd:string">Компонент позволяет ввести текст в выбранный элемент управления.
 
 Данный элемент может использовать,
-как и для браузерных приложений, так и десктопных.
-
-</Value>
+как и для браузерных приложений, так и десктопных.</Value>
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -266,6 +264,23 @@
                                 <Properties>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
+                                        <Name>ComponentName</Name>
+                                        <Value xsi:type="xsd:string">Открыть браузер www.google.com</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
+                                        <Name>Annotation</Name>
+                                        <Value xsi:type="xsd:string">Для работы данного компонента 
+вам нужно установить расширение.
+Чтобы это сделать воспользуйтесь гайдом:
+https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chrome
+
+*Мы использовали Google Chrome, в настройках можно выбрать другой браузер, 
+но в таком случае можно использовть установку другого расширения. 
+Браузер IE установки расширения не требует</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
                                         <Name>BrowserType</Name>
                                         <Value xsi:type="xsd:int">6</Value>
                                     </SerializationItem>
@@ -318,28 +333,11 @@
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
-                                        <Name>ComponentName</Name>
-                                        <Value xsi:type="xsd:string">Открыть браузер www.google.com</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
                                         <Name>WaitBefore</Name>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
                                         <Name>WaitAfter</Name>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
-                                        <Name>Annotation</Name>
-                                        <Value xsi:type="xsd:string">Для работы данного компонента 
-вам нужно установить расширение.
-Чтобы это сделать воспользуйтесь гайдом:
-https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chrome
-
-*Мы использовали Google Chrome, в настройках можно выбрать другой браузер, 
-но в таком случае можно использовть установку другого расширения. 
-Браузер IE установки расширения не требует</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -486,7 +484,7 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
                                                 <Name>Annotation</Name>
-                                                <Value xsi:type="xsd:string">Чтобы выбрать контрол, в который робот будет вписать текст, нажми на "волшебую палочку"
+                                                <Value xsi:type="xsd:string">Чтобы выбрать контрол, в который робот будет писать текст, нажми на "волшебую палочку"
 
 После чего студия начнет подсвечивать все контролы на сайте/приложении.
 
@@ -502,7 +500,7 @@ Simulate - Имитация ввода как человек
 Invoke может вписать данные, даже когда контрол не видим глазу человека.
 Но бывает и так, что сайты и приложения не реагируют на программный ввод. Чаще всего это делается как защита от внешних автоматизаций или не умышлено.
 
-Для настройки режима Simulate - есть разсдел свойств Эмуляция.</Value>
+Для настройки режима Simulate - есть раздел свойств Эмуляция.</Value>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
@@ -763,6 +761,15 @@ Invoke может вписать данные, даже когда контро�
                                 <Properties>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
+                                        <Name>ComponentName</Name>
+                                        <Value xsi:type="xsd:string">Присоединиться к приложению MyCRM</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
+                                        <Name>Annotation</Name>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
                                         <Name>DesktopType</Name>
                                         <Value xsi:type="xsd:int">0</Value>
                                     </SerializationItem>
@@ -817,20 +824,11 @@ Invoke может вписать данные, даже когда контро�
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
-                                        <Name>ComponentName</Name>
-                                        <Value xsi:type="xsd:string">Присоединиться к приложению MyCRM</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
                                         <Name>WaitBefore</Name>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
                                         <Name>WaitAfter</Name>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
-                                        <Name>Annotation</Name>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -976,7 +974,7 @@ Invoke может вписать данные, даже когда контро�
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
                                                 <Name>Annotation</Name>
-                                                <Value xsi:type="xsd:string">Чтобы выбрать контрол, в который робот будет вписать текст, нажми на "волшебую палочку"
+                                                <Value xsi:type="xsd:string">Чтобы выбрать контрол, в который робот будет писать текст, нажми на "волшебую палочку"
 
 После чего студия начнет подсвечивать все контролы на сайте/приложении.
 
