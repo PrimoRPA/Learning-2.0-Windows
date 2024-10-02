@@ -12,6 +12,16 @@
         <Properties>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
+                <Name>ComponentName</Name>
+                <Value xsi:type="xsd:string">Добавление водяного знака</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>Annotation</Name>
+                <Value xsi:type="xsd:string">Компонент, добавляющий водяной знак к документу PDF</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
                 <Name>TextTag</Name>
             </SerializationItem>
             <SerializationItem>
@@ -21,21 +31,11 @@
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
-                <Name>ComponentName</Name>
-                <Value xsi:type="xsd:string">Добавление водяного знака</Value>
-            </SerializationItem>
-            <SerializationItem>
-                <IsListValue>false</IsListValue>
                 <Name>WaitBefore</Name>
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>WaitAfter</Name>
-            </SerializationItem>
-            <SerializationItem>
-                <IsListValue>false</IsListValue>
-                <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент, добавляющий водяной знак к документу PDF</Value>
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -97,6 +97,27 @@
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
+                        <Name>ComponentName</Name>
+                        <Value xsi:type="xsd:string">Добавление водяного знака</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Annotation</Name>
+                        <Value xsi:type="xsd:string">Для работы с активность необходимо заполнить следующие обязательные свойства:
+
+- Текст: Текст водяного знака, который будет добавлен в документ
+  - Имя шрифта: Имя шрифта водяного знака. Для работы можно выбрать любой из шрифтов, встроенных в вашу систему. Примеры таких шрифтов:  "Arial Black, "Times New Roman", "Georgia".
+  - Размер шрифта: Размер шрифта водяного знака, который будет добавлен в документ. Важно учест, что водяной знак добавляется только в центр выбранных страниц документа.
+  - Путь к файлу: Путь к файлу PDF, в который необходимо добавить водяной знак
+  - Путь к результату: Путь к результирующему файлу PDF, представляющиму собой исходный текст и водяой знак
+ 
+Дополнительыне свойства заполняются в случае необходимости:
+ - Пароль: Пароль документа PDF. Указывется в том случае, если PDF документ защищён паролем
+ - Защищенный пароль: Пароль документа PDF, указанный в формате защищенной строки. Получить можно, например, из «Диспетчера учетных данных» или "Primo RPA Orchestrator"
+- Страницы: Номера страниц документа, на которые необходимо добавить водяной знак. В случае, если параметр не указан водяно знак будет добавлен на все страницы документа</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
                         <Name>Text</Name>
                         <Value xsi:type="xsd:string">"Primo RPA"</Value>
                     </SerializationItem>
@@ -108,7 +129,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>WFontSize</Name>
-                        <Value xsi:type="xsd:string">40</Value>
+                        <Value xsi:type="xsd:string">5</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -134,32 +155,11 @@
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
-                        <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Добавление водяного знака</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
                         <Name>WaitBefore</Name>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>WaitAfter</Name>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Для работы с активность необходимо заполнить следующие обязательные свойства:
-
-- Текст: Текст водяного знака, который будет добавлен в документ
-  - Имя шрифта: Имя шрифта водяного знака. Для работы можно выбрать любой из шрифтов, встроенных в вашу систему. Примеры таких шрифтов:  "Arial Black, "Times New Roman", "Georgia".
-  - Размер шрифта: Размер шрифта водяного знака, который будет добавлен в документ. Важно учест, что водяной знак добавляется только в центр выбранных страниц документа.
-  - Путь к файлу: Путь к файлу PDF, в который необходимо добавить водяной знак
-  - Путь к результату: Путь к результирующему файлу PDF, представляющиму собой исходный текст и водяой знак
- 
-Дополнительыне свойства заполняются в случае необходимости:
- - Пароль: Пароль документа PDF. Указывется в том случае, если PDF документ защищён паролем
- - Защищенный пароль: Пароль документа PDF, указанный в формате защищенной строки. Получить можно, например, из «Диспетчера учетных данных» или "Primo RPA Orchestrator"
-- Страницы: Номера страниц документа, на которые необходимо добавить водяной знак. В случае, если параметр не указан водяно знак будет добавлен на все страницы документа</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
