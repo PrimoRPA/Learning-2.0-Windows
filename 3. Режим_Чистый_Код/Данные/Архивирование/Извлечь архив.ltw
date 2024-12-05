@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-16"?>
+<SerializationRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <WorkflowType>2</WorkflowType>
+    <IsTestCase>false</IsTestCase>
+    <UseArgs>false</UseArgs>
+    <ColumnsTableTestData />
+    <RowsTableTestData />
+    <ScriptType>CS</ScriptType>
+    <RootContainer>
+        <ClassName>LTools.Workflow.View.WFOnlyCode</ClassName>
+        <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+        <Properties>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ComponentName</Name>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ComponentID</Name>
+                <Value xmlns:q1="http://microsoft.com/wsdl/types/" xsi:type="q1:guid">00000000-0000-0000-0000-000000000000</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ContinueOnException</Name>
+                <Value xsi:type="xsd:boolean">false</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>Variables</Name>
+                <Value xsi:type="ArrayOfScriptVariable" />
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ScriptCode</Name>
+                <Value xsi:type="xsd:string">using System;
+using System.Collections.Generic;
+using System.Text;
+using LTools.Scripting.Model;
+using LTools.Network.Model;
+
+public class PrimoScript
+{
+	public static LTools.Scripting.CSharp.ScriptDebugger __debug;
+	
+	public void main(LTools.Common.Model.WorkflowData wf)
+    {
+      	/*
+		Компонент, распаковывающий архив файлов.  Свойства
+		- wf: [LTools.Common.Model.WorkflowData] ссылка на вызывающий алгоритм
+		- path - Путь: [String] Cтроковое значение, которое указывает путь к папке, в которую будут извлечены файлы.
+		- file - Архив: [String] Cтроковое значение, которое указывает путь к архиву, который нужно распаковать.
+		- password - Пароль: [String] Пароль архива. Указывется в том случае, если архив защищён паролем
+		- szPath - Путь к 7-zip: [String] Строковое значение, которое указывает путь к 7zip.dll. (C:\Program Files\7-Zip\7z.dll)
+		*/
+		LTools.Data.ArchiveApp.Extract(wf, @".\Дополнительные материалы\Архив\Выходные данные\123.rar", @".\Дополнительные материалы\Архив\Входные данные\123.rar", [password], "C:\Program Files\7-Zip\7z.dll");  
+    }
+}</Value>
+            </SerializationItem>
+        </Properties>
+        <IsBreakpoint>false</IsBreakpoint>
+        <IsIgnore>false</IsIgnore>
+        <Components />
+    </RootContainer>
+    <GlobalVariables />
+    <Arguments />
+</SerializationRoot>
