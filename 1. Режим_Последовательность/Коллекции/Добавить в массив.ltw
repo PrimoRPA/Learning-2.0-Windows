@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-16"?>
+<SerializationRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <WorkflowType>0</WorkflowType>
+    <IsTestCase>false</IsTestCase>
+    <UseArgs>false</UseArgs>
+    <ColumnsTableTestData />
+    <RowsTableTestData />
+    <ScriptType>CS</ScriptType>
+    <RootContainer>
+        <ClassName>LTools.Workflow.Elements.WFContainerSequence</ClassName>
+        <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+        <Properties>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ComponentName</Name>
+                <Value xsi:type="xsd:string">Добавить в массив</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>Annotation</Name>
+                <Value xsi:type="xsd:string">Компонент позволяет добавить новый элемент в коллекцию</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>TextTag</Name>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>Variables</Name>
+                <Value xsi:type="ArrayOfScriptVariable" />
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>WaitBefore</Name>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>WaitAfter</Name>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ComponentID</Name>
+                <Value xmlns:q1="http://microsoft.com/wsdl/types/" xsi:type="q1:guid">87010bd9-bb4b-4a07-ba43-b1e37549d315</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ContinueOnException</Name>
+                <Value xsi:type="xsd:boolean">false</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>PreventLogging</Name>
+                <Value xsi:type="xsd:boolean">false</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>SSSuccess</Name>
+                <Value xsi:type="xsd:boolean">false</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>SSFail</Name>
+                <Value xsi:type="xsd:boolean">false</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>true</IsListValue>
+                <Name>NoCodeProperties</Name>
+                <ListValue />
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>NoCodeUsed</Name>
+                <Value xsi:type="xsd:boolean">false</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>IsCollapsed</Name>
+                <Value xsi:type="xsd:boolean">false</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ShowAnnotation</Name>
+                <Value xsi:type="xsd:boolean">true</Value>
+            </SerializationItem>
+        </Properties>
+        <IsBreakpoint>false</IsBreakpoint>
+        <IsIgnore>false</IsIgnore>
+        <Components>
+            <SerializationComponent>
+                <ClassName>LTools.Workflow.Elements.WFAssign</ClassName>
+                <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+                <Properties>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Variable</Name>
+                        <Value xsi:type="xsd:string">listElements</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Data</Name>
+                        <Value xsi:type="xsd:string">new List&lt;string&gt;() { "Добавить в массив", "Таблицу в CSV"};</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>TextTag</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>ComponentName</Name>
+                        <Value xsi:type="xsd:string">Присвоение listElements</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>WaitBefore</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>WaitAfter</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Annotation</Name>
+                        <Value xsi:type="xsd:string">Инициализация списка строк для дальнейшего добавления в него эелемнта</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>ComponentID</Name>
+                        <Value xmlns:q2="http://microsoft.com/wsdl/types/" xsi:type="q2:guid">93373f91-857f-4edc-b2fd-d2d6fd1adec4</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>ContinueOnException</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>PreventLogging</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>SSSuccess</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>SSFail</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>true</IsListValue>
+                        <Name>NoCodeProperties</Name>
+                        <ListValue />
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>NoCodeUsed</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>IsCollapsed</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>ShowAnnotation</Name>
+                        <Value xsi:type="xsd:boolean">true</Value>
+                    </SerializationItem>
+                </Properties>
+                <IsBreakpoint>false</IsBreakpoint>
+                <IsIgnore>false</IsIgnore>
+            </SerializationComponent>
+            <SerializationComponent>
+                <ClassName>LTools.Data.Elements.Collections.WFArrayAdd</ClassName>
+                <AssemblyName>LTools.Data, Version=1.0.3.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+                <Properties>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Variable</Name>
+                        <Value xsi:type="xsd:string">listElements</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Data</Name>
+                        <Value xsi:type="xsd:string">"Фильтр таблицы"</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>TextTag</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>ComponentName</Name>
+                        <Value xsi:type="xsd:string">Добавить в массив</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>WaitBefore</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>WaitAfter</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Annotation</Name>
+                        <Value xsi:type="xsd:string">Элемент осуществляющий добавление нового значения  симеющийся массив данных.
+
+Для работы с активностью необходимо заполнить следующие обязательные свойства: 
+Коллекция: Переменная, содержащая коллекцию, в которую необходимо добавить данные
+Переменная: Значение для добавления в коллекцию. Можно задать в виде переменной или вписать данные длядобавления в это поле. Важно - данные должны быть того типа, который содержит коллекция</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>ComponentID</Name>
+                        <Value xmlns:q3="http://microsoft.com/wsdl/types/" xsi:type="q3:guid">00f9db0d-bd02-42f7-ae4a-076177866109</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>ContinueOnException</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>PreventLogging</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>SSSuccess</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>SSFail</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>true</IsListValue>
+                        <Name>NoCodeProperties</Name>
+                        <ListValue />
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>NoCodeUsed</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>IsCollapsed</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>ShowAnnotation</Name>
+                        <Value xsi:type="xsd:boolean">true</Value>
+                    </SerializationItem>
+                </Properties>
+                <IsBreakpoint>false</IsBreakpoint>
+                <IsIgnore>false</IsIgnore>
+            </SerializationComponent>
+        </Components>
+    </RootContainer>
+    <GlobalVariables>
+        <ScriptVariable>
+            <Name>listElements</Name>
+            <Group />
+            <Comment>Список строк для добавления нового элемента</Comment>
+            <DataTypeString>List&lt;String&gt;</DataTypeString>
+            <Direction>IN_OUT</Direction>
+        </ScriptVariable>
+    </GlobalVariables>
+    <Arguments />
+</SerializationRoot>

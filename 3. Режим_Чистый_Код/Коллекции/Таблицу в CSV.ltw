@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-16"?>
+<SerializationRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <WorkflowType>2</WorkflowType>
+    <IsTestCase>false</IsTestCase>
+    <UseArgs>false</UseArgs>
+    <ColumnsTableTestData />
+    <RowsTableTestData />
+    <ScriptType>CS</ScriptType>
+    <RootContainer>
+        <ClassName>LTools.Workflow.View.WFOnlyCode</ClassName>
+        <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+        <Properties>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ComponentName</Name>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ComponentID</Name>
+                <Value xmlns:q1="http://microsoft.com/wsdl/types/" xsi:type="q1:guid">00000000-0000-0000-0000-000000000000</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ContinueOnException</Name>
+                <Value xsi:type="xsd:boolean">false</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>Variables</Name>
+                <Value xsi:type="ArrayOfScriptVariable" />
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ScriptCode</Name>
+                <Value xsi:type="xsd:string">using System;
+using System.Collections.Generic;
+using System.Text;
+using LTools.Scripting.Model;
+using LTools.Network.Model;
+
+public class PrimoScript
+{
+	public static LTools.Scripting.CSharp.ScriptDebugger __debug;
+	
+	public void main(LTools.Common.Model.WorkflowData wf)
+    {
+        /*
+		Преобразует таблицу к CSV.  Свойства:
+		data - Таблица: [System.Data.DataTable] Таблица данных
+		sep - Разделитель: [String] Разделитель колонок
+		string ret = LTools.Common.Helpers.DataHelper.DataTableToCSV(data, sep);
+		*/
+	
+		var dt_dataFromTable = new DataTable(); 	//Инициализация пустой таблицы
+		
+		//Добавление столбцов в таблицу
+		dt_dataFromTable.Columns.Add("Индекс");
+		dt_dataFromTable.Columns.Add("Элемент");
+		dt_dataFromTable.Columns.Add("Группа");
+		
+		// Добавление данных в таблицу
+		dt_dataFromTable.Rows.Add(1, "Таблицу в CSV", "Коллекции");
+		dt_dataFromTable.Rows.Add(2, "Фильтр таблицы", "Коллекции");
+		dt_dataFromTable.Rows.Add(3, "Открыть браузер", "Браузер");
+
+		var sep = ";"; // Определение разделителя
+		
+		string ret = LTools.Common.Helpers.DataHelper.DataTableToCSV(dt_dataFromTable, sep);
+		
+    }
+}</Value>
+            </SerializationItem>
+        </Properties>
+        <IsBreakpoint>false</IsBreakpoint>
+        <IsIgnore>false</IsIgnore>
+        <Components />
+    </RootContainer>
+    <GlobalVariables />
+    <Arguments />
+</SerializationRoot>
