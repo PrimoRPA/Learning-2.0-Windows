@@ -1,0 +1,8 @@
+Sub FillCell()
+    Sheets("legal").Select
+    Dim Ranges As Range, Cells As Range
+    Set Ranges = Cells(7, 1).CurrentRegion
+    For Each Cells In Diapazon
+        If Cells = "менеджер" Then Cells.Interior.Color = RGB(255, 0, 0)
+    Next Cells
+End Sub
