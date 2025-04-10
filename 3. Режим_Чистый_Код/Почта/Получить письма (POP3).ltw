@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-16"?>
+<SerializationRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <WorkflowType>2</WorkflowType>
+    <IsTestCase>false</IsTestCase>
+    <UseArgs>false</UseArgs>
+    <ColumnsTableTestData />
+    <RowsTableTestData />
+    <ScriptType>CS</ScriptType>
+    <RootContainer>
+        <ClassName>LTools.Workflow.View.WFOnlyCode</ClassName>
+        <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+        <Properties>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ComponentName</Name>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ComponentID</Name>
+                <Value xmlns:q1="http://microsoft.com/wsdl/types/" xsi:type="q1:guid">00000000-0000-0000-0000-000000000000</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ContinueOnException</Name>
+                <Value xsi:type="xsd:boolean">false</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>Variables</Name>
+                <Value xsi:type="ArrayOfScriptVariable" />
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ScriptCode</Name>
+                <Value xsi:type="xsd:string">using System;
+using System.Collections.Generic;
+using System.Text;
+using LTools.Scripting.Model;
+using LTools.Network.Model;
+
+public class PrimoScript
+{
+	public static LTools.Scripting.CSharp.ScriptDebugger __debug;
+	
+	public void main(LTools.Common.Model.WorkflowData wf)
+    {
+        /*
+		Компонент, осуществляющий получение почтовых сообщений по протоколу POP3.  Свойства
+		wf: [LTools.Common.Model.WorkflowData] ссылка на вызывающий алгоритм
+		server - Сервер: [String] Адрес почтового сервера
+		port - Порт: [Int32] Порт почтового сервера
+		login - Логин: [String] Логин почтового сервера
+		password - Пароль: [String] Пароль почтового сервера
+		count - Кол-во: [Int32] Количество считываемых сообщений
+		ids - Индексы: [System.Collections.Generic.List&lt;String&gt;] Массив индексов получаемых сообщений
+		messages - Письма: [System.Collections.Generic.List&lt;LTools.Network.Model.EMail.MailMessage&gt;] Массив сообщений
+		delete - Удалять: [Boolean] Автоматически удалять полученные сообщения
+		readAtts - Получать вложения: [Boolean] Признак получения вложений
+		isSsl - SSL: [Boolean] Признак использования сервером соединения SSL
+		useSSO - Использовать SSO: Признак использования SSO
+		sso - SSO: Secure Socket Options
+		to - Таймаут: [Int32] Предельное время ожидания завершения процесса (мс)
+		List&lt;LTools.Network.Model.EMail.MailMessage&gt; mail = LTools.Network.MailApp.POP3Receive(wf, server, port, login, password, count, ids, delete, readAtts, isSsl, to, useSSO, sso);
+		List&lt;LTools.Network.Model.EMail.MailMessage&gt; mail = LTools.Network.MailApp.POP3Receive(wf, server, port, login, password, count, messages, delete, readAtts, isSsl, to, useSSO, sso);
+		*/
+		
+		//Внесите в данные переменные собственные данные для учетной записи
+		string userName = "";
+		string userPass = "";
+		string Server = "pop.yandex.ru";
+
+    	List&lt;LTools.Network.Model.EMail.MailMessage&gt; mail = LTools.Network.MailApp.POP3Receive(wf, Server, 995, userName, userPass, 5, new List&lt;LTools.Network.Model.EMail.MailMessage&gt;(), false, false, false, 60000);
+		
+	}
+}</Value>
+            </SerializationItem>
+        </Properties>
+        <IsBreakpoint>false</IsBreakpoint>
+        <IsIgnore>false</IsIgnore>
+        <Components />
+    </RootContainer>
+    <GlobalVariables />
+    <Arguments />
+</SerializationRoot>
