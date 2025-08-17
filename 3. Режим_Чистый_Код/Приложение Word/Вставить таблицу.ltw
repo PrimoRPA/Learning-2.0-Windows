@@ -56,16 +56,17 @@ public class PrimoScript
 		//Инициализация документа MS Word
 		LTools.Office.WordApp app = LTools.Office.WordApp.Init(wf, @".\Дополнительные материалы\Приложение Word\Входные данные\Информация об RPA.docx", LTools.Office.Model.InteropTypes.DX);
    
-		var dataTable = new DataTable();
-		dataTable.Columns.Add("Направление роботизации");
-		dataTable.Columns.Add("% использования");
+		var dtTable = new DataTable();
+		dtTable.Columns.Add("Направление роботизации");
+		dtTable.Columns.Add("% использования");
 		
-		DataRow row = dataTable.NewRow();
+		DataRow row = dtTable.NewRow();
 		row["Направление роботизации"] = "Анализ данных";
 		row["% использования"] = "60%";
-		dataTable.Rows.Add(row);
+		dtTable.Rows.Add(row);
 		
-		app.InsertTable(dataTable, "BookmarkPrimo");
+		//Добавление таблицы в документ MsWord
+		app.InsertTable(dtTable, "BookmarkPrimo");
 		
 		//Сохранение изменений документа MS Word
 		app.SaveAs(@".\Дополнительные материалы\Приложение Word\Выходные данные\Вставить таблицу.docx");
@@ -79,4 +80,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

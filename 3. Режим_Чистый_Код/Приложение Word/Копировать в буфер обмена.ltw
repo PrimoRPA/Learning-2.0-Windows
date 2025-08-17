@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<SerializationRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<SerializationRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <WorkflowType>2</WorkflowType>
     <IsTestCase>false</IsTestCase>
     <UseArgs>false</UseArgs>
@@ -54,9 +54,15 @@ public class PrimoScript
 		LTools.Office.WordApp app = LTools.Office.WordApp.Init(wf, @".\Дополнительные материалы\Приложение Word\Входные данные\Информация об RPA.docx", LTools.Office.Model.InteropTypes.DX);
    
 		
-		app.SelectRange(0, 52); // Выделение фрагмента текста для копирования в буфер обмена
+		app.SelectRange(5, 95); // Выделение фрагмента текста для копирования в буфер обмена
 		
+		//Копирование данных вбуфер обмена
 		app.CopyToClipboard();
+		
+		//Получение текста из буфера обмена для проверки работы активности
+		var strTextFromFord = LTools.Desktop.DesktopApp.GetFromClipboard(wf, System.Windows.TextDataFormat.Text);	
+		
+		LTools.Workflow.PrimoApp.AddToLog(wf, "Текст, полученный из документа MsWord - " + strTextFromFord.ToString().Trim(), LTools.Enums.LogMessageType.Info);
 		
 	}
 }</Value>
@@ -68,4 +74,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -108,19 +112,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Элемент используется для выделения данных на указанном лист в книгу Excel, указанной в контенере "Приложение Excel". После выделения данные могут быть скопированы, удалены или изменены другими активностями Primo Studio
-
-Для работы с элементом необходимо заполнить 
-обязательные свойства:
-
-Диапазон: ячейки для выделения. Выделение диапазона необходимо для дальнейшей обработки, например для удаления данных
-
-Дополнительные свойства заполняются в случае необходимости:
-
-Страница: название страницы, на которой будет выделен диапазон данных в документе Excel, указанном в контейнере Приложение Excel
-Индекс страницы: порядковый номер страницы, на которой необходимо выделить данные. Нумерация начинается с нуля.
-
-В случае если не указан индекс страницы или название страницы данные будут выделены на первом листе книги</Value>
+                    <Value xsi:type="xsd:string">Контейнер с элементом Выделение диапазона</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -199,6 +191,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -209,13 +205,8 @@
                     <Properties>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
-                            <Name>ComponentName</Name>
-                            <Value xsi:type="xsd:string">Приложение Excel</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string" />
+                            <Name>FileName</Name>
+                            <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -231,11 +222,6 @@
                             <IsListValue>false</IsListValue>
                             <Name>R1C1</Name>
                             <Value xsi:type="xsd:boolean">false</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>FileName</Name>
-                            <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -290,11 +276,21 @@
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
+                            <Name>ComponentName</Name>
+                            <Value xsi:type="xsd:string">Приложение Excel</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
                             <Name>WaitBefore</Name>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>WaitAfter</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Annotation</Name>
+                            <Value xsi:type="xsd:string" />
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -539,6 +535,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -716,6 +716,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -816,7 +820,24 @@
                 <SerializationItem>
                     <IsListValue>true</IsListValue>
                     <Name>PointsList</Name>
-                    <ListValue />
+                    <ListValue>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>PointsList</Name>
+                            <Value xsi:type="Point">
+                                <X>568</X>
+                                <Y>147</Y>
+                            </Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>PointsList</Name>
+                            <Value xsi:type="Point">
+                                <X>568.03666666666663</X>
+                                <Y>147</Y>
+                            </Value>
+                        </SerializationItem>
+                    </ListValue>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -930,6 +951,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -938,4 +968,5 @@
     </Components>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

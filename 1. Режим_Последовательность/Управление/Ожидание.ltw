@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент, останавливающий выполнение процесса на заданное количество миллисекунд</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -196,7 +196,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">В данной активности указывается количество секунд, которые будет ждать процесс после начала работы активности
+                        <Value xsi:type="xsd:string">Компонент, останавливающий выполнение процесса на заданное количество миллисекунд
+
+В данной активности указывается количество секунд, которые будет ждать процесс после начала работы активности
 Количество секунд указывается в тысячах миллисекунд (1 сек = 1000 мс)</Value>
                     </SerializationItem>
                     <SerializationItem>
@@ -333,4 +335,5 @@
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

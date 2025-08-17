@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -117,12 +121,16 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">458.91166666666663</Value>
+                    <Value xsi:type="xsd:double">443</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">164.03999999999996</Value>
+                    <Value xsi:type="xsd:double">160.50923638661698</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -302,13 +310,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Элемент производит вставку изображения в документ Word, для этого необходимо добавить переменную в свойство "Изображение"
-
-Для работы с элементом можно заполнить свойства:
-Позиция: Индекс начала вставки, чтобы определить символ, с которого начнется вставка изображения
-Закладка: Свойство используется в случае, если нужно вставить изображения от закладки. Для того чтобы свойство отработало необходимо чтобы в документе была создана закладка. Если свойство используется а закладок в документе нет бует получена ошибка
-
-В случае, если не свойство "Позиция" и "Закладка" не указаны вставка будет осуществлена в конец документа</Value>
+                    <Value xsi:type="xsd:string">Контейнер с элементом Вставка изображения</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -317,12 +319,16 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">444.13333333333333</Value>
+                    <Value xsi:type="xsd:double">443</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">304.03999999999996</Value>
+                    <Value xsi:type="xsd:double">408.32571428571418</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -397,23 +403,13 @@
                     <Properties>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
-                            <Name>ComponentName</Name>
-                            <Value xsi:type="xsd:string">Документ Word</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string" />
+                            <Name>FileName</Name>
+                            <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Word\Входные данные\Информация об RPA.docx"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>InteropType</Name>
                             <Value xsi:type="xsd:int">0</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>FileName</Name>
-                            <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Word\Входные данные\Информация об RPA.docx"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -443,11 +439,21 @@
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
+                            <Name>ComponentName</Name>
+                            <Value xsi:type="xsd:string">Документ Word</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
                             <Name>WaitBefore</Name>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>WaitAfter</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Annotation</Name>
+                            <Value xsi:type="xsd:string" />
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -504,8 +510,34 @@
                             <Properties>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
+                                    <Name>Bookmark</Name>
+                                    <Value xsi:type="xsd:string">"BookmarkPrimo"</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>Pos</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>Picture</Name>
+                                    <Value xsi:type="xsd:string">image</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>TextTag</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
                                     <Name>ComponentName</Name>
                                     <Value xsi:type="xsd:string">Вставка изображения</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>WaitBefore</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>WaitAfter</Name>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -517,32 +549,6 @@
 Закладка: Свойство используется в случае, если нужно вставить изображения от закладки. Для того чтобы свойство отработало необходимо чтобы в документе была создана закладка. Если свойство используется а закладок в документе нет бует получена ошибка
 
 В случае, если не свойство "Позиция" и "Закладка" не указаны вставка будет осуществлена в конец документа</Value>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>Picture</Name>
-                                    <Value xsi:type="xsd:string">image</Value>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>Bookmark</Name>
-                                    <Value xsi:type="xsd:string">"BookmarkPrimo"</Value>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>Pos</Name>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>TextTag</Name>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>WaitBefore</Name>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>WaitAfter</Name>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -698,12 +704,16 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">102.00000000000001</Value>
+                    <Value xsi:type="xsd:double">86.720476190476234</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">164.03999999999996</Value>
+                    <Value xsi:type="xsd:double">244.04000000000002</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -874,12 +884,16 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">113.86333333333334</Value>
+                    <Value xsi:type="xsd:double">86.720476190476234</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">33.723333333333329</Value>
+                    <Value xsi:type="xsd:double">49.999999999999972</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -1158,6 +1172,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1292,6 +1315,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1302,9 +1334,11 @@
         <ScriptVariable>
             <Name>image</Name>
             <Group />
+            <Comment>Изображение, которое необходимо добавить в документ</Comment>
             <DataTypeString>System.Byte[]</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

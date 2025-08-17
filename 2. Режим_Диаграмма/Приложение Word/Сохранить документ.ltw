@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -117,12 +121,16 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">169.46999999999991</Value>
+                    <Value xsi:type="xsd:double">165</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">155.03999999999996</Value>
+                    <Value xsi:type="xsd:double">221.03999999999996</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -198,7 +206,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Comment</Name>
-                            <Value xsi:type="xsd:string">Для работы с любыми активностями группы "Документ Word" необходимо использовать контейнер, описанный в последовательности "Документ Word.ltw"</Value>
+                            <Value xsi:type="xsd:string" />
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -285,13 +293,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Элемент позволяет сохранить изменения, внесенные в документ Word при работе с ним.
-
-Дополнительные свойства заполняются в случае необходимости:
-
-Путь к файлу - Расположение нового файла Цщкв. Если значение не задано, то документ будет сохранен по пути, указанному в текущем контейнере
-
-Данная активность может быть заменена чекбоксом "Сохранить изменения" в контейнере Word. Однако данное свойство контейнера не позволяет сохранить документ с другим названием или в другую папку.</Value>
+                    <Value xsi:type="xsd:string">Контейнер с элементом Сохранить документ</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -306,6 +308,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
                     <Value xsi:type="xsd:double">155.04</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -380,13 +386,13 @@
                     <Properties>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
-                            <Name>InteropType</Name>
-                            <Value xsi:type="xsd:int">0</Value>
+                            <Name>FileName</Name>
+                            <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Word\Входные данные\Информация об RPA.docx"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
-                            <Name>FileName</Name>
-                            <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Word\Входные данные\Информация об RPA.docx"</Value>
+                            <Name>InteropType</Name>
+                            <Value xsi:type="xsd:int">0</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -601,6 +607,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>IsSingleElemented</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
@@ -673,7 +683,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Comment</Name>
-                            <Value xsi:type="xsd:string">Компонент, производящий сохранения файла Word</Value>
+                            <Value xsi:type="xsd:string" />
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -763,7 +773,24 @@
                 <SerializationItem>
                     <IsListValue>true</IsListValue>
                     <Name>PointsList</Name>
-                    <ListValue />
+                    <ListValue>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>PointsList</Name>
+                            <Value xsi:type="Point">
+                                <X>568</X>
+                                <Y>147</Y>
+                            </Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>PointsList</Name>
+                            <Value xsi:type="Point">
+                                <X>568.03666666666663</X>
+                                <Y>147</Y>
+                            </Value>
+                        </SerializationItem>
+                    </ListValue>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -877,6 +904,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -885,4 +921,5 @@
     </Components>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

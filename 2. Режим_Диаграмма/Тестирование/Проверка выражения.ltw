@@ -92,6 +92,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -126,7 +130,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">315</Value>
+                    <Value xsi:type="xsd:double">312</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -191,6 +195,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -202,7 +210,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Expr</Name>
-                            <Value xsi:type="xsd:string">IsTrue</Value>
+                            <Value xsi:type="xsd:string">boolTrue</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -304,7 +312,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">121</Value>
+                    <Value xsi:type="xsd:double">99</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -373,6 +381,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -465,7 +477,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>ComponentName</Name>
-                    <Value xsi:type="xsd:string">Присвоение IsTrue</Value>
+                    <Value xsi:type="xsd:string">Присвоение boolTrue</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -483,7 +495,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">166.55333333333334</Value>
+                    <Value xsi:type="xsd:double">162</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -548,6 +560,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -559,7 +575,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Variable</Name>
-                            <Value xsi:type="xsd:string">IsTrue</Value>
+                            <Value xsi:type="xsd:string">boolTrue</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -573,7 +589,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>ComponentName</Name>
-                            <Value xsi:type="xsd:string">Присвоение IsTrue</Value>
+                            <Value xsi:type="xsd:string">Присвоение boolTrue</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -767,6 +783,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -901,6 +926,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -909,7 +943,7 @@
     </Components>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>IsTrue</Name>
+            <Name>boolTrue</Name>
             <Group>Value</Group>
             <Comment>Провека выражения</Comment>
             <DataTypeString>Boolean</DataTypeString>
@@ -917,4 +951,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

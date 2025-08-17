@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<SerializationRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<SerializationRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <WorkflowType>1</WorkflowType>
     <IsTestCase>false</IsTestCase>
     <UseArgs>false</UseArgs>
@@ -38,6 +38,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
                     <Value xsi:type="xsd:double">50</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -121,7 +125,11 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">157</Value>
+                    <Value xsi:type="xsd:double">158</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -195,6 +203,16 @@
                     <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
                     <Properties>
                         <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>ComponentName</Name>
+                            <Value xsi:type="xsd:string">Множественное присвоение</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Annotation</Name>
+                            <Value xsi:type="xsd:string">Внесите в данные переменные собственные данные для учетной записи</Value>
+                        </SerializationItem>
+                        <SerializationItem>
                             <IsListValue>true</IsListValue>
                             <Name>Items</Name>
                             <ListValue>
@@ -202,7 +220,7 @@
                                     <IsListValue>false</IsListValue>
                                     <Name>Items</Name>
                                     <Value xsi:type="MultipleAssignItem">
-                                        <Variable>userName</Variable>
+                                        <Variable>strUserName</Variable>
                                         <IsNoCodeVariable>false</IsNoCodeVariable>
                                         <Assign>""</Assign>
                                         <IsNoCodeAssign>false</IsNoCodeAssign>
@@ -212,7 +230,7 @@
                                     <IsListValue>false</IsListValue>
                                     <Name>Items</Name>
                                     <Value xsi:type="MultipleAssignItem">
-                                        <Variable>userPass</Variable>
+                                        <Variable>strUserPass</Variable>
                                         <IsNoCodeVariable>false</IsNoCodeVariable>
                                         <Assign>""</Assign>
                                         <IsNoCodeAssign>false</IsNoCodeAssign>
@@ -222,9 +240,19 @@
                                     <IsListValue>false</IsListValue>
                                     <Name>Items</Name>
                                     <Value xsi:type="MultipleAssignItem">
-                                        <Variable>ServerExchangeURL</Variable>
+                                        <Variable>strServerExchangeURL</Variable>
                                         <IsNoCodeVariable>false</IsNoCodeVariable>
                                         <Assign>"https://test.test.ru"</Assign>
+                                        <IsNoCodeAssign>false</IsNoCodeAssign>
+                                    </Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>Items</Name>
+                                    <Value xsi:type="MultipleAssignItem">
+                                        <Variable>strPathFolder</Variable>
+                                        <IsNoCodeVariable>false</IsNoCodeVariable>
+                                        <Assign>@".\Дополнительные материалы\Почта\"</Assign>
                                         <IsNoCodeAssign>false</IsNoCodeAssign>
                                     </Value>
                                 </SerializationItem>
@@ -236,21 +264,11 @@
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
-                            <Name>ComponentName</Name>
-                            <Value xsi:type="xsd:string">Множественное присвоение</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
                             <Name>WaitBefore</Name>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>WaitAfter</Name>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string">Внесите в данные переменные собственные данные для учетной записи</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -333,7 +351,11 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">265.99999999999989</Value>
+                    <Value xsi:type="xsd:double">260</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -409,7 +431,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>SvcUrl</Name>
-                            <Value xsi:type="xsd:string">ServerExchangeURL</Value>
+                            <Value xsi:type="xsd:string">strServerExchangeURL</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -419,12 +441,12 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Login</Name>
-                            <Value xsi:type="xsd:string">userName</Value>
+                            <Value xsi:type="xsd:string">strUserName</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Password</Name>
-                            <Value xsi:type="xsd:string">userPass</Value>
+                            <Value xsi:type="xsd:string">strUserPass</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -540,7 +562,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Variable</Name>
-                                    <Value xsi:type="xsd:string">ListMessage</Value>
+                                    <Value xsi:type="xsd:string">listMessage</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -658,7 +680,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Equation</Name>
-                                    <Value xsi:type="xsd:string">ListMessage</Value>
+                                    <Value xsi:type="xsd:string">listMessage</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -677,7 +699,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Index</Name>
-                                    <Value xsi:type="xsd:string">IndexMessage</Value>
+                                    <Value xsi:type="xsd:string">intIndexMessage</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -789,7 +811,7 @@
                                         <SerializationItem>
                                             <IsListValue>false</IsListValue>
                                             <Name>Index</Name>
-                                            <Value xsi:type="xsd:string">IndexAttachment</Value>
+                                            <Value xsi:type="xsd:string">intIndexAttachment</Value>
                                         </SerializationItem>
                                         <SerializationItem>
                                             <IsListValue>false</IsListValue>
@@ -877,7 +899,7 @@
                                                 <SerializationItem>
                                                     <IsListValue>false</IsListValue>
                                                     <Name>FileName</Name>
-                                                    <Value xsi:type="xsd:string">@".\\Дополнительные материалы\Почта\My message attachemnts Cообщение - " + IndexMessage.ToString() + " Вложение - " + IndexAttachment.ToString() + ".pdf"</Value>
+                                                    <Value xsi:type="xsd:string">strPathFolder + Attachment.FileName</Value>
                                                 </SerializationItem>
                                                 <SerializationItem>
                                                     <IsListValue>false</IsListValue>
@@ -988,12 +1010,16 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">126</Value>
+                    <Value xsi:type="xsd:double">138</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">49.999999999999972</Value>
+                    <Value xsi:type="xsd:double">50</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -1271,6 +1297,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1405,6 +1440,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1413,7 +1457,7 @@
     </Components>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>IndexAttachment</Name>
+            <Name>intIndexAttachment</Name>
             <Group>Counter</Group>
             <DefaultValue xsi:type="xsd:string">0</DefaultValue>
             <Comment>Индекс текущего вложения</Comment>
@@ -1421,7 +1465,7 @@
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>IndexMessage</Name>
+            <Name>intIndexMessage</Name>
             <Group>Counter</Group>
             <DefaultValue xsi:type="xsd:string">0</DefaultValue>
             <Comment>Индекс текущего сообщения</Comment>
@@ -1429,7 +1473,7 @@
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>ListMessage</Name>
+            <Name>listMessage</Name>
             <Group>Output</Group>
             <DefaultValue xsi:type="xsd:string" />
             <Comment>Переменная вывода для сохранения списка полученных писем</Comment>
@@ -1437,7 +1481,7 @@
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>ServerExchangeURL</Name>
+            <Name>strServerExchangeURL</Name>
             <Group>ServerExchange</Group>
             <DefaultValue xsi:type="xsd:string">""</DefaultValue>
             <Comment>URL сервера MS Exchange</Comment>
@@ -1445,7 +1489,7 @@
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>userName</Name>
+            <Name>strUserName</Name>
             <Group>Сredential</Group>
             <DefaultValue xsi:type="xsd:string">""</DefaultValue>
             <Comment>Логин пользователя для отправки писем</Comment>
@@ -1453,13 +1497,21 @@
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>userPass</Name>
+            <Name>strUserPass</Name>
             <Group>Сredential</Group>
             <DefaultValue xsi:type="xsd:string">""</DefaultValue>
             <Comment>Пароль пользователя для отправки писем</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
+        <ScriptVariable>
+            <Name>strPathFolder</Name>
+            <Group>Folder</Group>
+            <Comment>Путь до папки для сохранения</Comment>
+            <DataTypeString>System.String</DataTypeString>
+            <Direction>IN_OUT</Direction>
+        </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

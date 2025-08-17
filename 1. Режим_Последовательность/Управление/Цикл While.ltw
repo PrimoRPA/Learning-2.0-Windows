@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Цикл, продолжающийся, пока установленное в нем выражение возвращает Истину </Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -205,7 +205,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Отличительной особенностью цикла While является то, что условие проверяется вначале каждой итерации, 
+                        <Value xsi:type="xsd:string">Цикл, продолжающийся, пока установленное в нем выражение возвращает Истину 
+
+Отличительной особенностью цикла While является то, что условие проверяется вначале каждой итерации, 
 тело цикла не выполнится ни одного раза, так как условие изначально ложно. (на данный момент условие 
 цикла ложно, индекс будет равен 0 после прохождения цикла)</Value>
                     </SerializationItem>
@@ -431,9 +433,11 @@
         <ScriptVariable>
             <Name>index</Name>
             <Group />
+            <Comment>Индекс для условия цикла While</Comment>
             <DataTypeString>Int32</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

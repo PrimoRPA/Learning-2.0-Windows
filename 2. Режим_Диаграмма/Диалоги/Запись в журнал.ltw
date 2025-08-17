@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -107,22 +111,17 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Позволяет вывести сообщение в Консоль и пользовательский журнал</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">145.66666666666657</Value>
+                    <Value xsi:type="xsd:double">138.66666666666657</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">10.723333333333329</Value>
+                    <Value xsi:type="xsd:double">49.999999999999972</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -141,6 +140,11 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Позволяет вывести сообщение в Консоль и пользовательский журнал</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -186,6 +190,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -282,17 +290,6 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Активность используется для записи какой-либо информации в Консоль Primo Studio при разработке процесса и в пользовательский журнал при запуске процесса из Оркестратора.
-
-Элемент необходим для удосбтва процесса разработки и для мониторинга выполненных задач. 
-
-В свойство "Текст" записывается текст сообщения, а в поле "Тип" можно выбрать разные типы сообщений, в дальнейшем в консоли или в оркестраторе можно сортировать сообщения по типам.
-Наиболее часто используются типы сообщений "Info", "Error", "Debug"
-</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -322,6 +319,16 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Активность используется для записи какой-либо информации в Консоль Primo RPA Studio при разработке процесса и в пользовательский журнал при запуске процесса из Оркестратора.
+
+Элемент необходим для удобства процесса разработки и для мониторинга выполненных задач. 
+
+В свойство "Текст" записывается текст сообщения, а в поле "Тип" можно выбрать разные типы сообщений, в дальнейшем в консоли или в оркестраторе можно сортировать сообщения по типам.
+Наиболее часто используются типы сообщений "Info", "Error", "Debug"</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -368,6 +375,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -406,13 +417,12 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string">Активность используется для записи какой-либо информации в Консоль Primo Studio при разработке процесса и в пользовательский журнал при запуске процесса из Оркестратора.
+                            <Value xsi:type="xsd:string">Активность используется для записи какой-либо информации в Консоль Primo RPA Studio при разработке процесса и в пользовательский журнал при запуске процесса из Оркестратора.
 
-Элемент необходим для удосбтва процесса разработки и для мониторинга выполненных задач. 
+Элемент необходим для удобства процесса разработки и для мониторинга выполненных задач. 
 
 В свойство "Текст" записывается текст сообщения, а в поле "Тип" можно выбрать разные типы сообщений, в дальнейшем в консоли или в оркестраторе можно сортировать сообщения по типам.
-Наиболее часто используются типы сообщений "Info", "Error", "Debug"
-</Value>
+Наиболее часто используются типы сообщений "Info", "Error", "Debug"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -594,6 +604,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -602,4 +621,5 @@
     </Components>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

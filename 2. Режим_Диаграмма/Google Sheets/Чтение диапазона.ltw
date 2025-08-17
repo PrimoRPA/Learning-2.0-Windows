@@ -13,6 +13,15 @@
             <Properties>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ComponentName</Name>
+                    <Value xsi:type="xsd:string">Начало диаграммы</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TType</Name>
                     <Value xsi:type="xsd:int">1</Value>
                 </SerializationItem>
@@ -32,8 +41,7 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>ComponentName</Name>
-                    <Value xsi:type="xsd:string">Начало диаграммы</Value>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -42,10 +50,6 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -107,17 +111,22 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Компонент, считывающий данные из диапазона ячеек Google Sheets</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">209.16666666666669</Value>
+                    <Value xsi:type="xsd:double">107.16666666666669</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">33.723333333333329</Value>
+                    <Value xsi:type="xsd:double">49.999999999999972</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -136,11 +145,6 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Компонент, считывающий данные из диапазона ячеек Google Sheets</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -186,6 +190,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -282,6 +290,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -292,7 +304,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">152.04</Value>
+                    <Value xsi:type="xsd:double">158</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -314,13 +326,8 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">ID документа Google Sheets. Для работы внесите свое значение id</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
                     <Name>ComponentID</Name>
-                    <Value xmlns:q4="http://microsoft.com/wsdl/types/" xsi:type="q4:guid">67ff2a33-7cd3-4035-8243-43aaade2bd33</Value>
+                    <Value xmlns:q4="http://microsoft.com/wsdl/types/" xsi:type="q4:guid">5075caca-714a-472c-b5a3-5f3d752be407</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -360,7 +367,11 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
-                    <Value xsi:type="xsd:boolean">true</Value>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -373,7 +384,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Variable</Name>
-                            <Value xsi:type="xsd:string">googleDocID</Value>
+                            <Value xsi:type="xsd:string">strGoogleDocID</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -405,7 +416,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>ComponentID</Name>
-                            <Value xmlns:q5="http://microsoft.com/wsdl/types/" xsi:type="q5:guid">9c6f3d5c-6faf-4429-80ab-d9ad02ead112</Value>
+                            <Value xmlns:q5="http://microsoft.com/wsdl/types/" xsi:type="q5:guid">7784a3bc-18b7-4e3b-97c6-6b0bcbc8e34b</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -464,6 +475,11 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Контейнер с элементом Чтение диапазона</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -474,7 +490,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">292.03999999999996</Value>
+                    <Value xsi:type="xsd:double">313</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -496,27 +512,8 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Настройки активность "Документ Google Sheets" следует произвести в соотвествии с шагами, описанными в "Документ Google Sheets.ltw" данного проекта
-
-Для работы с элементов необходимо заполнить свойства:
-
-Диапазон: ячейки, которые необходимо прочитать. Необходимо указывать в формате строки "A1:D12". В случае, если диапазон не указан, будет считан диапазон, выделенны пользователем в таблице
-
-Страница: название страницы, с которой будут считываться данные
-
-Строка заголовков: Признак того, что первая строка содержит заголовки. Актуально только для считывания в переменную таблицы.
-
-Возможны несколько вариантов получения информации:
-
-Переменная (информация): информация о считываемых ячейках
-Переменная (таблица): получение результатов чтения текстовых значений в формате таблицы
-Переменная (текст): получение результатов чтения текстовых значений в формате текста в списке List&lt;List&lt;string&gt;&gt;</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
                     <Name>ComponentID</Name>
-                    <Value xmlns:q6="http://microsoft.com/wsdl/types/" xsi:type="q6:guid">892f1797-2fc4-4b35-a019-58582c82f01c</Value>
+                    <Value xmlns:q6="http://microsoft.com/wsdl/types/" xsi:type="q6:guid">2eb63a01-9300-474f-957a-c7e0b1ce71dd</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -558,6 +555,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -574,7 +575,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>SheetID</Name>
-                            <Value xsi:type="xsd:string">googleDocID</Value>
+                            <Value xsi:type="xsd:string">strGoogleDocID</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -608,7 +609,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>ComponentID</Name>
-                            <Value xmlns:q7="http://microsoft.com/wsdl/types/" xsi:type="q7:guid">e12d8287-4f2b-46df-87b0-72bdc15bd0b7</Value>
+                            <Value xmlns:q7="http://microsoft.com/wsdl/types/" xsi:type="q7:guid">b03e02bd-fad9-45fe-8bd7-d9cfb6ac2f6e</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -666,7 +667,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Variable</Name>
-                                    <Value xsi:type="xsd:string">text</Value>
+                                    <Value xsi:type="xsd:string">listText</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -675,7 +676,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>VariableTable</Name>
-                                    <Value xsi:type="xsd:string">tableWIthInfo</Value>
+                                    <Value xsi:type="xsd:string">dtWIthInfo</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -707,9 +708,9 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Annotation</Name>
-                                    <Value xsi:type="xsd:string">Для работы с элементов необходимо заполнить свойства:
+                                    <Value xsi:type="xsd:string">Для работы с элементом необходимо заполнить свойства:
 
-Диапазон: ячейки, которые необходимо прочитать. Необходимо указывать в формате строки "A1:D12". В случае, если диапазон не указан, будет считан диапазон, выделенны пользователем в таблице
+Диапазон: ячейки, которые необходимо прочитать. Необходимо указывать в формате строки "A1:D12". В случае, если диапазон не указан, будет считан диапазон, выделенный пользователем в таблице
 
 Страница: название страницы, с которой будут считываться данные
 
@@ -724,7 +725,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>ComponentID</Name>
-                                    <Value xmlns:q8="http://microsoft.com/wsdl/types/" xsi:type="q8:guid">84a15dba-9f42-460f-bb7c-658d7a8f4561</Value>
+                                    <Value xmlns:q8="http://microsoft.com/wsdl/types/" xsi:type="q8:guid">f0f5f8f4-0a5a-4f9e-957b-026d8f75a377</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -780,6 +781,10 @@
             <Properties>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Result</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -810,11 +815,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>EndElementID</Name>
-                    <Value xmlns:q10="http://microsoft.com/wsdl/types/" xsi:type="q10:guid">67ff2a33-7cd3-4035-8243-43aaade2bd33</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Result</Name>
+                    <Value xmlns:q10="http://microsoft.com/wsdl/types/" xsi:type="q10:guid">5075caca-714a-472c-b5a3-5f3d752be407</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -861,7 +862,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>ComponentID</Name>
-                    <Value xmlns:q11="http://microsoft.com/wsdl/types/" xsi:type="q11:guid">51678d0c-8772-4ff0-9969-b8269ec7abdd</Value>
+                    <Value xmlns:q11="http://microsoft.com/wsdl/types/" xsi:type="q11:guid">7b2ea645-9d11-4de4-9c2e-32b17611ca35</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -903,6 +904,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -912,6 +922,10 @@
             <ClassName>LTools.Workflow.Elements.Workflow.WFWorkflowPath</ClassName>
             <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
             <Properties>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Result</Name>
+                </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
@@ -934,21 +948,17 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>EndItemPointIndex</Name>
-                    <Value xsi:type="xsd:int">0</Value>
+                    <Value xsi:type="xsd:int">-1</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>StartElementID</Name>
-                    <Value xmlns:q12="http://microsoft.com/wsdl/types/" xsi:type="q12:guid">67ff2a33-7cd3-4035-8243-43aaade2bd33</Value>
+                    <Value xmlns:q12="http://microsoft.com/wsdl/types/" xsi:type="q12:guid">5075caca-714a-472c-b5a3-5f3d752be407</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>EndElementID</Name>
-                    <Value xmlns:q13="http://microsoft.com/wsdl/types/" xsi:type="q13:guid">892f1797-2fc4-4b35-a019-58582c82f01c</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Result</Name>
+                    <Value xmlns:q13="http://microsoft.com/wsdl/types/" xsi:type="q13:guid">2eb63a01-9300-474f-957a-c7e0b1ce71dd</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -995,7 +1005,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>ComponentID</Name>
-                    <Value xmlns:q14="http://microsoft.com/wsdl/types/" xsi:type="q14:guid">7ca11d36-02ae-4aea-8130-1035b31442b1</Value>
+                    <Value xmlns:q14="http://microsoft.com/wsdl/types/" xsi:type="q14:guid">6a78c32c-216e-447e-8023-7c0d3b292985</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -1037,6 +1047,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1045,31 +1064,35 @@
     </Components>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>text</Name>
-            <Group />
-            <DataTypeString>System.Collections.Generic.List&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;</DataTypeString>
-            <Direction>IN_OUT</Direction>
-        </ScriptVariable>
-        <ScriptVariable>
-            <Name>tableWIthInfo</Name>
-            <Group />
-            <DataTypeString>System.Data.DataTable</DataTypeString>
-            <Direction>IN_OUT</Direction>
-        </ScriptVariable>
-        <ScriptVariable>
-            <Name>infoTable</Name>
-            <Group />
-            <DataTypeString>System.Collections.Generic.List&lt;System.Collections.Generic.List&lt;LTools.Office.Model.ExcelCellInfo&gt;&gt;</DataTypeString>
-            <Direction>IN_OUT</Direction>
-        </ScriptVariable>
-        <ScriptVariable>
-            <Name>googleDocID</Name>
+            <Name>strGoogleDocID</Name>
             <Group />
             <DefaultValue xsi:type="xsd:string" />
             <Comment>ID документа Google Sheets</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
+        <ScriptVariable>
+            <Name>listText</Name>
+            <Group />
+            <Comment>Данные,полученные из документа Google Sheets в виде списка списков строк</Comment>
+            <DataTypeString>System.Collections.Generic.List&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;</DataTypeString>
+            <Direction>IN_OUT</Direction>
+        </ScriptVariable>
+        <ScriptVariable>
+            <Name>listInfoTable</Name>
+            <Group />
+            <Comment>Данные,полученные из документа Google Sheets в виде информации о ячейках</Comment>
+            <DataTypeString>System.Collections.Generic.List&lt;System.Collections.Generic.List&lt;LTools.Office.Model.ExcelCellInfo&gt;&gt;</DataTypeString>
+            <Direction>IN_OUT</Direction>
+        </ScriptVariable>
+        <ScriptVariable>
+            <Name>dtWIthInfo</Name>
+            <Group />
+            <Comment>Данные,полученные из документа Google Sheets в виде таблицы</Comment>
+            <DataTypeString>System.Data.DataTable</DataTypeString>
+            <Direction>IN_OUT</Direction>
+        </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

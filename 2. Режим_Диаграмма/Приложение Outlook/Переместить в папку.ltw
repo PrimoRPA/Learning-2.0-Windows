@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -186,6 +190,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -362,6 +370,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -459,12 +471,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Активность «Переместить в папку» в Primo RPA предназначена для автоматического перемещения электронных писем в Microsoft Outlook из одной папки в другую. Это может быть полезно для организации и управления электронной корреспонденцией, например, для автоматической сортировки писем по категориям или архивирования обработанных сообщений.
-
-Свойства активности «Переместить в папку»:
-
-Папка назначения: выбор папки, в которую будут перемещены выбранные письма. Это может быть любая папка в Outlook, например, «Входящие», «Отправленные», «Архив» и т. д. Для пути к папке необходимо указывать электронный ящик аакаунта в Outlook
-Письма: выбор писем, которые будут перемещены. Необходимо передать список писем, который был получен ранее в процессе работы</Value>
+                    <Value xsi:type="xsd:string">Контейнер с элементом Переместить в папку</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -542,6 +549,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -655,7 +666,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Variable</Name>
-                                    <Value xsi:type="xsd:string">mailList</Value>
+                                    <Value xsi:type="xsd:string">listMails</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -774,7 +785,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Msg</Name>
-                                    <Value xsi:type="xsd:string">mailList</Value>
+                                    <Value xsi:type="xsd:string">listMails</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -862,6 +873,10 @@
             <Properties>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Result</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -893,10 +908,6 @@
                     <IsListValue>false</IsListValue>
                     <Name>EndElementID</Name>
                     <Value xmlns:q11="http://microsoft.com/wsdl/types/" xsi:type="q11:guid">5698503e-e327-47ad-b3bb-8f7596f8a55f</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Result</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -985,6 +996,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -993,7 +1013,7 @@
     </Components>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>mailList</Name>
+            <Name>listMails</Name>
             <Group />
             <Comment>Список полученных писем</Comment>
             <DataTypeString>System.Collections.Generic.List&lt;LTools.Office.Model.OMailMessage&gt;</DataTypeString>
@@ -1001,4 +1021,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

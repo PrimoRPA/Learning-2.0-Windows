@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -186,6 +190,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -362,6 +370,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -459,9 +471,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Активность «Закрыть Outlook» в Primo RPA предназначена для автоматического закрытия программы Microsoft Outlook. Это может быть полезно для завершения работы с почтовым клиентом в рамках автоматизированного процесса, например, после выполнения определённых задач по обработке писем или при завершении рабочего процесса.
-
-Активностьработает корректно только в контейнере "Приложение Outlook"</Value>
+                    <Value xsi:type="xsd:string">Контейнер с элементом Закрыть Outlook</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -539,6 +549,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -646,19 +660,12 @@
                             <Properties>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
+                                    <Name>TextTag</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
                                     <Name>ComponentName</Name>
                                     <Value xsi:type="xsd:string">Закрыть Outlook</Value>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>Annotation</Name>
-                                    <Value xsi:type="xsd:string">Активность «Закрыть Outlook» в Primo RPA предназначена для автоматического закрытия программы Microsoft Outlook. Это может быть полезно для завершения работы с почтовым клиентом в рамках автоматизированного процесса, например, после выполнения определённых задач по обработке писем или при завершении рабочего процесса.
-
-Активностьработает корректно только в контейнере "Приложение Outlook"</Value>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>TextTag</Name>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -667,6 +674,13 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>WaitAfter</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>Annotation</Name>
+                                    <Value xsi:type="xsd:string">Активность «Закрыть Outlook» в Primo RPA предназначена для автоматического закрытия программы Microsoft Outlook. Это может быть полезно для завершения работы с почтовым клиентом в рамках автоматизированного процесса, например, после выполнения определённых задач по обработке писем или при завершении рабочего процесса.
+
+Активность работает корректно только в контейнере "Приложение Outlook"</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -727,6 +741,10 @@
             <Properties>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Result</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -758,10 +776,6 @@
                     <IsListValue>false</IsListValue>
                     <Name>EndElementID</Name>
                     <Value xmlns:q10="http://microsoft.com/wsdl/types/" xsi:type="q10:guid">66b3e32b-e572-4c77-a3e2-fbd8f1639638</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Result</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -850,6 +864,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -858,4 +881,5 @@
     </Components>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

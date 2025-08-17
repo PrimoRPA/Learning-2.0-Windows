@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -108,19 +112,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Элемент осуществляет удаление колонок выбранного листа в книге Excel, указанной в контенере "Приложение Excel".  Индекс колонки, с которой необходимо начать удаление, и количество удаляемых колонок необходимо задать в свойствах.
-
-Для работы с элементом необходимо заполнить обязательные свойства:
-
-Индекс: номер колонки,с которой необходимо начать удаление колонок в документе Excel. Нумерация начинается с 1
-Кол-во: количество колонок для удаления
-
-Дополнительные свойства заполняются в случае необходимости:
-
-Страница: название страницы, на которой будут удалены колонки в документе Excel, указанном в контейнере Приложение Excel
-Индекс страницы: порядковый номер страницы, на которой необходимо удалить колонки. Нумерация начинается с нуля.
-
-В случае если не указан индекс страницы или название страницы данные будут удалены с первого листа книги</Value>
+                    <Value xsi:type="xsd:string">Контейнер с элементом Удаление колонок</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -199,6 +191,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -209,13 +205,8 @@
                     <Properties>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
-                            <Name>ComponentName</Name>
-                            <Value xsi:type="xsd:string">Приложение Excel</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string" />
+                            <Name>FileName</Name>
+                            <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -231,11 +222,6 @@
                             <IsListValue>false</IsListValue>
                             <Name>R1C1</Name>
                             <Value xsi:type="xsd:boolean">false</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>FileName</Name>
-                            <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -290,11 +276,21 @@
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
+                            <Name>ComponentName</Name>
+                            <Value xsi:type="xsd:string">Приложение Excel</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
                             <Name>WaitBefore</Name>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>WaitAfter</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Annotation</Name>
+                            <Value xsi:type="xsd:string" />
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -388,15 +384,17 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Annotation</Name>
-                                    <Value xsi:type="xsd:string">Для работы с элементом необходимо заполнить обязательные свойства:
+                                    <Value xsi:type="xsd:string">Элемент осуществляет удаление колонок выбранного листа в книге Excel, указанной в контенере "Приложение Excel".  Индекс колонки, с которой необходимо начать удаление, и количество удаляемых колонок необходимо задать в свойствах.
 
-Индекс: нмоер колонки,с которой необходимо начать удаление колонок в документе Excel. Нумерация начинается с 1
+Для работы с элементом необходимо заполнить обязательные свойства:
+
+Индекс: номер колонки,с которой необходимо начать удаление колонок в документе Excel. Нумерация начинается с 1
 Кол-во: количество колонок для удаления
 
 Дополнительные свойства заполняются в случае необходимости:
 
-Страница: название страницы, на которой будет удален диапазон данных в документе Excel, указанном в контейнере Приложение Excel
-Индекс страницы: порядковый номер страницы, на которой необходимо удалить данные. Нумерация начинается с нуля.
+Страница: название страницы, на которой будут удалены колонки в документе Excel, указанном в контейнере Приложение Excel
+Индекс страницы: порядковый номер страницы, на которой необходимо удалить колонки. Нумерация начинается с нуля.
 
 В случае если не указан индекс страницы или название страницы данные будут удалены с первого листа книги</Value>
                                 </SerializationItem>
@@ -478,7 +476,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Annotation</Name>
-                                    <Value xsi:type="xsd:string">Для просмотра внесенных изменений необходимо сохранить документ. Подробнее о данном элеменете можно узнать в последвоательности "Сохранить документ.ltw"</Value>
+                                    <Value xsi:type="xsd:string">Для просмотра внесенных изменений необходимо сохранить документ. Подробнее о данном элементе можно узнать в последовательности "Сохранить документ.ltw"</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -624,6 +622,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -736,7 +738,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">188.3566666666668</Value>
+                    <Value xsi:type="xsd:double">236.3566666666668</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -800,6 +802,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -901,7 +907,24 @@
                 <SerializationItem>
                     <IsListValue>true</IsListValue>
                     <Name>PointsList</Name>
-                    <ListValue />
+                    <ListValue>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>PointsList</Name>
+                            <Value xsi:type="Point">
+                                <X>568</X>
+                                <Y>147</Y>
+                            </Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>PointsList</Name>
+                            <Value xsi:type="Point">
+                                <X>568.03666666666663</X>
+                                <Y>147</Y>
+                            </Value>
+                        </SerializationItem>
+                    </ListValue>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -1015,6 +1038,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1023,4 +1055,5 @@
     </Components>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

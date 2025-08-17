@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -117,12 +121,16 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">444.00499999999994</Value>
+                    <Value xsi:type="xsd:double">443</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">182.03999999999996</Value>
+                    <Value xsi:type="xsd:double">153.03999999999996</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -290,7 +298,9 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Чтобы содать папку, необходимо указать свойство "Путь", путь может быть абсолютный или относительный
+                    <Value xsi:type="xsd:string">Этот компонент предназначен для создания новых папок в системе. Он позволяет быстро и удобно организовать хранение файлов, разделяя их по категориям или проектам.
+
+Чтобы содать папку, необходимо указать свойство "Путь", путь может быть абсолютный или относительный
 
 *В случае, если в указанном пути нет одной из промежуточных папок, она будет создана автоматически
 *В случае, если создается папка с таким же названием, ничего не произойдет, файлы из уже существующей папки не будут удалены</Value>
@@ -302,12 +312,16 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">444.005</Value>
+                    <Value xsi:type="xsd:double">443</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">316.03999999999996</Value>
+                    <Value xsi:type="xsd:double">320.03999999999996</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -405,7 +419,9 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string">Чтобы содать папку, необходимо указать свойство "Путь", путь может быть абсолютный или относительный
+                            <Value xsi:type="xsd:string">Этот компонент предназначен для создания новых папок в системе. Он позволяет быстро и удобно организовать хранение файлов, разделяя их по категориям или проектам.
+
+Чтобы содать папку, необходимо указать свойство "Путь", путь может быть абсолютный или относительный
 
 *В случае, если в указанном пути нет одной из промежуточных папок, она будет создана автоматически
 *В случае, если создается папка с таким же названием, ничего не произойдет, файлы из уже существующей папки не будут удалены</Value>
@@ -476,24 +492,7 @@
                 <SerializationItem>
                     <IsListValue>true</IsListValue>
                     <Name>PointsList</Name>
-                    <ListValue>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>PointsList</Name>
-                            <Value xsi:type="Point">
-                                <X>568</X>
-                                <Y>165</Y>
-                            </Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>PointsList</Name>
-                            <Value xsi:type="Point">
-                                <X>567.93833333333328</X>
-                                <Y>165</Y>
-                            </Value>
-                        </SerializationItem>
-                    </ListValue>
+                    <ListValue />
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -607,6 +606,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -627,24 +635,7 @@
                 <SerializationItem>
                     <IsListValue>true</IsListValue>
                     <Name>PointsList</Name>
-                    <ListValue>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>PointsList</Name>
-                            <Value xsi:type="Point">
-                                <X>567.93833333333328</X>
-                                <Y>299</Y>
-                            </Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>PointsList</Name>
-                            <Value xsi:type="Point">
-                                <X>568</X>
-                                <Y>299</Y>
-                            </Value>
-                        </SerializationItem>
-                    </ListValue>
+                    <ListValue />
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -758,6 +749,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -768,9 +768,11 @@
         <ScriptVariable>
             <Name>strFolderPath</Name>
             <Group />
+            <Comment>Путь до создаваемой папки</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент используется для удаления почтовых сообщений по протоколу IMAP</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -170,6 +170,16 @@
                 <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
                 <Properties>
                     <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>ComponentName</Name>
+                        <Value xsi:type="xsd:string">Множественное присвоение</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Annotation</Name>
+                        <Value xsi:type="xsd:string">Внесите в данные переменные собственные данные для учетной записи</Value>
+                    </SerializationItem>
+                    <SerializationItem>
                         <IsListValue>true</IsListValue>
                         <Name>Items</Name>
                         <ListValue>
@@ -177,7 +187,7 @@
                                 <IsListValue>false</IsListValue>
                                 <Name>Items</Name>
                                 <Value xsi:type="MultipleAssignItem">
-                                    <Variable>userName</Variable>
+                                    <Variable>strUserName</Variable>
                                     <IsNoCodeVariable>false</IsNoCodeVariable>
                                     <Assign>""</Assign>
                                     <IsNoCodeAssign>false</IsNoCodeAssign>
@@ -187,7 +197,7 @@
                                 <IsListValue>false</IsListValue>
                                 <Name>Items</Name>
                                 <Value xsi:type="MultipleAssignItem">
-                                    <Variable>userPass</Variable>
+                                    <Variable>strUserPass</Variable>
                                     <IsNoCodeVariable>false</IsNoCodeVariable>
                                     <Assign>""</Assign>
                                     <IsNoCodeAssign>false</IsNoCodeAssign>
@@ -197,7 +207,7 @@
                                 <IsListValue>false</IsListValue>
                                 <Name>Items</Name>
                                 <Value xsi:type="MultipleAssignItem">
-                                    <Variable>ImapServer</Variable>
+                                    <Variable>strImapServer</Variable>
                                     <IsNoCodeVariable>false</IsNoCodeVariable>
                                     <Assign>"imap.yandex.ru"</Assign>
                                     <IsNoCodeAssign>false</IsNoCodeAssign>
@@ -211,21 +221,11 @@
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
-                        <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Множественное присвоение</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
                         <Name>WaitBefore</Name>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>WaitAfter</Name>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Внесите в данные переменные собственные данные для учетной записи</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -288,7 +288,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Server</Name>
-                        <Value xsi:type="xsd:string">ImapServer</Value>
+                        <Value xsi:type="xsd:string">strImapServer</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -298,12 +298,12 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Login</Name>
-                        <Value xsi:type="xsd:string">userName</Value>
+                        <Value xsi:type="xsd:string">strUserName</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Password</Name>
-                        <Value xsi:type="xsd:string">userPass</Value>
+                        <Value xsi:type="xsd:string">strUserPass</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -393,7 +393,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Result</Name>
-                        <Value xsi:type="xsd:string">emailList</Value>
+                        <Value xsi:type="xsd:string">listEmail</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -472,12 +472,12 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Messages</Name>
-                        <Value xsi:type="xsd:string">emailList</Value>
+                        <Value xsi:type="xsd:string">listEmail</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Server</Name>
-                        <Value xsi:type="xsd:string">ImapServer</Value>
+                        <Value xsi:type="xsd:string">strImapServer</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -487,12 +487,12 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Login</Name>
-                        <Value xsi:type="xsd:string">userName</Value>
+                        <Value xsi:type="xsd:string">strUserName</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Password</Name>
-                        <Value xsi:type="xsd:string">userPass</Value>
+                        <Value xsi:type="xsd:string">strUserPass</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -556,7 +556,7 @@
 Порт: номер порта, используемого для подключения к серверу IMAP.
 SSL: опция для использования защищённого соединения SSL при подключении к серверу IMAP.
 Папка источник: папка на сервере IMAP, из которой будут удалены письма.
-Сообщения: для удаления писем неободимо передать их в активность в свойство "Письма". Вы можете считать необходимые письма соответствующей активностью и передать переменную со списком писем в соответствующее свойство.</Value>
+Сообщения: для удаления писем необходимо передать их в активность в свойство "Письма". Вы можете считать необходимые письма соответствующей активностью и передать переменную со списком писем в соответствующее свойство.</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -611,28 +611,28 @@ SSL: опция для использования защищённого сое�
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>userPass</Name>
+            <Name>strUserPass</Name>
             <Group />
             <Comment>Пароль пользователя дляотправки писем</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>userName</Name>
+            <Name>strUserName</Name>
             <Group />
             <Comment>Логин пользователядля отправки писем</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>emailList</Name>
+            <Name>listEmail</Name>
             <Group />
             <Comment>Список писем,полученных по IMAP</Comment>
             <DataTypeString>System.Collections.Generic.List&lt;LTools.Network.Model.EMail.MailMessage&gt;</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>ImapServer</Name>
+            <Name>strImapServer</Name>
             <Group />
             <Comment>Сервер для работы с почтой</Comment>
             <DataTypeString>String</DataTypeString>
@@ -640,4 +640,5 @@ SSL: опция для использования защищённого сое�
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

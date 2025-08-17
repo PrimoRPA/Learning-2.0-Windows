@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент, вставляющий таблицу в документ</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -171,23 +171,13 @@
                 <Properties>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
-                        <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Документ Word</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string" />
+                        <Name>FileName</Name>
+                        <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Word\Входные данные\Информация об RPA.docx"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>InteropType</Name>
                         <Value xsi:type="xsd:int">0</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>FileName</Name>
-                        <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Word\Входные данные\Информация об RPA.docx"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -217,11 +207,21 @@
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
+                        <Name>ComponentName</Name>
+                        <Value xsi:type="xsd:string">Документ Word</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
                         <Name>WaitBefore</Name>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>WaitAfter</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Annotation</Name>
+                        <Value xsi:type="xsd:string" />
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -279,7 +279,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>On</Name>
-                                <Value xsi:type="xsd:boolean">true</Value>
+                                <Value xsi:type="xsd:boolean">false</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -448,7 +448,7 @@
                                         <Value xsi:type="xsd:boolean">true</Value>
                                     </SerializationItem>
                                 </Properties>
-                                <IsBreakpoint>false</IsBreakpoint>
+                                <IsBreakpoint>true</IsBreakpoint>
                                 <IsIgnore>false</IsIgnore>
                             </SerializationComponent>
                             <SerializationComponent>
@@ -645,21 +645,6 @@
                                 <Properties>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
-                                        <Name>ComponentName</Name>
-                                        <Value xsi:type="xsd:string">Вставить таблицу</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
-                                        <Name>Annotation</Name>
-                                        <Value xsi:type="xsd:string">Элемент добавляет таблицу в документ, для этого необходимо указать таблицу в свойстве "Таблица"
-
-Для работы с элементом можно заполнить свойства:
-Закладка: Свойство используется в случае, если нужно вставить таблицу от закладки. Для того чтобы свойство отработало необходимо чтобы в документе была создана закладка. Если свойство используется а закладок в документе нет бует получена ошибка
-
-В случае, если необходимо добавить заголовок таблицы в документе, то необходимо название столбцов вносить как первую строку таблицы.</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
                                         <Name>Bookmark</Name>
                                         <Value xsi:type="xsd:string">"BookmarkPrimo"</Value>
                                     </SerializationItem>
@@ -679,11 +664,26 @@
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
+                                        <Name>ComponentName</Name>
+                                        <Value xsi:type="xsd:string">Вставить таблицу</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
                                         <Name>WaitBefore</Name>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
                                         <Name>WaitAfter</Name>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
+                                        <Name>Annotation</Name>
+                                        <Value xsi:type="xsd:string">Элемент добавляет таблицу в документ, для этого необходимо указать таблицу в свойстве "Таблица"
+
+Для работы с элементом можно заполнить свойства:
+Закладка: Свойство используется в случае, если нужно вставить таблицу от закладки. Для того чтобы свойство отработало необходимо чтобы в документе была создана закладка. Если свойство используется а закладок в документе нет бует получена ошибка
+
+В случае, если необходимо добавить заголовок таблицы в документе, то необходимо название столбцов вносить как первую строку таблицы.</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -731,7 +731,7 @@
                                         <Value xsi:type="xsd:boolean">true</Value>
                                     </SerializationItem>
                                 </Properties>
-                                <IsBreakpoint>false</IsBreakpoint>
+                                <IsBreakpoint>true</IsBreakpoint>
                                 <IsIgnore>false</IsIgnore>
                             </SerializationComponent>
                             <SerializationComponent>
@@ -825,19 +825,6 @@
                                 <Properties>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
-                                        <Name>ComponentName</Name>
-                                        <Value xsi:type="xsd:string">Вставить таблицу</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
-                                        <Name>Annotation</Name>
-                                        <Value xsi:type="xsd:string">Элемент добавляет лист строк в документ, для этого необходимо указать лист строк в свойстве "Данные"
- 
-Для работы с элементом можно заполнить свойства:
-Закладка: Свойство используется в случае, если нужно вставить таблицу от закладки. Для того чтобы свойство отработало необходимо чтобы в документе была создана закладка. Если свойство используется а закладок в документе нет бует получена ошибка</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
                                         <Name>Bookmark</Name>
                                         <Value xsi:type="xsd:string">"BookmarkPrimo"</Value>
                                     </SerializationItem>
@@ -857,11 +844,26 @@
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
+                                        <Name>ComponentName</Name>
+                                        <Value xsi:type="xsd:string">Вставить таблицу</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
                                         <Name>WaitBefore</Name>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
                                         <Name>WaitAfter</Name>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
+                                        <Name>Annotation</Name>
+                                        <Value xsi:type="xsd:string">Элемент, вставляющий таблицу в документ
+
+Элемент добавляет лист строк в документ, для этого необходимо указать лист строк в свойстве "Данные"
+ 
+Для работы с элементом можно заполнить свойства:
+Закладка: Свойство используется в случае, если нужно вставить таблицу от закладки. Для того чтобы свойство отработало необходимо чтобы в документе была создана закладка. Если свойство используется а закладок в документе нет бует получена ошибка</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -909,7 +911,7 @@
                                         <Value xsi:type="xsd:boolean">true</Value>
                                     </SerializationItem>
                                 </Properties>
-                                <IsBreakpoint>false</IsBreakpoint>
+                                <IsBreakpoint>true</IsBreakpoint>
                                 <IsIgnore>false</IsIgnore>
                             </SerializationComponent>
                         </Components>
@@ -1002,15 +1004,18 @@
         <ScriptVariable>
             <Name>dtTable</Name>
             <Group />
+            <Comment>Таблица с данными</Comment>
             <DataTypeString>System.Data.DataTable</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
             <Name>listString</Name>
             <Group />
+            <Comment>Список с данными</Comment>
             <DataTypeString>System.Collections.Generic.List&lt;System.String&gt;</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

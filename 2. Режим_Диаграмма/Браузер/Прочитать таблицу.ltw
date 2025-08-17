@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -117,12 +121,12 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">210</Value>
+                    <Value xsi:type="xsd:double">136</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">33.723333333333329</Value>
+                    <Value xsi:type="xsd:double">49.999999999999972</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -186,6 +190,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -283,14 +291,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Для корректной работы элемента его необходимо использовать в контейнере "Открыть браузер" или "Присоединиться к браузеру".
-
-Для работы с активностью необходимо заполнить следующие обязательные свойства: 
-Тэг заголовка, Тэг колонки, Тэг строки: Тэги, соответствующие тэгам сайта, с которым производится работа
-Также необходимо указать переменную, в которую будет записываться результат чтения. Можно указать в формате DataTable или в WebDataTable, в зависимости от того, что необходимо сделать в дальнейшем. Описание типа WebDataTable приведено в сновке и в документации.
-
-Для того, чтобы выбрать данные для считывания можно воспользоваться стандартным формированием шаблона поиска через волшебную палочку. Также возможна работа с мастером чтения таблиц. Для этого необходимо нажать на кнопку "Мастер" в активности. В окне мастера приведена подробная инструкция по работе с ним. Кроме того, можно обратиться в документацию, чтобы получить примеры заполнения со скриншотами:
-https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_browser/el_browser_gettable</Value>
+                    <Value xsi:type="xsd:string">Контейнер с элементом Прочитать таблицу</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -299,7 +300,7 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_browser/el_browser_g
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">444.15</Value>
+                    <Value xsi:type="xsd:double">443</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -369,6 +370,10 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_browser/el_browser_g
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -379,17 +384,8 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_browser/el_browser_g
                     <Properties>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
-                            <Name>ComponentName</Name>
-                            <Value xsi:type="xsd:string">Открыть браузер</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string">Подробное описание активности приведено
- в последовательности "Открыть браузер.ltw"
-
-Для того, чтобы страница браузера всегда была актуальна, 
-в url адрес добавляется текущая дата</Value>
+                            <Name>URL</Name>
+                            <Value xsi:type="xsd:string">"https://www.cbr.ru/currency_base/daily/?UniDbQuery.Posted=True&amp;UniDbQuery.To=" + DateTime.Now.ToString("dd.MM.yyyy")</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -400,11 +396,6 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_browser/el_browser_g
                             <IsListValue>false</IsListValue>
                             <Name>Headless</Name>
                             <Value xsi:type="xsd:boolean">false</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>URL</Name>
-                            <Value xsi:type="xsd:string">"https://www.cbr.ru/currency_base/daily/?UniDbQuery.Posted=True&amp;UniDbQuery.To=" + DateTime.Now.ToString("dd.MM.yyyy")</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -448,11 +439,25 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_browser/el_browser_g
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
+                            <Name>ComponentName</Name>
+                            <Value xsi:type="xsd:string">Открыть браузер</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
                             <Name>WaitBefore</Name>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>WaitAfter</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Annotation</Name>
+                            <Value xsi:type="xsd:string">Подробное описание активности приведено
+ в последовательности "Открыть браузер.ltw"
+
+Для того, чтобы страница браузера всегда была актуальна, 
+в url адрес добавляется текущая дата</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -548,7 +553,7 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_browser/el_browser_g
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Text2</Name>
-                                    <Value xsi:type="xsd:string">tableInfo</Value>
+                                    <Value xsi:type="xsd:string">dtInfo</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -632,6 +637,80 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_browser/el_browser_g
                             <IsBreakpoint>false</IsBreakpoint>
                             <IsIgnore>false</IsIgnore>
                         </SerializationComponent>
+                        <SerializationComponent>
+                            <ClassName>LTools.WebBrowser.Elements.WFCloseBrowser</ClassName>
+                            <AssemblyName>LTools.WebBrowser, Version=1.0.4.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+                            <Properties>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>ComponentName</Name>
+                                    <Value xsi:type="xsd:string">Закрыть браузер</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>Annotation</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>TextTag</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>WaitBefore</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>WaitAfter</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>ComponentID</Name>
+                                    <Value xmlns:q7="http://microsoft.com/wsdl/types/" xsi:type="q7:guid">7a7bafb1-79af-406a-afcf-a7a27e59d86c</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>ContinueOnException</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>PreventLogging</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>SSSuccess</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>SSFail</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>true</IsListValue>
+                                    <Name>NoCodeProperties</Name>
+                                    <ListValue />
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>NoCodeUsed</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>IsCollapsed</Name>
+                                    <Value xsi:type="xsd:boolean">true</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>ShowAnnotation</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                            </Properties>
+                            <IsBreakpoint>false</IsBreakpoint>
+                            <IsIgnore>false</IsIgnore>
+                        </SerializationComponent>
                     </Components>
                 </SerializationComponent>
             </Components>
@@ -671,12 +750,12 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_browser/el_browser_g
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>StartElementID</Name>
-                    <Value xmlns:q7="http://microsoft.com/wsdl/types/" xsi:type="q7:guid">a23672f7-1140-43de-8aa9-cddc5cc8a99f</Value>
+                    <Value xmlns:q8="http://microsoft.com/wsdl/types/" xsi:type="q8:guid">a23672f7-1140-43de-8aa9-cddc5cc8a99f</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>EndElementID</Name>
-                    <Value xmlns:q8="http://microsoft.com/wsdl/types/" xsi:type="q8:guid">3a0ca49b-c47d-48bc-b3c0-fdf3864d193f</Value>
+                    <Value xmlns:q9="http://microsoft.com/wsdl/types/" xsi:type="q9:guid">3a0ca49b-c47d-48bc-b3c0-fdf3864d193f</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -723,7 +802,7 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_browser/el_browser_g
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>ComponentID</Name>
-                    <Value xmlns:q9="http://microsoft.com/wsdl/types/" xsi:type="q9:guid">4f591fb6-7aee-4bf9-aef4-397166661c15</Value>
+                    <Value xmlns:q10="http://microsoft.com/wsdl/types/" xsi:type="q10:guid">4f591fb6-7aee-4bf9-aef4-397166661c15</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -765,6 +844,15 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_browser/el_browser_g
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -773,7 +861,7 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_browser/el_browser_g
     </Components>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>tableInfo</Name>
+            <Name>dtInfo</Name>
             <Group />
             <DefaultValue xsi:type="xsd:string" />
             <Comment>Переменная для сохранения результатов</Comment>
@@ -782,4 +870,5 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_browser/el_browser_g
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

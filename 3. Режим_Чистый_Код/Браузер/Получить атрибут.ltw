@@ -58,7 +58,7 @@ public class PrimoScript
 		LTools.WebBrowser.BrowserApp app = LTools.WebBrowser.BrowserApp.Open(wf, LTools.WebBrowser.Model.BrowserTypes.Chrome, "https://www.google.com/"); // открыть браузер
 		System.Threading.Thread.Sleep(5000); // Ожидание 5 секунд для загрузки страницы
 
-		List&lt;String&gt; txt = app.GetAttribute("{\"Tag\":\"IMG\",\"Attributes\":[{\"Key\":\"CLASS\",\"Value\":\"lnXdpd\"}]}", "src", 10000);
+		List&lt;String&gt; strAttributeResult = app.GetAttribute("{\"Tag\":\"IMG\",\"Attributes\":[{\"Key\":\"CLASS\",\"Value\":\"lnXdpd\"}]}", "src", 10000);
 
 		//app.Close(); //Компонент, завершающий работу браузера.
     }
@@ -71,4 +71,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

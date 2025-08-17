@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -107,11 +111,6 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Компонент, открывающий диалоговое окно для выбора файла</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -141,6 +140,11 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Компонент, открывающий диалоговое окно для выбора файла</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -186,6 +190,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -282,21 +290,6 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Активность отображает диалог, для выбора файла или папка. Элемент можно применять для взаимодействия пользователя с роботом.
-
-Для работы с активностью необходимо задать ширину и высоту окна, которое будет отображено во время работы. По умолчанию значения уже установлены, но в случае, если вам необходим поясняющий текст рекомендуется увеличить высоту окна.
-Для того, чтобы пользователь знал, что от него ожидается следует указать свойства "Заголовок" и "Текст". В данных полях указывается информация в свободной форме.
-
-Чтобы получить путь до файла или папки, которые пользователь выберет, необходимо задать переменную в свойство "Результат". Переменная необходимо в формате String.
-
-Свойство "Тип диалога" необходимо чтобы переключиться на выбор папки в случае необходимости.
-
-Диалог ввода отображается на экране до тех пор, пока пользователь его не закроет нажатием на кнопку "Окей" или на крестик.
-</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -326,6 +319,21 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Активность отображает диалог, для выбора файла или папки. Элемент можно применять для взаимодействия пользователя с роботом.
+
+Для работы с активностью необходимо задать ширину и высоту окна, которое будет отображено во время работы. По умолчанию значения уже установлены, но в случае, если вам необходим поясняющий текст рекомендуется увеличить высоту окна.
+Для того, чтобы пользователь знал, что от него ожидается следует указать свойства "Заголовок" и "Текст". В данных полях указывается информация в свободной форме.
+
+Чтобы получить путь до файла или папки, которые пользователь выберет, необходимо задать переменную в свойство "Результат". Переменная необходима в формате String.
+
+Свойство "Тип диалога" необходимо чтобы переключиться на выбор папки в случае необходимости.
+
+Диалог ввода отображается на экране до тех пор, пока пользователь его не закроет нажатием на кнопку "Окей" или на крестик.
+</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -372,6 +380,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -393,7 +405,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Result</Name>
-                            <Value xsi:type="xsd:string">filePath</Value>
+                            <Value xsi:type="xsd:string">strFilePath</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -430,12 +442,12 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string">Активность отображает диалог, для выбора файла или папка. Элемент можно применять для взаимодействия пользователя с роботом.
+                            <Value xsi:type="xsd:string">Активность отображает диалог, для выбора файла или папки. Элемент можно применять для взаимодействия пользователя с роботом.
 
 Для работы с активностью необходимо задать ширину и высоту окна, которое будет отображено во время работы. По умолчанию значения уже установлены, но в случае, если вам необходим поясняющий текст рекомендуется увеличить высоту окна.
 Для того, чтобы пользователь знал, что от него ожидается следует указать свойства "Заголовок" и "Текст". В данных полях указывается информация в свободной форме.
 
-Чтобы получить путь до файла или папки, которые пользователь выберет, необходимо задать переменную в свойство "Результат". Переменная необходимо в формате String.
+Чтобы получить путь до файла или папки, которые пользователь выберет, необходимо задать переменную в свойство "Результат". Переменная необходима в формате String.
 
 Свойство "Тип диалога" необходимо чтобы переключиться на выбор папки в случае необходимости.
 
@@ -622,6 +634,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -630,7 +651,7 @@
     </Components>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>filePath</Name>
+            <Name>strFilePath</Name>
             <Group />
             <Comment>Путь до выбранного файла</Comment>
             <DataTypeString>System.String</DataTypeString>
@@ -638,4 +659,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

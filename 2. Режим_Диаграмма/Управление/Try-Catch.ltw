@@ -92,6 +92,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -202,6 +206,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -210,6 +218,31 @@
                     <ClassName>LTools.Workflow.Elements.WFTryCatch</ClassName>
                     <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
                     <Properties>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>ComponentName</Name>
+                            <Value xsi:type="xsd:string">Try-Catch</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Annotation</Name>
+                            <Value xsi:type="xsd:string">В случае, если в блоке Try произойдет ошибка (предусмотренная или не предусмотренная) 
+робот перейтет в блок Catch для выполнения сценария обработки ошибки. Блок Finally будет 
+выполнен в любом случае, даже если в блоке Catch снова возникла ошибка (как правило, не 
+пердусмотренная)
+
+В случаях, когда необходимо выйти из ltw после получения ошибки в блоке Try используется:
+1) Оборачивание всего сценария в Try-Catch
+2) Активность повтор исключения (процесс пойдет искать Try-Catch оборачивающий ltw в котором вызвана ошибка)
+3) Активность исключение (процесс пойдет искать Try-Catch оборачивающий ltw в котором вызвана ошибка)
+4) Активность выход из процесса 
+*Любой из вариантов, в любом случае, выполнит действия в блоке Finally
+
+Данная активность имеет следующие свойства:
+1) Исключение - переменная содержащая информацию о текущей ошибке
+2) Скриншот исключения - будет создана папка .Screenshots в корневой папке проекта, 
+куда будут добавляться снимки экрана во время ошибки</Value>
+                        </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Exc</Name>
@@ -241,36 +274,11 @@
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
-                            <Name>ComponentName</Name>
-                            <Value xsi:type="xsd:string">Try-Catch</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
                             <Name>WaitBefore</Name>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>WaitAfter</Name>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string">В случае, если в блоке Try произойдет ошибка (предусмотренная или не предусмотренная) 
-робот перейтет в блок Catch для выполнения сценария обработки ошибки. Блок Finally будет 
-выполнен в любом случае, даже если в блоке Catch снова возникла ошибка (как правило, не 
-пердусмотренная)
-
-В случаях, когда необходимо выйти из ltw после получения ошибки в блоке Try используется:
-1) Оборачивание всего сценария в Try-Catch
-2) Активность повтор исключения (процесс пойдет искать Try-Catch оборачивающий ltw в котором вызвана ошибка)
-3) Активность исключение (процесс пойдет искать Try-Catch оборачивающий ltw в котором вызвана ошибка)
-4) Активность выход из процесса 
-*Любой из вариантов, в любом случае, выполнит действия в блоке Finally
-
-Данная активность имеет следующие свойства:
-1) Исключение - переменная содержащая информацию о текущей ошибке
-2) Скриншот исключения - будет создана папка .Screenshots в корневой папке проекта, 
-куда будут добавляться снимки экрана во время ошибки</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -683,12 +691,12 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">449.93166666666667</Value>
+                    <Value xsi:type="xsd:double">443.23666666666668</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">853.04</Value>
+                    <Value xsi:type="xsd:double">829.04</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -752,6 +760,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -969,6 +981,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -989,7 +1010,24 @@
                 <SerializationItem>
                     <IsListValue>true</IsListValue>
                     <Name>PointsList</Name>
-                    <ListValue />
+                    <ListValue>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>PointsList</Name>
+                            <Value xsi:type="Point">
+                                <X>568</X>
+                                <Y>812</Y>
+                            </Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>PointsList</Name>
+                            <Value xsi:type="Point">
+                                <X>568.23666666666668</X>
+                                <Y>812</Y>
+                            </Value>
+                        </SerializationItem>
+                    </ListValue>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -1103,6 +1141,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1113,9 +1160,11 @@
         <ScriptVariable>
             <Name>exception</Name>
             <Group />
+            <Comment>переменная с данными о возникшей ошибке</Comment>
             <DataTypeString>LTools.Common.Model.ExecutionExceptionInfo</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

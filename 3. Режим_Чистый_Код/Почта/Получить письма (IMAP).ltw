@@ -67,11 +67,11 @@ public class PrimoScript
    */
 		
 		//Внесите в данные переменные собственные данные для учетной записи
-		string userName = "";
-		string userPass = "";
-		string ImapServer = "imap.yandex.ru";
+		string strUserName = "";
+		string strUserPass = "";
+		string strServer = "imap.yandex.ru";
 		
-		List&lt;LTools.Network.Model.EMail.MailMessage&gt; mail = LTools.Network.MailApp.IMAPReceive(wf, ImapServer, 993, userName, userPass, "Inbox", true, false, false, new List&lt;LTools.Network.Model.EMail.MailMessage&gt;(), null, null, true, true, 60000);
+		List&lt;LTools.Network.Model.EMail.MailMessage&gt; listMail = LTools.Network.MailApp.IMAPReceive(wf, strServer, 993, strUserName, strUserPass, "Inbox", true, false, false, new List&lt;LTools.Network.Model.EMail.MailMessage&gt;(), null, null, true, true, 60000);
   
 	}
 }</Value>
@@ -83,4 +83,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

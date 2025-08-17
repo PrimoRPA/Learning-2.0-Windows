@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Позволяет сохранить на диск письмо из электронной почты Outlook</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -273,7 +273,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Variable</Name>
-                                <Value xsi:type="xsd:string">mailList</Value>
+                                <Value xsi:type="xsd:string">listMails</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -392,7 +392,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Variable</Name>
-                                <Value xsi:type="xsd:string">mailList[0]</Value>
+                                <Value xsi:type="xsd:string">listMails[0]</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -481,7 +481,7 @@
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>mailList</Name>
+            <Name>listMails</Name>
             <Group />
             <Comment>Список полученных писем</Comment>
             <DataTypeString>System.Collections.Generic.List&lt;LTools.Office.Model.OMailMessage&gt;</DataTypeString>
@@ -489,4 +489,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

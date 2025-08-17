@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент позволяет удалить элемент из очереди обмена данных Оркестратора</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -96,17 +96,12 @@
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
+                        <Name>TextTag</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
                         <Name>ComponentName</Name>
                         <Value xsi:type="xsd:string">Комментарий</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Все элементы группы "Оркестратор" работают только в Primo RPA Studio Enterprise. Необходим подключенный оркестратор</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>TextTag</Name>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -115,6 +110,11 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>WaitAfter</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Annotation</Name>
+                        <Value xsi:type="xsd:string">Все элементы группы "Оркестратор" работают только в Primo RPA Studio Enterprise. Необходим подключенный оркестратор</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -311,9 +311,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Активность позволяющая удалить любой элемент из указанной очереди
+                        <Value xsi:type="xsd:string">Активность, позволяющая удалить любой элемент из указанной очереди.
 
-Чтобы всё сработало корректно, нужно указать название очереди, из которой необходимо удалить элемент. Идентификация элемента происходит по его уникальному идентификатору (Id). Чтобы получить этот идентификатор, нужно извлечь элемент из очереди и передать его Id в данную активность в соответсвующее свойство</Value>
+Чтобы всё сработало корректно, нужно указать название очереди, из которой необходимо удалить элемент. Идентификация элемента происходит по его уникальному идентификатору (Id). Чтобы получить этот идентификатор, нужно извлечь элемент из очереди и передать его Id в данную активность в соответствующее свойство.</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -376,4 +376,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

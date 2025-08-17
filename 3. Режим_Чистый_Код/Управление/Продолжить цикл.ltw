@@ -50,8 +50,12 @@ public class PrimoScript
 		{
 			//В случае, если необходимо пропустить один их элементов цикла, чтобы не тратить время на его обработку, 
 			//можно воспользоваться данной активностью. Ее можно использовать в любом контейнере с цикличной основой.
+			
 			continue;
+			LTools.Workflow.PrimoApp.AddToLog(wf, "Запись в журнал после элемента 'Продолжить цикл'", LTools.Enums.LogMessageType.Info);
 		}
+		
+		LTools.Workflow.PrimoApp.AddToLog(wf, "Запись в журнал после цикла", LTools.Enums.LogMessageType.Info);
     }
 }</Value>
             </SerializationItem>
@@ -62,4 +66,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

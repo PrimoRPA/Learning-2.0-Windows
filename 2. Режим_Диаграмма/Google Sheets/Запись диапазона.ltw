@@ -13,6 +13,15 @@
             <Properties>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ComponentName</Name>
+                    <Value xsi:type="xsd:string">Начало диаграммы</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TType</Name>
                     <Value xsi:type="xsd:int">1</Value>
                 </SerializationItem>
@@ -32,8 +41,7 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>ComponentName</Name>
-                    <Value xsi:type="xsd:string">Начало диаграммы</Value>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -42,10 +50,6 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -107,17 +111,22 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Компонент, записывающий данные диапазона ячеек в Google Sheets</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">199</Value>
+                    <Value xsi:type="xsd:double">131.857142857143</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">33.723333333333329</Value>
+                    <Value xsi:type="xsd:double">49.999999999999972</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -136,11 +145,6 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Компонент, записывающий данные диапазона ячеек в Google Sheets</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -186,6 +190,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -278,7 +286,12 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>ComponentName</Name>
-                    <Value xsi:type="xsd:string">Присвоение googleDocID</Value>
+                    <Value xsi:type="xsd:string">Присвоение strGoogleDocID</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">ID документа Google Sheets. Для работы внесите свое значение id</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -311,11 +324,6 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">ID документа Google Sheets. Для работы внесите свое значение id</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -362,6 +370,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -373,7 +385,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Variable</Name>
-                            <Value xsi:type="xsd:string">googleDocID</Value>
+                            <Value xsi:type="xsd:string">strGoogleDocID</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -387,7 +399,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>ComponentName</Name>
-                            <Value xsi:type="xsd:string">Присвоение googleDocID</Value>
+                            <Value xsi:type="xsd:string">Присвоение strGoogleDocID</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -464,6 +476,11 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Пременная для записи в Google Sheets. Необходим формат List&lt;object&gt;</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -474,7 +491,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">297.03999999999996</Value>
+                    <Value xsi:type="xsd:double">332.75428571428574</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -493,11 +510,6 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Пременная для записи в Google Sheets. Необходим формат List&lt;object&gt;</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -543,6 +555,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -646,6 +662,11 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Контейнер с элементом Запись диапазона</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -656,7 +677,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">441.03999999999996</Value>
+                    <Value xsi:type="xsd:double">516.75428571428574</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -675,21 +696,6 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Настройки активность "Документ Google Sheets" следует 
-произвести в соотвествии с шагами, описанными в 
-"Документ Google Sheets.ltw" данного проекта
-
-Для работы с элементов необходимо заполнить свойства:
-
-Диапазон: ячейки, в которые необходимо произвести запись данных. Необходимо указывать в формате строки "A1:D12". Диапазон расширяется автоматически до размера введенных данных
-
-Переменная: данные, которые необходимо внести в таблицу. Переменная должна быть в формате List&lt;List&lt;object&gt;&gt;. Можно задать список List&lt;object&gt; и внести его в редактор коллекции, которы открывается путемнажатия решетки возле соотвествующего поля.
-
-Страница: название страницы, на которую будут внесены данные</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -736,6 +742,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -752,7 +762,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>SheetID</Name>
-                            <Value xsi:type="xsd:string">googleDocID</Value>
+                            <Value xsi:type="xsd:string">strGoogleDocID</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -871,11 +881,11 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Annotation</Name>
-                                    <Value xsi:type="xsd:string">Для работы с элементов необходимо заполнить свойства:
+                                    <Value xsi:type="xsd:string">Для работы с элементом необходимо заполнить свойства:
 
 Диапазон: ячейки, в которые необходимо произвести запись данных. Необходимо указывать в формате строки "A1:D12". Диапазон расширяется автоматически до размера введенных данных
 
-Переменная: данные, которые необходимо внести в таблицу. Переменная должна быть в формате List&lt;List&lt;object&gt;&gt;. Можно задать список List&lt;object&gt; и внести его в редактор коллекции, которы открывается путемнажатия решетки возле соотвествующего поля.
+Переменная: данные, которые необходимо внести в таблицу. Переменная должна быть в формате List&lt;List&lt;object&gt;&gt;. Можно задать список List&lt;object&gt; и внести его в редактор коллекции, который открывается путем нажатия решетки возле соотвествующего поля.
 
 Страница: название страницы, на которую будут внесены данные</Value>
                                 </SerializationItem>
@@ -938,6 +948,10 @@
             <Properties>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Result</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -969,10 +983,6 @@
                     <IsListValue>false</IsListValue>
                     <Name>EndElementID</Name>
                     <Value xmlns:q12="http://microsoft.com/wsdl/types/" xsi:type="q12:guid">b82f9c0a-99cc-4509-9b30-bbeb72c43e83</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Result</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -1061,6 +1071,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1070,6 +1089,10 @@
             <ClassName>LTools.Workflow.Elements.Workflow.WFWorkflowPath</ClassName>
             <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
             <Properties>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Result</Name>
+                </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
@@ -1103,10 +1126,6 @@
                     <IsListValue>false</IsListValue>
                     <Name>EndElementID</Name>
                     <Value xmlns:q15="http://microsoft.com/wsdl/types/" xsi:type="q15:guid">8d8a8469-c37a-4426-ae8c-05ad37b1e70a</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Result</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -1195,6 +1214,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1204,6 +1232,10 @@
             <ClassName>LTools.Workflow.Elements.Workflow.WFWorkflowPath</ClassName>
             <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
             <Properties>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Result</Name>
+                </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
@@ -1237,10 +1269,6 @@
                     <IsListValue>false</IsListValue>
                     <Name>EndElementID</Name>
                     <Value xmlns:q18="http://microsoft.com/wsdl/types/" xsi:type="q18:guid">e5e946ef-e8da-4eee-9803-87acea4b2fe9</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Result</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -1329,6 +1357,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1339,11 +1376,12 @@
         <ScriptVariable>
             <Name>listTextForSheets</Name>
             <Group />
+            <Comment>Список объектов для записи в документ GoogleSheets</Comment>
             <DataTypeString>List&lt;Object&gt;</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>googleDocID</Name>
+            <Name>strGoogleDocID</Name>
             <Group />
             <DefaultValue xsi:type="xsd:string" />
             <Comment>ID документа Google Sheets</Comment>
@@ -1352,4 +1390,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

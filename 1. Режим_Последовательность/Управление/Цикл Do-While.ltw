@@ -18,8 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент представляет собой цикл Do-While, который продолжает выполняться 
-до тех пор, пока заданное логическое выражение остается истинным</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -81,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -206,7 +205,10 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Отличительной особенностью цикла Do-While является то, что условие проверяется в конце каждой итерации, 
+                        <Value xsi:type="xsd:string">Элемент представляет собой цикл Do-While, который продолжает выполняться до тех пор, пока 
+заданное логическое выражение остается истинным
+
+Отличительной особенностью цикла Do-While является то, что условие проверяется в конце каждой итерации, 
 что гарантирует выполнение тела цикла хотя бы один раз, даже если условие изначально ложно. (на данный 
 момент условие цикла ложно, индекс будет равен 1 после прохождения цикла)</Value>
                     </SerializationItem>
@@ -432,9 +434,11 @@
         <ScriptVariable>
             <Name>index</Name>
             <Group />
+            <Comment>Индекс для условия цикла Do-While</Comment>
             <DataTypeString>Int32</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

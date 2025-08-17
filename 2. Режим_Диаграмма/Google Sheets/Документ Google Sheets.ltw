@@ -13,6 +13,15 @@
             <Properties>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ComponentName</Name>
+                    <Value xsi:type="xsd:string">Начало диаграммы</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TType</Name>
                     <Value xsi:type="xsd:int">1</Value>
                 </SerializationItem>
@@ -32,8 +41,7 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>ComponentName</Name>
-                    <Value xsi:type="xsd:string">Начало диаграммы</Value>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -42,10 +50,6 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -187,6 +191,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -287,12 +295,12 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">118.0574242424242</Value>
+                    <Value xsi:type="xsd:double">132.24242424242419</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">140.62500000000003</Value>
+                    <Value xsi:type="xsd:double">211.5183333333332</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -321,7 +329,7 @@
 В файле авторизации данного проекта не указаны 
 поля "client_id" и "client_secret", файл приведен как пример.
 
-Также необходимо указать ссылку на портал для получения токенов, чтобы была возможность перенаправления пользователя для авторизации, например https://developers.google.com/oauthplayground/. Необходимо ввести данные клиента и выбирать области, к которым необходимо предоставить доступ.
+Также необходимо указать ссылку на портал для получения токенов, чтобы была возможность перенаправления пользователя для авторизации, например https://developers.google.com/oauthplayground/. Необходимо ввести данные клиента и выбрать области, к которым необходимо предоставить доступ.
 
 Важно на шаге «Test users» добавить почту, с которой необходим доступ к Google Sheets</Value>
                 </SerializationItem>
@@ -369,6 +377,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -482,7 +494,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">317.45499999999993</Value>
+                    <Value xsi:type="xsd:double">345.4549999999997</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -505,10 +517,10 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Для работы с элементов необходимо заполнить свойства:
+                    <Value xsi:type="xsd:string">Для работы с элементом необходимо заполнить свойства:
 
-ID документа: идентивикатор документа, 
-с которым необходимо выполнть взаимодействие.
+ID документа: идентификатор документа, 
+с которым необходимо выполнять взаимодействие.
 Id расположено в url документа между d/ и /edit. 
 
 Путь к файлу: файл, использующийся для 
@@ -561,6 +573,10 @@ Id расположено в url документа между d/ и /edit.
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -571,13 +587,32 @@ Id расположено в url документа между d/ и /edit.
                     <Properties>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
+                            <Name>ComponentName</Name>
+                            <Value xsi:type="xsd:string">Документ Google Sheets</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Annotation</Name>
+                            <Value xsi:type="xsd:string">Для работы с элементом необходимо заполнить свойства:
+
+ID документа: идентификатор документа, 
+с которым необходимо выполнять взаимодействие.
+Id расположено в url документа между d/ и /edit. 
+
+Путь к файлу: файл, использующийся для 
+идентификации клиента приложения Google. Данный файл 
+будет получен после регистрации своего приложения. 
+Шаги описаны в документации.</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
                             <Name>FileName</Name>
                             <Value xsi:type="xsd:string">@".\Дополнительные материалы\Google Sheets\client_secret.json"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>SheetID</Name>
-                            <Value xsi:type="xsd:string">googleDocID</Value>
+                            <Value xsi:type="xsd:string">strGoogleDocID</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -590,30 +625,11 @@ Id расположено в url документа между d/ и /edit.
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
-                            <Name>ComponentName</Name>
-                            <Value xsi:type="xsd:string">Документ Google Sheets</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
                             <Name>WaitBefore</Name>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>WaitAfter</Name>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string">Для работы с элементов необходимо заполнить свойства:
-
-ID документа: идентивикатор документа, 
-с которым необходимо выполнть взаимодействие.
-Id расположено в url документа между d/ и /edit. 
-
-Путь к файлу: файл, использующийся для 
-идентификации клиента приложения Google. Данный файл 
-будет получен после регистрации своего приложения. 
-Шаги описаны в документации.</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -674,7 +690,7 @@ Id расположено в url документа между d/ и /edit.
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>ComponentName</Name>
-                    <Value xsi:type="xsd:string">Присвоение googleDocID</Value>
+                    <Value xsi:type="xsd:string">Присвоение strGoogleDocID</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -758,6 +774,10 @@ Id расположено в url документа между d/ и /edit.
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -769,7 +789,7 @@ Id расположено в url документа между d/ и /edit.
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Variable</Name>
-                            <Value xsi:type="xsd:string">googleDocID</Value>
+                            <Value xsi:type="xsd:string">strGoogleDocID</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -783,7 +803,7 @@ Id расположено в url документа между d/ и /edit.
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>ComponentName</Name>
-                            <Value xsi:type="xsd:string">Присвоение googleDocID</Value>
+                            <Value xsi:type="xsd:string">Присвоение strGoogleDocID</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -978,6 +998,15 @@ Id расположено в url документа между d/ и /edit.
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1112,6 +1141,15 @@ Id расположено в url документа между d/ и /edit.
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1120,7 +1158,7 @@ Id расположено в url документа между d/ и /edit.
     </Components>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>googleDocID</Name>
+            <Name>strGoogleDocID</Name>
             <Group />
             <DefaultValue xsi:type="xsd:string" />
             <Comment>ID документа Google Sheets</Comment>
@@ -1129,4 +1167,5 @@ Id расположено в url документа между d/ и /edit.
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

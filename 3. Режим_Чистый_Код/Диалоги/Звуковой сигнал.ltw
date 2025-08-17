@@ -51,10 +51,10 @@ public class PrimoScript
 		freq - Частота: [Int32] Частота звукового сигнала (Hz)
 		LTools.Workflow.PrimoApp.Beep(wf, len, freq);
 		*/
-		var len = 1000;
-		var freq = 2000;
+		var intLen = 1000;
+		var intFreq = 2000;
 		
-		LTools.Workflow.PrimoApp.Beep(wf, len, freq);
+		LTools.Workflow.PrimoApp.Beep(wf, intLen, intFreq);
     }
 }</Value>
             </SerializationItem>
@@ -65,4 +65,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

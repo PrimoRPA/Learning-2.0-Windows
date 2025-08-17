@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент позволяет получить ресурс из Оркестратора</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -177,7 +177,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Text</Name>
-                        <Value xsi:type="xsd:string">assetResult</Value>
+                        <Value xsi:type="xsd:string">strAssetResult</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -265,7 +265,7 @@
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>assetResult</Name>
+            <Name>strAssetResult</Name>
             <Group />
             <Comment>Значение, полученное из ресурса</Comment>
             <DataTypeString>String</DataTypeString>
@@ -273,4 +273,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

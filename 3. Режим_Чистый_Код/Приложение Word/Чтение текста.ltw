@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<SerializationRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<SerializationRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <WorkflowType>2</WorkflowType>
     <IsTestCase>false</IsTestCase>
     <UseArgs>false</UseArgs>
@@ -58,7 +58,10 @@ public class PrimoScript
 		//Инициализация документа MS Word
 		LTools.Office.WordApp app = LTools.Office.WordApp.Init(wf, @".\Дополнительные материалы\Приложение Word\Входные данные\Информация об RPA.docx", LTools.Office.Model.InteropTypes.DX);
     
-		string txt = app.ReadText(selStart, selLength);
+		//Чтение текста документа MsWord
+		string strTextFromWord = app.ReadText(selStart, selLength);
+		
+		LTools.Workflow.PrimoApp.AddToLog(wf, "Текст,полученный из документа: " + strTextFromWord.Trim(), LTools.Enums.LogMessageType.Info);
     }
 }</Value>
             </SerializationItem>
@@ -69,4 +72,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

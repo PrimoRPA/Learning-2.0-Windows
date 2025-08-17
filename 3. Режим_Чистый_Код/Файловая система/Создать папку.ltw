@@ -48,7 +48,8 @@ public class PrimoScript
 		//Чтобы содать папку, необходимо указать свойство "Путь", путь может быть абсолютный или относительный
 		//*В случае, если в указанном пути нет одной из промежуточных папок, она будет создана автоматически
 		//*В случае, если создается папка с таким же названием, ничего не произойдет, файлы из уже существующей папки не будут удалены
-        System.IO.Directory.CreateDirectory(strFolderPath);
+        
+		System.IO.Directory.CreateDirectory(strFolderPath);
     }
 }</Value>
             </SerializationItem>
@@ -59,4 +60,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

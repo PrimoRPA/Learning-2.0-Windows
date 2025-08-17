@@ -49,11 +49,9 @@ public class PrimoScript
 		//Чтобы добавить строку в файл, необходимо указать "Путь к файлу", путь может быть абсолютный или относительный
 		//Компонент вносит строку указанную в strText
 		//*Активность работает только с файлами формата .txt, файлы другого формата будут ломаться после добавления строки
-        System.IO.File.AppendAllText(strTxtPath, strText, "utf-8");
+        System.IO.File.AppendAllText(strTxtPath, strText, Encoding.UTF8);
     }
-}
-
-//15 строка Аргумент 3: не удается преобразовать из "string" в "System.Text.Encoding". </Value>
+}</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -62,4 +60,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

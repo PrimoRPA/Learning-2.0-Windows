@@ -49,6 +49,7 @@ public class PrimoScript
 		//*В случае, если в указанном пути нет одной из промежуточных папок, в консоль выведется ошибка 
 		//*В случае, если создается файл с таким же названием, существующий файл будет перезаписан и будет пустым
 		//*Активность работает с файлами любого формата
+		
         System.IO.File.Create(strFolderPath);
     }
 }</Value>
@@ -60,4 +61,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -55,11 +55,11 @@ public class PrimoScript
 		String res = LTools.Workflow.PrimoApp.ChooseFile(wf, title, text, dict, width, height);
 		*/
 		
-		var title = "Primo Learning";
-		var text = "Выберите файл для дальнейшей обработки";
+		var strTitle = "Primo Learning";
+		var strText = "Выберите файл для дальнейшей обработки";
 		var dict = new List&lt;String&gt;(){"Все понятно","Нужно больше примеров", "Информация не понятно изложена"};
 		
-		String res = LTools.Workflow.PrimoApp.ChooseFile(wf, title, text, LTools.Workflow.Model.ChooseFileModes.File, 365, 160);
+		String res = LTools.Workflow.PrimoApp.ChooseFile(wf, strTitle, strText, LTools.Workflow.Model.ChooseFileModes.File, 365, 160);
     }
 }</Value>
             </SerializationItem>
@@ -70,4 +70,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

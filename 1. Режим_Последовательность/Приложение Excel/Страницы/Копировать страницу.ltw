@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент предназначен для копирования страницы в документе Excel</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -171,13 +171,8 @@
                 <Properties>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
-                        <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Приложение Excel</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string" />
+                        <Name>FileName</Name>
+                        <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -193,11 +188,6 @@
                         <IsListValue>false</IsListValue>
                         <Name>R1C1</Name>
                         <Value xsi:type="xsd:boolean">false</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>FileName</Name>
-                        <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -252,11 +242,21 @@
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
+                        <Name>ComponentName</Name>
+                        <Value xsi:type="xsd:string">Приложение Excel</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
                         <Name>WaitBefore</Name>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>WaitAfter</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Annotation</Name>
+                        <Value xsi:type="xsd:string" />
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -350,7 +350,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string">Элемент используется для копирования листа в книгу Excel, указанной в контенере "Приложение Excel". Файл, с котрого необходимо скопировать лист, указывается в свойствах. Лсит будет скопирован полностью, со всеми данными и форматированием
+                                <Value xsi:type="xsd:string">Элемент используется для копирования листа в книгу Excel, указанной в контенере "Приложение Excel". Файл, с котрого необходимо скопировать лист, указывается в свойствах. Лист будет скопирован полностью, со всеми данными и форматированием
 
 Для работы с элементом необходимо заполнить 
 обязательные свойства:
@@ -359,7 +359,7 @@
 Файл: путь к документу Excel, в который необходимо скопировать страницу
 
 Дополнительные свойства заполняются в случае необходимости:
-Индекс: порядковый номер копируемой страницы. Если указано имя страницы, то данный параметр указывать ненужно
+Индекс: порядковый номер копируемой страницы. Если указано имя страницы, то данный параметр указывать не нужно
 Новая страница: название, с которым необходимо вставить копируемую страницу в документ Excel. В случае если параметр не указан страница будет скопирована с изначальным названием</Value>
                             </SerializationItem>
                             <SerializationItem>
@@ -417,4 +417,5 @@
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

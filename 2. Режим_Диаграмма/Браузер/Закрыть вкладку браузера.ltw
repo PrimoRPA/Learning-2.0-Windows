@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -117,12 +121,12 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">213.99999999999997</Value>
+                    <Value xsi:type="xsd:double">111</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">41.861666666666665</Value>
+                    <Value xsi:type="xsd:double">49.999999999999972</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -186,6 +190,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -283,15 +291,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Активность применяется для того, чтобы закрыть выбранную вкладку браузера. При этом для закрытия можно выбрать вкладку по индексу, заголовку или закрыть активную вкладку.
-
-Для работы с активностью необходимо заполнить любое из указанных свойств в зависимости от данных, которыми вы обладаете: 
-- Индекс вкладки: Порядковый номер вкладки, которую необходимо закрыть. Начинается отсчет с 0. Данный параметр наиболее удобен в случае, если происходит работа с одним и темже порталом на разных вкладках браузера.
-- Заголовок вкладки: Заголовок вкладки, которую необходимо закрыть. В случае, если в браузере открыто несколько вкладок с одинаковым заголовком, будет закрыта первая вкладка имеющий заголовок, указанный в активности.
-- Активная вкладка: Чекбокс, отражающий необходимость закрытия вкладки, являющейся активной на данный момент
-
-Дополнительные свойства. Заполняются в случае необходимости:
-- Переменная: Переменная, которая хранит в себе ссылку на используемый браузер. В случае, если активность используется в контейнерах работы с браузером ("Открыть браузер" и "Присоединиться к браузеру"), данное свойство можно не использовать</Value>
+                    <Value xsi:type="xsd:string">Контейнер с элементом Закрыть вкладку браузера </Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -370,6 +370,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -380,14 +384,8 @@
                     <Properties>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
-                            <Name>ComponentName</Name>
-                            <Value xsi:type="xsd:string">Открыть браузер</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string">Подробное описание активности приведено
- в последовательности "Открыть браузер.ltw"</Value>
+                            <Name>URL</Name>
+                            <Value xsi:type="xsd:string">"https://www.google.com/"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -398,11 +396,6 @@
                             <IsListValue>false</IsListValue>
                             <Name>Headless</Name>
                             <Value xsi:type="xsd:boolean">false</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>URL</Name>
-                            <Value xsi:type="xsd:string">"https://www.google.com/"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -446,11 +439,22 @@
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
+                            <Name>ComponentName</Name>
+                            <Value xsi:type="xsd:string">Открыть браузер</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
                             <Name>WaitBefore</Name>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>WaitAfter</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Annotation</Name>
+                            <Value xsi:type="xsd:string">Подробное описание активности приведено
+ в последовательности "Открыть браузер.ltw"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -507,6 +511,17 @@
                             <Properties>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
+                                    <Name>ComponentName</Name>
+                                    <Value xsi:type="xsd:string">Открыть вкладку браузера</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>Annotation</Name>
+                                    <Value xsi:type="xsd:string">Подробное описание активности приведено
+ в последовательности "Открыть вкладку браузера.ltw"</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
                                     <Name>PageUrl</Name>
                                     <Value xsi:type="xsd:string">"https://docs.primo-rpa.ru/"</Value>
                                 </SerializationItem>
@@ -529,22 +544,11 @@
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
-                                    <Name>ComponentName</Name>
-                                    <Value xsi:type="xsd:string">Открыть вкладку браузера</Value>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
                                     <Name>WaitBefore</Name>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>WaitAfter</Name>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>Annotation</Name>
-                                    <Value xsi:type="xsd:string">Подробное описание активности приведено
- в последовательности "Открыть вкладку браузера.ltw"</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -790,7 +794,24 @@
                 <SerializationItem>
                     <IsListValue>true</IsListValue>
                     <Name>PointsList</Name>
-                    <ListValue />
+                    <ListValue>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>PointsList</Name>
+                            <Value xsi:type="Point">
+                                <X>568</X>
+                                <Y>147</Y>
+                            </Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>PointsList</Name>
+                            <Value xsi:type="Point">
+                                <X>568.05666666666662</X>
+                                <Y>147</Y>
+                            </Value>
+                        </SerializationItem>
+                    </ListValue>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -904,6 +925,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -912,4 +942,5 @@
     </Components>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

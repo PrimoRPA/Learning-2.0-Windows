@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -107,22 +111,17 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Предназначен для фильтрации данных в таблице</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">184</Value>
+                    <Value xsi:type="xsd:double">142</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">33.723333333333329</Value>
+                    <Value xsi:type="xsd:double">49.999999999999972</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -141,6 +140,11 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Предназначен для фильтрации данных в таблице</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -186,6 +190,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -278,13 +286,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>ComponentName</Name>
-                    <Value xsi:type="xsd:string">Инициализация таблицы</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">В данной последовательности происходит создание пустой 
-таблицы и добавление трех строк в нее</Value>
+                    <Value xsi:type="xsd:string">Фильтр таблицы</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -298,7 +300,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">159.04</Value>
+                    <Value xsi:type="xsd:double">320.03999999999996</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -320,8 +322,22 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Элемент предназначен для осуществления фильтрации таблицы по заданным параметрам. Параметры можно указать через мастер запросов и через мастер фильтров. Мастер запросов представляет собой более сокращенную версию мастера фильтров.
+
+Для работы с активностью необходимо заполнить следующие обязательные свойства: 
+Таблица: Необходимо указать переменную, содержащую таблицу, которую необходимо отфильтровать
+Переменная: Необходимо указать переменную, в которую будет сохранен результат работы активности.
+
+В мастере фильтров вы можете указать значения по которым необходимо произвести фильтрацию. Также можно указать следует сохранить данные, подходящие под фильтр, или удалить их. 
+Помимо этого есть возможность выбрать только те колонки, которые понадобятся в дальнейшем. Для этого следует открыть раздел "Столбцы результата" и указать названия столбцов для удаления или сохранения.
+
+Подробную информацию о мастере фильтров и мастере запросов можно найти в документации https://docs.primo-rpa.ru/</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>ComponentID</Name>
-                    <Value xmlns:q4="http://microsoft.com/wsdl/types/" xsi:type="q4:guid">bb4fb2c6-1163-4047-9970-2cee97a88168</Value>
+                    <Value xmlns:q4="http://microsoft.com/wsdl/types/" xsi:type="q4:guid">b3d5e240-e823-4fee-8cb5-827b096abf25</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -363,6 +379,219 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+            </Properties>
+            <IsBreakpoint>false</IsBreakpoint>
+            <IsIgnore>false</IsIgnore>
+            <Components>
+                <SerializationComponent>
+                    <ClassName>LTools.Data.Elements.Collections.WFFilterDataTable</ClassName>
+                    <AssemblyName>LTools.Data, Version=1.0.3.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+                    <Properties>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Data</Name>
+                            <Value xsi:type="xsd:string">dtDataFromTable</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Variable</Name>
+                            <Value xsi:type="xsd:string">dtFilterTable</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Wiz2</Name>
+                            <Value xsi:type="xsd:string">{"Items":[{"AddOrCondition":0,"Column":"\"Группа\"","Operator":0,"Value":"\"Коллекции\""}],"RowMode":0,"Columns":[{"Column":"\"Индекс\""},{"Column":"\"Элемент\""}],"ColumnMode":0}</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Query</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Wizard</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>TextTag</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>ComponentName</Name>
+                            <Value xsi:type="xsd:string">Фильтр таблицы</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>WaitBefore</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>WaitAfter</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Annotation</Name>
+                            <Value xsi:type="xsd:string">Элемент предназначен для осуществления фильтрации таблицы по заданным параметрам. Параметры можно указать через мастер запросов и через мастер фильтров. Мастер запросов представляет собой более сокращенную версию мастера фильтров.
+
+Для работы с активностью необходимо заполнить следующие обязательные свойства: 
+Таблица: Необходимо указать переменную, содержащую таблицу, которую необходимо отфильтровать
+Переменная: Необходимо указать переменную, в которую будет сохранен результат работы активности.
+
+В мастере фильтров вы можете указать значения по которым необходимо произвести фильтрацию. Также можно указать следует сохранить данные, подходящие под фильтр, или удалить их. 
+Помимо этого есть возможность выбрать только те колонки, которые понадобятся в дальнейшем. Для этого следует открыть раздел "Столбцы результата" и указать названия столбцов для удаления или сохранения.
+
+Подробную информацию о мастере фильтров и мастере запросов можно найти в документации https://docs.primo-rpa.ru/</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>ComponentID</Name>
+                            <Value xmlns:q5="http://microsoft.com/wsdl/types/" xsi:type="q5:guid">8ab86d13-7e8f-4f73-85d3-e4bf7713c999</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>ContinueOnException</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>PreventLogging</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>SSSuccess</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>SSFail</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>true</IsListValue>
+                            <Name>NoCodeProperties</Name>
+                            <ListValue />
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>NoCodeUsed</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>IsCollapsed</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>ShowAnnotation</Name>
+                            <Value xsi:type="xsd:boolean">true</Value>
+                        </SerializationItem>
+                    </Properties>
+                    <IsBreakpoint>false</IsBreakpoint>
+                    <IsIgnore>false</IsIgnore>
+                </SerializationComponent>
+            </Components>
+        </SerializationComponent>
+        <SerializationComponent xsi:type="SerializationContainer">
+            <ClassName>LTools.Workflow.Elements.Workflow.WFWorkflowContainerSequence</ClassName>
+            <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+            <Properties>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ComponentName</Name>
+                    <Value xsi:type="xsd:string">Инициализация таблицы</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>TextTag</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>X</Name>
+                    <Value xsi:type="xsd:double">443</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Y</Name>
+                    <Value xsi:type="xsd:double">159</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>IsSingleElemented</Name>
+                    <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Variables</Name>
+                    <Value xsi:type="ArrayOfScriptVariable" />
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>WaitBefore</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>WaitAfter</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">В данной последовательности происходит создание пустой 
+таблицы и добавление трех строк в нее</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ComponentID</Name>
+                    <Value xmlns:q6="http://microsoft.com/wsdl/types/" xsi:type="q6:guid">c7ca8c90-6942-4dcd-8318-1877d8ad1b51</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ContinueOnException</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>PreventLogging</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>SSSuccess</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>SSFail</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>true</IsListValue>
+                    <Name>NoCodeProperties</Name>
+                    <ListValue />
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>NoCodeUsed</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>IsCollapsed</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ShowAnnotation</Name>
+                    <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -402,7 +631,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>ComponentID</Name>
-                            <Value xmlns:q5="http://microsoft.com/wsdl/types/" xsi:type="q5:guid">593a1c28-a0af-4d8d-8983-70e0832386fc</Value>
+                            <Value xmlns:q7="http://microsoft.com/wsdl/types/" xsi:type="q7:guid">d2fbf315-41ec-49e7-987b-d110f502a506</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -437,7 +666,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>IsCollapsed</Name>
-                            <Value xsi:type="xsd:boolean">true</Value>
+                            <Value xsi:type="xsd:boolean">false</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -460,7 +689,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Variable</Name>
-                                    <Value xsi:type="xsd:string">dt_dataFromTable</Value>
+                                    <Value xsi:type="xsd:string">dtDataFromTable</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -474,7 +703,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>ComponentName</Name>
-                                    <Value xsi:type="xsd:string">Создать таблицу</Value>
+                                    <Value xsi:type="xsd:string">Создать таблицу dtDataFromTable</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -491,7 +720,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>ComponentID</Name>
-                                    <Value xmlns:q6="http://microsoft.com/wsdl/types/" xsi:type="q6:guid">41df35de-a66e-4c6d-b7c4-99304b0078f5</Value>
+                                    <Value xmlns:q8="http://microsoft.com/wsdl/types/" xsi:type="q8:guid">b8db9daa-4519-49b9-9fe9-6cb55e74ad34</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -549,7 +778,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Variable</Name>
-                                    <Value xsi:type="xsd:string">dt_dataFromTable</Value>
+                                    <Value xsi:type="xsd:string">dtDataFromTable</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -566,7 +795,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>ComponentName</Name>
-                                    <Value xsi:type="xsd:string">Добавить строку</Value>
+                                    <Value xsi:type="xsd:string">Добавить строку в dtDataFromTable</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -583,7 +812,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>ComponentID</Name>
-                                    <Value xmlns:q7="http://microsoft.com/wsdl/types/" xsi:type="q7:guid">dcbaae55-72b2-4003-9379-f4e714c17fe8</Value>
+                                    <Value xmlns:q9="http://microsoft.com/wsdl/types/" xsi:type="q9:guid">326871e5-8ffd-498e-9403-8a9a320a437f</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -641,7 +870,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Variable</Name>
-                                    <Value xsi:type="xsd:string">dt_dataFromTable</Value>
+                                    <Value xsi:type="xsd:string">dtDataFromTable</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -658,7 +887,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>ComponentName</Name>
-                                    <Value xsi:type="xsd:string">Добавить строку</Value>
+                                    <Value xsi:type="xsd:string">Добавить строку в dtDataFromTable</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -675,7 +904,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>ComponentID</Name>
-                                    <Value xmlns:q8="http://microsoft.com/wsdl/types/" xsi:type="q8:guid">6da3b1cc-b3c0-4db6-9ccb-5add162b914a</Value>
+                                    <Value xmlns:q10="http://microsoft.com/wsdl/types/" xsi:type="q10:guid">164ba539-781e-4474-b4b2-15db37d9f1e1</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -733,7 +962,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Variable</Name>
-                                    <Value xsi:type="xsd:string">dt_dataFromTable</Value>
+                                    <Value xsi:type="xsd:string">dtDataFromTable</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -750,7 +979,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>ComponentName</Name>
-                                    <Value xsi:type="xsd:string">Добавить строку</Value>
+                                    <Value xsi:type="xsd:string">Добавить строку в dtDataFromTable</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -767,7 +996,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>ComponentID</Name>
-                                    <Value xmlns:q9="http://microsoft.com/wsdl/types/" xsi:type="q9:guid">c2b6dad1-86d2-4100-be37-744a737f1efc</Value>
+                                    <Value xmlns:q11="http://microsoft.com/wsdl/types/" xsi:type="q11:guid">c0fcdfbd-136f-47e8-82a1-f603a6e0ed6f</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -818,226 +1047,9 @@
             </Components>
         </SerializationComponent>
         <SerializationComponent xsi:type="SerializationContainer">
-            <ClassName>LTools.Workflow.Elements.Workflow.WFWorkflowContainerSequence</ClassName>
-            <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
-            <Properties>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>ComponentName</Name>
-                    <Value xsi:type="xsd:string">Фильтр таблицы</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Элемент предназначен для осуществления фильтрации таблицы по заданным параметрам. Параметры можно указать через мастер запросов и через мастер фильтров. Мастер запросов представляет собой более сокращенную версию мастера фильтров.
-
-Для работы с активностью необходимо заполнить следующие обязательные свойства: 
-Табица: Необходимо указать переменную, содержащую таблицу, которую необходимо отфильтровать
-Переменная: Необходимо указать переменную, в которую будут сохранен результат работы активности.
-
-В мастере фильтров вы можете указать значения по которым необходимо произвести фильтрацию. Также можно указать следует сохранить данные, подходящие под фильтр, или удалить их. 
-Помимо этого есть возможность выбрать только те колонки, которые понадобятся в дальнейшем. Для этого следует открыть раздел "Столбцы результата" и указать названия столбцов для удаления или сохранения.
-
-Подробную информацию о мастере фильтров и мастере запросов можно найти в документации https://docs.primo-rpa.ru/</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>TextTag</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>X</Name>
-                    <Value xsi:type="xsd:double">443</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Y</Name>
-                    <Value xsi:type="xsd:double">320.03999999999996</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>IsSingleElemented</Name>
-                    <Value xsi:type="xsd:boolean">true</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Variables</Name>
-                    <Value xsi:type="ArrayOfScriptVariable" />
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>WaitBefore</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>ComponentID</Name>
-                    <Value xmlns:q10="http://microsoft.com/wsdl/types/" xsi:type="q10:guid">b3d5e240-e823-4fee-8cb5-827b096abf25</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>ContinueOnException</Name>
-                    <Value xsi:type="xsd:boolean">false</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>PreventLogging</Name>
-                    <Value xsi:type="xsd:boolean">false</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>SSSuccess</Name>
-                    <Value xsi:type="xsd:boolean">false</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>SSFail</Name>
-                    <Value xsi:type="xsd:boolean">false</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>true</IsListValue>
-                    <Name>NoCodeProperties</Name>
-                    <ListValue />
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>NoCodeUsed</Name>
-                    <Value xsi:type="xsd:boolean">false</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>IsCollapsed</Name>
-                    <Value xsi:type="xsd:boolean">false</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>ShowAnnotation</Name>
-                    <Value xsi:type="xsd:boolean">true</Value>
-                </SerializationItem>
-            </Properties>
-            <IsBreakpoint>false</IsBreakpoint>
-            <IsIgnore>false</IsIgnore>
-            <Components>
-                <SerializationComponent>
-                    <ClassName>LTools.Data.Elements.Collections.WFFilterDataTable</ClassName>
-                    <AssemblyName>LTools.Data, Version=1.0.3.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
-                    <Properties>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Data</Name>
-                            <Value xsi:type="xsd:string">dt_dataFromTable</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Variable</Name>
-                            <Value xsi:type="xsd:string">dt_filtrTable</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Wiz2</Name>
-                            <Value xsi:type="xsd:string">{"Items":[{"AddOrCondition":0,"Column":"\"Группа\"","Operator":0,"Value":"\"Коллекции\""}],"RowMode":0,"Columns":[{"Column":"\"Индекс\""},{"Column":"\"Элемент\""}],"ColumnMode":0}</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Query</Name>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Wizard</Name>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>TextTag</Name>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>ComponentName</Name>
-                            <Value xsi:type="xsd:string">Фильтр таблицы</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>WaitBefore</Name>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>WaitAfter</Name>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string">Элемент предназначен для осуществления фильтрации таблицы по заданным параметрам. Параметры можно указать через мастер запросов и через мастер фильтров. Мастер запросов представляет собой более сокращенную версию мастера фильтров.
-
-Для работы с активностью необходимо заполнить следующие обязательные свойства: 
-Табица: Необходимо указать переменную, содержащую таблицу, которую необходимо отфильтровать
-Переменная: Необходимо указать переменную, в которую будут сохранен результат работы активности.
-
-В мастере фильтров вы можете указать значения по которым необходимо произвести фильтрацию. Также можно указать следует сохранить данные, подходящие под фильтр, или удалить их. 
-Помимо этого есть возможность выбрать только те колонки, которые понадобятся в дальнейшем. Для этого следует открыть раздел "Столбцы результата" и указать названия столбцов для удаления или сохранения.
-
-Подробную информацию о мастере фильтров и мастере запросов можно найти в документации https://docs.primo-rpa.ru/</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>ComponentID</Name>
-                            <Value xmlns:q11="http://microsoft.com/wsdl/types/" xsi:type="q11:guid">8ab86d13-7e8f-4f73-85d3-e4bf7713c999</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>ContinueOnException</Name>
-                            <Value xsi:type="xsd:boolean">false</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>PreventLogging</Name>
-                            <Value xsi:type="xsd:boolean">false</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>SSSuccess</Name>
-                            <Value xsi:type="xsd:boolean">false</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>SSFail</Name>
-                            <Value xsi:type="xsd:boolean">false</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>true</IsListValue>
-                            <Name>NoCodeProperties</Name>
-                            <ListValue />
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>NoCodeUsed</Name>
-                            <Value xsi:type="xsd:boolean">false</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>IsCollapsed</Name>
-                            <Value xsi:type="xsd:boolean">false</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>ShowAnnotation</Name>
-                            <Value xsi:type="xsd:boolean">true</Value>
-                        </SerializationItem>
-                    </Properties>
-                    <IsBreakpoint>false</IsBreakpoint>
-                    <IsIgnore>false</IsIgnore>
-                </SerializationComponent>
-            </Components>
-        </SerializationComponent>
-        <SerializationComponent xsi:type="SerializationContainer">
             <ClassName>LTools.Workflow.Elements.Workflow.WFWorkflowPath</ClassName>
             <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
             <Properties>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Result</Name>
-                </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
@@ -1060,7 +1072,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>EndItemPointIndex</Name>
-                    <Value xsi:type="xsd:int">-1</Value>
+                    <Value xsi:type="xsd:int">0</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -1070,7 +1082,11 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>EndElementID</Name>
-                    <Value xmlns:q13="http://microsoft.com/wsdl/types/" xsi:type="q13:guid">bb4fb2c6-1163-4047-9970-2cee97a88168</Value>
+                    <Value xmlns:q13="http://microsoft.com/wsdl/types/" xsi:type="q13:guid">c7ca8c90-6942-4dcd-8318-1877d8ad1b51</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Result</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -1117,7 +1133,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>ComponentID</Name>
-                    <Value xmlns:q14="http://microsoft.com/wsdl/types/" xsi:type="q14:guid">f3cd5d0a-0a12-46eb-b8c6-6349f2c172c8</Value>
+                    <Value xmlns:q14="http://microsoft.com/wsdl/types/" xsi:type="q14:guid">65ae8bc4-0495-4942-9f09-7ced8690fb3c</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -1158,6 +1174,15 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -1170,33 +1195,12 @@
             <Properties>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>Result</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>true</IsListValue>
                     <Name>PointsList</Name>
-                    <ListValue>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>PointsList</Name>
-                            <Value xsi:type="Point">
-                                <X>568</X>
-                                <Y>305</Y>
-                            </Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>PointsList</Name>
-                            <Value xsi:type="Point">
-                                <X>567.82166666666672</X>
-                                <Y>305</Y>
-                            </Value>
-                        </SerializationItem>
-                    </ListValue>
+                    <ListValue />
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -1216,12 +1220,16 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>StartElementID</Name>
-                    <Value xmlns:q15="http://microsoft.com/wsdl/types/" xsi:type="q15:guid">bb4fb2c6-1163-4047-9970-2cee97a88168</Value>
+                    <Value xmlns:q15="http://microsoft.com/wsdl/types/" xsi:type="q15:guid">c7ca8c90-6942-4dcd-8318-1877d8ad1b51</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>EndElementID</Name>
                     <Value xmlns:q16="http://microsoft.com/wsdl/types/" xsi:type="q16:guid">b3d5e240-e823-4fee-8cb5-827b096abf25</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Result</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -1268,7 +1276,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>ComponentID</Name>
-                    <Value xmlns:q17="http://microsoft.com/wsdl/types/" xsi:type="q17:guid">9610a648-4f12-415a-939e-b6e92890fc85</Value>
+                    <Value xmlns:q17="http://microsoft.com/wsdl/types/" xsi:type="q17:guid">06eed2b5-0a80-4f53-a0c6-574a8ae2e496</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -1309,6 +1317,15 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -1318,14 +1335,14 @@
     </Components>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>dt_dataFromTable</Name>
+            <Name>dtDataFromTable</Name>
             <Group />
             <Comment>Таблица для фильтрации</Comment>
             <DataTypeString>System.Data.DataTable</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>dt_filtrTable</Name>
+            <Name>dtFilterTable</Name>
             <Group />
             <Comment>Таблица с данными после фильтрации</Comment>
             <DataTypeString>System.Data.DataTable</DataTypeString>
@@ -1333,4 +1350,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

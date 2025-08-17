@@ -60,8 +60,8 @@ public class PrimoScript
 		*/
 		
         //Для работы данного элемента необходимо в начале инициализировать приложение Excel
-		var fileName = @".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx";
-        LTools.Office.ExcelApp app = LTools.Office.ExcelApp.Init(wf, fileName, ";", LTools.Office.Model.InteropTypes.DX);
+		var strFileName = @".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx";
+        LTools.Office.ExcelApp app = LTools.Office.ExcelApp.Init(wf, strFileName, ";", LTools.Office.Model.InteropTypes.DX);
 		
 		app.SetCells("A2:F12", System.Drawing.Color.Gray, System.Drawing.Color.Brown, LTools.Office.Model.CellBorderThicknesses.Medium, LTools.Office.Model.CellBorderTypes.Full, "Персонал", null);
 		
@@ -78,4 +78,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

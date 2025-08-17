@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -186,6 +190,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -362,6 +370,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -459,14 +471,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Активность «Чтение почты» в Primo RPA предназначена для автоматического извлечения информации из электронных писем в Microsoft Outlook. Это может быть полезно для извлечения данных, анализа корреспонденции или использования информации в других процессах автоматизации.
-
-Запрос: это условие или набор критериев, по которым будут выбираться письма для чтения. Например, можно задать поиск по теме письма, отправителю, дате отправки и т. д.
-Направление сортировки: определяет порядок, в котором будут обрабатываться письма. Можно выбрать сортировку по дате (от самых новых к самым старым или наоборот), по теме, отправителю и т. д.
-Путь к папке: указывает на папку в Outlook, из которой будут читаться письма. Это может быть «Входящие», «Отправленные», «Архив» и т. д. Если у вас в системе названия папок указано на английском языке то в активности также следует указывать такое название
-Сортировать: опция, которая позволяет включить или отключить сортировку писем по заданному критерию.
-Только непрочитанные: если эта опция включена, то будут читаться только те письма, которые ещё не были прочитаны. Это полезно для обработки новых сообщений.
-Читать свойства: определяет, какие свойства писем будут извлечены. Это могут быть тема, текст, отправитель, дата отправки, вложения и т. д.</Value>
+                    <Value xsi:type="xsd:string">Контейнер с элементом Чтение почты</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -544,6 +549,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -657,7 +666,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Variable</Name>
-                                    <Value xsi:type="xsd:string">mailList</Value>
+                                    <Value xsi:type="xsd:string">listMails</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -782,6 +791,10 @@
             <Properties>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Result</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -813,10 +826,6 @@
                     <IsListValue>false</IsListValue>
                     <Name>EndElementID</Name>
                     <Value xmlns:q10="http://microsoft.com/wsdl/types/" xsi:type="q10:guid">89fc4c40-201e-47b8-94e9-79c770375e69</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Result</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -905,6 +914,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -913,7 +931,7 @@
     </Components>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>mailList</Name>
+            <Name>listMails</Name>
             <Group />
             <Comment>Список полученных писем</Comment>
             <DataTypeString>System.Collections.Generic.List&lt;LTools.Office.Model.OMailMessage&gt;</DataTypeString>
@@ -921,4 +939,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент позволяет экспортировать данные из таблицы в формат CSV</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -179,7 +179,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Variable</Name>
-                                <Value xsi:type="xsd:string">dt_dataFromTable</Value>
+                                <Value xsi:type="xsd:string">dtDataFromTable</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -193,7 +193,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>ComponentName</Name>
-                                <Value xsi:type="xsd:string">Создать таблицу</Value>
+                                <Value xsi:type="xsd:string">Создать таблицу dtDataFromTable</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -268,7 +268,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Variable</Name>
-                                <Value xsi:type="xsd:string">dt_dataFromTable</Value>
+                                <Value xsi:type="xsd:string">dtDataFromTable</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -285,7 +285,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>ComponentName</Name>
-                                <Value xsi:type="xsd:string">Добавить строку</Value>
+                                <Value xsi:type="xsd:string">Добавить строку в dtDataFromTable</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -360,7 +360,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Variable</Name>
-                                <Value xsi:type="xsd:string">dt_dataFromTable</Value>
+                                <Value xsi:type="xsd:string">dtDataFromTable</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -377,7 +377,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>ComponentName</Name>
-                                <Value xsi:type="xsd:string">Добавить строку</Value>
+                                <Value xsi:type="xsd:string">Добавить строку в dtDataFromTable</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -452,7 +452,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Variable</Name>
-                                <Value xsi:type="xsd:string">dt_dataFromTable</Value>
+                                <Value xsi:type="xsd:string">dtDataFromTable</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -469,7 +469,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>ComponentName</Name>
-                                <Value xsi:type="xsd:string">Добавить строку</Value>
+                                <Value xsi:type="xsd:string">Добавить строку  в dtDataFromTable</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -541,12 +541,12 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Data</Name>
-                        <Value xsi:type="xsd:string">dt_dataFromTable</Value>
+                        <Value xsi:type="xsd:string">dtDataFromTable</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Variable</Name>
-                        <Value xsi:type="xsd:string">TableInCsv</Value>
+                        <Value xsi:type="xsd:string">strTableInCsv</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -578,9 +578,9 @@
 Для работы с активностью необходимо заполнить следующие обязательные свойства: 
 Табица: Необходимо указать переменную, содержащую таблицу, которую необходимо преобразовать
 Разделитель: Символ, которым будут разделены данные из ячеек в итоговой строке
-Переменная: Необходимо указать переменную, в которую будут сохранен результат работы активности.
+Переменная: Необходимо указать переменную, в которую будет сохранен результат работы активности.
 
-При преобразовании таблицы ячейки отделяются друг от друга указанным разделителем, а строки отедалются переносом строки \n</Value>
+При преобразовании таблицы ячейки отделяются друг от друга указанным разделителем, а строки отделяются переносом строки \n</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -635,14 +635,14 @@
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>dt_dataFromTable</Name>
+            <Name>dtDataFromTable</Name>
             <Group />
             <Comment>Таблица, которую необходимо преобразовать в csv</Comment>
             <DataTypeString>System.Data.DataTable</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>TableInCsv</Name>
+            <Name>strTableInCsv</Name>
             <Group />
             <Comment>Результат преобразования</Comment>
             <DataTypeString>System.String</DataTypeString>
@@ -650,4 +650,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

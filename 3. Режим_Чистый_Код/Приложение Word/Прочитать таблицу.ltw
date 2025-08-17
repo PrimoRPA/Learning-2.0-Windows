@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<SerializationRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<SerializationRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <WorkflowType>2</WorkflowType>
     <IsTestCase>false</IsTestCase>
     <UseArgs>false</UseArgs>
@@ -55,7 +55,10 @@ public class PrimoScript
 		//Инициализация документа MS Word
 		LTools.Office.WordApp app = LTools.Office.WordApp.Init(wf, @".\Дополнительные материалы\Приложение Word\Входные данные\Таблица персонал.docx", LTools.Office.Model.InteropTypes.DX);
    
-		System.Data.DataTable table = app.ReadTable(0);
+		//Чтение таблицы из файла MsWord
+		System.Data.DataTable dtTableWithInfo = app.ReadTable(0);
+		
+		LTools.Workflow.PrimoApp.AddToLog(wf, "Количество полученных строк таблицы: " + dtTableWithInfo.Rows.Count.ToString(), LTools.Enums.LogMessageType.Info);
 	}
 }</Value>
             </SerializationItem>
@@ -66,4 +69,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

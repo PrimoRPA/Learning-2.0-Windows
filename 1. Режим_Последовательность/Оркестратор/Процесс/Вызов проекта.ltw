@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент вызывает проект из Оркестратора, чтобы обработать его локально</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -209,7 +209,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Активность «Вызов проекта» в Primo RPA позволяет запустить другой проект из текущего. 
+                        <Value xsi:type="xsd:string">Активность «Вызов проекта» в Primo RPA позволяет запустить другой проект из текущего, чтобы обработать его локально
 
 Для того чтобы запустить проект с помощью активности «Вызов проекта» в Primo RPA, необходимо выполнить несколько предварительных условий:
 
@@ -278,4 +278,5 @@
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

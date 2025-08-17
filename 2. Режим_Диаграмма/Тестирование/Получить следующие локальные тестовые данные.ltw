@@ -94,6 +94,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -132,7 +136,7 @@ System.Collections.Generic.Dictionary&lt;System.String, System.Object&gt;: Пе�
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">181.00000000000003</Value>
+                    <Value xsi:type="xsd:double">163.00000000000003</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -196,6 +200,10 @@ System.Collections.Generic.Dictionary&lt;System.String, System.Object&gt;: Пе�
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -319,12 +327,12 @@ System.Collections.Generic.Dictionary&lt;System.String, System.Object&gt;: Пе�
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">127</Value>
+                    <Value xsi:type="xsd:double">142</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">50</Value>
+                    <Value xsi:type="xsd:double">12</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -388,6 +396,10 @@ System.Collections.Generic.Dictionary&lt;System.String, System.Object&gt;: Пе�
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -602,6 +614,15 @@ System.Collections.Generic.Dictionary&lt;System.String, System.Object&gt;: Пе�
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -628,12 +649,12 @@ System.Collections.Generic.Dictionary&lt;System.String, System.Object&gt;: Пе�
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">127</Value>
+                    <Value xsi:type="xsd:double">142</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">287.03999999999996</Value>
+                    <Value xsi:type="xsd:double">245</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -656,7 +677,7 @@ System.Collections.Generic.Dictionary&lt;System.String, System.Object&gt;: Пе�
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>ComponentID</Name>
-                    <Value xmlns:q9="http://microsoft.com/wsdl/types/" xsi:type="q9:guid">32b789b1-518b-4ca3-886f-3dd636c60338</Value>
+                    <Value xmlns:q9="http://microsoft.com/wsdl/types/" xsi:type="q9:guid">4a23ac39-6dcc-4caa-a4dd-4a25791396ea</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -698,6 +719,10 @@ System.Collections.Generic.Dictionary&lt;System.String, System.Object&gt;: Пе�
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -735,7 +760,7 @@ System.Collections.Generic.Dictionary&lt;System.String, System.Object&gt;: Пе�
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>ComponentID</Name>
-                            <Value xmlns:q10="http://microsoft.com/wsdl/types/" xsi:type="q10:guid">a2a62679-12b1-403b-9bf9-fcd72179e5a4</Value>
+                            <Value xmlns:q10="http://microsoft.com/wsdl/types/" xsi:type="q10:guid">66a7e707-ccf6-4297-9deb-d5389eacb7fd</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -788,11 +813,12 @@ System.Collections.Generic.Dictionary&lt;System.String, System.Object&gt;: Пе�
         <ScriptVariable>
             <Name>DictionaryValue</Name>
             <Group>Value</Group>
-            <DefaultValue xsi:type="xsd:string">new System.Collections.Generic.Dictionary&lt;System.String, System.Object&gt;()</DefaultValue>
-            <Comment>Переменная с полученными данными</Comment>
+            <DefaultValue xsi:type="xsd:string">new System.Collections.Generic.Dictionary&lt;System.String, System.Object&gt;() </DefaultValue>
+            <Comment>Переменная</Comment>
             <DataTypeString>System.Collections.Generic.Dictionary&lt;System.String, System.Object&gt;</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

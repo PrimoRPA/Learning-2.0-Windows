@@ -57,10 +57,10 @@ public class PrimoScript
 		*/
 		
         //Для работы данного элемента необходимо в начале инициализировать приложение Excel
-		var fileName = @".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx";
-        LTools.Office.ExcelApp app = LTools.Office.ExcelApp.Init(wf, fileName, ";", LTools.Office.Model.InteropTypes.DX);
+		var strFileNamee = @".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx";
+        LTools.Office.ExcelApp app = LTools.Office.ExcelApp.Init(wf, strFileName, ";", LTools.Office.Model.InteropTypes.DX);
 		
-		string data = app.LookUpRange("C1:C7", "менеджер", "Персонал", null);
+		string strCellWithInfo = app.LookUpRange("C1:C7", "менеджер", "Персонал", null);
     }
 }</Value>
             </SerializationItem>
@@ -71,4 +71,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

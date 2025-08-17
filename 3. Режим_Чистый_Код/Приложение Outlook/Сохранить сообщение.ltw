@@ -54,10 +54,10 @@ public class PrimoScript
 		*/
 		
 		LTools.Office.OutlookApp app = LTools.Office.OutlookApp.Init(wf, "Outlook");
-		List&lt;LTools.Office.Model.OMailMessage&gt; ret = app.ReadMail(@"\\Outlook\Входящие", true);
+		List&lt;LTools.Office.Model.OMailMessage&gt; listMails = app.ReadMail(@"\\Outlook\Входящие", true);
 		
-		string savePath =System.IO.Path.GetFullPath(@".\Дополнительные материалы\Приложение Outlook\EmailText.txt");
-		app.SaveMessage(ret[0], savePath, LTools.Office.Model.OutlookApp.MessageFileTypes.TXT);
+		string strSavePath =System.IO.Path.GetFullPath(@".\Дополнительные материалы\Приложение Outlook\EmailText.txt");
+		app.SaveMessage(listMails[0], strSavePath, LTools.Office.Model.OutlookApp.MessageFileTypes.TXT);
 		
     }
 }</Value>
@@ -69,4 +69,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

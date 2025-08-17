@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -186,6 +190,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -361,6 +369,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -538,6 +550,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -547,6 +563,16 @@
                     <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
                     <Properties>
                         <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>ComponentName</Name>
+                            <Value xsi:type="xsd:string">Множественное присвоение</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Annotation</Name>
+                            <Value xsi:type="xsd:string">Внесите в данные переменные собственные данные для учетной записи</Value>
+                        </SerializationItem>
+                        <SerializationItem>
                             <IsListValue>true</IsListValue>
                             <Name>Items</Name>
                             <ListValue>
@@ -554,7 +580,7 @@
                                     <IsListValue>false</IsListValue>
                                     <Name>Items</Name>
                                     <Value xsi:type="MultipleAssignItem">
-                                        <Variable>userName</Variable>
+                                        <Variable>strUserName</Variable>
                                         <IsNoCodeVariable>false</IsNoCodeVariable>
                                         <Assign>""</Assign>
                                         <IsNoCodeAssign>false</IsNoCodeAssign>
@@ -564,7 +590,7 @@
                                     <IsListValue>false</IsListValue>
                                     <Name>Items</Name>
                                     <Value xsi:type="MultipleAssignItem">
-                                        <Variable>userPass</Variable>
+                                        <Variable>strUserPass</Variable>
                                         <IsNoCodeVariable>false</IsNoCodeVariable>
                                         <Assign>""</Assign>
                                         <IsNoCodeAssign>false</IsNoCodeAssign>
@@ -578,21 +604,11 @@
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
-                            <Name>ComponentName</Name>
-                            <Value xsi:type="xsd:string">Множественное присвоение</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
                             <Name>WaitBefore</Name>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>WaitAfter</Name>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string">Внесите в данные переменные собственные данные для учетной записи</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -669,7 +685,7 @@ SSL: опция для использования защищённого сое�
 Кому: адрес электронной почты получателя.
 Тема: тема письма.
 Содержимое: текст письма, который будет отправлен получателю.
-Вложения: файлы, которые будут прикреплены к письму. Вы можете указать ихсписком или воспользоваться редактором коллекции</Value>
+Вложения: файлы, которые будут прикреплены к письму. Вы можете указать их списком или воспользоваться редактором коллекции</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -748,6 +764,10 @@ SSL: опция для использования защищённого сое�
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -764,7 +784,7 @@ SSL: опция для использования защищённого сое�
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>From</Name>
-                            <Value xsi:type="xsd:string">userName</Value>
+                            <Value xsi:type="xsd:string">strUserName</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -801,12 +821,12 @@ SSL: опция для использования защищённого сое�
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Login</Name>
-                            <Value xsi:type="xsd:string">userName</Value>
+                            <Value xsi:type="xsd:string">strUserName</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Password</Name>
-                            <Value xsi:type="xsd:string">userPass</Value>
+                            <Value xsi:type="xsd:string">strUserPass</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -859,7 +879,7 @@ SSL: опция для использования защищённого сое�
 Кому: адрес электронной почты получателя.
 Тема: тема письма.
 Содержимое: текст письма, который будет отправлен получателю.
-Вложения: файлы, которые будут прикреплены к письму. Вы можете указать ихсписком или воспользоваться редактором коллекции</Value>
+Вложения: файлы, которые будут прикреплены к письму. Вы можете указать их списком или воспользоваться редактором коллекции</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -1041,6 +1061,15 @@ SSL: опция для использования защищённого сое�
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1175,6 +1204,15 @@ SSL: опция для использования защищённого сое�
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1183,14 +1221,14 @@ SSL: опция для использования защищённого сое�
     </Components>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>userPass</Name>
+            <Name>strUserPass</Name>
             <Group />
             <Comment>Пароль пользователя дляотправки писем</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>userName</Name>
+            <Name>strUserName</Name>
             <Group />
             <Comment>Логин пользователядля отправки писем</Comment>
             <DataTypeString>String</DataTypeString>
@@ -1198,4 +1236,5 @@ SSL: опция для использования защищённого сое�
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

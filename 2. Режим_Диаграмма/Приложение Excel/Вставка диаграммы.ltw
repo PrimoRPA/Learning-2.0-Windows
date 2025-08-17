@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -187,6 +191,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -299,7 +307,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">176.3566666666668</Value>
+                    <Value xsi:type="xsd:double">232.3566666666668</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -363,6 +371,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -461,19 +473,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Элемент используется для добавления диаграммы в книгу Excel, указанной в контенере "Приложение Excel". Все необходимые для создания диаграммы параметры необходимо указать в свойстве активности
-
-Параметры, которые можно заполнить для данной активности: 
-Высота: высота диаграммы, указанная в пикселях
-Диапазон: диапазон данных, на которых будет построена диаграмма. Если указать "*", то для диаграммы будет выбран весь лист
-Индекс страницы: порядковый номер страницы, на которую необходимо вставить диаграмму. Нумерация начинается с нуля
-Сверху: отступ в пикселях, который нужно выставить от верхней границы листа
-Снизу: отступ в пикселях, который нужно выставить от левой границы листа
-Страница: название страницы, на которую необходимо вставить диаграмму. Нумерация начинается с нуля
-Тип: тип создаваемой диаграммы. По умолчанию Area - диаграмма с областями. Существуют и другие типы: Bar -линейная, Column - столбчатая, Pie - круговая и д.р. Подробнее о типах диаграмм можно узнать в документации по ссылке: https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_excel/el_excel_createchart
-Ширина: ширина диаграммы, указанная в пикселях
-
-В случае если не указаны свойства активности диаграмма будет создана на первом листе книги Excel, указанной в контейнере, в ячейке A1. Данные для диаграммы будут выбрано автоматически</Value>
+                    <Value xsi:type="xsd:string">Контейнер с элементом Вставка диаграммы</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -482,12 +482,12 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">446.4133333333333</Value>
+                    <Value xsi:type="xsd:double">443</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">151.04</Value>
+                    <Value xsi:type="xsd:double">162.79423638661717</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -552,6 +552,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -562,13 +566,8 @@
                     <Properties>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
-                            <Name>ComponentName</Name>
-                            <Value xsi:type="xsd:string">Приложение Excel</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string" />
+                            <Name>FileName</Name>
+                            <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -584,11 +583,6 @@
                             <IsListValue>false</IsListValue>
                             <Name>R1C1</Name>
                             <Value xsi:type="xsd:boolean">false</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>FileName</Name>
-                            <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -643,11 +637,21 @@
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
+                            <Name>ComponentName</Name>
+                            <Value xsi:type="xsd:string">Приложение Excel</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
                             <Name>WaitBefore</Name>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>WaitAfter</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Annotation</Name>
+                            <Value xsi:type="xsd:string" />
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -710,6 +714,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Variable</Name>
+                                    <Value xsi:type="xsd:string">chartLink</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -765,7 +770,9 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Annotation</Name>
-                                    <Value xsi:type="xsd:string">Параметры, которые можно заполнить для данной активности: 
+                                    <Value xsi:type="xsd:string">Элемент используется для добавления диаграммы в книгу Excel, указанной в контенере "Приложение Excel". Все необходимые для создания диаграммы параметры необходимо указать в свойстве активности
+
+Параметры, которые можно заполнить для данной активности: 
 Высота: высота диаграммы, указанная в пикселях
 Диапазон: диапазон данных, на которых будет построена диаграмма. Если указать "*", то для диаграммы будет выбран весь лист
 Индекс страницы: порядковый номер страницы, на которую необходимо вставить диаграмму. Нумерация начинается с нуля
@@ -855,7 +862,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Annotation</Name>
-                                    <Value xsi:type="xsd:string">Для просмотра внесенных изменений необходимо сохранить документ. Подробнее о данном элеменете можно узнать в последвоательности "Сохранить документ.ltw"</Value>
+                                    <Value xsi:type="xsd:string">Для просмотра внесенных изменений необходимо сохранить документ. Подробнее о данном элементе можно узнать в последовательности "Сохранить документ.ltw"</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -925,16 +932,7 @@
                 <SerializationItem>
                     <IsListValue>true</IsListValue>
                     <Name>PointsList</Name>
-                    <ListValue>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>PointsList</Name>
-                            <Value xsi:type="Point">
-                                <X>568</X>
-                                <Y>151.03999999999996</Y>
-                            </Value>
-                        </SerializationItem>
-                    </ListValue>
+                    <ListValue />
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -1048,12 +1046,30 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
             <Components />
         </SerializationComponent>
     </Components>
-    <GlobalVariables />
+    <GlobalVariables>
+        <ScriptVariable>
+            <Name>chartLink</Name>
+            <Group />
+            <Comment>Ссылка на диаграмму</Comment>
+            <DataTypeString>LTools.Office.Model.Excel.ExcelChartItem</DataTypeString>
+            <Direction>IN_OUT</Direction>
+        </ScriptVariable>
+    </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

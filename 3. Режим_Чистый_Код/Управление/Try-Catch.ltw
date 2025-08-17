@@ -62,13 +62,13 @@ public class PrimoScript
 		}
 		catch (Exception e) when (e is not OperationCanceledException)
 		{
-			LTools.Workflow.PrimoApp.AddToLog(wf, "Блок Catch", LTools.Enums.LogMessageType.Info);
+			LTools.Workflow.PrimoApp.AddToLog(wf, "Блок Catch. Возникла ошибка: " + e.Message, LTools.Enums.LogMessageType.Info);
 		}
 		finally
 		{
-			LTools.Workflow.PrimoApp.AddToLog(wf, "Блок Finally", LTools.Enums.LogMessageType.Info);
 		}
-		LTools.Workflow.PrimoApp.AddToLog(wf, "Снаруже контейнера Try Catch", LTools.Enums.LogMessageType.Info);
+			LTools.Workflow.PrimoApp.AddToLog(wf, "Блок Finally. Работа Try-Catch завершена", LTools.Enums.LogMessageType.Info);
+		LTools.Workflow.PrimoApp.AddToLog(wf, "Лог снаружи контейнера Try Catch", LTools.Enums.LogMessageType.Info);
     }
 }</Value>
             </SerializationItem>
@@ -79,4 +79,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

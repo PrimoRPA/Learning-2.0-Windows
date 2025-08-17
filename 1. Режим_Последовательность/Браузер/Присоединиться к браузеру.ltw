@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент осуществляет подключение к действующему веб-браузеру</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -92,14 +92,8 @@
                 <Properties>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
-                        <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Открыть браузер</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Подробное описание активности приведено
- в последовательности "Открыть браузер.ltw"</Value>
+                        <Name>URL</Name>
+                        <Value xsi:type="xsd:string">"https://www.google.com/"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -110,11 +104,6 @@
                         <IsListValue>false</IsListValue>
                         <Name>Headless</Name>
                         <Value xsi:type="xsd:boolean">false</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>URL</Name>
-                        <Value xsi:type="xsd:string">"https://www.google.com/"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -158,11 +147,22 @@
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
+                        <Name>ComponentName</Name>
+                        <Value xsi:type="xsd:string">Открыть браузер</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
                         <Name>WaitBefore</Name>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>WaitAfter</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Annotation</Name>
+                        <Value xsi:type="xsd:string">Подробное описание активности приведено
+ в последовательности "Открыть браузер.ltw"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -220,47 +220,13 @@
                 <Properties>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
-                        <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Присоединиться к браузеру</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Активность используется для присоединения к 
-браузеру и дальнейшей работе в нем.
-
-Для работы с активностью необходимо заполнить
- следующие обязательные свойства: 
-- Тип браузера: Тип используемого браузера. В соответствии 
-с используемым типом необходимо установить расширение
-
-Одно из следующих свойств должно быть заполнено:
-- Url: Адрес ресурса, который необходимо открыть
-- Заголовок браузера: Заголовок открытой странице в 
-браузере, к которому необходимо присоединиться
-- Переменная (раздела "Браузер"): Переменная, которая
- хранит в себе ссылку на используемый браузер.
-
-Дополнительные свойства. Заполняются в случае необходимости:
-- Индекс вкладки браузера: Номер вкладки, к которой 
-необходимо присоединиться.  Следует использовать, если до этого 
-осуществлялась работа в другом приложении. Если же работа 
-осуществлялась вбраузере следует использовать активность 
-"Активировать вкладку браузера"
-- Переменная: Переменная, которая хранит в себе ссылку 
-на используемый браузер. В свойстве раздела "Вывод" 
-сохраняется информация о браузере, а в разделе "Браузер" 
-используется для присоединения</Value>
+                        <Name>BrowserTitle</Name>
+                        <Value xsi:type="xsd:string">"Google"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>BrowserType</Name>
                         <Value xsi:type="xsd:int">1</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>BrowserTitle</Name>
-                        <Value xsi:type="xsd:string">"Google"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -308,12 +274,46 @@
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
+                        <Name>ComponentName</Name>
+                        <Value xsi:type="xsd:string">Присоединиться к браузеру</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
                         <Name>WaitBefore</Name>
                         <Value xsi:type="xsd:string">2000</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>WaitAfter</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Annotation</Name>
+                        <Value xsi:type="xsd:string">Активность используется для присоединения к 
+браузеру и дальнейшей работе в нем.
+
+Для работы с активностью необходимо заполнить
+ следующие обязательные свойства: 
+- Тип браузера: Тип используемого браузера. В соответствии 
+с используемым типом необходимо установить расширение
+
+Одно из следующих свойств должно быть заполнено:
+- Url: Адрес ресурса, который необходимо открыть
+- Заголовок браузера: Заголовок открытой странице в 
+браузере, к которому необходимо присоединиться
+- Переменная (раздела "Браузер"): Переменная, которая
+ хранит в себе ссылку на используемый браузер.
+
+Дополнительные свойства. Заполняются в случае необходимости:
+- Индекс вкладки браузера: Номер вкладки, к которой 
+необходимо присоединиться.  Следует использовать, если до этого 
+осуществлялась работа в другом приложении. Если же работа 
+осуществлялась вбраузере следует использовать активность 
+"Активировать вкладку браузера"
+- Переменная: Переменная, которая хранит в себе ссылку 
+на используемый браузер. В свойстве раздела "Вывод" 
+сохраняется информация о браузере, а в разделе "Браузер" 
+используется для присоединения</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -370,12 +370,16 @@
                         <Properties>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
-                                <Name>TextTag</Name>
+                                <Name>ComponentName</Name>
+                                <Value xsi:type="xsd:string">Закрыть браузер</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
-                                <Name>ComponentName</Name>
-                                <Value xsi:type="xsd:string">Закрыть браузер</Value>
+                                <Name>Annotation</Name>
+                            </SerializationItem>
+                            <SerializationItem>
+                                <IsListValue>false</IsListValue>
+                                <Name>TextTag</Name>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -384,10 +388,6 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>WaitAfter</Name>
-                            </SerializationItem>
-                            <SerializationItem>
-                                <IsListValue>false</IsListValue>
-                                <Name>Annotation</Name>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -452,4 +452,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

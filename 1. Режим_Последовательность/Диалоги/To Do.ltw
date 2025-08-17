@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент, задающий точку для разработки функционала в будущем</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -90,6 +90,11 @@
                 <ClassName>LTools.Workflow.Elements.WFToDo</ClassName>
                 <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
                 <Properties>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Completed</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Comment</Name>
@@ -115,7 +120,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Активность предназначена для создания пометок, например для будущих доработок
+                        <Value xsi:type="xsd:string">Элемент, задающий точку для разработки функционала в будущем. Активность предназначена для создания пометок, например для будущих доработок
 
 В активности следует указать текст, который будет указывать на необходимость возвращения к текущему месту. Комментарий, который указан в активности будет отражен на панели "To Do" Primo Studio. На данной панели отображаются все имеющиеся в проекте точки для разработки функционала и файлы, в которых они находятся. При двойном нажатии на комментарий в данной панели происходит автоматическое открытие файла процесса и переход к элементу.
 
@@ -175,4 +180,5 @@
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

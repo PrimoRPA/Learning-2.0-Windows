@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -125,6 +129,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
                     <Value xsi:type="xsd:double">176.04</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -217,7 +225,7 @@
                                     <Value xsi:type="MultipleAssignItem">
                                         <Variable>strDestinationPath</Variable>
                                         <IsNoCodeVariable>false</IsNoCodeVariable>
-                                        <Assign>".\\Дополнительные материалы\\Файловая система\\Копировать файл\\"+DateTime.Now.ToString()+".txt"</Assign>
+                                        <Assign>".\\Дополнительные материалы\\Файловая система\\Копировать файл\\"+DateTime.Now.ToString("dd.MM.yyyy")+".txt"</Assign>
                                         <IsNoCodeAssign>false</IsNoCodeAssign>
                                     </Value>
                                 </SerializationItem>
@@ -310,7 +318,9 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Чтобы скопировать файл, необходимо указать "Источник" (изначальный файл для копирования) и "Назначение" (место, куда будет помещена копия файла)
+                    <Value xsi:type="xsd:string">Этот компонент предназначен для копирования файлов. Он позволяет создать дубликат исходного файла в указанной директории.
+
+Чтобы скопировать файл, необходимо указать "Источник" (изначальный файл для копирования) и "Назначение" (место, куда будет помещена копия файла)
 
 В случае, если по пути, указанному в свойстве "Назначение" уже есть файл, активность выдаст ошибку (чтобы избежать такой ситуации необходимо поставить галочку в свойстве "Перезаписать")
 
@@ -323,12 +333,16 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">444.7</Value>
+                    <Value xsi:type="xsd:double">443</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">363.03999999999996</Value>
+                    <Value xsi:type="xsd:double">346.03999999999991</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -414,7 +428,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>DoOverwrite</Name>
-                            <Value xsi:type="xsd:boolean">false</Value>
+                            <Value xsi:type="xsd:boolean">true</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -436,7 +450,9 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string">Чтобы скопировать файл, необходимо указать "Источник" (изначальный файл для копирования) и "Назначение" (место, куда будет помещена копия файла)
+                            <Value xsi:type="xsd:string">Этот компонент предназначен для копирования файлов. Он позволяет создать дубликат исходного файла в указанной директории.
+
+Чтобы скопировать файл, необходимо указать "Источник" (изначальный файл для копирования) и "Назначение" (место, куда будет помещена копия файла)
 
 В случае, если по пути, указанному в свойстве "Назначение" уже есть файл, активность выдаст ошибку (чтобы избежать такой ситуации необходимо поставить галочку в свойстве "Перезаписать")
 
@@ -622,6 +638,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -756,6 +781,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -766,15 +800,18 @@
         <ScriptVariable>
             <Name>strTemplatePath</Name>
             <Group />
+            <Comment>Исходный путь файла, который необходимо скопировать</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
             <Name>strDestinationPath</Name>
             <Group />
+            <Comment>Путь куда нужно скопировать файл</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -54,12 +54,10 @@ public class PrimoScript
         string txt = System.IO.File.ReadAllText(strTxtPath);
 		byte[] bytes = System.IO.File.ReadAllBytes(strTxtPath);
 		System.Drawing.Image img = System.Drawing.Bitmap.FromFile(strPngPath);
+		
+		LTools.Workflow.PrimoApp.AddToLog(wf, "Текст, полученный из файла: " + txt, LTools.Enums.LogMessageType.Info);
     }
-}
-
-//17 строка Не удается неявно преобразовать тип "System.Drawing.Image" в "System.Drawing.Bitmap".
-//Существует явное преобразование (возможно, пропущено приведение типов).
-//Если выставить тип System.Drawing.Image все нормально, но в последовательности диаграммы тип переменной "System.Drawing.Bitmap"</Value>
+}</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -68,4 +66,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

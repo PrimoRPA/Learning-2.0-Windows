@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -122,7 +126,11 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">161.03999999999996</Value>
+                    <Value xsi:type="xsd:double">218.03999999999996</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -198,7 +206,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Comment</Name>
-                            <Value xsi:type="xsd:string">Для работы с любыми активностями группы "Документ Word" необходимо использовать контейнер, описанный в последовательности "Документ Word.ltw"</Value>
+                            <Value xsi:type="xsd:string" />
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -285,13 +293,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Активность производит изменение цвета фона выбранного текста.
-
-Для работы активности необходимо указать свойство Start, чтобы определить начала диапозона фона шрифта, и Length, чтобы определить конец диапозона фона шрифта
-
-Для изменения цвета фона шрифта необходимо выставить значение свойства Change color
-
-Для получения переменной текушего цвета фона необходимо добавить переменную в свойство Color</Value>
+                    <Value xsi:type="xsd:string">Контейнер с элементом Цвет фона шрифта</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -300,12 +302,16 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">449.06333333333333</Value>
+                    <Value xsi:type="xsd:double">443</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">161.04</Value>
+                    <Value xsi:type="xsd:double">157.04</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -380,13 +386,13 @@
                     <Properties>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
-                            <Name>InteropType</Name>
-                            <Value xsi:type="xsd:int">0</Value>
+                            <Name>FileName</Name>
+                            <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Word\Входные данные\Информация об RPA.docx"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
-                            <Name>FileName</Name>
-                            <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Word\Входные данные\Информация об RPA.docx"</Value>
+                            <Name>InteropType</Name>
+                            <Value xsi:type="xsd:int">0</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -487,8 +493,45 @@
                             <Properties>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
+                                    <Name>SelStart</Name>
+                                    <Value xsi:type="xsd:string">0</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>SelLength</Name>
+                                    <Value xsi:type="xsd:string">52</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>LabelFontColorS</Name>
+                                    <Value xsi:type="xsd:string">#FFFF0000</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>ChColor</Name>
+                                    <Value xsi:type="xsd:boolean">true</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>GetColor</Name>
+                                    <Value xsi:type="xsd:string">drawColor</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>TextTag</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
                                     <Name>ComponentName</Name>
                                     <Value xsi:type="xsd:string">Цвет фона шрифта</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>WaitBefore</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>WaitAfter</Name>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -500,43 +543,6 @@
 Для изменения цвета фона шрифта необходимо выставить значение свойства Change color
 
 Для получения переменной текушего цвета фона необходимо добавить переменную в свойство Color</Value>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>ChColor</Name>
-                                    <Value xsi:type="xsd:boolean">true</Value>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>LabelFontColorS</Name>
-                                    <Value xsi:type="xsd:string">#FFFF0000</Value>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>GetColor</Name>
-                                    <Value xsi:type="xsd:string">drawColor</Value>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>SelStart</Name>
-                                    <Value xsi:type="xsd:string">0</Value>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>SelLength</Name>
-                                    <Value xsi:type="xsd:string">52</Value>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>TextTag</Name>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>WaitBefore</Name>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>WaitAfter</Name>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -701,6 +707,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>IsSingleElemented</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
@@ -773,7 +783,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Comment</Name>
-                            <Value xsi:type="xsd:string">Элемент, обрабатывающий цвет фона текста документа</Value>
+                            <Value xsi:type="xsd:string" />
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -977,6 +987,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -987,9 +1006,11 @@
         <ScriptVariable>
             <Name>drawColor</Name>
             <Group />
+            <Comment>Цвет, добавленный в документ после работы активности</Comment>
             <DataTypeString>System.Drawing.Color</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

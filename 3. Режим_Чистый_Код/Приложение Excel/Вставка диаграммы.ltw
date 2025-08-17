@@ -62,10 +62,10 @@ public class PrimoScript
 		*/
 		
         //Для работы данного элемента необходимо в начале инициализировать приложение Excel
-		var fileName = @".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx";
-        LTools.Office.ExcelApp app = LTools.Office.ExcelApp.Init(wf, fileName, ";", LTools.Office.Model.InteropTypes.DX);
+		var strFileName = @".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx";
+        LTools.Office.ExcelApp app = LTools.Office.ExcelApp.Init(wf, strFileName, ";", LTools.Office.Model.InteropTypes.DX);
 		
-		LTools.Office.Model.Excel.ExcelChartItem data = app.InsertChart("B2:E12", LTools.Office.Model.Excel.ChartTypes.Area, "Копия персонала", null, 2000, 100, 1500, 1000);
+		LTools.Office.Model.Excel.ExcelChartItem chartLink = app.InsertChart("B2:E12", LTools.Office.Model.Excel.ChartTypes.Area, "Копия персонала", null, 2000, 100, 1500, 1000);
 		
 		//Для отображения результата необходимо сохранить внесенные изменения
 		app.SaveAs(@".\Дополнительные материалы\Приложение Excel\Выходные данные\PrimoLearningInsertСhart.xlsx");
@@ -79,4 +79,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент осуществляет безусловный выход из последовательности.</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -98,7 +98,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">В случае, если необходимо выйти из процесса до того, как он дойдет до последней активности (обычно ставится в блоке Catch контейнера Try-Catch), можно использовать активность "Выход из процесса".
+                        <Value xsi:type="xsd:string">Элемент осуществляет безусловный выход из последовательности.
+
+В случае, если необходимо выйти из процесса до того, как он дойдет до последней активности (обычно ставится в блоке Catch контейнера Try-Catch), можно использовать активность "Выход из процесса".
 *Все аргументы с префиксом io, out на момент выхода, будут перенесены в ltw уровнем выше</Value>
                     </SerializationItem>
                     <SerializationItem>
@@ -166,4 +168,5 @@
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

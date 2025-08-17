@@ -59,6 +59,7 @@ public class PrimoScript
 		var name = System.IO.Path.GetFullPath(@".\Дополнительные материалы\Приложение Word\Входные данные\macros_changeColor.bas");
 		var func = "ChangeColorVBA";
 		
+		//Запуск VBA скрипта
 		object data = app.RunVBA(name, func);
 		
 		//Сохранение изменений документа MS Word
@@ -73,4 +74,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -54,8 +54,10 @@ public class PrimoScript
 		*/
 		
 		//app - переменнаядля сохранения ссылки на подключенный браузер. Для работы со страницами браузера необходимо будет указывать данное подключение
-		var url = "https://www.google.com/"; // портал, который необходимо открыть
-		LTools.WebBrowser.BrowserApp app = LTools.WebBrowser.BrowserApp.Open(wf, LTools.WebBrowser.Model.BrowserTypes.Chrome, url);
+		var strUrl = "https://www.google.com/"; // портал, который необходимо открыть
+		LTools.WebBrowser.BrowserApp app = LTools.WebBrowser.BrowserApp.Open(wf, LTools.WebBrowser.Model.BrowserTypes.Chrome, strUrl);
+		
+		//app.Close(); //Компонент, завершающий работу браузера.
     }
 }</Value>
             </SerializationItem>
@@ -66,4 +68,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -57,8 +57,8 @@ public class PrimoScript
 		*/
 		
         //Для работы данного элемента необходимо в начале инициализировать приложение Excel
-		var fileName = @".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx";
-        LTools.Office.ExcelApp app = LTools.Office.ExcelApp.Init(wf, fileName, ";", LTools.Office.Model.InteropTypes.DX);
+		var strFileName = @".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx";
+        LTools.Office.ExcelApp app = LTools.Office.ExcelApp.Init(wf, strFileName, ";", LTools.Office.Model.InteropTypes.DX);
 		
 		app.DeleteRows(1, 1, "Персонал", null);
 		
@@ -74,4 +74,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

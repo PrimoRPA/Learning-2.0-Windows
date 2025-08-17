@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент, создающий новую папку.</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -200,7 +200,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Чтобы содать папку, необходимо указать свойство "Путь", путь может быть абсолютный или относительный
+                        <Value xsi:type="xsd:string">Этот компонент предназначен для создания новых папок в системе. Он позволяет быстро и удобно организовать хранение файлов, разделяя их по категориям или проектам.
+
+Чтобы содать папку, необходимо указать свойство "Путь", путь может быть абсолютный или относительный
 
 *В случае, если в указанном пути нет одной из промежуточных папок, она будет создана автоматически
 *В случае, если создается папка с таким же названием, ничего не произойдет, файлы из уже существующей папки не будут удалены</Value>
@@ -260,9 +262,11 @@
         <ScriptVariable>
             <Name>strFolderPath</Name>
             <Group />
+            <Comment>Путь до создаваемой папки</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

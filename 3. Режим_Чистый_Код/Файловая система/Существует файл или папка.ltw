@@ -46,18 +46,22 @@ public class PrimoScript
     {
 		var strFilePath = ".\\Дополнительные материалы\\Файловая система\\Существует файл или папка\\file.txt";
 		var strFolderPath = ".\\Дополнительные материалы\\Файловая система\\Существует файл или папка\\directory";
+		bool boolExist = false;
+		
 		//Чтобы проверить существование файла используйте if (true)
 		//Чтобы проверить существование папки используйте if (false)
-		if (false){
+		if (true){
 			//Чтобы проверить существование файла, необходимо указать свойство "Путь", путь может быть абсолютный или относительный. Для проверки именно файла необходимо отключить свойство "Искать папку" (изначально отключено)
 			//Активность возращает переменную "boolExist" (тип System.Boolean) true или false в зависимости от того, существует файл или нет
 			//*Активность работает с файлами любого формата
-	 		bool boolExist = System.IO.File.Exists(strFilePath);
+	 		boolExist = System.IO.File.Exists(strFilePath);
 	 	}else{
 			//Чтобы проверить существование папки, необходимо указать свойство "Путь", путь может быть абсолютный или относительный. Для проверки именно папки необходимо включить свойство "Искать папку"
 			//Активность возращает переменную "boolExist" (тип System.Boolean) true или false в зависимости от того, существует папка или нет
-	   		bool boolExist = System.IO.Directory.Exists(strFolderPath);
+	   		boolExist = System.IO.Directory.Exists(strFolderPath);
 		}
+		
+		LTools.Workflow.PrimoApp.AddToLog(wf, boolExist ? "Объект существует на диске" : "Объект не существует на диске", LTools.Enums.LogMessageType.Info);
     }
 }</Value>
             </SerializationItem>
@@ -68,4 +72,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

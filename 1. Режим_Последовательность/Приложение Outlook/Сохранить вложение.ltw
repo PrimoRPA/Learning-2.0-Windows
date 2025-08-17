@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент сохраняет вложение письма</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -273,7 +273,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Variable</Name>
-                                <Value xsi:type="xsd:string">mailList</Value>
+                                <Value xsi:type="xsd:string">listMails</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -387,12 +387,12 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>FileName</Name>
-                                <Value xsi:type="xsd:string">System.IO.Path.GetFullPath(@".\Дополнительные материалы\Приложение Outlook\" + mailList[0].Attachments[0].FileName)</Value>
+                                <Value xsi:type="xsd:string">System.IO.Path.GetFullPath(@".\Дополнительные материалы\Приложение Outlook\" + listMails[0].Attachments[0].FileName)</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Att</Name>
-                                <Value xsi:type="xsd:string">mailList[0].Attachments[0]</Value>
+                                <Value xsi:type="xsd:string">listMails[0].Attachments[0]</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -466,7 +466,7 @@
                                 <Value xsi:type="xsd:boolean">true</Value>
                             </SerializationItem>
                         </Properties>
-                        <IsBreakpoint>true</IsBreakpoint>
+                        <IsBreakpoint>false</IsBreakpoint>
                         <IsIgnore>false</IsIgnore>
                     </SerializationComponent>
                 </Components>
@@ -475,7 +475,7 @@
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>mailList</Name>
+            <Name>listMails</Name>
             <Group />
             <Comment>Список полученных писем</Comment>
             <DataTypeString>System.Collections.Generic.List&lt;LTools.Office.Model.OMailMessage&gt;</DataTypeString>
@@ -483,4 +483,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент-цикл, перебирающий все значения выбранной таблицы</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -160,7 +160,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ShowAnnotation</Name>
-                        <Value xsi:type="xsd:boolean">true</Value>
+                        <Value xsi:type="xsd:boolean">false</Value>
                     </SerializationItem>
                 </Properties>
                 <IsBreakpoint>false</IsBreakpoint>
@@ -591,7 +591,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Для работы цикла необходимо указать переменную таблицы в свойстве "Массив", 
+                        <Value xsi:type="xsd:string">Компонент-цикл, перебирающий все значения выбранной таблицы
+
+Для работы цикла необходимо указать переменную таблицы в свойстве "Массив", 
 так же в свойствах есть два типа переменных - обычная и виртуальная,
 требуется обязательно указать одну из них. По умолчанию используется виртуальная 
 переменная item - она удаляется сразу после работы цикла и, таким образом, не 
@@ -739,23 +741,27 @@
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>dtWorkers</Name>
+            <Name>rowWorkerItem</Name>
             <Group />
-            <DataTypeString>System.Data.DataTable</DataTypeString>
+            <Comment>Обрабатываемая строка таблицы</Comment>
+            <DataTypeString>System.Data.DataRow</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
             <Name>index</Name>
             <Group />
+            <Comment>Индекс строки таблицы,обрабатываемой в данный момент</Comment>
             <DataTypeString>Int32</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>rowWorkerItem</Name>
+            <Name>dtWorkers</Name>
             <Group />
-            <DataTypeString>System.Data.DataRow</DataTypeString>
+            <Comment>Таблица для цикла ForEach для DataTable</Comment>
+            <DataTypeString>System.Data.DataTable</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

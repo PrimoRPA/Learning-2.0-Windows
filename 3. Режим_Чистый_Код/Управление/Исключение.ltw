@@ -44,7 +44,7 @@ public class PrimoScript
 	
 	public void main(LTools.Common.Model.WorkflowData wf)
     {
-		//Чтобы продемонстрировать работу элемента "Исключение" снаруже контейнера Try-Catch используйте if (true)
+		//Чтобы продемонстрировать работу элемента "Исключение" снаружи контейнера Try-Catch используйте if (true)
 		//Чтобы продемонстрировать работу элемента "Исключение" внутри контейнера Try-Catch используйте if (false)
 		if (true){
 			//В случае, если исключение вызвано снаруже контейнера Try-Catch, оно будет отлавливаться контейнером 
@@ -57,13 +57,13 @@ public class PrimoScript
 			}
 			catch (Exception e) when (e is not OperationCanceledException)
 			{
-				LTools.Workflow.PrimoApp.AddToLog(wf, "Блок Catch", LTools.Enums.LogMessageType.Info);
+				LTools.Workflow.PrimoApp.AddToLog(wf, "Блок Catch. Возникла ошибка: " + e.Message, LTools.Enums.LogMessageType.Info);
 			}
 			finally
 			{
-				LTools.Workflow.PrimoApp.AddToLog(wf, "Блок Finally", LTools.Enums.LogMessageType.Info);
+				LTools.Workflow.PrimoApp.AddToLog(wf, "Блок Finally. Работа Try-Catch завершена", LTools.Enums.LogMessageType.Info);
 			}
-			LTools.Workflow.PrimoApp.AddToLog(wf, "Снаруже контейнера Try Catch", LTools.Enums.LogMessageType.Info);
+			LTools.Workflow.PrimoApp.AddToLog(wf, "Лог снаружи контейнера Try Catch", LTools.Enums.LogMessageType.Info);
 		}else{
 			try
 			{
@@ -74,13 +74,13 @@ public class PrimoScript
 			}
 			catch (Exception e) when (e is not OperationCanceledException)
 			{
-				LTools.Workflow.PrimoApp.AddToLog(wf, "Блок Catch", LTools.Enums.LogMessageType.Info);
+				LTools.Workflow.PrimoApp.AddToLog(wf, "Блок Catch. Возникла ошибка: " + e.Message, LTools.Enums.LogMessageType.Info);
 			}
 			finally
 			{
-				LTools.Workflow.PrimoApp.AddToLog(wf, "Блок Finally", LTools.Enums.LogMessageType.Info);
+				LTools.Workflow.PrimoApp.AddToLog(wf, "Блок Finally. Работа Try-Catch завершена", LTools.Enums.LogMessageType.Info);
 			}
-			LTools.Workflow.PrimoApp.AddToLog(wf, "Снаруже контейнера Try Catch", LTools.Enums.LogMessageType.Info);
+			LTools.Workflow.PrimoApp.AddToLog(wf, "Лог снаружи контейнера Try Catch", LTools.Enums.LogMessageType.Info);
 		}
     }
 }</Value>
@@ -92,4 +92,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

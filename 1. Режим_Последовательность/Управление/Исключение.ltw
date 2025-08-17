@@ -18,8 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент позволяет вызвать исключение в сценарии автоматизации. Вызов исключения может быть полезен в тестировании ошибочных 
-сценариев и помогает настроить обработку исключений разных типов</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -222,7 +221,10 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string">В случае, если исключение вызвано снаруже контейнера Try-Catch, оно будет отлавливаться контейнером Try-Catch оборачивающим ltw в котором исключение было вызвано (не попадет ни в один Try-Catch внутри ltw, в котором вызвано). Если такого блока нет, робот завершит работу указав текст ошибки в консоли
+                                <Value xsi:type="xsd:string">Элемент позволяет вызвать исключение в сценарии автоматизации. Вызов исключения может быть полезен в тестировании ошибочных 
+сценариев и помогает настроить обработку исключений разных типов
+
+В случае, если исключение вызвано снаруже контейнера Try-Catch, оно будет отлавливаться контейнером Try-Catch оборачивающим ltw в котором исключение было вызвано (не попадет ни в один Try-Catch внутри ltw, в котором вызвано). Если такого блока нет, робот завершит работу указав текст ошибки в консоли
 
 Активность имеет следующие свойства:
 1) Код - Код исключения
@@ -287,6 +289,16 @@
                         <Properties>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
+                                <Name>ComponentName</Name>
+                                <Value xsi:type="xsd:string">Try-Catch</Value>
+                            </SerializationItem>
+                            <SerializationItem>
+                                <IsListValue>false</IsListValue>
+                                <Name>Annotation</Name>
+                                <Value xsi:type="xsd:string">*Try Catch для примера</Value>
+                            </SerializationItem>
+                            <SerializationItem>
+                                <IsListValue>false</IsListValue>
                                 <Name>Exc</Name>
                                 <Value xsi:type="xsd:string">exceptionInfo</Value>
                             </SerializationItem>
@@ -317,21 +329,11 @@
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
-                                <Name>ComponentName</Name>
-                                <Value xsi:type="xsd:string">Try-Catch</Value>
-                            </SerializationItem>
-                            <SerializationItem>
-                                <IsListValue>false</IsListValue>
                                 <Name>WaitBefore</Name>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>WaitAfter</Name>
-                            </SerializationItem>
-                            <SerializationItem>
-                                <IsListValue>false</IsListValue>
-                                <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string">*Try Catch для примера</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -714,6 +716,16 @@
                         <Properties>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
+                                <Name>ComponentName</Name>
+                                <Value xsi:type="xsd:string">Try-Catch</Value>
+                            </SerializationItem>
+                            <SerializationItem>
+                                <IsListValue>false</IsListValue>
+                                <Name>Annotation</Name>
+                                <Value xsi:type="xsd:string">*Try Catch для примера</Value>
+                            </SerializationItem>
+                            <SerializationItem>
+                                <IsListValue>false</IsListValue>
                                 <Name>Exc</Name>
                                 <Value xsi:type="xsd:string">exceptionInfo</Value>
                             </SerializationItem>
@@ -744,21 +756,11 @@
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
-                                <Name>ComponentName</Name>
-                                <Value xsi:type="xsd:string">Try-Catch</Value>
-                            </SerializationItem>
-                            <SerializationItem>
-                                <IsListValue>false</IsListValue>
                                 <Name>WaitBefore</Name>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>WaitAfter</Name>
-                            </SerializationItem>
-                            <SerializationItem>
-                                <IsListValue>false</IsListValue>
-                                <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string">*Try Catch для примера</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -935,7 +937,10 @@
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
                                         <Name>Annotation</Name>
-                                        <Value xsi:type="xsd:string">В случае, если исключени вызвано в контейнере     Try-Catch, оно будет поймано в блоке Catch для последующей обработки
+                                        <Value xsi:type="xsd:string">Элемент позволяет вызвать исключение в сценарии автоматизации. Вызов исключения может быть полезен в тестировании ошибочных 
+сценариев и помогает настроить обработку исключений разных типов
+
+В случае, если исключени вызвано в контейнере     Try-Catch, оно будет поймано в блоке Catch для последующей обработки
 
 Активность имеет следующие свойства:
 1) Код - Код исключения
@@ -1264,4 +1269,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

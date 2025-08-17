@@ -52,9 +52,9 @@ public class PrimoScript
 		hide - Скрывать: Скрывать сообщение при закрытии
 		LTools.Workflow.PrimoApp.Toast(wf, text, header, hide);
 		*/
-		var header = "Primo Learning";
-		var text = "Изучение работы элемента 'Всплывающее сообщения'";
-		LTools.Workflow.PrimoApp.Toast(wf, text, header, false);
+		var strHeader = "Primo Learning";
+		var strText = "Изучение работы элемента 'Всплывающее сообщения'";
+		LTools.Workflow.PrimoApp.Toast(wf, strText, strHeader, false);
     }
 }</Value>
             </SerializationItem>
@@ -65,4 +65,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

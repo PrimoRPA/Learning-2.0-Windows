@@ -58,8 +58,9 @@ public class PrimoScript
 		byte[] txt = LTools.WebBrowser.BrowserApp.GetImage(wf, url, [timeOut]);
 		*/
 		
-		byte[] txt = LTools.WebBrowser.BrowserApp.GetImage(wf, "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png", 10000);
+		byte[] imageFromSite = LTools.WebBrowser.BrowserApp.GetImage(wf, "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png", 10000);
     
+		//app.Close(); //Компонент, завершающий работу браузера.
 	}
 }</Value>
             </SerializationItem>
@@ -70,4 +71,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

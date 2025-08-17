@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент, создающий новый файл.</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -200,7 +200,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Чтобы содать файл, необходимо указать свойство "Путь", путь может быть абсолютный или относительный
+                        <Value xsi:type="xsd:string">Этот компонент предназначен для создания новых файлов в системе. Он позволяет быстро формировать пустые файлы, которые затем можно заполнить данными.
+
+Чтобы содать файл, необходимо указать свойство "Путь", путь может быть абсолютный или относительный
 
 *В случае, если в указанном пути нет одной из промежуточных папок, в консоль выведется ошибка 
 *В случае, если создается файл с таким же названием, существующий файл будет перезаписан и будет пустым
@@ -261,9 +263,11 @@
         <ScriptVariable>
             <Name>strFolderPath</Name>
             <Group />
+            <Comment>Путь до создаваемого файла</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -187,6 +191,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -283,16 +291,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Активность применяется для того, чтобы переключить активную вкладку браузера. При этом изменить вкладку можно используя Url, Заголовок страницы, Индекс или Id.
-
-Для работы с активностью необходимо заполнить любое из указанных свойств в зависимости от данных, которыми вы обладаете: 
-- Индекс вкладки: Порядковый номер вкладки, которую нужно активировать. Начинается отсчет с 0. Данный параметр наиболее удобен в случае, если происходит работа с одним и темже порталом на разных вкладках браузера.
-- Url: Адрес ресурса, вкладку с которым необходимо активировать
-- Заголовок вкладки: Заголовок вкладки, которую необходимо активировать
-- ID вкладки: Параметр, который можно сохранить при открытии вкладки в Primo Studio
-
-Дополнительные свойства. Заполняются в случае необходимости:
-- Переменная: Переменная, которая хранит в себе ссылку на используемый браузер. В случае, если активность используется в контейнерах работы с браузером ("Открыть браузер" и "Присоединиться к браузеру"), данное свойство можно не использовать</Value>
+                    <Value xsi:type="xsd:string">Контейнер с элементом Активировать вкладку браузера</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -371,6 +370,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -381,14 +384,8 @@
                     <Properties>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
-                            <Name>ComponentName</Name>
-                            <Value xsi:type="xsd:string">Открыть браузер</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string">Подробное описание активности приведено
- в последовательности "Открыть браузер.ltw"</Value>
+                            <Name>URL</Name>
+                            <Value xsi:type="xsd:string">"https://www.google.com/"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -399,11 +396,6 @@
                             <IsListValue>false</IsListValue>
                             <Name>Headless</Name>
                             <Value xsi:type="xsd:boolean">false</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>URL</Name>
-                            <Value xsi:type="xsd:string">"https://www.google.com/"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -447,11 +439,22 @@
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
+                            <Name>ComponentName</Name>
+                            <Value xsi:type="xsd:string">Открыть браузер</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
                             <Name>WaitBefore</Name>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>WaitAfter</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Annotation</Name>
+                            <Value xsi:type="xsd:string">Подробное описание активности приведено
+ в последовательности "Открыть браузер.ltw"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -508,6 +511,17 @@
                             <Properties>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
+                                    <Name>ComponentName</Name>
+                                    <Value xsi:type="xsd:string">Открыть вкладку браузера</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>Annotation</Name>
+                                    <Value xsi:type="xsd:string">Подробное описание активности приведено
+ в последовательности "Открыть вкладку браузера.ltw"</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
                                     <Name>PageUrl</Name>
                                     <Value xsi:type="xsd:string">"https://docs.primo-rpa.ru/"</Value>
                                 </SerializationItem>
@@ -530,22 +544,11 @@
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
-                                    <Name>ComponentName</Name>
-                                    <Value xsi:type="xsd:string">Открыть вкладку браузера</Value>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
                                     <Name>WaitBefore</Name>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>WaitAfter</Name>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>Annotation</Name>
-                                    <Value xsi:type="xsd:string">Подробное описание активности приведено
- в последовательности "Открыть вкладку браузера.ltw"</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -602,6 +605,25 @@
                             <Properties>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
+                                    <Name>ComponentName</Name>
+                                    <Value xsi:type="xsd:string">Активировать вкладку браузера</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>Annotation</Name>
+                                    <Value xsi:type="xsd:string">Активность применяется для того, чтобы переключить активную вкладку браузера. При этом изменить вкладку можно используя Url, Заголовок страницы, Индекс или Id.
+
+Для работы с активностью необходимо заполнить любое из указанных свойств в зависимости от данных, которыми вы обладаете: 
+- Индекс вкладки: Порядковый номер вкладки, которую нужно активировать. Начинается отсчет с 0. Данный параметр наиболее удобен в случае, если происходит работа с одним и темже порталом на разных вкладках браузера.
+- Url: Адрес ресурса, вкладку с которым необходимо активировать
+- Заголовок вкладки: Заголовок вкладки, которую необходимо активировать
+- ID вкладки: Параметр, который можно сохранить при открытии вкладки в Primo Studio
+
+Дополнительные свойства. Заполняются в случае необходимости:
+- Переменная: Переменная, которая хранит в себе ссылку на используемый браузер. В случае, если активность используется в контейнерах работы с браузером ("Открыть браузер" и "Присоединиться к браузеру"), данное свойство можно не использовать</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
                                     <Name>TabTitle</Name>
                                 </SerializationItem>
                                 <SerializationItem>
@@ -627,31 +649,12 @@
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
-                                    <Name>ComponentName</Name>
-                                    <Value xsi:type="xsd:string">Активировать вкладку браузера</Value>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
                                     <Name>WaitBefore</Name>
                                     <Value xsi:type="xsd:string">5000</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>WaitAfter</Name>
-                                </SerializationItem>
-                                <SerializationItem>
-                                    <IsListValue>false</IsListValue>
-                                    <Name>Annotation</Name>
-                                    <Value xsi:type="xsd:string">Активность применяется для того, чтобы переключить активную вкладку браузера. При этом изменить вкладку можно используя Url, Заголовок страницы, Индекс или Id.
-
-Для работы с активностью необходимо заполнить любое из указанных свойств в зависимости от данных, которыми вы обладаете: 
-- Индекс вкладки: Порядковый номер вкладки, которую нужно активировать. Начинается отсчет с 0. Данный параметр наиболее удобен в случае, если происходит работа с одним и темже порталом на разных вкладках браузера.
-- Url: Адрес ресурса, вкладку с которым необходимо активировать
-- Заголовок вкладки: Заголовок вкладки, которую необходимо активировать
-- ID вкладки: Параметр, который можно сохранить при открытии вкладки в Primo Studio
-
-Дополнительные свойства. Заполняются в случае необходимости:
-- Переменная: Переменная, которая хранит в себе ссылку на используемый браузер. В случае, если активность используется в контейнерах работы с браузером ("Открыть браузер" и "Присоединиться к браузеру"), данное свойство можно не использовать</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -795,7 +798,24 @@
                 <SerializationItem>
                     <IsListValue>true</IsListValue>
                     <Name>PointsList</Name>
-                    <ListValue />
+                    <ListValue>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>PointsList</Name>
+                            <Value xsi:type="Point">
+                                <X>568</X>
+                                <Y>147</Y>
+                            </Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>PointsList</Name>
+                            <Value xsi:type="Point">
+                                <X>568.48666666666668</X>
+                                <Y>147</Y>
+                            </Value>
+                        </SerializationItem>
+                    </ListValue>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -909,6 +929,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -917,4 +946,5 @@
     </Components>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

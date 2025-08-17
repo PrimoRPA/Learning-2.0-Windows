@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент извлекает данные из буфера обмена</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -172,6 +172,22 @@
                 <Properties>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
+                        <Name>ComponentName</Name>
+                        <Value xsi:type="xsd:string">Получить из буфера обмена</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Annotation</Name>
+                        <Value xsi:type="xsd:string">Элемент извлекает данные из буфера обмена
+
+Чтобы получить текстовое значение из буфер обмена, необходимо указать переменную в свойсте "Результат". В данную переменную будет записана информация из буфера обмена
+
+В случае,если полученную информацию необходимо воспринимать как тектовое значение, необходимо указать соответствующий параметр.
+
+В случае, если информация воспринимается как текст  необходимо указать в свойстве "Формат" соответствующее значение, в противном случае полученный текст будет отображаться не корректно</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
                         <Name>IsText</Name>
                         <Value xsi:type="xsd:boolean">true</Value>
                     </SerializationItem>
@@ -183,16 +199,11 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Text</Name>
-                        <Value xsi:type="xsd:string">resultText</Value>
+                        <Value xsi:type="xsd:string">strResultText</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>TextTag</Name>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Получить из буфера обмена</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -201,15 +212,6 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>WaitAfter</Name>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Чтобы получить текстовое значение из буфер обмена, необходимо указать переменную в свойсте "Результат". В данную переменную будет записана информация из буфера обмена
-
-В случае,если полученную инфорацию необходимо воспринимать как тектовое значение, необходимо указать соответствующий параметр.
-
-В случае, если информация воспринимается как текст ее необходимо указать в свойстве "Кодировка", в противном случае полученный текст будет отображаться не корректно</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -264,11 +266,13 @@
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>resultText</Name>
+            <Name>strResultText</Name>
             <Group />
+            <Comment>Текст, полученный из буфера обмена</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

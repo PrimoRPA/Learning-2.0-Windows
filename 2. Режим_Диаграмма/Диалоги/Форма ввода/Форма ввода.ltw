@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -107,11 +111,6 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Элемент, отображающий пользовательскую форму</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -141,6 +140,11 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Элемент, отображающий пользовательскую форму</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -186,6 +190,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -282,24 +290,6 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Активность используется для отображения пользовательских форм ввода. 
-
-Для работы активности необходима созданная форма ввода. Ее можно создать в инструменте "Редактор диалогов".
- Для этого необходимо открыть вкладку "Инструменты", выбрать необходимый инструмент и в нем создать форму, 
-удовлетворяющую текущему запросу. Подробно про данный инструмент можно прочитать в документации: 
-https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/tools/dialogs-editor
-Также вы можете найти видео по работе с формами на YouTube компании.
-Для понимания представленного кода советуем открыть используемую форму в редакторе диалогов и 
-посмотреть названия полей.
-
-В активности используются входные и выходные данные. Используя выходные данные, можно понять, что внес 
-пользователь в форму ввода и какие кнопки были нажаты. В данной последовательности показаны действия, 
-отслеживающие нажатие на кнопку "поиск"
-</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -329,6 +319,23 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/tools/dialogs-editor
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Активность используется для отображения пользовательских форм ввода. 
+
+Для работы активности необходима созданная форма ввода. Ее можно создать в инструменте "Редактор диалогов".
+ Для этого необходимо открыть вкладку "Инструменты", выбрать необходимый инструмент и в нем создать форму, 
+удовлетворяющую текущему запросу. Подробно про данный инструмент можно прочитать в документации: 
+https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/tools/dialogs-editor
+Также вы можете найти видео по работе с формами на канах компании YouTube, RuTube и т.д.
+Для понимания представленного кода советуем открыть используемую форму в редакторе диалогов и 
+посмотреть названия полей.
+
+В активности используются входные и выходные данные. Используя выходные данные, можно понять, что внес 
+пользователь в форму ввода и какие кнопки были нажаты. В данной последовательности показаны действия, 
+отслеживающие нажатие на кнопку "Поиск"</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -374,6 +381,10 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/tools/dialogs-editor
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -428,14 +439,13 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/tools/dialogs-editor
  Для этого необходимо открыть вкладку "Инструменты", выбрать необходимый инструмент и в нем создать форму, 
 удовлетворяющую текущему запросу. Подробно про данный инструмент можно прочитать в документации: 
 https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/tools/dialogs-editor
-Также вы можете найти видео по работе с формами на YouTube компании.
+Также вы можете найти видео по работе с формами на канах компании YouTube, RuTube и т.д.
 Для понимания представленного кода советуем открыть используемую форму в редакторе диалогов и 
 посмотреть названия полей.
 
 В активности используются входные и выходные данные. Используя выходные данные, можно понять, что внес 
 пользователь в форму ввода и какие кнопки были нажаты. В данной последовательности показаны действия, 
-отслеживающие нажатие на кнопку "поиск"
-</Value>
+отслеживающие нажатие на кнопку "Поиск"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -1115,6 +1125,15 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/tools/dialogs-editor
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1130,4 +1149,5 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/tools/dialogs-editor
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

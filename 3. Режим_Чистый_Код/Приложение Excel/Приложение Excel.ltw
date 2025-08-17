@@ -60,8 +60,8 @@ public class PrimoScript
 		LTools.Office.ExcelApp app = LTools.Office.ExcelApp.Init(wf, fileName, [csvDel], [interop], [loadAddIns], [isAttach], [pass]);
         LTools.Office.ExcelApp app = LTools.Office.ExcelApp.Init(wf, bytes, [csvDel], [interop], [loadAddIns], [pass]);
 		 */
-		var fileName = @".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx";
-        LTools.Office.ExcelApp app = LTools.Office.ExcelApp.Init(wf, fileName, ";", LTools.Office.Model.InteropTypes.DX);
+		var strFileName = @".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx";
+        LTools.Office.ExcelApp app = LTools.Office.ExcelApp.Init(wf, strFileName, ";", LTools.Office.Model.InteropTypes.DX);
     }
 }</Value>
             </SerializationItem>
@@ -72,4 +72,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

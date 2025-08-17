@@ -56,6 +56,8 @@ public class PrimoScript
         LTools.Office.WordApp app = LTools.Office.WordApp.Init(wf, System.IO.Path.GetFullPath(@".\Дополнительные материалы\Приложение Word\Входные данные\Информация об RPA.docm"), LTools.Office.Model.InteropTypes.Interop);
 		
 		var name = "ChangeColorVBA";
+		
+		//Запуск макроса для файла MsWord
 		app.RunMacro(name);
 		
 		//Сохранение изменений документа MS Word
@@ -70,4 +72,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

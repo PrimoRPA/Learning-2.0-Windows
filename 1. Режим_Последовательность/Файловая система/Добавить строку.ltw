@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент, добавляющий строку в конец файла.</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -239,7 +239,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Чтобы добавить строку в файл, необходимо указать "Путь к файлу", путь может быть абсолютный или относительный
+                        <Value xsi:type="xsd:string">Этот компонент предназначен для добавления строки в конец файла. Он позволяет удобно и быстро дописывать необходимую информацию, не изменяя при этом уже существующие данные в файле.
+
+Чтобы добавить строку в файл, необходимо указать "Путь к файлу", путь может быть абсолютный или относительный
 
 Компонент вносит строку указанную в свойстве "Текст"
 
@@ -302,21 +304,25 @@
         <ScriptVariable>
             <Name>strTxtPath</Name>
             <Group />
+            <Comment>Путь до файла в который необходимо добавить текст</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
             <Name>strText</Name>
             <Group />
+            <Comment>Текст для добавления в файл</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
             <Name>strEncodingType</Name>
             <Group />
+            <Comment>Тип кодировки файла</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

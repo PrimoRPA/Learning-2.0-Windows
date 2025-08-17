@@ -52,8 +52,8 @@ public class PrimoScript
 		LTools.Workflow.PrimoApp.AddToLog(wf, msg, [messageType]);
 		*/
 		
-		var msg = "Изучение работы элемента";
-		LTools.Workflow.PrimoApp.AddToLog(wf, msg, LTools.Enums.LogMessageType.Info);
+		var strMessage = "Изучение работы элемента";
+		LTools.Workflow.PrimoApp.AddToLog(wf, strMessage, LTools.Enums.LogMessageType.Info);
     }
 }</Value>
             </SerializationItem>
@@ -64,4 +64,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

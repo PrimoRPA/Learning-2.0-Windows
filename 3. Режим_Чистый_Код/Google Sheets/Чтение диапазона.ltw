@@ -53,19 +53,19 @@ public class PrimoScript
         System.Data.DataTable data = app.ReadRangeTable(range, sheet); - получение результатов чтения текстовых значений в формате таблицы
 		*/
 		
-		var googleDocID = ""; //ID документа Google Sheets. Для работы внесите свое значение id
+		var strGoogleDocID = ""; //ID документа Google Sheets. Для работы внесите свое значение id
 		
 		//Настройки активность "Документ Google Sheets" следует произвести в соотвествии с шагами, описанными в "Документ Google Sheets.ltw" данного проекта:	
-		LTools.Office.GoogleSheetsApp app = LTools.Office.GoogleSheetsApp.Init(wf, @".\Дополнительные материалы\Google Sheets\client_secret.json", googleDocID);
+		LTools.Office.GoogleSheetsApp app = LTools.Office.GoogleSheetsApp.Init(wf, @".\Дополнительные материалы\Google Sheets\client_secret.json", strGoogleDocID);
 		
-		var range = "A1:C4";//Ячейки, которые необходимо прочитать. Необходимо указывать в формате строки "A1:D12". В случае, если диапазон не указан, будет считан диапазон, выделенны пользователем в таблице
-		var sheet = "NewData"; //Название страницы, с которой будут считываться данные
+		var strRange = "A1:C4";//Ячейки, которые необходимо прочитать. Необходимо указывать в формате строки "A1:D12". В случае, если диапазон не указан, будет считан диапазон, выделенны пользователем в таблице
+		var strSheetName = "NewData"; //Название страницы, с которой будут считываться данные
 		
 		//Выберите необходимую переменную для вывода информации и расскомментируйте ее
 		
 		//List&lt;List&lt;string&gt;&gt; data = app.ReadRange(range, sheet);
         //List&lt;List&lt;LTools.Office.Model.ExcelCellInfo&gt;&gt; data = app.ReadRangeInfo(range, sheet);
-        System.Data.DataTable data = app.ReadRangeTable(range, sheet);
+        System.Data.DataTable data = app.ReadRangeTable(strRange , strSheetName);
     }
 }
 
@@ -78,4 +78,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

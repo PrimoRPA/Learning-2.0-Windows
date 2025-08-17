@@ -90,6 +90,16 @@
                 <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
                 <Properties>
                     <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>ComponentName</Name>
+                        <Value xsi:type="xsd:string">Множественное присвоение</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Annotation</Name>
+                        <Value xsi:type="xsd:string">Внесите в данные переменные собственные данные для учетной записи</Value>
+                    </SerializationItem>
+                    <SerializationItem>
                         <IsListValue>true</IsListValue>
                         <Name>Items</Name>
                         <ListValue>
@@ -97,9 +107,9 @@
                                 <IsListValue>false</IsListValue>
                                 <Name>Items</Name>
                                 <Value xsi:type="MultipleAssignItem">
-                                    <Variable>userName</Variable>
+                                    <Variable>strUserName</Variable>
                                     <IsNoCodeVariable>false</IsNoCodeVariable>
-                                    <Assign>""</Assign>
+                                    <Assign>"v.lozhechka@primo-rpa.ru"</Assign>
                                     <IsNoCodeAssign>false</IsNoCodeAssign>
                                 </Value>
                             </SerializationItem>
@@ -107,9 +117,9 @@
                                 <IsListValue>false</IsListValue>
                                 <Name>Items</Name>
                                 <Value xsi:type="MultipleAssignItem">
-                                    <Variable>userPass</Variable>
+                                    <Variable>strUserPass</Variable>
                                     <IsNoCodeVariable>false</IsNoCodeVariable>
-                                    <Assign>""</Assign>
+                                    <Assign>"[&amp;7zdDF-$9jK"</Assign>
                                     <IsNoCodeAssign>false</IsNoCodeAssign>
                                 </Value>
                             </SerializationItem>
@@ -117,9 +127,9 @@
                                 <IsListValue>false</IsListValue>
                                 <Name>Items</Name>
                                 <Value xsi:type="MultipleAssignItem">
-                                    <Variable>ServerExchangeURL</Variable>
+                                    <Variable>strServerExchangeURL</Variable>
                                     <IsNoCodeVariable>false</IsNoCodeVariable>
-                                    <Assign>"https://test.test.ru"</Assign>
+                                    <Assign>"https://mail.primo-rpa.ru"</Assign>
                                     <IsNoCodeAssign>false</IsNoCodeAssign>
                                 </Value>
                             </SerializationItem>
@@ -131,21 +141,11 @@
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
-                        <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Множественное присвоение</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
                         <Name>WaitBefore</Name>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>WaitAfter</Name>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Внесите в данные переменные собственные данные для учетной записи</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -203,22 +203,22 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>SvcUrl</Name>
-                        <Value xsi:type="xsd:string">ServerExchangeURL</Value>
+                        <Value xsi:type="xsd:string">strServerExchangeURL</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>AutoUrl</Name>
-                        <Value xsi:type="xsd:string">"test@primo-rpa.ru"</Value>
+                        <Value xsi:type="xsd:string">"v.lozhechka@primo-rpa.ru"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Login</Name>
-                        <Value xsi:type="xsd:string">userName</Value>
+                        <Value xsi:type="xsd:string">strUserName</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Password</Name>
-                        <Value xsi:type="xsd:string">userPass</Value>
+                        <Value xsi:type="xsd:string">strUserPass</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -339,7 +339,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>SendTo</Name>
-                                <Value xsi:type="xsd:string">"test@primo-rpa.ru"</Value>
+                                <Value xsi:type="xsd:string">"v.lozhechka@primo-rpa.ru"</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -468,7 +468,7 @@
                                 <Value xsi:type="xsd:boolean">true</Value>
                             </SerializationItem>
                         </Properties>
-                        <IsBreakpoint>false</IsBreakpoint>
+                        <IsBreakpoint>true</IsBreakpoint>
                         <IsIgnore>false</IsIgnore>
                     </SerializationComponent>
                 </Components>
@@ -477,7 +477,7 @@
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>userName</Name>
+            <Name>strUserName</Name>
             <Group>Сredential</Group>
             <DefaultValue xsi:type="xsd:string">""</DefaultValue>
             <Comment>Логин пользователя для отправки писем</Comment>
@@ -485,7 +485,7 @@
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>userPass</Name>
+            <Name>strUserPass</Name>
             <Group>Сredential</Group>
             <DefaultValue xsi:type="xsd:string">""</DefaultValue>
             <Comment>Пароль пользователя для отправки писем</Comment>
@@ -493,7 +493,7 @@
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>ServerExchangeURL</Name>
+            <Name>strServerExchangeURL</Name>
             <Group>ServerExchange</Group>
             <DefaultValue xsi:type="xsd:string">""</DefaultValue>
             <Comment>URL сервера MS Exchange</Comment>
@@ -502,4 +502,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

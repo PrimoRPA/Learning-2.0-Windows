@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент, производящий получение изображения</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -98,7 +98,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Для работы с активностью необходимо заполнить следующие обязательные свойства: 
+                        <Value xsi:type="xsd:string">Компонент, производящий получение изображения
+
+Для работы с активностью необходимо заполнить следующие обязательные свойства: 
 - Изображение: Необходимо указать переменную, в которую будет записано изображение для последующей работы
 Также необходимо заполнить любое из следующий свойств:
 - URL: Адрес страницы, с которой необходимо сохранить изображение
@@ -287,4 +289,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

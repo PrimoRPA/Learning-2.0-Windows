@@ -63,12 +63,12 @@ public class PrimoScript
    		*/
 		
 		//Внесите в данные переменные собственные данные для учетной записи
-		string userName = "loje4kavica@yandex.ru";
-		string userPass = "bahufsxniyxsvopp";
-		string server = "smtp.yandex.ru";
-		string body = "&lt;p&gt;Добрый день!&lt;br&gt;Проводим обучение по работе с отправкой письма по SMTP.&lt;br&gt;Хорошего дня!&lt;/p&gt;";
+		string strUserName = "";
+		string strUserPass = "";
+		string strServer = "smtp.yandex.ru";
+		string strBody = "&lt;p&gt;Добрый день!&lt;br&gt;Проводим обучение по работе с отправкой письма по SMTP.&lt;br&gt;Хорошего дня!&lt;/p&gt;";
 		
-		LTools.Network.MailApp.SMTPSend(wf, userName, "primo@yandex.ru", "Primo Learning", body, server, 587, userName, userPass, true, true, new List&lt;string&gt;(){@".\Дополнительные материалы\PDF\Входные данные\PrimoInfo.pdf"}, 60000);
+		LTools.Network.MailApp.SMTPSend(wf, strUserName, "primo@yandex.ru", "Primo Learning", strBody, strServer, 587, strUserName, strUserPass, true, true, new List&lt;string&gt;(){@".\Дополнительные материалы\PDF\Входные данные\PrimoInfo.pdf"}, 60000);
 	}
 }</Value>
             </SerializationItem>
@@ -79,4 +79,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

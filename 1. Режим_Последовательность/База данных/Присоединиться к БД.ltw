@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент осуществляет подключение к базе данных (БД)</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -93,7 +93,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Variable</Name>
-                        <Value xsi:type="xsd:string">excelPath</Value>
+                        <Value xsi:type="xsd:string">strExcelPath</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -107,7 +107,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Присвоение excelPath</Value>
+                        <Value xsi:type="xsd:string">Присвоение strExcelPath</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -178,7 +178,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ConnectionString</Name>
-                        <Value xsi:type="xsd:string">"Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};Dbq="+ excelPath</Value>
+                        <Value xsi:type="xsd:string">"Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};Dbq="+ strExcelPath</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -214,7 +214,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Элемент «Присоединиться к БД» в Primo RPA используется 
+                        <Value xsi:type="xsd:string">Элемент осуществляет подключение к базе данных (БД)
+
+Элемент «Присоединиться к БД» в Primo RPA используется 
 для установления соединения с базой данных. С его помощью
  можно настроить параметры подключения, такие как тип 
 базы данных, адрес сервера, порт, имя пользователя и пароль.
@@ -223,7 +225,7 @@
 соединение, которое затем можно использовать в других 
 элементах сценария, например, в элементе «Выполнить запрос». 
 Это позволяет автоматизировать процессы работы с данными 
-в базе данных, такие как чтение, запись или обновление информации.
+в базе данных, такими как чтение, запись или обновление информации.
 
 Есть три типа подключение: ODBC, Postgre SQL, OLEDB. Каждый из типов 
 имеет свою строку подключения.
@@ -290,7 +292,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ConnectionString</Name>
-                        <Value xsi:type="xsd:string">"Username= "+ strUsername + ";Database= "+ nameDBConnect + ";Host= "+ hostDBConnect + ";Password="+ strPassword</Value>
+                        <Value xsi:type="xsd:string">"Username= "+ strUsername + ";Database= "+ strNameDBConnect + ";Host= "+ strHostDBConnect + ";Password="+ strPassword</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -387,7 +389,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ConnectionString</Name>
-                        <Value xsi:type="xsd:string">"Provider=SQLOLEDB.1;Persist Security Info=False;User ID=" + strUsername + ";Initial Catalog=" + hostDBConnect + ";Data Source=" + nameDBConnect + ";"</Value>
+                        <Value xsi:type="xsd:string">"Provider=SQLOLEDB.1;Persist Security Info=False;User ID=" + strUsername + ";Initial Catalog=" + strHostDBConnect + ";Data Source=" + strNameDBConnect + ";"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -488,7 +490,7 @@
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>excelPath</Name>
+            <Name>strExcelPath</Name>
             <Group />
             <Comment>Путь до книги Excel</Comment>
             <DataTypeString>String</DataTypeString>
@@ -509,14 +511,14 @@
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>hostDBConnect</Name>
+            <Name>strHostDBConnect</Name>
             <Group />
             <Comment>Сервер для подключения</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>nameDBConnect</Name>
+            <Name>strNameDBConnect</Name>
             <Group />
             <Comment>Название БД для подключения</Comment>
             <DataTypeString>String</DataTypeString>
@@ -524,4 +526,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

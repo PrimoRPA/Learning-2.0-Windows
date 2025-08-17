@@ -58,6 +58,7 @@ public class PrimoScript
    
 		var data = new List&lt;string&gt;() { "13", "Глебов В.Е.", "разработчик", "технический отдел", "90000,00" };
 		
+		//Добавление данныхв таблицу файла MsWor
 		app.AddTableRow(0, data);
 		
 		//Сохранение изменений документа MS Word
@@ -72,4 +73,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

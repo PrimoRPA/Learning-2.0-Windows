@@ -92,7 +92,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Variable</Name>
-                        <Value xsi:type="xsd:string">TestIntValue</Value>
+                        <Value xsi:type="xsd:string">intValue</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -123,7 +123,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ComponentID</Name>
-                        <Value xmlns:q2="http://microsoft.com/wsdl/types/" xsi:type="q2:guid">51c85edf-0ae3-44a7-952e-11ea866d8016</Value>
+                        <Value xmlns:q2="http://microsoft.com/wsdl/types/" xsi:type="q2:guid">fda3b372-1322-46bb-ae61-2aecf6b29578</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -176,7 +176,8 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>File</Name>
-                        <Value xsi:type="xsd:string">@".\Дополнительные материалы\Тестирование\Сохранить переменные\SaveValue.xlsx"</Value>
+                        <Value xsi:type="xsd:string">@".\\Дополнительные материалы\Тестирование\Сохранить переменные\SaveValue.xlsx"
+</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -263,7 +264,7 @@
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>TestStringValue</Name>
+            <Name>strValue</Name>
             <Group>TestString</Group>
             <DefaultValue xsi:type="xsd:string">"test"</DefaultValue>
             <Comment>Cохраняемая переменная string</Comment>
@@ -271,7 +272,7 @@
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>TestIntValue</Name>
+            <Name>intValue</Name>
             <Group>TestInt</Group>
             <DefaultValue xsi:type="xsd:string">4</DefaultValue>
             <Comment>Cохраняемая переменная Int32</Comment>
@@ -279,7 +280,7 @@
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>TestBoolValue</Name>
+            <Name>boolValue</Name>
             <Group>TestBool</Group>
             <DefaultValue xsi:type="xsd:string">true</DefaultValue>
             <Comment>Cохраняемая перменная bool</Comment>
@@ -288,4 +289,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

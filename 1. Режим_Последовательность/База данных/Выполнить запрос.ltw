@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент выполняет запрос к базе данных (БД)</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -93,7 +93,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Variable</Name>
-                        <Value xsi:type="xsd:string">excelPath</Value>
+                        <Value xsi:type="xsd:string">strExcelPath</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -107,7 +107,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Присвоение excelPath</Value>
+                        <Value xsi:type="xsd:string">Присвоение strExcelPath</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -178,7 +178,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ConnectionString</Name>
-                        <Value xsi:type="xsd:string">"Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};Dbq="+ excelPath</Value>
+                        <Value xsi:type="xsd:string">"Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};Dbq="+ strExcelPath</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -342,15 +342,17 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string">Элемент «Выполнить запрос» в Primo RPA предназначен для взаимодействия с базами данных. С его помощью можно отправлять SQL-запросы к базе данных и получать результаты для дальнейшего использования в сценарии
+                                <Value xsi:type="xsd:string">Элемент выполняет запрос к базе данных (БД)
 
-Если в сценарии вы сначала применяете контейнер «Присоединиться к БД», а запрос находится ниже, за пределами контейнера, то в запросе можно использовать активное подключение из контейнера. Для этого нужно сохраненное активное подключение  потом применить в элементе «Выполнить запрос» в свойстве «Соединение с БД».
+Элемент «Выполнить запрос» в Primo RPA предназначен для взаимодействия с базами данных. С его помощью можно отправлять SQL-запросы к базе данных и получать результаты для дальнейшего использования в сценарии
+
+Если в сценарии вы сначала применяете контейнер «Присоединиться к БД», а запрос находится ниже, за пределами контейнера, то в запросе можно использовать активное подключение из контейнера. Для этого нужно сохраненное активное подключение   применить в элементе «Выполнить запрос» в свойстве «Соединение с БД».
 
 В случае, если вы используете активность «Выполнить запрос» в контейнере «Присоединиться к БД», то указывать подключение не требуется, так как оно будет такое же как у контейнера.
 
 После выполнения запроса можно получить результаты в виде таблицы или набора данных, которые можно использовать в последующих действиях сценария
 
-При использовании активности ВАЖНО ставить галочку "Наличие результата" если вы выполняете запрос, который должен получить какие-либо данные. Если данная галочка не будет установлена, то таблица после выполнения активнсоти будет пустая</Value>
+При использовании активности ВАЖНО ставить галочку "Наличие результата",если вы выполняете запрос, который должен получить какие-либо данные. Если данная галочка не будет установлена, то таблица после выполнения активности будет пустая</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -477,7 +479,7 @@
                                 <Value xsi:type="xsd:boolean">false</Value>
                             </SerializationItem>
                         </Properties>
-                        <IsBreakpoint>true</IsBreakpoint>
+                        <IsBreakpoint>false</IsBreakpoint>
                         <IsIgnore>false</IsIgnore>
                     </SerializationComponent>
                 </Components>
@@ -493,7 +495,7 @@
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>excelPath</Name>
+            <Name>strExcelPath</Name>
             <Group />
             <Comment>Путь до книги Excel</Comment>
             <DataTypeString>String</DataTypeString>
@@ -508,4 +510,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

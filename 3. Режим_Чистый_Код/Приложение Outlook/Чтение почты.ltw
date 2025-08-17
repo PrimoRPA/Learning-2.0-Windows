@@ -54,7 +54,7 @@ public class PrimoScript
 		
 		LTools.Office.OutlookApp app = LTools.Office.OutlookApp.Init(wf, "Outlook");
 		
-		List&lt;LTools.Office.Model.OMailMessage&gt; ret = app.ReadMail(@"\\Outlook\Входящие", true);
+		List&lt;LTools.Office.Model.OMailMessage&gt; listMails = app.ReadMail(@"\\Outlook\Входящие", true);
     }
 }</Value>
             </SerializationItem>
@@ -65,4 +65,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

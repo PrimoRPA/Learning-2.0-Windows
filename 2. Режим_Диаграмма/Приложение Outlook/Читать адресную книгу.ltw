@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -186,6 +190,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -362,6 +370,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -459,13 +471,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Активность «Читать адресную книгу Outlook» в Primo RPA предназначена для автоматического извлечения данных из адресной книги Microsoft Outlook. Это может быть полезно для получения информации о контактах, например, для использования в других процессах автоматизации или для анализа данных.
-
-Свойства активности «Читать адресную книгу Outlook»:
-Критерии поиска: условия для выбора контактов, чьи данные будут извлечены (например, поиск по имени, фамилии, электронной почте).
-Переменная: необходимо указать переменную в которую будет получена информация из адресной книги: фамили, имя и почта.
-
-Для работы с активностью необходимо чтобыв Outlook была создана адресная книга и в ней были адресаты.</Value>
+                    <Value xsi:type="xsd:string">Контейнер с элементом Читать адресную книгу</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -543,6 +549,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -664,7 +674,7 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Variable</Name>
-                                    <Value xsi:type="xsd:string">contactList</Value>
+                                    <Value xsi:type="xsd:string">listContact</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -690,9 +700,9 @@
 
 Свойства активности «Читать адресную книгу Outlook»:
 Критерии поиска: условия для выбора контактов, чьи данные будут извлечены (например, поиск по имени, фамилии, электронной почте).
-Переменная: необходимо указать переменную в которую будет получена информация из адресной книги: фамили, имя и почта.
+Переменная: необходимо указать переменную, в которую будет получена информация из адресной книги: фамилия, имя и почта.
 
-Для работы с активностью необходимо чтобыв Outlook была создана адресная книга и в ней были адресаты.</Value>
+Для работы с активностью необходимо, чтобы в Outlook была создана адресная книга и в ней были адресаты.</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -753,6 +763,10 @@
             <Properties>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Result</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -784,10 +798,6 @@
                     <IsListValue>false</IsListValue>
                     <Name>EndElementID</Name>
                     <Value xmlns:q10="http://microsoft.com/wsdl/types/" xsi:type="q10:guid">e5d847fb-cd7e-42f5-b8b7-2a75fed2d676</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Result</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -876,6 +886,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -884,7 +903,7 @@
     </Components>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>contactList</Name>
+            <Name>listContact</Name>
             <Group />
             <Comment>Список контактов, подходящих под фильтр</Comment>
             <DataTypeString>System.Collections.Generic.List&lt;LTools.Office.Model.OContact&gt;</DataTypeString>
@@ -892,4 +911,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

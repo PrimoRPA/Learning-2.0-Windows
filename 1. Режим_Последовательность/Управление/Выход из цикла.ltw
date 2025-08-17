@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент производит безусловный выход из цикла</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -321,7 +321,9 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string">В случае, если необходимо екстренно выйти из цикла, не дожидаясь перебора всех его элементов, можно воспользоваться данной активностью. Ее можно использовать в любом контейнере с цикличной основой (обычно используется при нахождении искомого элемента, чтобы не тратить время на перебор остальных элементов массива, листа, таблицы и т.д.)</Value>
+                                <Value xsi:type="xsd:string">Компонент производит безусловный выход из цикла
+
+В случае, если необходимо екстренно выйти из цикла, не дожидаясь перебора всех его элементов, можно воспользоваться данной активностью. Ее можно использовать в любом контейнере с цикличной основой (обычно используется при нахождении искомого элемента, чтобы не тратить время на перебор остальных элементов массива, листа, таблицы и т.д.)</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -568,7 +570,9 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string">В случае, если необходимо екстренно выйти из цикла, не дожидаясь перебора всех его элементов, можно воспользоваться данной активностью. Ее можно использовать в любом контейнере с цикличной основой (обычно используется при нахождении искомого элемента, чтобы не тратить время на перебор остальных элементов массива, листа, таблицы и т.д.)</Value>
+                                <Value xsi:type="xsd:string">Компонент производит безусловный выход из цикла
+
+В случае, если необходимо екстренно выйти из цикла, не дожидаясь перебора всех его элементов, можно воспользоваться данной активностью. Ее можно использовать в любом контейнере с цикличной основой (обычно используется при нахождении искомого элемента, чтобы не тратить время на перебор остальных элементов массива, листа, таблицы и т.д.)</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -824,7 +828,9 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string">В случае, если необходимо екстренно выйти из цикла, не дожидаясь перебора всех его элементов, можно воспользоваться данной активностью. Ее можно использовать в любом контейнере с цикличной основой (обычно используется при нахождении искомого элемента, чтобы не тратить время на перебор остальных элементов массива, листа, таблицы и т.д.)</Value>
+                                <Value xsi:type="xsd:string">Компонент производит безусловный выход из цикла
+
+В случае, если необходимо екстренно выйти из цикла, не дожидаясь перебора всех его элементов, можно воспользоваться данной активностью. Ее можно использовать в любом контейнере с цикличной основой (обычно используется при нахождении искомого элемента, чтобы не тратить время на перебор остальных элементов массива, листа, таблицы и т.д.)</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -976,21 +982,25 @@
         <ScriptVariable>
             <Name>strPath</Name>
             <Group />
+            <Comment>Путь до диска С для получения путей к файлам</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
             <Name>arrPaths</Name>
             <Group />
+            <Comment>Массив путейк файлам с диска С</Comment>
             <DataTypeString>String[]</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
             <Name>index</Name>
             <Group />
+            <Comment>Счетчик для цикла While</Comment>
             <DataTypeString>Int32</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

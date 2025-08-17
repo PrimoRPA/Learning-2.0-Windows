@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент предназначен для размещения в контейнере Выбрать ветвь</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -115,7 +115,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Контейнер, в котором можно разместить две и более ветвей.
+                        <Value xsi:type="xsd:string">
+
+Контейнер, в котором можно разместить две и более ветвей.
 В параллельном режиме запускается ожидание срабатывания триггера одной из ветвей. 
 Первая ветвь, вернувшая значение true (даже в случаее, если все ветви возращают true), выполнит настроенное для нее действие.
 Остальные ветви будут проигнорированы.</Value>
@@ -163,7 +165,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ShowAnnotation</Name>
-                        <Value xsi:type="xsd:boolean">true</Value>
+                        <Value xsi:type="xsd:boolean">false</Value>
                     </SerializationItem>
                 </Properties>
                 <IsBreakpoint>false</IsBreakpoint>
@@ -181,7 +183,9 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string">Для ветви настраивается "Триггер" и "Действие", выполняемое при срабатывании этого триггера.
+                                <Value xsi:type="xsd:string">Элемент предназначен для размещения в контейнере "Выбрать ветвь"
+
+Для ветви настраивается "Триггер" и "Действие", выполняемое при срабатывании этого триггера.
 Срабатывание триггера происходит после того, как в блоке "Действие" возрашается значение true</Value>
                             </SerializationItem>
                             <SerializationItem>
@@ -436,7 +440,9 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string">Для ветви настраивается "Триггер" и "Действие", выполняемое при срабатывании этого триггера.
+                                <Value xsi:type="xsd:string">Элемент предназначен для размещения в контейнере "Выбрать ветвь"
+
+Для ветви настраивается "Триггер" и "Действие", выполняемое при срабатывании этого триггера.
 Срабатывание триггера происходит после того, как в блоке "Действие" возрашается значение true</Value>
                             </SerializationItem>
                             <SerializationItem>
@@ -687,9 +693,11 @@
         <ScriptVariable>
             <Name>boolBranch</Name>
             <Group />
+            <Comment>Переменная для сохранения результата проверки наличия папки</Comment>
             <DataTypeString>Boolean</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент, закрывающий форму</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -191,6 +191,7 @@
                                 <IsListValue>false</IsListValue>
                                 <Name>Annotation</Name>
                                 <Value xsi:type="xsd:string">Компонент используется для закрытия ранее открытой формы ввода
+
 Форма может быть закрыта и без использования этого элемента, но если в логике процесса необходимо заложить чтобы форма закрывалась на основании каких-либо введенных пользователем данных необходимо использовать оисываемый элемент.
 
 Активность используется только в контенере "Форма ввода"</Value>
@@ -262,4 +263,5 @@
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

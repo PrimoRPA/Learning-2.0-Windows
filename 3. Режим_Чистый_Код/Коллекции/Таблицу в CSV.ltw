@@ -51,21 +51,21 @@ public class PrimoScript
 		string ret = LTools.Common.Helpers.DataHelper.DataTableToCSV(data, sep);
 		*/
 	
-		var dt_dataFromTable = new DataTable(); 	//Инициализация пустой таблицы
+		var dtDataFromTable = new DataTable(); 	//Инициализация пустой таблицы
 		
 		//Добавление столбцов в таблицу
-		dt_dataFromTable.Columns.Add("Индекс");
-		dt_dataFromTable.Columns.Add("Элемент");
-		dt_dataFromTable.Columns.Add("Группа");
+		dtDataFromTable.Columns.Add("Индекс");
+		dtDataFromTable.Columns.Add("Элемент");
+		dtDataFromTable.Columns.Add("Группа");
 		
 		// Добавление данных в таблицу
-		dt_dataFromTable.Rows.Add(1, "Таблицу в CSV", "Коллекции");
-		dt_dataFromTable.Rows.Add(2, "Фильтр таблицы", "Коллекции");
-		dt_dataFromTable.Rows.Add(3, "Открыть браузер", "Браузер");
+		dtDataFromTable.Rows.Add(1, "Таблицу в CSV", "Коллекции");
+		dtDataFromTable.Rows.Add(2, "Фильтр таблицы", "Коллекции");
+		dtDataFromTable.Rows.Add(3, "Открыть браузер", "Браузер");
 
-		var sep = ";"; // Определение разделителя
+		var strSeparator = ";"; // Определение разделителя
 		
-		string ret = LTools.Common.Helpers.DataHelper.DataTableToCSV(dt_dataFromTable, sep);
+		string strTableInCsv = LTools.Common.Helpers.DataHelper.DataTableToCSV(dtDataFromTable, strSeparator);
 		
     }
 }</Value>
@@ -77,4 +77,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

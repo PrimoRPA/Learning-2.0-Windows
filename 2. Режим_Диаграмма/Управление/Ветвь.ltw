@@ -92,6 +92,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -108,10 +112,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Контейнер, в котором можно разместить две и более ветвей.
-В параллельном режиме запускается ожидание срабатывания триггера одной из ветвей. 
-Первая ветвь, вернувшая значение true (даже в случаее, если все ветви возращают true), выполнит настроенное для нее действие.
-Остальные ветви будут проигнорированы.</Value>
+                    <Value xsi:type="xsd:string">Контейнер с элементом Ветвь</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -120,12 +121,12 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">443.52666666666664</Value>
+                    <Value xsi:type="xsd:double">457.09333333333336</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">188.03999999999996</Value>
+                    <Value xsi:type="xsd:double">173.03999999999996</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -189,6 +190,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -289,7 +294,9 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Annotation</Name>
-                                    <Value xsi:type="xsd:string">Для ветви настраивается "Триггер" и "Действие", выполняемое при срабатывании этого триггера.
+                                    <Value xsi:type="xsd:string">Элемент предназначен для размещения в контейнере "Выбрать ветвь"
+
+Для ветви настраивается "Триггер" и "Действие", выполняемое при срабатывании этого триггера.
 Срабатывание триггера происходит после того, как в блоке "Действие" возрашается значение true</Value>
                                 </SerializationItem>
                                 <SerializationItem>
@@ -544,7 +551,9 @@
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>Annotation</Name>
-                                    <Value xsi:type="xsd:string">Для ветви настраивается "Триггер" и "Действие", выполняемое при срабатывании этого триггера.
+                                    <Value xsi:type="xsd:string">Элемент предназначен для размещения в контейнере "Выбрать ветвь"
+
+Для ветви настраивается "Триггер" и "Действие", выполняемое при срабатывании этого триггера.
 Срабатывание триггера происходит после того, как в блоке "Действие" возрашается значение true</Value>
                                 </SerializationItem>
                                 <SerializationItem>
@@ -920,6 +929,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -930,9 +948,11 @@
         <ScriptVariable>
             <Name>boolBranch</Name>
             <Group />
+            <Comment>Переменная для сохранения результата проверки наличия папки</Comment>
             <DataTypeString>Boolean</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

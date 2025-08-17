@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -107,11 +111,6 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Компонент, производящий отображение окна ввода данных</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -141,6 +140,11 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Компонент, производящий отображение окна ввода данных</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -186,6 +190,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -282,11 +290,6 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Список вариантов дял вобра в диалоге ввода</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -316,6 +319,11 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Список вариантов дял выбора в диалоге ввода</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -362,6 +370,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -373,7 +385,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Variable</Name>
-                            <Value xsi:type="xsd:string">optionsList</Value>
+                            <Value xsi:type="xsd:string">listOptions</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -464,20 +476,6 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Активность отображает диалог ввода, для взаимодействия пользователя с роботом.
-
-Для работы с активностью необходимо задать ширину и высоту окна, которое будет отображено во время работы.
-Для того, чтобы пользователь знал, что от него ожидается следует указать свойства "Заголовок" и "Текст". В данных полях указывается информация в свободной форме.
-
-Чтобы получить данные, которые пользователь введет в диалог ввода, необходимо задать переменную в свойство "Результат". Переменная необходимо в формате String.
-
-Свойство "Справочник" отвечает за присутствие вариантов выбора. Его можно задать, передав в активность список строк или воспользоваться Редактором коллекции в данном свойстве и записать все значения в него, чтобы все данные были сформированы в список.
-
-Диалог ввода отображается на экране до тех пор, пока пользователь его не закроет нажатием на кнопку "Окей" или на крестик.</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -507,6 +505,20 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Активность отображает диалог ввода, для взаимодействия пользователя с роботом.
+
+Для работы с активностью необходимо задать ширину и высоту окна, которое будет отображено во время работы.
+Для того, чтобы пользователь знал, что от него ожидается следует указать свойства "Заголовок" и "Текст". В данных полях указывается информация в свободной форме.
+
+Чтобы получить данные, которые пользователь введет в диалог ввода, необходимо задать переменную в свойство "Результат". Переменная необходимо в формате String.
+
+Свойство "Справочник" отвечает за присутствие вариантов выбора. Его можно задать, передав в активность список строк или воспользоваться Редактором коллекции в данном свойстве и записать все значения в него, чтобы все данные были сформированы в список.
+
+Диалог ввода отображается на экране до тех пор, пока пользователь его не закроет нажатием на кнопку "Окей" или на крестик.</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -553,6 +565,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -574,12 +590,12 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Result</Name>
-                            <Value xsi:type="xsd:string">userInfo</Value>
+                            <Value xsi:type="xsd:string">strUserInfo</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Dict</Name>
-                            <Value xsi:type="xsd:string">optionsList</Value>
+                            <Value xsi:type="xsd:string">listOptions</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -614,11 +630,11 @@
                             <Value xsi:type="xsd:string">Активность отображает диалог ввода, для взаимодействия пользователя с роботом.
 
 Для работы с активностью необходимо задать ширину и высоту окна, которое будет отображено во время работы.
-Для того, чтобы пользователь знал что от него ожидается следует указать свойства "Заголовок" и "Текст". В данных полях указывается информация всвободной форме.
+Для того, чтобы пользователь знал, что от него ожидается следует указать свойства "Заголовок" и "Текст". В данных полях указывается информация в свободной форме.
 
 Чтобы получить данные, которые пользователь введет в диалог ввода, необходимо задать переменную в свойство "Результат". Переменная необходимо в формате String.
 
-Свойство "Справочник" отвечает за присутствие вариантов выбора. Его можно задать передав в вактивность список строк или воспользоваться Редактором коллекции в данном свойстве и записать все значения в него, чтобы все данные были сформированы в список.
+Свойство "Справочник" отвечает за присутствие вариантов выбора. Его можно задать, передав в активность список строк или воспользоваться Редактором коллекции в данном свойстве и записать все значения в него, чтобы все данные были сформированы в список.
 
 Диалог ввода отображается на экране до тех пор, пока пользователь его не закроет нажатием на кнопку "Окей" или на крестик.</Value>
                         </SerializationItem>
@@ -684,11 +700,6 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Пример работы активности без справочника. Текст, который введет пользователь в имеющееся поле будет также записан в переменную.</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -718,6 +729,11 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Пример работы активности без справочника. Текст, который введет пользователь в имеющееся поле будет также записан в переменную.</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -764,6 +780,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -785,7 +805,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Result</Name>
-                            <Value xsi:type="xsd:string">userInfo</Value>
+                            <Value xsi:type="xsd:string">strUserInfo</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -1003,6 +1023,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1136,6 +1165,15 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -1271,6 +1309,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1279,14 +1326,14 @@
     </Components>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>userInfo</Name>
+            <Name>strUserInfo</Name>
             <Group />
             <Comment>Данные, полученные от пользователя при вводе сообещния</Comment>
             <DataTypeString>System.String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>optionsList</Name>
+            <Name>listOptions</Name>
             <Group />
             <Comment>Список вариантов для ввода данных</Comment>
             <DataTypeString>List&lt;String&gt;</DataTypeString>
@@ -1294,4 +1341,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

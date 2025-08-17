@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент завершает соединение с базой данных</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -93,7 +93,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Variable</Name>
-                        <Value xsi:type="xsd:string">excelPath</Value>
+                        <Value xsi:type="xsd:string">strExcelPath</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -107,7 +107,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Присвоение excelPath</Value>
+                        <Value xsi:type="xsd:string">Присвоение strExcelPath</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -178,7 +178,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ConnectionString</Name>
-                        <Value xsi:type="xsd:string">"Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};Dbq="+ excelPath</Value>
+                        <Value xsi:type="xsd:string">"Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};Dbq="+ strExcelPath</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -281,9 +281,11 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string">Элемент Primo RPA, предназначенный для завершения соединения с базой данных, играет важную роль в управлении ресурсами и оптимизации рабочих процессов. Этот компонент позволяет автоматизировать процесс закрытия соединения с базой данных после выполнения необходимых операций.
+                                <Value xsi:type="xsd:string">Элемент завершает соединение с базой данных
 
-Основная цель этого элемента — обеспечить эффективное управление ресурсами и предотвратить возможные проблемы, связанные с незакрытыми соединениями. Незакрытые соединения могут привести к снижению производительности системы, утечке ресурсов и другим проблемам.
+Элемент Primo RPA, предназначенный для завершения соединения с базой данных, играет важную роль в управлении ресурсами и оптимизации рабочих процессов. Этот компонент позволяет автоматизировать процесс закрытия соединения с базой данных после выполнения необходимых операций.
+
+Основная цель этого элемента - обеспечить эффективное управление ресурсами и предотвратить возможные проблемы, связанные с незакрытыми соединениями. Незакрытые соединения могут привести к снижению производительности системы, утечке ресурсов и другим проблемам.
 
 Элемент автоматически закрывает соединение с базой данных после завершения работы, что гарантирует освобождение ресурсов.
 
@@ -368,7 +370,7 @@
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>excelPath</Name>
+            <Name>strExcelPath</Name>
             <Group />
             <Comment>Путь до книги Excel</Comment>
             <DataTypeString>String</DataTypeString>
@@ -376,4 +378,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -52,14 +52,14 @@ public class PrimoScript
 		*/
 		
 		//Добавление полейдля последующего удаления
-		var msg = new Dictionary&lt;string, string&gt;() {{"Learning", "\"Добавление поля\""}};
-		LTools.Workflow.PrimoApp.AddLogField(wf, msg);
+		var dictMsg = new Dictionary&lt;string, string&gt;() {{"Learning", "\"Добавление поля\""}};
+		LTools.Workflow.PrimoApp.AddLogField(wf, dictMsg);
 		
 		//Запись сообщения в журнал, дял проерки работы элемента
 		LTools.Workflow.PrimoApp.AddToLog(wf, "Изучение работы элемента", LTools.Enums.LogMessageType.Info);
 		
-		var msgDelete = new List&lt;string&gt;() {"Learning"};
-		LTools.Workflow.PrimoApp.RemoveLogField(wf, msgDelete);
+		var listMsgDelete = new List&lt;string&gt;() {"Learning"};
+		LTools.Workflow.PrimoApp.RemoveLogField(wf, listMsgDelete);
 		
 		//Запись сообщения в журнал, дял проерки работы элемента
 		LTools.Workflow.PrimoApp.AddToLog(wf, "Изучение работы элемента", LTools.Enums.LogMessageType.Info);
@@ -74,4 +74,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -50,6 +50,8 @@ public class PrimoScript
 		//Активность возращает переменную "listFiles" (System.Collections.Generic.List&lt;String&gt;) в которой содержатся пути до фалов находящихся в указанной папке
 		//*Активность работает с файлами любого формата
         string[] listFiles = System.IO.Directory.GetFiles(strFolderPath, strPattern, System.IO.SearchOption.AllDirectories);
+		
+		LTools.Workflow.PrimoApp.AddToLog(wf, "Количество файлов, подходящих под маску: " + listFiles.Length.ToString(), LTools.Enums.LogMessageType.Info);
     }
 }</Value>
             </SerializationItem>
@@ -60,4 +62,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

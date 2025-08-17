@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент выполняет логику в параллельных потоках</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -98,7 +98,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Контейнер потоков, в нем можно выстроить логику которая будет выполняться параллельно в разных потоках
+                        <Value xsi:type="xsd:string">Компонент выполняет логику в параллельных потоках
+
+Контейнер потоков, в нем можно выстроить логику которая будет выполняться параллельно в разных потоках
 
 Можно указать необязательное свойство "Оставновить все потоки при ошибке"</Value>
                     </SerializationItem>
@@ -431,15 +433,18 @@
         <ScriptVariable>
             <Name>strFirstPart</Name>
             <Group />
+            <Comment>Первая часть формируемого сообщения</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
             <Name>strSecondPart</Name>
             <Group />
+            <Comment>Вторая часть формируемого сообщения</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

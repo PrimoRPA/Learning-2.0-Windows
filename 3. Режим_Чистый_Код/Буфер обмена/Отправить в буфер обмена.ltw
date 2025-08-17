@@ -51,9 +51,9 @@ public class PrimoScript
 		LTools.Desktop.DesktopApp.SendToClipboard(wf, text);
 		*/
 		
-		var text = "Primo RPA Studio Learning";
+		var strText = "Primo RPA Studio Learning";
 		//Текст можно внести непосредственно в активность или передать с помощью переменной
-		LTools.Desktop.DesktopApp.SendToClipboard(wf, text);
+		LTools.Desktop.DesktopApp.SendToClipboard(wf, strText);
     }
 }</Value>
             </SerializationItem>
@@ -64,4 +64,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

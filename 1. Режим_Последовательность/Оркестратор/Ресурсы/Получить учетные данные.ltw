@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент позволяет получить учетные данные из Оркестратора</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -177,12 +177,12 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Text</Name>
-                        <Value xsi:type="xsd:string">userName</Value>
+                        <Value xsi:type="xsd:string">strUserName</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Password</Name>
-                        <Value xsi:type="xsd:string">password</Value>
+                        <Value xsi:type="xsd:string">strPassword</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -271,14 +271,14 @@
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>userName</Name>
+            <Name>strUserName</Name>
             <Group />
             <Comment>Полученный логин из ресурса</Comment>
             <DataTypeString>System.String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>password</Name>
+            <Name>strPassword</Name>
             <Group />
             <Comment>Полученный пароль из ресурса</Comment>
             <DataTypeString>System.Security.SecureString</DataTypeString>
@@ -286,4 +286,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

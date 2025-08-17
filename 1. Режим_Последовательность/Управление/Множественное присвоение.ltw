@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент, производящий присвоение данных заданным переменным</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -98,7 +98,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Переменные:
+                        <Value xsi:type="xsd:string">Компонент, производящий присвоение данных заданным переменным
+
+Переменные:
 1) Булевое значение 
 2) Строковое значение 
 3) Числовое значение 
@@ -455,21 +457,25 @@
         <ScriptVariable>
             <Name>strVariable</Name>
             <Group />
+            <Comment>Строковое значение для демонстрации присвоения</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
             <Name>intVariable</Name>
             <Group />
+            <Comment>Числовое значение для демонстрации присвоения</Comment>
             <DataTypeString>Int32</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
             <Name>boolVariable</Name>
             <Group />
+            <Comment>Булевое значение для демонстрации присвоения</Comment>
             <DataTypeString>Boolean</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -57,9 +57,9 @@ public class PrimoScript
 		например https://developers.google.com/oauthplayground/. Необходимо ввести данные клиента и выбирать области, к которым необходимо предоставить доступ.
 		*/
 		
-		var googleDocID = ""; //ID документа Google Sheets. Для работы внесите свое значение id
+		var strGoogleDocID = ""; //ID документа Google Sheets. Для работы внесите свое значение id
 			
-		LTools.Office.GoogleSheetsApp app = LTools.Office.GoogleSheetsApp.Init(wf, @".\Дополнительные материалы\Google Sheets\client_secret.json", googleDocID);
+		LTools.Office.GoogleSheetsApp app = LTools.Office.GoogleSheetsApp.Init(wf, @".\Дополнительные материалы\Google Sheets\client_secret.json", strGoogleDocID);
     }
 }</Value>
             </SerializationItem>
@@ -70,4 +70,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

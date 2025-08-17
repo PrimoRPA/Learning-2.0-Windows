@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Предназначен для фильтрации данных в таблице</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -179,7 +179,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Variable</Name>
-                                <Value xsi:type="xsd:string">dt_dataFromTable</Value>
+                                <Value xsi:type="xsd:string">dtDataFromTable</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -193,7 +193,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>ComponentName</Name>
-                                <Value xsi:type="xsd:string">Создать таблицу</Value>
+                                <Value xsi:type="xsd:string">Создать таблицу dtDataFromTable</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -268,7 +268,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Variable</Name>
-                                <Value xsi:type="xsd:string">dt_dataFromTable</Value>
+                                <Value xsi:type="xsd:string">dtDataFromTable</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -285,7 +285,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>ComponentName</Name>
-                                <Value xsi:type="xsd:string">Добавить строку</Value>
+                                <Value xsi:type="xsd:string">Добавить строку в dtDataFromTable</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -360,7 +360,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Variable</Name>
-                                <Value xsi:type="xsd:string">dt_dataFromTable</Value>
+                                <Value xsi:type="xsd:string">dtDataFromTable</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -377,7 +377,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>ComponentName</Name>
-                                <Value xsi:type="xsd:string">Добавить строку</Value>
+                                <Value xsi:type="xsd:string">Добавить строку в dtDataFromTable</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -452,7 +452,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Variable</Name>
-                                <Value xsi:type="xsd:string">dt_dataFromTable</Value>
+                                <Value xsi:type="xsd:string">dtDataFromTable</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -469,7 +469,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>ComponentName</Name>
-                                <Value xsi:type="xsd:string">Добавить строку</Value>
+                                <Value xsi:type="xsd:string">Добавить строку в dtDataFromTable</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -541,12 +541,12 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Data</Name>
-                        <Value xsi:type="xsd:string">dt_dataFromTable</Value>
+                        <Value xsi:type="xsd:string">dtDataFromTable</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Variable</Name>
-                        <Value xsi:type="xsd:string">dt_filtrTable</Value>
+                        <Value xsi:type="xsd:string">dtFilterTable</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -584,8 +584,8 @@
                         <Value xsi:type="xsd:string">Элемент предназначен для осуществления фильтрации таблицы по заданным параметрам. Параметры можно указать через мастер запросов и через мастер фильтров. Мастер запросов представляет собой более сокращенную версию мастера фильтров.
 
 Для работы с активностью необходимо заполнить следующие обязательные свойства: 
-Табица: Необходимо указать переменную, содержащую таблицу, которую необходимо отфильтровать
-Переменная: Необходимо указать переменную, в которую будут сохранен результат работы активности.
+Таблица: Необходимо указать переменную, содержащую таблицу, которую необходимо отфильтровать
+Переменная: Необходимо указать переменную, в которую будет сохранен результат работы активности.
 
 В мастере фильтров вы можете указать значения по которым необходимо произвести фильтрацию. Также можно указать следует сохранить данные, подходящие под фильтр, или удалить их. 
 Помимо этого есть возможность выбрать только те колонки, которые понадобятся в дальнейшем. Для этого следует открыть раздел "Столбцы результата" и указать названия столбцов для удаления или сохранения.
@@ -645,14 +645,14 @@
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>dt_dataFromTable</Name>
+            <Name>dtDataFromTable</Name>
             <Group />
             <Comment>Таблица для фильтрации</Comment>
             <DataTypeString>System.Data.DataTable</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>dt_filtrTable</Name>
+            <Name>dtFilterTable</Name>
             <Group />
             <Comment>Таблица с данными после фильтрации</Comment>
             <DataTypeString>System.Data.DataTable</DataTypeString>
@@ -660,4 +660,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

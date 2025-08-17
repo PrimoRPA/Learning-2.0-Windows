@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент ожидает событие нажатия мыши в окне браузера</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -174,7 +174,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Variable</Name>
-                        <Value xsi:type="xsd:string">isComplete</Value>
+                        <Value xsi:type="xsd:string">boolIsComplete</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -497,7 +497,7 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_desktop/els_events/e
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Variable</Name>
-                                <Value xsi:type="xsd:string">isComplete</Value>
+                                <Value xsi:type="xsd:string">boolIsComplete</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -686,13 +686,8 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_desktop/els_events/e
                         <Properties>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
-                                <Name>ComponentName</Name>
-                                <Value xsi:type="xsd:string">Открыть браузер</Value>
-                            </SerializationItem>
-                            <SerializationItem>
-                                <IsListValue>false</IsListValue>
-                                <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string" />
+                                <Name>URL</Name>
+                                <Value xsi:type="xsd:string">"https://www.google.com/"</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -703,11 +698,6 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_desktop/els_events/e
                                 <IsListValue>false</IsListValue>
                                 <Name>Headless</Name>
                                 <Value xsi:type="xsd:boolean">false</Value>
-                            </SerializationItem>
-                            <SerializationItem>
-                                <IsListValue>false</IsListValue>
-                                <Name>URL</Name>
-                                <Value xsi:type="xsd:string">"https://www.google.com/"</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -752,11 +742,21 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_desktop/els_events/e
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
+                                <Name>ComponentName</Name>
+                                <Value xsi:type="xsd:string">Открыть браузер</Value>
+                            </SerializationItem>
+                            <SerializationItem>
+                                <IsListValue>false</IsListValue>
                                 <Name>WaitBefore</Name>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>WaitAfter</Name>
+                            </SerializationItem>
+                            <SerializationItem>
+                                <IsListValue>false</IsListValue>
+                                <Name>Annotation</Name>
+                                <Value xsi:type="xsd:string" />
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -813,8 +813,23 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_desktop/els_events/e
                                 <Properties>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
+                                        <Name>MouseButton</Name>
+                                        <Value xsi:type="xsd:int">1</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
+                                        <Name>Position</Name>
+                                        <Value xsi:type="xsd:int">0</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
+                                        <Name>KeyboardButton</Name>
+                                        <Value xsi:type="xsd:int">0</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
                                         <Name>SearchPatterText</Name>
-                                        <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\".Tag\",\"Value\":\"SPAN\"},{\"Key\":\".SearchFrames\",\"Value\":\"False\"},{\"Key\":\"CLASS\",\"Value\":\"ly0Ckb\"}],\"Items\":[]}],\"ContainerID\":\"94565a98-2251-4662-9435-b43f724ff737\",\"LastContainerName\":\"Open browser\",\"LastContainerType\":1,\"AppType\":5}"</Value>
+                                        <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\".Tag\",\"Value\":\"SPAN\",\"ValueKind\":0},{\"Key\":\".SearchFrames\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\"CLASS\",\"Value\":\"ly0Ckb\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"94565a98-2251-4662-9435-b43f724ff737\",\"LastContainerName\":\"Открыть браузер\",\"LastContainerType\":1,\"AppType\":5}"</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -849,22 +864,7 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_desktop/els_events/e
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
-                                        <Name>MouseButton</Name>
-                                        <Value xsi:type="xsd:int">1</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
-                                        <Name>KeyboardButton</Name>
-                                        <Value xsi:type="xsd:int">0</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
                                         <Name>Area</Name>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
-                                        <Name>Position</Name>
-                                        <Value xsi:type="xsd:int">0</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -1047,7 +1047,7 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_desktop/els_events/e
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Equation</Name>
-                                <Value xsi:type="xsd:string">!isComplete</Value>
+                                <Value xsi:type="xsd:string">!boolIsComplete</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -1234,7 +1234,7 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_desktop/els_events/e
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Variable</Name>
-                                <Value xsi:type="xsd:string">result</Value>
+                                <Value xsi:type="xsd:string">strResult</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -1320,7 +1320,7 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_desktop/els_events/e
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Variable</Name>
-                                <Value xsi:type="xsd:string">result</Value>
+                                <Value xsi:type="xsd:string">strResult</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -1486,23 +1486,13 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_desktop/els_events/e
                         <Properties>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
-                                <Name>ComponentName</Name>
-                                <Value xsi:type="xsd:string">Присоединиться к браузеру</Value>
-                            </SerializationItem>
-                            <SerializationItem>
-                                <IsListValue>false</IsListValue>
-                                <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string" />
+                                <Name>BrowserTitle</Name>
+                                <Value xsi:type="xsd:string">"*DEMOQA*"</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>BrowserType</Name>
                                 <Value xsi:type="xsd:int">1</Value>
-                            </SerializationItem>
-                            <SerializationItem>
-                                <IsListValue>false</IsListValue>
-                                <Name>BrowserTitle</Name>
-                                <Value xsi:type="xsd:string">"*DEMOQA*"</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -1550,11 +1540,21 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_desktop/els_events/e
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
+                                <Name>ComponentName</Name>
+                                <Value xsi:type="xsd:string">Присоединиться к браузеру</Value>
+                            </SerializationItem>
+                            <SerializationItem>
+                                <IsListValue>false</IsListValue>
                                 <Name>WaitBefore</Name>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>WaitAfter</Name>
+                            </SerializationItem>
+                            <SerializationItem>
+                                <IsListValue>false</IsListValue>
+                                <Name>Annotation</Name>
+                                <Value xsi:type="xsd:string" />
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -1688,7 +1688,7 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_desktop/els_events/e
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>isComplete</Name>
+            <Name>boolIsComplete</Name>
             <Group />
             <Comment>Флаг, указывающий на происхождение события</Comment>
             <DataTypeString>Boolean</DataTypeString>
@@ -1707,7 +1707,7 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_desktop/els_events/e
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>result</Name>
+            <Name>strResult</Name>
             <Group />
             <Comment>Итог выполнения события</Comment>
             <DataTypeString>String</DataTypeString>
@@ -1715,4 +1715,5 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_desktop/els_events/e
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

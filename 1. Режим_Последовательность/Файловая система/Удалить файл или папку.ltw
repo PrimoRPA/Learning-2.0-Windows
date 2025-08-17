@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент, удаляющий файл.</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -290,7 +290,9 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string">Чтобы удалить файл или папку, необходимо указать свойство "Путь", путь может быть абсолютный или относительный
+                                <Value xsi:type="xsd:string">Этот компонент предназначен для удаления файлов и папок из системы. Он позволяет безвозвратно удалять ненужные данные, освобождая место на диске.
+
+Чтобы удалить файл или папку, необходимо указать свойство "Путь", путь может быть абсолютный или относительный
 
 *Активность работает с файлами любого формата</Value>
                             </SerializationItem>
@@ -432,9 +434,11 @@
         <ScriptVariable>
             <Name>strFilePath</Name>
             <Group />
+            <Comment>Путь до элемента, который необходимо удалить</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент, который преобразует SecureString в строку</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -114,7 +114,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Для примера работы активности создается строка в формате SecureString. На практике данная реализация должна применяться крайне редко. Учетные данные лучше хранить не в проекте, а в Primo Orchestrator, Credential Manager или других средствах с возможность хранения паролей.</Value>
+                        <Value xsi:type="xsd:string">Для примера работы активности создается строка в формате SecureString. На практике данная реализация должна применяться крайне редко. Учетные данные лучше хранить не в проекте, а в Primo RPA Orchestrator, Credential Manager или других средствах с возможностью хранения паролей.</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -368,9 +368,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Активность используется для преобразования данный типа SecureString в String.
+                        <Value xsi:type="xsd:string">Активность используется для преобразования данных типа SecureString в String.
 Учетные данные пользователей рекомендованно передавать в формате защищенной строки, но не все активности могут вносить данные в формате SecureString, поэтому их необходимо преобразовывать.
-Учетные данные в формате SecureString выможете получить из Primo Orchestrator или из Credential Manager.
+Учетные данные в формате SecureString вы можете получить из Primo RPA Orchestrator или из Credential Manager.
 
 Для работы с активностью необходимо заполнить следующие обязательные свойства: 
 - SecureString: Защищенная строка, данные которой необходимо преобразовать.
@@ -439,6 +439,7 @@
         <ScriptVariable>
             <Name>secStringPass</Name>
             <Group />
+            <Comment>Данные в формате защищенной строки</Comment>
             <DataTypeString>System.Security.SecureString</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
@@ -451,4 +452,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

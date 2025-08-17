@@ -60,9 +60,9 @@ public class PrimoScript
 		LTools.WebBrowser.BrowserApp app = LTools.WebBrowser.BrowserApp.Open(wf, LTools.WebBrowser.Model.BrowserTypes.Chrome, "https://www.google.com/"); // открыть браузер
 		System.Threading.Thread.Sleep(5000); // Ожидание 5 секунд для загрузки страницы
 		
-		string ret = app.Eval("document.getElementById('APjFqb').value = 'Primo Studio Test Components'" , 10000);
+		string strScriptResult = app.Eval("document.getElementById('APjFqb').value = 'Primo Studio Test Components'" , 10000);
 		
-		app.Close(); //Компонент, завершающий работу браузера.
+		//app.Close(); //Компонент, завершающий работу браузера.
 	}
 }</Value>
             </SerializationItem>
@@ -73,4 +73,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

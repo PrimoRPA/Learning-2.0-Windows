@@ -92,12 +92,12 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Variable</Name>
-                        <Value xsi:type="xsd:string">FirstString</Value>
+                        <Value xsi:type="xsd:string">strFirstValue</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Data</Name>
-                        <Value xsi:type="xsd:string">"Primo Learning"</Value>
+                        <Value xsi:type="xsd:string">"test"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -106,7 +106,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Присвоение FirstString</Value>
+                        <Value xsi:type="xsd:string">Присвоение strFirstValue</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -176,12 +176,12 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Variable</Name>
-                        <Value xsi:type="xsd:string">SecondValue</Value>
+                        <Value xsi:type="xsd:string">strSecondValue</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Data</Name>
-                        <Value xsi:type="xsd:string">"Primo Learning"</Value>
+                        <Value xsi:type="xsd:string">"test"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -190,7 +190,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Присвоение SecondValue</Value>
+                        <Value xsi:type="xsd:string">Присвоение strSecondValue</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -260,12 +260,12 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Expr</Name>
-                        <Value xsi:type="xsd:string">FirstString</Value>
+                        <Value xsi:type="xsd:string">strFirstValue</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Expr2</Name>
-                        <Value xsi:type="xsd:string">SecondValue</Value>
+                        <Value xsi:type="xsd:string">strSecondValue</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -351,14 +351,14 @@
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>FirstString</Name>
+            <Name>strFirstValue</Name>
             <Group>Value</Group>
             <Comment>Первая строка для проверки выражения</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>SecondValue</Name>
+            <Name>strSecondValue</Name>
             <Group>Value</Group>
             <Comment>Вторая строка для проверки выражения</Comment>
             <DataTypeString>String</DataTypeString>
@@ -366,4 +366,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

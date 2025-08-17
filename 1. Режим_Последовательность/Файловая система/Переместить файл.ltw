@@ -12,6 +12,16 @@
         <Properties>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
+                <Name>ComponentName</Name>
+                <Value xsi:type="xsd:string">Переместить файл</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>Annotation</Name>
+                <Value xsi:type="xsd:string" />
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
                 <Name>TextTag</Name>
             </SerializationItem>
             <SerializationItem>
@@ -21,21 +31,11 @@
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
-                <Name>ComponentName</Name>
-                <Value xsi:type="xsd:string">Переместить файл</Value>
-            </SerializationItem>
-            <SerializationItem>
-                <IsListValue>false</IsListValue>
                 <Name>WaitBefore</Name>
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>WaitAfter</Name>
-            </SerializationItem>
-            <SerializationItem>
-                <IsListValue>false</IsListValue>
-                <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент, перемещающий файл.</Value>
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -319,7 +319,9 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string">Чтобы переместить файл, необходимо указать "Источник" (изначальный файл для копирования) и "Назначение" (место, куда будет помещена копия файла)
+                                <Value xsi:type="xsd:string">Этот компонент предназначен для перемещения файлов из одной директории в другую. Он позволяет эффективно управлять файлами и организовывать их хранение в системе.
+
+Чтобы переместить файл, необходимо указать "Источник" (изначальный файл для копирования) и "Назначение" (место, куда будет помещена копия файла)
 
 В случае, если по пути, указанному в свойстве "Назначение" уже есть файл, активность выдаст ошибку (чтобы избежать такой ситуации необходимо поставить галочку в свойстве "Перезаписать")
 
@@ -414,7 +416,9 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string">Чтобы переместить файл, необходимо указать "Источник" (изначальный файл для копирования) и "Назначение" (место, куда будет помещена копия файла)
+                                <Value xsi:type="xsd:string">Этот компонент предназначен для перемещения файлов из одной директории в другую. Он позволяет эффективно управлять файлами и организовывать их хранение в системе.
+
+Чтобы переместить файл, необходимо указать "Источник" (изначальный файл для копирования) и "Назначение" (место, куда будет помещена копия файла)
 
 В случае, если по пути, указанному в свойстве "Назначение" уже есть файл, активность выдаст ошибку (чтобы избежать такой ситуации необходимо поставить галочку в свойстве "Перезаписать")
 
@@ -477,15 +481,18 @@
         <ScriptVariable>
             <Name>strPathOne</Name>
             <Group />
+            <Comment>Исходный путь до файла, который необходимо переместить</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
             <Name>strPathTwo</Name>
             <Group />
+            <Comment>Путь до пермеещенного файла</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

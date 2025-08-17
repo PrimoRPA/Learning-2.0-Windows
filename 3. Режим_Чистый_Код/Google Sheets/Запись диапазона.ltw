@@ -53,16 +53,16 @@ public class PrimoScript
         app.WriteRange(data, range, sheet);
 		*/
 		
-		var googleDocID = ""; //ID документа Google Sheets. Для работы внесите свое значение id
+		var strGoogleDocID = ""; //ID документа Google Sheets. Для работы внесите свое значение id
 		
 		//Настройки активность "Документ Google Sheets" следует произвести в соотвествии с шагами, описанными в "Документ Google Sheets.ltw" данного проекта:	
-		LTools.Office.GoogleSheetsApp app = LTools.Office.GoogleSheetsApp.Init(wf, @".\Дополнительные материалы\Google Sheets\client_secret.json", googleDocID);
+		LTools.Office.GoogleSheetsApp app = LTools.Office.GoogleSheetsApp.Init(wf, @".\Дополнительные материалы\Google Sheets\client_secret.json", strGoogleDocID);
 		
-		var data = new List&lt;List&lt;object&gt;&gt; {new List&lt;object&gt;{"Primo RPA", "Learning"}}; //Данные, которые необходимо внести в таблицу. Переменная должна быть в формате List&lt;List&lt;object&gt;&gt;
-		var range = "A1";//Ячейки, в которые необходимо произвести запись данных. Необходимо указывать в формате строки "A1:D12". Диапазон расширяется автоматически до размера введенных данных
-		var sheet = "NewData"; //Название страницы, на которую будут внесены данные
+		var listTextForSheets = new List&lt;List&lt;object&gt;&gt; {new List&lt;object&gt;{"Primo RPA", "Learning"}}; //Данные, которые необходимо внести в таблицу. Переменная должна быть в формате List&lt;List&lt;object&gt;&gt;
+		var strRange = "A1";//Ячейки, в которые необходимо произвести запись данных. Необходимо указывать в формате строки "A1:D12". Диапазон расширяется автоматически до размера введенных данных
+		var strSheetName = "NewData"; //Название страницы, на которую будут внесены данные
 		
-		app.WriteRange(data, range, sheet);
+		app.WriteRange(listTextForSheets, strRange, strSheetName);
     }
 }</Value>
             </SerializationItem>
@@ -73,4 +73,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

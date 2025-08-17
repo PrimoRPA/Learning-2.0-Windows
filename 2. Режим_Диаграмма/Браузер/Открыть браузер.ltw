@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -187,6 +191,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -298,12 +306,12 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">154.00000000000006</Value>
+                    <Value xsi:type="xsd:double">151.98666666666668</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">184.04</Value>
+                    <Value xsi:type="xsd:double">238.03999999999996</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -367,6 +375,10 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -577,6 +589,10 @@ Complete — робот будет ожидать полной загрузки 
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -587,40 +603,8 @@ Complete — робот будет ожидать полной загрузки 
                     <Properties>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
-                            <Name>ComponentName</Name>
-                            <Value xsi:type="xsd:string">Открыть браузер</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string">Активность может быть применена для двух разных случаев: 
-1. Открытие нового браузера. 
-В случае, если экземпляр браузера еще не открыт, 
-то будет открыт выбранный браузер с порталом,
-указанным в свойстве. URL. 
-2. Открытие новой страницы. 
-Если браузер на момент использования активности открыт, то портал, 
-указанный в свойстве URL, будет открыт в новой вкладке. 
-
-Для работы с активностью необходимо заполнить следующие обязательные свойства: 
-- Url: Адрес ресурса, который необходимо открыть
-- Тип браузера: Тип используемого браузера. В соответствии с используемым типом 
-необходимо установить расширение
-
-Дополнительные свойства. Заполняются в случае необходимости:
-- Аргументы запуска: С версии студии 1.24.10 можно использовать различные аргументы 
-для запуска браузера. С их помощью можно запустить браузер в режиме инкогнито, 
-выключить плагины и т.д. В данном случае браузер запускается в режиме инкогнито
- - Состояние загрузки: Ждать определенного состояния загрузки страницы
-None — не ждать загрузки страницы. При выборе данного параметра можно дополнительно 
-настроить на какие объекты ориентироваться роботу, чтобы понять что страница загружена. 
-Это можно сделать путем использования элементов "Исчезновение элемента" 
-и "Присутствие элемента" раздела "Работа с UI"
-Interactive — система будет ждать загрузки страницы, но дополнительные 
-ресурсы могут продолжать загружаться после отработки активности
-Complete — робот будет ожидать полной загрузки страницы. 
-Важно осторожно использовать данный параметр, так как если страница 
-будет погружаться очень долго, то робот будет дожидаться ее загрузки достаточно долго</Value>
+                            <Name>URL</Name>
+                            <Value xsi:type="xsd:string">"https://www.google.com/"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -631,11 +615,6 @@ Complete — робот будет ожидать полной загрузки 
                             <IsListValue>false</IsListValue>
                             <Name>Headless</Name>
                             <Value xsi:type="xsd:boolean">false</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>URL</Name>
-                            <Value xsi:type="xsd:string">"https://www.google.com/"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -680,11 +659,48 @@ Complete — робот будет ожидать полной загрузки 
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
+                            <Name>ComponentName</Name>
+                            <Value xsi:type="xsd:string">Открыть браузер</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
                             <Name>WaitBefore</Name>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>WaitAfter</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Annotation</Name>
+                            <Value xsi:type="xsd:string">Активность может быть применена для двух разных случаев: 
+1. Открытие нового браузера. 
+В случае, если экземпляр браузера еще не открыт, 
+то будет открыт выбранный браузер с порталом,
+указанным в свойстве. URL. 
+2. Открытие новой страницы. 
+Если браузер на момент использования активности открыт, то портал, 
+указанный в свойстве URL, будет открыт в новой вкладке. 
+
+Для работы с активностью необходимо заполнить следующие обязательные свойства: 
+- Url: Адрес ресурса, который необходимо открыть
+- Тип браузера: Тип используемого браузера. В соответствии с используемым типом 
+необходимо установить расширение
+
+Дополнительные свойства. Заполняются в случае необходимости:
+- Аргументы запуска: С версии студии 1.24.10 можно использовать различные аргументы 
+для запуска браузера. С их помощью можно запустить браузер в режиме инкогнито, 
+выключить плагины и т.д. В данном случае браузер запускается в режиме инкогнито
+ - Состояние загрузки: Ждать определенного состояния загрузки страницы
+None — не ждать загрузки страницы. При выборе данного параметра можно дополнительно 
+настроить на какие объекты ориентироваться роботу, чтобы понять что страница загружена. 
+Это можно сделать путем использования элементов "Исчезновение элемента" 
+и "Присутствие элемента" раздела "Работа с UI"
+Interactive — система будет ждать загрузки страницы, но дополнительные 
+ресурсы могут продолжать загружаться после отработки активности
+Complete — робот будет ожидать полной загрузки страницы. 
+Важно осторожно использовать данный параметр, так как если страница 
+будет погружаться очень долго, то робот будет дожидаться ее загрузки достаточно долго</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -753,7 +769,24 @@ Complete — робот будет ожидать полной загрузки 
                 <SerializationItem>
                     <IsListValue>true</IsListValue>
                     <Name>PointsList</Name>
-                    <ListValue />
+                    <ListValue>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>PointsList</Name>
+                            <Value xsi:type="Point">
+                                <X>568</X>
+                                <Y>147</Y>
+                            </Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>PointsList</Name>
+                            <Value xsi:type="Point">
+                                <X>568.355</X>
+                                <Y>147</Y>
+                            </Value>
+                        </SerializationItem>
+                    </ListValue>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -867,6 +900,15 @@ Complete — робот будет ожидать полной загрузки 
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -875,4 +917,5 @@ Complete — робот будет ожидать полной загрузки 
     </Components>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

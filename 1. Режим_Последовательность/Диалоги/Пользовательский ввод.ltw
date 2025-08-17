@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент отображает пользовательское окно ввода данных</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -93,7 +93,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Variable</Name>
-                        <Value xsi:type="xsd:string">fullPath</Value>
+                        <Value xsi:type="xsd:string">strFullPath</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -177,12 +177,12 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>URL</Name>
-                        <Value xsi:type="xsd:string">"file:////" + fullPath</Value>
+                        <Value xsi:type="xsd:string">"file:////" + strFullPath</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Result</Name>
-                        <Value xsi:type="xsd:string">userInfo</Value>
+                        <Value xsi:type="xsd:string">strUserInfo</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -214,13 +214,13 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Активность позволяет использовать диалогового окна, созданного не в Primo Studio.
+                        <Value xsi:type="xsd:string">Активность позволяет использовать диалоговое окно, созданное не в Primo RPA Studio.
 
 Результат работы активности записывается в указанную переменную и может быть использован в дальнешем.
 
 Можно указать необходимую высоту и ширину окна формы.
 
-В случае, если необходимый для отображения диалог расположен в сети, необхоимо указать url до него. Если же форма представлена в виде сохраненно файла, то необходимо перед полным путем указать file://// и в самом пути заменить слеши на обратные.</Value>
+В случае, если необходимый для отображения диалог расположен в сети, необхоимо указать url до него. Если же форма представлена в виде сохраненного файла, то необходимо перед полным путем указать file://// и в самом пути заменить слеши на обратные.</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -275,19 +275,20 @@
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>userInfo</Name>
+            <Name>strUserInfo</Name>
             <Group />
             <Comment>Информаци, полученная от пользователя</Comment>
             <DataTypeString>System.String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>fullPath</Name>
+            <Name>strFullPath</Name>
             <Group />
             <Comment>Полный путь до файла формы</Comment>
-            <DataTypeString>String</DataTypeString>
+            <DataTypeString>System.String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

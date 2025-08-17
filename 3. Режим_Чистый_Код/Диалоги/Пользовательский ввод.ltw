@@ -53,9 +53,9 @@ public class PrimoScript
 		String res = LTools.Workflow.PrimoApp.CustomInput(wf, url, width, height);
 		*/
 		
-		var fullPath = System.IO.Path.GetFullPath(@".\Дополнительные материалы\Диалоги\Форма.html").Replace("\\", "/");
+		var strFullPath = System.IO.Path.GetFullPath(@".\Дополнительные материалы\Диалоги\Форма.html").Replace("\\", "/");
 		
-		String res = LTools.Workflow.PrimoApp.CustomInput(wf, "file:////" + fullPath, 500, 850);
+		String res = LTools.Workflow.PrimoApp.CustomInput(wf, "file:////" + strFullPath, 500, 850);
     }
 }</Value>
             </SerializationItem>
@@ -66,4 +66,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

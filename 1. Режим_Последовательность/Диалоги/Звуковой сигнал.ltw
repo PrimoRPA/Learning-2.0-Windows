@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент, воспроизводящий звук заданной протяженности и частоты</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -120,11 +120,11 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Элемент воспроизводит звуковой сигнал.
+                        <Value xsi:type="xsd:string">Элемент воспроизводит звуковой сигнал заданной протяженности и частоты.
  
 Вы можете задать какой звуковой сигнал будет воспроизведен. Для этого необходимо задать протяженность сигнала в миллисекундах и задать частоту сигнала.
 
-Данная активность может быть использована для привлечения внимания пользователя в Attended роботах. Допусти если пользователю необходимо ввести данные в диалог ввода, то перед ней можно использовать звуковой сигнал, чтобы пользователь знал, что от него требуется действие</Value>
+Данная активность может быть использована для привлечения внимания пользователя в Attended роботах. Допустим если пользователю необходимо ввести данные в диалог ввода, то перед ней можно использовать звуковой сигнал, чтобы пользователь знал, что от него требуется действие</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -179,4 +179,5 @@
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

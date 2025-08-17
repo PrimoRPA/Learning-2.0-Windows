@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент, записывающий данные диапазона ячеек в Google Sheets</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -172,7 +172,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Variable</Name>
-                        <Value xsi:type="xsd:string">googleDocID</Value>
+                        <Value xsi:type="xsd:string">strGoogleDocID</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -186,7 +186,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Присвоение googleDocID</Value>
+                        <Value xsi:type="xsd:string">Присвоение strGoogleDocID</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -341,13 +341,25 @@
                 <Properties>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
+                        <Name>ComponentName</Name>
+                        <Value xsi:type="xsd:string">Документ Google Sheets</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Annotation</Name>
+                        <Value xsi:type="xsd:string">Настройки активность "Документ Google Sheets" следует 
+произвести в соотвествии с шагами, описанными в 
+"Документ Google Sheets.ltw" данного проекта</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
                         <Name>FileName</Name>
                         <Value xsi:type="xsd:string">@".\Дополнительные материалы\Google Sheets\client_secret.json"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>SheetID</Name>
-                        <Value xsi:type="xsd:string">googleDocID</Value>
+                        <Value xsi:type="xsd:string">strGoogleDocID</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -360,23 +372,11 @@
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
-                        <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Документ Google Sheets</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
                         <Name>WaitBefore</Name>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>WaitAfter</Name>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Настройки активность "Документ Google Sheets" следует 
-произвести в соотвествии с шагами, описанными в 
-"Документ Google Sheets.ltw" данного проекта</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -466,11 +466,13 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string">Для работы с элементов необходимо заполнить свойства:
+                                <Value xsi:type="xsd:string">Компонент, записывающий данные диапазона ячеек в Google Sheets
+
+Для работы с элементом необходимо заполнить свойства:
 
 Диапазон: ячейки, в которые необходимо произвести запись данных. Необходимо указывать в формате строки "A1:D12". Диапазон расширяется автоматически до размера введенных данных
 
-Переменная: данные, которые необходимо внести в таблицу. Переменная должна быть в формате List&lt;List&lt;object&gt;&gt;. Можно задать список List&lt;object&gt; и внести его в редактор коллекции, которы открывается путемнажатия решетки возле соотвествующего поля.
+Переменная: данные, которые необходимо внести в таблицу. Переменная должна быть в формате List&lt;List&lt;object&gt;&gt;. Можно задать список List&lt;object&gt; и внести его в редактор коллекции, который открывается путем нажатия решетки возле соотвествующего поля.
 
 Страница: название страницы, на которую будут внесены данные</Value>
                             </SerializationItem>
@@ -529,7 +531,7 @@
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>googleDocID</Name>
+            <Name>strGoogleDocID</Name>
             <Group />
             <DefaultValue xsi:type="xsd:string" />
             <Comment>ID документа Google Sheets</Comment>
@@ -539,9 +541,11 @@
         <ScriptVariable>
             <Name>listTextForSheets</Name>
             <Group />
+            <Comment>Список объектов для записи в документ GoogleSheets</Comment>
             <DataTypeString>List&lt;Object&gt;</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

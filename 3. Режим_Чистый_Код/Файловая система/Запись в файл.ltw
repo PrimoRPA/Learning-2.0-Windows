@@ -47,6 +47,7 @@ public class PrimoScript
 		var strTxtPath = ".\\Дополнительные материалы\\Файловая система\\Добавить в файл\\file.txt";
 		var strText = "Привет";
 		var bByte = new System.Byte[]{0, 16, 104, 213};
+		
 		//Чтобы сделать запись в файл, необходимо указать "Путь к файлу", путь может быть абсолютный или относительный
 		//В данном случае в файл txt вносится строка strText и bByte
 		//*Активность работает только с файлами формата .png и .txt, файлы другого формата будут ломаться после добавления строки
@@ -62,4 +63,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

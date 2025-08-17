@@ -56,10 +56,10 @@ public class PrimoScript
 		object data = app.ReadCell(cell, [sheet], [sheetIdx]);
 		*/
         //Для работы данного элемента необходимо в начале инициализировать приложение Excel
-		var fileName = @".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx";
-        LTools.Office.ExcelApp app = LTools.Office.ExcelApp.Init(wf, fileName, ";", LTools.Office.Model.InteropTypes.DX);
+		var strFileName = @".\Дополнительные материалы\Приложение Excel\Входные данные\PrimoLearning.xlsx";
+        LTools.Office.ExcelApp app = LTools.Office.ExcelApp.Init(wf, strFileName, ";", LTools.Office.Model.InteropTypes.DX);
 		
-		object data = app.ReadCell("B3", "Персонал", null);
+		object strCellData = app.ReadCell("B3", "Персонал", null);
 
     }
 }</Value>
@@ -71,4 +71,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

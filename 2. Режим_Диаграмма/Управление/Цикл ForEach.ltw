@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -124,7 +128,11 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">175.04</Value>
+                    <Value xsi:type="xsd:double">160.04</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -310,7 +318,9 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Для работы цикла необходимо указать переменную таблицы в свойстве "Массив", 
+                    <Value xsi:type="xsd:string">Элемент представляет собой цикл, перебирающий все значения выбранного массива
+
+Для работы цикла необходимо указать переменную таблицы в свойстве "Массив", 
 так же в свойствах есть два типа переменных - обычная и виртуальная,
 требуется обязательно указать одну из них. По умолчанию используется виртуальная 
 переменная item - она удаляется сразу после работы цикла и, таким образом, не 
@@ -331,12 +341,16 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">445.24333333333334</Value>
+                    <Value xsi:type="xsd:double">443</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">331.03999999999996</Value>
+                    <Value xsi:type="xsd:double">328.04</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -464,7 +478,9 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Annotation</Name>
-                            <Value xsi:type="xsd:string">Для работы цикла необходимо указать переменную таблицы в свойстве "Массив", 
+                            <Value xsi:type="xsd:string">Элемент представляет собой цикл, перебирающий все значения выбранного массива
+
+Для работы цикла необходимо указать переменную таблицы в свойстве "Массив", 
 так же в свойствах есть два типа переменных - обычная и виртуальная,
 требуется обязательно указать одну из них. По умолчанию используется виртуальная 
 переменная item - она удаляется сразу после работы цикла и, таким образом, не 
@@ -900,6 +916,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1034,6 +1059,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1042,29 +1076,34 @@
     </Components>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>arrPaths</Name>
+            <Name>strPathItem</Name>
             <Group />
-            <DataTypeString>String[]</DataTypeString>
-            <Direction>IN_OUT</Direction>
-        </ScriptVariable>
-        <ScriptVariable>
-            <Name>index</Name>
-            <Group />
-            <DataTypeString>Int32</DataTypeString>
+            <Comment>Элемент массива ForEach</Comment>
+            <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
             <Name>strPath</Name>
             <Group />
+            <Comment>Путь до диска С</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>strPathItem</Name>
+            <Name>index</Name>
             <Group />
-            <DataTypeString>String</DataTypeString>
+            <Comment>Индекс элемента массива ForEach в массиве данных</Comment>
+            <DataTypeString>Int32</DataTypeString>
+            <Direction>IN_OUT</Direction>
+        </ScriptVariable>
+        <ScriptVariable>
+            <Name>arrPaths</Name>
+            <Group />
+            <Comment>Массив путей в диске С</Comment>
+            <DataTypeString>String[]</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

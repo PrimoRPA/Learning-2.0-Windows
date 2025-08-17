@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент, производящий отображение окна с заданным сообщением</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -115,13 +115,13 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Активность отображает окно с сообщение, которое можно использовать для взаимодействия пользователя с роботом.
+                        <Value xsi:type="xsd:string">Активность отображает окно с сообщением, которое можно использовать для взаимодействия пользователя с роботом.
 
 Для того, чтобы пользователь знал, что от него ожидается следует указать свойства "Текст"
 
 Окно сообщения отображается на экране до тех пор, пока пользователь его не закроет нажатием на кнопку "Окей" или на крестик.
 
-Размеры окна подстраиваются поддлину заданного текста</Value>
+Размеры окна подстраиваются под длину заданного текста</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -176,4 +176,5 @@
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

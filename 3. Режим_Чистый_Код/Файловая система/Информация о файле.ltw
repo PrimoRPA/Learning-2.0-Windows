@@ -48,7 +48,10 @@ public class PrimoScript
 		//Чтобы узнать информацию о файле, необходимо указать "Путь", путь должен быть абсолютным иначе активность выдаст ошибку
 		//Активность возращает переменную LTools.Data.Model.FileInfo в которой хранится информация о файле
 		//*Активность работает с файлами любого формата
-        LTools.Data.Model.FileInfo inf = LTools.Data.Model.FileInfo.ReadInfo(strFilePath);
+		
+        LTools.Data.Model.FileInfo fileInfo = LTools.Data.Model.FileInfo.ReadInfo(System.IO.Path.GetFullPath(strFilePath));
+		
+		LTools.Workflow.PrimoApp.AddToLog(wf, "Значение параметра " + fileInfo.Properties[1].Header + ": " + fileInfo.Properties[1].Value ,LTools.Enums.LogMessageType.Info);
     }
 }</Value>
             </SerializationItem>
@@ -59,4 +62,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

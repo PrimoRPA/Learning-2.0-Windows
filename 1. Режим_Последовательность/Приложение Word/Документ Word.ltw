@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент производит подключение к приложению Word</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -171,43 +171,13 @@
                 <Properties>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
-                        <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Документ Word</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Для работы с элементом необходимо заполнить 
-обязательные свойства:
-
-Путь к файлу: файл, с которым роботу необходимо взаимодействовать
-Драйвер: тип драйвера подключения: DX или Interop:
-• Interop - необходим установленный на машине MS Office. 
-   Позволяет выполнять VBA и макросы. Скорость работы с файлом ниже
-• DX - нет необходимости в MS Office. Нельзя выполнять VBA и макросы. 
-   Скорость работы с файлом выше
-
-Дополнительные свойства заполняются в случае необходимости:
-- Массив байтов: массив байтов документа. Если в проект
- передается массив байт, то путь до документа можно не указывать
-- Сохранить изменения: Чекбокс отвечающий за сохранение внесенных 
-изменений в документ Word. Если чекбокс не установлен и нет активности 
-"Сохранить документ", то внесенные изменения не будут сохранены
-- Пароль: Пароль документа Word Указывется в том случае, 
-если Word документ защищён паролем
- - Защищенный пароль: Пароль документа Word, указанный 
-в формате защищенной строки. Получить можно, например, 
-из «Диспетчера учетных данных» или "Primo RPA Orchestrator"</Value>
+                        <Name>FileName</Name>
+                        <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Word\Входные данные\Информация об RPA.docx"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>InteropType</Name>
                         <Value xsi:type="xsd:int">0</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>FileName</Name>
-                        <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Word\Входные данные\Информация об RPA.docx"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -237,11 +207,41 @@
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
+                        <Name>ComponentName</Name>
+                        <Value xsi:type="xsd:string">Документ Word</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
                         <Name>WaitBefore</Name>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>WaitAfter</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Annotation</Name>
+                        <Value xsi:type="xsd:string">Для работы с элементом необходимо заполнить 
+обязательные свойства:
+
+Путь к файлу: файл, с которым роботу необходимо взаимодействовать
+Драйвер: тип драйвера подключения: DX или Interop:
+• Interop - необходим установленный на машине MS Office. 
+   Позволяет выполнять VBA и макросы. Скорость работы с файлом ниже
+• DX - нет необходимости в MS Office. Нельзя выполнять VBA и макросы. 
+   Скорость работы с файлом выше
+
+Дополнительные свойства заполняются в случае необходимости:
+- Массив байтов: массив байтов документа. Если в проект
+ передается массив байт, то путь до документа можно не указывать
+- Сохранить изменения: Чекбокс отвечающий за сохранение внесенных 
+изменений в документ Word. Если чекбокс не установлен и нет активности 
+"Сохранить документ", то внесенные изменения не будут сохранены
+- Пароль: Пароль документа Word Указывется в том случае, 
+если Word документ защищён паролем
+ - Защищенный пароль: Пароль документа Word, указанный 
+в формате защищенной строки. Получить можно, например, 
+из «Диспетчера учетных данных» или "Primo RPA Orchestrator"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -297,4 +297,5 @@
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

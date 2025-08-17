@@ -55,6 +55,7 @@ public class PrimoScript
 		//Инициализация документа MS Word
 		LTools.Office.WordApp app = LTools.Office.WordApp.Init(wf, @".\Дополнительные материалы\Приложение Word\Входные данные\Информация об RPA.docx", LTools.Office.Model.InteropTypes.DX);
    
+		//Замена значения в файле новым
 		app.ReplaceText("Robotic Process Automation", "Robotic Process Automation (RPA)");
 		
 		//Сохранение изменений документа MS Word
@@ -70,4 +71,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент проверяет, была ли запрошена в Оркестраторе мягкая остановка робота</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -191,7 +191,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Text</Name>
-                        <Value xsi:type="xsd:string">ShouldStop</Value>
+                        <Value xsi:type="xsd:string">boolShouldStop</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -266,7 +266,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Equation</Name>
-                        <Value xsi:type="xsd:string">ShouldStop</Value>
+                        <Value xsi:type="xsd:string">boolShouldStop</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -285,7 +285,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">If-Else ShouldStop</Value>
+                        <Value xsi:type="xsd:string">If-Else Была запрошена остановка</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -524,7 +524,7 @@
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>ShouldStop</Name>
+            <Name>boolShouldStop</Name>
             <Group />
             <Comment>Флаг, обозначающий запрос мягкой остановки</Comment>
             <DataTypeString>System.Boolean</DataTypeString>
@@ -532,4 +532,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

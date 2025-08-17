@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент позволяет добавить новый элемент в коллекцию</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -120,7 +120,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Инициализация списка строк для дальнейшего добавления в него эелемнта</Value>
+                        <Value xsi:type="xsd:string">Инициализация списка строк для дальнейшего добавления в него элемента</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -205,11 +205,11 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Элемент осуществляющий добавление нового значения  симеющийся массив данных.
+                        <Value xsi:type="xsd:string">Элемент осуществляющий добавление нового значения в имеющийся массив данных.
 
 Для работы с активностью необходимо заполнить следующие обязательные свойства: 
 Коллекция: Переменная, содержащая коллекцию, в которую необходимо добавить данные
-Переменная: Значение для добавления в коллекцию. Можно задать в виде переменной или вписать данные длядобавления в это поле. Важно - данные должны быть того типа, который содержит коллекция</Value>
+Переменная: Значение для добавления в коллекцию. Можно задать в виде переменной или вписать данные для добавления в это поле. Важно - данные должны быть того типа, который содержит коллекция</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -272,4 +272,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

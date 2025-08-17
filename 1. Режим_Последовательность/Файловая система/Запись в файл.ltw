@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент, перезаписывающий содержимое файла.</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -227,6 +227,11 @@
                 <Properties>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
+                        <Name>BrowserVar</Name>
+                        <Value xsi:type="xsd:string">img</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
                         <Name>ComponentName</Name>
                         <Value xsi:type="xsd:string">Снимок рабочего стола</Value>
                     </SerializationItem>
@@ -250,11 +255,6 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>InputVar</Name>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>BrowserVar</Name>
-                        <Value xsi:type="xsd:string">img</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -370,7 +370,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Чтобы сделать запись в файл, необходимо указать "Путь к файлу", путь может быть абсолютный или относительный
+                        <Value xsi:type="xsd:string">Этот компонент предназначен для перезаписи содержимого файла. Он позволяет полностью обновить данные в файле, заменив их новыми. 
+
+Чтобы сделать запись в файл, необходимо указать "Путь к файлу", путь может быть абсолютный или относительный
 
 В данном случае в файл txt вносится строка указанная в свойстве "Текст"
 
@@ -473,7 +475,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Чтобы сделать запись в файл, необходимо указать "Путь к файлу", путь может быть абсолютный или относительный
+                        <Value xsi:type="xsd:string">Этот компонент предназначен для перезаписи содержимого файла. Он позволяет полностью обновить данные в файле, заменив их новыми. 
+
+Чтобы сделать запись в файл, необходимо указать "Путь к файлу", путь может быть абсолютный или относительный
 
 В данном случае в файл png будет добавлено изображение, сделанное активностью "Снимок рабочего стола" и хранящееся в переменной "img"
 
@@ -532,47 +536,48 @@
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>strTxtPath</Name>
-            <Group />
-            <DataTypeString>String</DataTypeString>
-            <Direction>IN_OUT</Direction>
-        </ScriptVariable>
-        <ScriptVariable>
-            <Name>strText</Name>
-            <Group />
-            <DataTypeString>String</DataTypeString>
-            <Direction>IN_OUT</Direction>
-        </ScriptVariable>
-        <ScriptVariable>
-            <Name>strEncodingType</Name>
-            <Group />
-            <DataTypeString>String</DataTypeString>
-            <Direction>IN_OUT</Direction>
-        </ScriptVariable>
-        <ScriptVariable>
             <Name>strPngPath</Name>
             <Group />
-            <DataTypeString>String</DataTypeString>
-            <Direction>IN_OUT</Direction>
-        </ScriptVariable>
-        <ScriptVariable>
-            <Name>strXlsxPath</Name>
-            <Group />
+            <Comment>Путь до  файла png в который необходимо добавить текст</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
             <Name>img</Name>
             <Group />
+            <Comment>Активность для хранения снимка рабочего стола</Comment>
             <DataTypeString>System.Drawing.Bitmap</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
             <Name>bByte</Name>
             <Group />
+            <Comment>Данные для записи в файл</Comment>
             <DataTypeString>System.Byte[]</DataTypeString>
+            <Direction>IN_OUT</Direction>
+        </ScriptVariable>
+        <ScriptVariable>
+            <Name>strTxtPath</Name>
+            <Group />
+            <Comment>Путь до текстового файла в который необходимо добавить текст</Comment>
+            <DataTypeString>String</DataTypeString>
+            <Direction>IN_OUT</Direction>
+        </ScriptVariable>
+        <ScriptVariable>
+            <Name>strText</Name>
+            <Group />
+            <Comment>Текст для добавления в файл</Comment>
+            <DataTypeString>String</DataTypeString>
+            <Direction>IN_OUT</Direction>
+        </ScriptVariable>
+        <ScriptVariable>
+            <Name>strEncodingType</Name>
+            <Group />
+            <Comment>Тип кодировки файла</Comment>
+            <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

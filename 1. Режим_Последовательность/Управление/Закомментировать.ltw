@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Контейнер, который блокирует выполнение элементов, помещенных в него. Чтобы раскомментировать элемент, уберите его за пределы контейнера.</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -200,7 +200,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Данный контейнер позволяет игнорировать содержащиеся в нем участки кода (обычно используется, когда 
+                        <Value xsi:type="xsd:string">Контейнер, который блокирует выполнение элементов, помещенных в него. Чтобы раскомментировать элемент, уберите его за пределы контейнера.
+
+Данный контейнер позволяет игнорировать содержащиеся в нем участки кода (обычно используется, когда 
 разработчику нужно использовать этот код в будушем, но на момент отладки он не нужен из-за недостатка 
 данных, в финальных версиях проекта закомментированных участков кода быть не должно)
 
@@ -424,4 +426,5 @@
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

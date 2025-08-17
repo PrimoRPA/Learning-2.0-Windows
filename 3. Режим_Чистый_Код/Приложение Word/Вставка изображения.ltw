@@ -57,9 +57,10 @@ public class PrimoScript
 		//Инициализация документа MS Word
 		LTools.Office.WordApp app = LTools.Office.WordApp.Init(wf, @".\Дополнительные материалы\Приложение Word\Входные данные\Информация об RPA.docx", LTools.Office.Model.InteropTypes.DX);
    
-		byte[] pic = System.IO.File.ReadAllBytes(@".\Дополнительные материалы\Приложение Word\Входные данные\LogoPrimo.png"); //Чтение изображения из файла и сохранение в byte[]
+		byte[] image = System.IO.File.ReadAllBytes(@".\Дополнительные материалы\Приложение Word\Входные данные\LogoPrimo.png"); //Чтение изображения из файла и сохранение в byte[]
 		
-		app.InsertPicture(pic, "BookmarkPrimo");
+		//Добавление изображения в документ MsWord
+		app.InsertPicture(image, "BookmarkPrimo");
 		
 		//Сохранение изменений документа MS Word
 		app.SaveAs(@".\Дополнительные материалы\Приложение Word\Выходные данные\Вставка изображения.docx");
@@ -73,4 +74,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

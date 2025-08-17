@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Позволяет вывести сообщение в Консоль и пользовательский журнал</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -120,9 +120,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Активность используется для записи какой-либо информации в Консоль Primo Studio при разработке процесса и в пользовательский журнал при запуске процесса из Оркестратора.
+                        <Value xsi:type="xsd:string">Активность используется для записи какой-либо информации в Консоль Primo RPA Studio при разработке процесса и в пользовательский журнал при запуске процесса из Оркестратора.
 
-Элемент необходим для удосбтва процесса разработки и для мониторинга выполненных задач. 
+Элемент необходим для удобства процесса разработки и для мониторинга выполненных задач. 
 
 В свойство "Текст" записывается текст сообщения, а в поле "Тип" можно выбрать разные типы сообщений, в дальнейшем в консоли или в оркестраторе можно сортировать сообщения по типам.
 Наиболее часто используются типы сообщений "Info", "Error", "Debug"
@@ -181,4 +181,5 @@
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

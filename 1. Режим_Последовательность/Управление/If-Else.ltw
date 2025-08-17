@@ -18,9 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Компонент используется для выполнения логической проверки заданного выражения, после чего осуществляется выбор одного из двух возможных путей 
-действий в зависимости от результата этой проверки. Это ключевой элемент в программировании и автоматизации процессов, позволяющий направлять 
-поток выполнения в разные ветви в зависимости от выполнения определенного условия.</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -82,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -109,7 +107,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Присвоение</Value>
+                        <Value xsi:type="xsd:string">Присвоение boolCondition</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -212,7 +210,11 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">В зависимости от состояния переменной boolCondition будет работать только одна из двух ветвей
+                        <Value xsi:type="xsd:string">Компонент используется для выполнения логической проверки заданного выражения, после чего осуществляется выбор одного из двух возможных путей 
+действий в зависимости от результата этой проверки. Это ключевой элемент в программировании и автоматизации процессов, позволяющий направлять 
+поток выполнения в разные ветви в зависимости от выполнения определенного условия.
+
+В зависимости от состояния переменной boolCondition будет работать только одна из двух ветвей
 
 *Для удобства и читаемости кода ветку "Ложно" можно скрыть нажав на кнопку "Скрыть ложно", 
 чтобы ее открыть нужно нажать на кнопку "Показать ложно"</Value>
@@ -436,9 +438,11 @@
         <ScriptVariable>
             <Name>boolCondition</Name>
             <Group />
+            <Comment>Условие для проверки в активности If-Else</Comment>
             <DataTypeString>Boolean</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -186,6 +190,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -362,6 +370,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -459,18 +471,7 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Активность «Отправить сообщение» в Primo RPA предназначена для автоматической отправки электронных писем через Microsoft Outlook. Это может быть полезно для автоматизации уведомлений, отчётов и других коммуникационных процессов.
-
-Свойства активности «Отправить сообщение Outlook»:
-Тема: заголовок письма, который будет отображаться в почтовом клиенте получателя.
-Тело письма: основной текст сообщения. В зависимости от выбранного формата, может содержать простой текст, форматированный текст или HTML-код с гиперссылками и другим оформлением.
-Вложения: файлы, которые будут прикреплены к письму. Можно указать путь к файлам на локальном диске или сетевом ресурсе.
-Кому: адреса получателей письма (адреса электронной почты).
-Копия: адреса, которым будет отправлена копия письма.
-Формат: определяет формат сообщения. Доступны следующие варианты:
-- PLAIN (по умолчанию) — простой текст, не поддерживающий картинки, гиперссылки и другие подобные элементы.
-- RICHTEXT (RTF) — форматированный текст с поддержкой различных стилей и шрифтов.
-- HTML — формат, позволяющий использовать гиперссылки, изображения и другое оформление, поддерживаемое HTML-кодом.</Value>
+                    <Value xsi:type="xsd:string">Контейнер с элементом Отправить сообщение</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -548,6 +549,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -778,12 +783,20 @@
                                 <SerializationItem>
                                     <IsListValue>true</IsListValue>
                                     <Name>NoCodeProperties</Name>
-                                    <ListValue />
+                                    <ListValue>
+                                        <SerializationItem>
+                                            <IsListValue>false</IsListValue>
+                                            <Name>NoCodeProperties</Name>
+                                            <Value xsi:type="KeyValueItem">
+                                                <Key>SendBcc</Key>
+                                            </Value>
+                                        </SerializationItem>
+                                    </ListValue>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
                                     <Name>NoCodeUsed</Name>
-                                    <Value xsi:type="xsd:boolean">false</Value>
+                                    <Value xsi:type="xsd:boolean">true</Value>
                                 </SerializationItem>
                                 <SerializationItem>
                                     <IsListValue>false</IsListValue>
@@ -932,6 +945,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -940,4 +962,5 @@
     </Components>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>true</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

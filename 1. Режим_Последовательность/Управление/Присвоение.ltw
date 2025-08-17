@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент позволяет присвоить любое значение переменной</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -107,7 +107,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Присвоение</Value>
+                        <Value xsi:type="xsd:string">Присвоение boolVariable</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -120,7 +120,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">В данном контейнере можно производить присвоение любого типа для одной переменной, в данном случае для Булевого значения</Value>
+                        <Value xsi:type="xsd:string">Элемент позволяет присвоить любое значение переменной
+
+В данном элементе можно производить присвоение любого типа для одной переменной, в данном случае для Булевого значения</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -192,7 +194,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Присвоение</Value>
+                        <Value xsi:type="xsd:string">Присвоение strVariable</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -205,7 +207,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">В данном контейнере можно производить присвоение любого типа для одной переменной, в данном случае для Строкового значения</Value>
+                        <Value xsi:type="xsd:string">Элемент позволяет присвоить любое значение переменной
+
+В данном элемент можно производить присвоение любого типа для одной переменной, в данном случае для Строкового значения</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -277,7 +281,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Присвоение</Value>
+                        <Value xsi:type="xsd:string">Присвоение intVariable</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -290,7 +294,9 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">В данном контейнере можно производить присвоение любого типа для одной переменной, в данном случае для Числового значения</Value>
+                        <Value xsi:type="xsd:string">Элемент позволяет присвоить любое значение переменной
+
+В данном элемент можно производить присвоение любого типа для одной переменной, в данном случае для Числового значения</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -590,21 +596,25 @@
         <ScriptVariable>
             <Name>strVariable</Name>
             <Group />
+            <Comment>String значение для демонстрации работы элемента "Присвоение"</Comment>
             <DataTypeString>String</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
             <Name>intVariable</Name>
             <Group />
+            <Comment>Int32 значение для демонстрации работы элемента "Присвоение"</Comment>
             <DataTypeString>Int32</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
             <Name>boolVariable</Name>
             <Group />
+            <Comment>Boolean значение для демонстрации работы элемента "Присвоение"</Comment>
             <DataTypeString>Boolean</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -18,7 +18,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Элемент предназначен для чтения данных из табличного элемента управления</Value>
+                <Value xsi:type="xsd:string" />
             </SerializationItem>
             <SerializationItem>
                 <IsListValue>false</IsListValue>
@@ -80,7 +80,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>ShowAnnotation</Name>
-                <Value xsi:type="xsd:boolean">true</Value>
+                <Value xsi:type="xsd:boolean">false</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -92,17 +92,8 @@
                 <Properties>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
-                        <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Открыть браузер</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Подробное описание активности приведено
- в последовательности "Открыть браузер.ltw"
-
-Для того, чтобы страница браузера всегда была актуальна, 
-в url адрес добавляется текущая дата</Value>
+                        <Name>URL</Name>
+                        <Value xsi:type="xsd:string">"https://www.cbr.ru/currency_base/daily/?UniDbQuery.Posted=True&amp;UniDbQuery.To=" + DateTime.Now.ToString("dd.MM.yyyy")</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -113,11 +104,6 @@
                         <IsListValue>false</IsListValue>
                         <Name>Headless</Name>
                         <Value xsi:type="xsd:boolean">false</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>URL</Name>
-                        <Value xsi:type="xsd:string">"https://www.cbr.ru/currency_base/daily/?UniDbQuery.Posted=True&amp;UniDbQuery.To=" + DateTime.Now.ToString("dd.MM.yyyy")</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -161,11 +147,25 @@
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
+                        <Name>ComponentName</Name>
+                        <Value xsi:type="xsd:string">Открыть браузер</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
                         <Name>WaitBefore</Name>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>WaitAfter</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Annotation</Name>
+                        <Value xsi:type="xsd:string">Подробное описание активности приведено
+ в последовательности "Открыть браузер.ltw"
+
+Для того, чтобы страница браузера всегда была актуальна, 
+в url адрес добавляется текущая дата</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -261,7 +261,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Text2</Name>
-                                <Value xsi:type="xsd:string">tableInfo</Value>
+                                <Value xsi:type="xsd:string">dtInfo</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -287,7 +287,9 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string">Для корректной работы элемента его необходимо использовать в контейнере "Открыть браузер" или "Присоединиться к браузеру".
+                                <Value xsi:type="xsd:string">Элемент предназначен для чтения данных из табличного элемента управления
+
+Для корректной работы элемента его необходимо использовать в контейнере "Открыть браузер" или "Присоединиться к браузеру".
 
 Для работы с активностью необходимо заполнить следующие обязательные свойства: 
 Тэг заголовка, Тэг колонки, Тэг строки: Тэги, соответствующие тэгам сайта, с которым производится работа
@@ -425,7 +427,7 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_browser/el_browser_g
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>tableInfo</Name>
+            <Name>dtInfo</Name>
             <Group />
             <DefaultValue xsi:type="xsd:string" />
             <Comment>Переменная для сохранения результатов</Comment>
@@ -434,4 +436,5 @@ https://docs.primo-rpa.ru/primo-rpa/g_elements/el_basic/els_browser/el_browser_g
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>
