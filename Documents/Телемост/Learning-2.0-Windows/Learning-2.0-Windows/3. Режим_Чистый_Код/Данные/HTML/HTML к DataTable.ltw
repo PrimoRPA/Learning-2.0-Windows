@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-16"?>
+<SerializationRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <WorkflowType>2</WorkflowType>
+    <IsTestCase>false</IsTestCase>
+    <UseArgs>false</UseArgs>
+    <ColumnsTableTestData />
+    <RowsTableTestData />
+    <ScriptType>CS</ScriptType>
+    <RootContainer>
+        <ClassName>LTools.Workflow.View.WFOnlyCode</ClassName>
+        <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+        <Properties>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ComponentName</Name>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ComponentID</Name>
+                <Value xmlns:q1="http://microsoft.com/wsdl/types/" xsi:type="q1:guid">00000000-0000-0000-0000-000000000000</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ContinueOnException</Name>
+                <Value xsi:type="xsd:boolean">false</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>Variables</Name>
+                <Value xsi:type="ArrayOfScriptVariable" />
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ScriptCode</Name>
+                <Value xsi:type="xsd:string">using System;
+using System.Collections.Generic;
+using System.Text;
+using LTools.Scripting.Model;
+using LTools.Network.Model;
+
+public class PrimoScript
+{
+	public static LTools.Scripting.CSharp.ScriptDebugger __debug;
+	
+	public void main(LTools.Common.Model.WorkflowData wf)
+    {
+		string html = String.Format("&lt;table&gt;&lt;tr&gt;&lt;th&gt;текст заголовка1&lt;/th&gt;&lt;th&gt;текст заголовка2&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;данные1&lt;/td&gt;&lt;td&gt;данные2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;");
+     /*
+		Преобразовывает HTML-код в коллекцию таблиц. Элемент полезно применять в случаях, когда требуется извлечь таблицы из HTML-кода, например, из тела письма. 
+		При этом код может содержать одну и более таблиц
+		Для работы с активность необходимо заполнить следующие обязательные свойства:
+		
+		- html - HTML: [String] Докмуент HTML
+		*/		
+		List&lt;System.Data.DataTable&gt; ret = LTools.Data.Helpers.HTMLHelper.ParseTable(html);   
+    }
+}</Value>
+            </SerializationItem>
+        </Properties>
+        <IsBreakpoint>false</IsBreakpoint>
+        <IsIgnore>false</IsIgnore>
+        <Components />
+    </RootContainer>
+    <GlobalVariables />
+    <Arguments />
+</SerializationRoot>

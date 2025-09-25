@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-16"?>
+<SerializationRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <WorkflowType>2</WorkflowType>
+    <IsTestCase>false</IsTestCase>
+    <UseArgs>false</UseArgs>
+    <ColumnsTableTestData />
+    <RowsTableTestData />
+    <ScriptType>CS</ScriptType>
+    <RootContainer>
+        <ClassName>LTools.Workflow.View.WFOnlyCode</ClassName>
+        <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+        <Properties>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ComponentName</Name>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ComponentID</Name>
+                <Value xmlns:q1="http://microsoft.com/wsdl/types/" xsi:type="q1:guid">00000000-0000-0000-0000-000000000000</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ContinueOnException</Name>
+                <Value xsi:type="xsd:boolean">false</Value>
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>Variables</Name>
+                <Value xsi:type="ArrayOfScriptVariable" />
+            </SerializationItem>
+            <SerializationItem>
+                <IsListValue>false</IsListValue>
+                <Name>ScriptCode</Name>
+                <Value xsi:type="xsd:string">using System;
+using System.Collections.Generic;
+using System.Text;
+using LTools.Scripting.Model;
+using LTools.Network.Model;
+
+public class PrimoScript
+{
+	public static LTools.Scripting.CSharp.ScriptDebugger __debug;
+	
+	public void main(LTools.Common.Model.WorkflowData wf)
+    {
+        /*
+		Элемент, вставляющий таблицу в документ. Элемент работает корректно только внутри контейнера Word  Свойства
+		app - [LTools.Office.WordApp] Приложение Word
+		bookmark - Закладка: [String] Имя закладки, определяющей начало записи. Если не указано, запись производится в конец текста.
+		data - Данные: [List&lt;List&lt;string&gt;&gt;] Данные таблицы
+		data - Таблица: [System.Data.DataTable] Данные таблицы
+		app.InsertTable(data, [bookmark]);
+		*/
+		
+		//Инициализация документа MS Word
+		LTools.Office.WordApp app = LTools.Office.WordApp.Init(wf, @".\Дополнительные материалы\Приложение Word\Входные данные\Информация об RPA.docx", LTools.Office.Model.InteropTypes.DX);
+   
+		var dtTable = new DataTable();
+		dtTable.Columns.Add("Направление роботизации");
+		dtTable.Columns.Add("% использования");
+		
+		DataRow row = dtTable.NewRow();
+		row["Направление роботизации"] = "Анализ данных";
+		row["% использования"] = "60%";
+		dtTable.Rows.Add(row);
+		
+		//Добавление таблицы в документ MsWord
+		app.InsertTable(dtTable, "BookmarkPrimo");
+		
+		//Сохранение изменений документа MS Word
+		app.SaveAs(@".\Дополнительные материалы\Приложение Word\Выходные данные\Вставить таблицу.docx");
+    }
+}</Value>
+            </SerializationItem>
+        </Properties>
+        <IsBreakpoint>false</IsBreakpoint>
+        <IsIgnore>false</IsIgnore>
+        <Components />
+    </RootContainer>
+    <GlobalVariables />
+    <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
+</SerializationRoot>

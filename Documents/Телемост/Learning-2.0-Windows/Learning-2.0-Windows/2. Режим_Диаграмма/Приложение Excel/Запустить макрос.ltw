@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="utf-16"?>
+<SerializationRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <WorkflowType>1</WorkflowType>
+    <IsTestCase>false</IsTestCase>
+    <UseArgs>false</UseArgs>
+    <ColumnsTableTestData />
+    <RowsTableTestData />
+    <ScriptType>CS</ScriptType>
+    <Components>
+        <SerializationComponent>
+            <ClassName>LTools.Workflow.Elements.Workflow.WFWorkflowStart</ClassName>
+            <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+            <Properties>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>TType</Name>
+                    <Value xsi:type="xsd:int">1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>TextTag</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>X</Name>
+                    <Value xsi:type="xsd:double">528</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Y</Name>
+                    <Value xsi:type="xsd:double">50</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ComponentName</Name>
+                    <Value xsi:type="xsd:string">Начало диаграммы</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>WaitBefore</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>WaitAfter</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ComponentID</Name>
+                    <Value xmlns:q1="http://microsoft.com/wsdl/types/" xsi:type="q1:guid">3d9ad7f6-7e1b-49c1-bb79-a087fa384c5e</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ContinueOnException</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>PreventLogging</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>SSSuccess</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>SSFail</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>true</IsListValue>
+                    <Name>NoCodeProperties</Name>
+                    <ListValue />
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>NoCodeUsed</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>IsCollapsed</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ShowAnnotation</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+            </Properties>
+            <IsBreakpoint>false</IsBreakpoint>
+            <IsIgnore>false</IsIgnore>
+        </SerializationComponent>
+        <SerializationComponent xsi:type="SerializationContainer">
+            <ClassName>LTools.Workflow.Elements.Workflow.WFWorkflowContainerSequence</ClassName>
+            <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+            <Properties>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ComponentName</Name>
+                    <Value xsi:type="xsd:string">Комментарий</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>TextTag</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>X</Name>
+                    <Value xsi:type="xsd:double">193</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Y</Name>
+                    <Value xsi:type="xsd:double">55</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>IsSingleElemented</Name>
+                    <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Variables</Name>
+                    <Value xsi:type="ArrayOfScriptVariable" />
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>WaitBefore</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>WaitAfter</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Элемент выполняет макрос Excel. Поддерживает работу только с драйвером Interop.
+Драйвер указывается в контейнере Приложение Excel.
+Файл Excel должен быть создан с поддержкой макросов (в данном случае в формате *.xlsm).</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ComponentID</Name>
+                    <Value xmlns:q2="http://microsoft.com/wsdl/types/" xsi:type="q2:guid">18abe501-1007-47d2-88ca-7a913345dbeb</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ContinueOnException</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>PreventLogging</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>SSSuccess</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>SSFail</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>true</IsListValue>
+                    <Name>NoCodeProperties</Name>
+                    <ListValue />
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>NoCodeUsed</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>IsCollapsed</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ShowAnnotation</Name>
+                    <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+            </Properties>
+            <IsBreakpoint>false</IsBreakpoint>
+            <IsIgnore>false</IsIgnore>
+            <Components>
+                <SerializationComponent>
+                    <ClassName>LTools.Workflow.Elements.WFComment</ClassName>
+                    <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+                    <Properties>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Comment</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>TextTag</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>ComponentName</Name>
+                            <Value xsi:type="xsd:string">Комментарий</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>WaitBefore</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>WaitAfter</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Annotation</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>ComponentID</Name>
+                            <Value xmlns:q3="http://microsoft.com/wsdl/types/" xsi:type="q3:guid">75a67212-6ddb-45d2-8795-9df287a53318</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>ContinueOnException</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>PreventLogging</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>SSSuccess</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>SSFail</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>true</IsListValue>
+                            <Name>NoCodeProperties</Name>
+                            <ListValue />
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>NoCodeUsed</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>IsCollapsed</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>ShowAnnotation</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                    </Properties>
+                    <IsBreakpoint>false</IsBreakpoint>
+                    <IsIgnore>false</IsIgnore>
+                </SerializationComponent>
+            </Components>
+        </SerializationComponent>
+        <SerializationComponent xsi:type="SerializationContainer">
+            <ClassName>LTools.Workflow.Elements.Workflow.WFWorkflowContainerSequence</ClassName>
+            <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+            <Properties>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ComponentName</Name>
+                    <Value xsi:type="xsd:string">Приложение Excel</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>TextTag</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>X</Name>
+                    <Value xsi:type="xsd:double">446.4133333333333</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Y</Name>
+                    <Value xsi:type="xsd:double">180.04</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>IsSingleElemented</Name>
+                    <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Variables</Name>
+                    <Value xsi:type="ArrayOfScriptVariable" />
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>WaitBefore</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>WaitAfter</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ComponentID</Name>
+                    <Value xmlns:q4="http://microsoft.com/wsdl/types/" xsi:type="q4:guid">0372cde1-86fc-49a4-bb03-5e99692ea875</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ContinueOnException</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>PreventLogging</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>SSSuccess</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>SSFail</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>true</IsListValue>
+                    <Name>NoCodeProperties</Name>
+                    <ListValue />
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>NoCodeUsed</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>IsCollapsed</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ShowAnnotation</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+            </Properties>
+            <IsBreakpoint>false</IsBreakpoint>
+            <IsIgnore>false</IsIgnore>
+            <Components>
+                <SerializationComponent xsi:type="SerializationContainer">
+                    <ClassName>LTools.Office.Elements.Excel.WFAttachExcel</ClassName>
+                    <AssemblyName>LTools.Office, Version=1.0.2.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+                    <Properties>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>ComponentName</Name>
+                            <Value xsi:type="xsd:string">Приложение Excel</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Annotation</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>InteropType</Name>
+                            <Value xsi:type="xsd:int">1</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Check</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>R1C1</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>FileName</Name>
+                            <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Excel\\Приложение Excel\Входные данные\TestMacros.xlsm"</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Pass</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Passss</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Bytes</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>CsvColumnDel</Name>
+                            <Value xsi:type="xsd:string">";"</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>IsVisibleObj</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>IsAttach</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>AddIns</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>ReadOnly</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>TextTag</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Variables</Name>
+                            <Value xsi:type="ArrayOfScriptVariable" />
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>WaitBefore</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>WaitAfter</Name>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>ComponentID</Name>
+                            <Value xmlns:q5="http://microsoft.com/wsdl/types/" xsi:type="q5:guid">0e71f480-d9cf-4335-bb8f-c354f70783af</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>ContinueOnException</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>PreventLogging</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>SSSuccess</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>SSFail</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>true</IsListValue>
+                            <Name>NoCodeProperties</Name>
+                            <ListValue />
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>NoCodeUsed</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>IsCollapsed</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>ShowAnnotation</Name>
+                            <Value xsi:type="xsd:boolean">false</Value>
+                        </SerializationItem>
+                    </Properties>
+                    <IsBreakpoint>false</IsBreakpoint>
+                    <IsIgnore>false</IsIgnore>
+                    <Components>
+                        <SerializationComponent>
+                            <ClassName>LTools.Office.Elements.Excel.WFRunMacro</ClassName>
+                            <AssemblyName>LTools.Office, Version=1.0.2.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+                            <Properties>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>Macro</Name>
+                                    <Value xsi:type="xsd:string">"Лист4.fillCell"</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>Args</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>TimeOut</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>Visib</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>Async</Name>
+                                    <Value xsi:type="xsd:boolean">true</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>Result</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>TextTag</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>ComponentName</Name>
+                                    <Value xsi:type="xsd:string">Запустить макрос</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>WaitBefore</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>WaitAfter</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>Annotation</Name>
+                                    <Value xsi:type="xsd:string">Для применения данного элемента достаточно заполнить свойство "Наименование" (в разделе Excel) - это наименование макроса, который создается в файле где будет применяться макрос.</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>ComponentID</Name>
+                                    <Value xmlns:q6="http://microsoft.com/wsdl/types/" xsi:type="q6:guid">0ada0212-66cb-47d1-8195-a327bedcf7d6</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>ContinueOnException</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>PreventLogging</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>SSSuccess</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>SSFail</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>true</IsListValue>
+                                    <Name>NoCodeProperties</Name>
+                                    <ListValue />
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>NoCodeUsed</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>IsCollapsed</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>ShowAnnotation</Name>
+                                    <Value xsi:type="xsd:boolean">true</Value>
+                                </SerializationItem>
+                            </Properties>
+                            <IsBreakpoint>false</IsBreakpoint>
+                            <IsIgnore>false</IsIgnore>
+                        </SerializationComponent>
+                        <SerializationComponent>
+                            <ClassName>LTools.Office.Elements.Excel.WFSaveExcel</ClassName>
+                            <AssemblyName>LTools.Office, Version=1.0.2.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+                            <Properties>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>FileName</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>TextTag</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>ComponentName</Name>
+                                    <Value xsi:type="xsd:string">Сохранить документ</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>WaitBefore</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>WaitAfter</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>Annotation</Name>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>ComponentID</Name>
+                                    <Value xmlns:q7="http://microsoft.com/wsdl/types/" xsi:type="q7:guid">c05ede53-9353-4924-bc87-c46481fe2d02</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>ContinueOnException</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>PreventLogging</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>SSSuccess</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>SSFail</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>true</IsListValue>
+                                    <Name>NoCodeProperties</Name>
+                                    <ListValue />
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>NoCodeUsed</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>IsCollapsed</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                                <SerializationItem>
+                                    <IsListValue>false</IsListValue>
+                                    <Name>ShowAnnotation</Name>
+                                    <Value xsi:type="xsd:boolean">false</Value>
+                                </SerializationItem>
+                            </Properties>
+                            <IsBreakpoint>false</IsBreakpoint>
+                            <IsIgnore>false</IsIgnore>
+                        </SerializationComponent>
+                    </Components>
+                </SerializationComponent>
+            </Components>
+        </SerializationComponent>
+        <SerializationComponent xsi:type="SerializationContainer">
+            <ClassName>LTools.Workflow.Elements.Workflow.WFWorkflowPath</ClassName>
+            <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+            <Properties>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>TextTag</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>true</IsListValue>
+                    <Name>PointsList</Name>
+                    <ListValue />
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Index</Name>
+                    <Value xsi:type="xsd:int">0</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>BeginItemPointIndex</Name>
+                    <Value xsi:type="xsd:int">2</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>EndItemPointIndex</Name>
+                    <Value xsi:type="xsd:int">0</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>StartElementID</Name>
+                    <Value xmlns:q8="http://microsoft.com/wsdl/types/" xsi:type="q8:guid">3d9ad7f6-7e1b-49c1-bb79-a087fa384c5e</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>EndElementID</Name>
+                    <Value xmlns:q9="http://microsoft.com/wsdl/types/" xsi:type="q9:guid">0372cde1-86fc-49a4-bb03-5e99692ea875</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Result</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>PathType</Name>
+                    <Value xsi:type="xsd:int">0</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>X</Name>
+                    <Value xsi:type="xsd:double">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Y</Name>
+                    <Value xsi:type="xsd:double">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>IsSingleElemented</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Variables</Name>
+                    <Value xsi:type="ArrayOfScriptVariable" />
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ComponentName</Name>
+                    <Value xsi:type="xsd:string">Связь</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>WaitBefore</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>WaitAfter</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ComponentID</Name>
+                    <Value xmlns:q10="http://microsoft.com/wsdl/types/" xsi:type="q10:guid">ceae9b23-5e77-4ad4-959c-94979ab6b670</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ContinueOnException</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>PreventLogging</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>SSSuccess</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>SSFail</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>true</IsListValue>
+                    <Name>NoCodeProperties</Name>
+                    <ListValue />
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>NoCodeUsed</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>IsCollapsed</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ShowAnnotation</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+            </Properties>
+            <IsBreakpoint>false</IsBreakpoint>
+            <IsIgnore>false</IsIgnore>
+            <Components />
+        </SerializationComponent>
+    </Components>
+    <GlobalVariables />
+    <Arguments />
+</SerializationRoot>

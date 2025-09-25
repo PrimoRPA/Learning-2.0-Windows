@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Ввод паспортных данных</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        
+        .form-container {
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        input[type="text"], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h1>Паспортные данные</h1>
+    <form id="passportForm">
+        <label for="surname">Фамилия:</label>
+        <input type="text" id="surname" placeholder="Введите фамилию" required>
+
+        <label for="name">Имя:</label>
+        <input type="text" id="name" placeholder="Введите имя" required>
+
+        <label for="patronymic">Отчество:</label>
+        <input type="text" id="patronymic" placeholder="Введите отчество" required>
+
+        <label for="birthDate">Дата рождения:</label>
+        <input type="date" id="birthDate" required>
+
+        <label for="gender">Пол:</label>
+        <select id="gender" required>
+            <option value="" disabled selected hidden>Выберите пол</option>
+            <option value="male">Мужской</option>
+            <option value="female">Женский</option>
+        </select>
+
+        <label for="series">Серия паспорта:</label>
+        <input type="text" id="series" placeholder="Введите серию паспорта" maxlength="4" pattern="\d{4}" title="Серия должна содержать 4 цифры" required>
+
+        <label for="number">Номер паспорта:</label>
+        <input type="text" id="number" placeholder="Введите номер паспорта" maxlength="6" pattern="\d{6}" title="Номер должен содержать 6 цифр" required>
+
+        <button type="submit">Подтвердить</button>
+    </form>
+</div>
+<script>
+    document.getElementById('passportForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const result = {
+            surname: document.getElementById('surname').value,
+            name: document.getElementById('name').value,
+            patronymic: document.getElementById('patronymic').value,
+            birthDate: document.getElementById('birthDate').value,
+            gender: document.getElementById('gender').value,
+            series: document.getElementById('series').value,
+            number: document.getElementById('number').value
+        };
+
+        console.log(result); // Здесь вы можете использовать полученные данные
+
+        alert("Данные успешно сохранены!");
+    });
+</script>
+</body>
+</html>
