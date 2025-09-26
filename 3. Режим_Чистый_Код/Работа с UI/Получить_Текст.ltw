@@ -44,11 +44,11 @@ public class PrimoScript
 	
 	public void main(LTools.Common.Model.WorkflowData wf)
     {
-      //Компонент позволяет ввести текст в выбранный элемент управления.
+      //Компонент позволяет получить текст из выбранного элемента управления.
 	  //Данный элемент может использовать,как и для браузерных приложений, так и десктопных.
 	  //Чтобы посмотреть работу бразуера используйте if (true)
 	  //Чтобы посмотреть работу бразуера используйте if (false)
-     if (true){
+     if (false){
 	 //Открываем браузер, а странице "https://www.html-code-generator.com/demo/html/select-option-list"
      //Для работы данного компонента вам нужно установить расширение.
      //Чтобы это сделать воспользуйтесь гайдом:
@@ -57,18 +57,20 @@ public class PrimoScript
      //*Мы использовали Google Chrome, в настройках можно выбрать другой браузер, 
      //но в таком случае можно использовть установку другого расширения. 
      //Браузер IE установки расширения не требует
+	 //Открыть браузер с URL:
      LTools.WebBrowser.BrowserApp app = LTools.WebBrowser.BrowserApp.Open(wf, LTools.WebBrowser.Model.BrowserTypes.Chrome, "https://www.html-code-generator.com/demo/html/select-option-list");
 	//Прочитаем текст заголовка
-     string text_example = app.GetInnerText("{\"Tag\":\"H1\",\"SearchFrames\":false,\"Attributes\":[]}", 10000);
+     string text_example = app.GetInnerText("{\"Items\":[{\"Values\":[{\"Key\":\".Tag\",\"Value\":\"H1\",\"ValueKind\":0},{\"Key\":\".SearchFrames\",\"Value\":\"False\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"f1bf5cff-f846-413a-9401-3c522817a51f\",\"LastContainerName\":\"Открыть браузер сайт \",\"LastContainerType\":1,\"AppType\":5}", 10000);
       
-	 }else{
+	 }else
+	 {
 	   //Запускаем приложение MyCRM. Оно будет расположено в дополнительных материалах
-       System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, @"D:\Citizen\ДобавлениеНовыхКлиентовCRM\MyCRM.exe","", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
-
+       System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, System.IO.Path.Combine(Environment.CurrentDirectory, @"Дополнительные материалы\MyCRM.exe"),"", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
+		//Присоединение к окну приложения
         LTools.Desktop.DesktopApp appAttached = LTools.Desktop.DesktopApp.Init(wf, "", "My CRM (Sample App)", 10000, false, LTools.Desktop.Model.DesktopTypes.UIAUTOMATION);
        //прочитаем Имя
-        string text_example = appAttached.GetInnerText("{\"Name\":\"First:\",\"AutomationID\":\"textBoxPeopleFirstName\",\"ClassName\":\"\",\"ControlType\":\"ControlType.Edit\",\"AUIProperties\":[],\"TextSearchMode\":0,\"IsRoot\":false,\"IsQuickSearch\":true,\"IsApplet\":false,\"DesktopType\":0}", 10000);
-        
+        string text_example = appAttached.GetInnerText("{\"Items\":[{\"Values\":[{\"Key\":\"Name\",\"Value\":\"First:\",\"ValueKind\":0},{\"Key\":\"AutomationID\",\"Value\":\"textBoxPeopleFirstName\",\"ValueKind\":0},{\"Key\":\"ClassName\",\"Value\":\"WindowsForms10.EDIT.app.0.378734a\",\"ValueKind\":0},{\"Key\":\"ControlType\",\"Value\":\"ControlType.Edit\",\"ValueKind\":0},{\"Key\":\"IsRoot\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\",\"ValueKind\":0},{\"Key\":\"IsApplet\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"c2b58050-d983-42d6-8d75-59bdf31e79a8\",\"LastContainerName\":\"Присоединиться к приложению MyCRM\",\"LastContainerType\":0,\"AppType\":5}", 10000);
+        LTools.Workflow.PrimoApp.AddToLog(wf, text_example, LTools.Enums.LogMessageType.Info);
 	 }
 	
         

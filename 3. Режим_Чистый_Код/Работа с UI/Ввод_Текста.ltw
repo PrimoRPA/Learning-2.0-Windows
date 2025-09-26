@@ -43,12 +43,18 @@ public class PrimoScript
 	public static LTools.Scripting.CSharp.ScriptDebugger __debug;
 	
 	public void main(LTools.Common.Model.WorkflowData wf)
-    {
+    {//Компонент, производящий ввод текста в выбранный элемент управления.  Свойства
+	//app - [LTools.Desktop.DesktopInst] Переменная для сохранения ссылки на подключенный процесс
+	//pattern - Шаблон поиска: [String] Шаблон поиска элемента управления
+	//element - Элемент: [LTools.UIInteraction.Model.UIControl] Ссылка на элемент управления
+	//text - Текст: [String] Вводимый текст
+	//timeOut - Таймаут: [Int32] Предельное время ожидания завершения процесса (мс)
+
       //Компонент позволяет ввести текст в выбранный элемент управления.
 	  //Данный элемент может использовать,как и для браузерных приложений, так и десктопных.
 	  //Чтобы посмотреть работу бразуера используйте if (true)
 	  //Чтобы посмотреть работу бразуера используйте if (false)
-     if (false){
+     if (true){
 	 //Открываем браузер, а странице "https://www.google.com/"
      //Для работы данного компонента вам нужно установить расширение.
      //Чтобы это сделать воспользуйтесь гайдом:
@@ -58,14 +64,17 @@ public class PrimoScript
      //но в таком случае можно использовть установку другого расширения. 
      //Браузер IE установки расширения не требует
      LTools.WebBrowser.BrowserApp app = LTools.WebBrowser.BrowserApp.Open(wf, LTools.WebBrowser.Model.BrowserTypes.Chrome, "https://www.google.com/");
-	//В поисковой строке пишем привет
-     app.TextInput("{\"SearchFrames\":false,\"Attributes\":[{\"Key\":\"title\",\"Value\":\"Search\"}]}", "Привет", 10000);
+	
+	//В поисковой строке пишем привет:
+     app.TextInput("{\"Items\":[{\"Values\":[{\"Key\":\".Tag\",\"Value\":\"TEXTAREA\",\"ValueKind\":0},{\"Key\":\".CSSSelector\",\"Value\":\"BODY&gt;DIV&gt;DIV&gt;FORM&gt;DIV&gt;DIV&gt;DIV&gt;DIV&gt;DIV\",\"ValueKind\":0},{\"Key\":\".SearchFrames\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\".TransientEditState\",\"Value\":\"{}\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"ce36402b-5ed9-4c46-85ec-4ecb468ff079\",\"LastContainerName\":\"Открыть браузер www.google.com\",\"LastContainerType\":1,\"AppType\":5}", "Привет", 10000);
+		 
 	 }else{
 	   //Запускаем приложение MyCRM. Оно будет расположено в дополнительных материалах
-       System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, @"D:\Citizen\ДобавлениеНовыхКлиентовCRM\MyCRM.exe","", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
+       System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, System.IO.Path.Combine(Environment.CurrentDirectory, @"Дополнительные материалы\MyCRM.exe"),"", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
 
         LTools.Desktop.DesktopApp appAttached = LTools.Desktop.DesktopApp.Init(wf, "", "My CRM (Sample App)", 10000, false, LTools.Desktop.Model.DesktopTypes.UIAUTOMATION);
-
+		
+	//В поисковой строке пишем привет:
         appAttached.TextInput("{\"AutomationID\":\"textBoxPeopleComments\",\"ControlType\":\"ControlType.Edit\",\"AUIProperties\":[],\"TextSearchMode\":0,\"IsRoot\":false,\"IsQuickSearch\":true,\"IsApplet\":false,\"DesktopType\":0}", "Привет", 10000);
 
 	 }

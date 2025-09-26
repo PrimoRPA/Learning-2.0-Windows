@@ -44,7 +44,7 @@ public class PrimoScript
 	
 	public void main(LTools.Common.Model.WorkflowData wf)
     {
-      //Компонент позволяет ввести текст в выбранный элемент управления.
+      //Устанавливает фокус ввода на выбранном элементе управления.
 	  //Данный элемент может использовать,как и для браузерных приложений, так и десктопных.
 	  //Чтобы посмотреть работу бразуера используйте if (true)
 	  //Чтобы посмотреть работу бразуера используйте if (false)
@@ -63,7 +63,7 @@ public class PrimoScript
       
 	 }else{
 	   //Запускаем приложение MyCRM. Оно будет расположено в дополнительных материалах
-       System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, @"D:\Citizen\ДобавлениеНовыхКлиентовCRM\MyCRM.exe","", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
+       System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, System.IO.Path.Combine(Environment.CurrentDirectory, @"Дополнительные материалы\MyCRM.exe"),"", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
 
         LTools.Desktop.DesktopApp appAttached = LTools.Desktop.DesktopApp.Init(wf, "", "My CRM (Sample App)", 10000, false, LTools.Desktop.Model.DesktopTypes.UIAUTOMATION);
         appAttached.SetFocus("{\"AutomationID\":\"textBoxPeopleComments\",\"ClassName\":\"WindowsForms10.EDIT.app.0.378734a\",\"ControlType\":\"ControlType.Edit\",\"AUIProperties\":[],\"TextSearchMode\":0,\"IsRoot\":false,\"IsQuickSearch\":true,\"IsApplet\":false,\"DesktopType\":0}", 10000);

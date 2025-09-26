@@ -44,11 +44,12 @@ public class PrimoScript
 	
 	public void main(LTools.Common.Model.WorkflowData wf)
     {
-      //Компонент позволяет ввести текст в выбранный элемент управления.
+      //Устанавливает курсор мыши на выбранном элементе управления.
+
 	  //Данный элемент может использовать,как и для браузерных приложений, так и десктопных.
 	  //Чтобы посмотреть работу бразуера используйте if (true)
 	  //Чтобы посмотреть работу бразуера используйте if (false)
-     if (false){
+     if (true){
 	 //Открываем браузер, а странице "https://www.cbr.ru/currency_base/monthly/"
      //Для работы данного компонента вам нужно установить расширение.
      //Чтобы это сделать воспользуйтесь гайдом:
@@ -59,11 +60,13 @@ public class PrimoScript
      //Браузер IE установки расширения не требует
      LTools.WebBrowser.BrowserApp app = LTools.WebBrowser.BrowserApp.Open(wf, LTools.WebBrowser.Model.BrowserTypes.Chrome, "https://www.cbr.ru/currency_base/monthly/");
 	 //Наведем стрелку мыши на кнопку даты
-     //app.MouseHover("{\"Tag\":\"BUTTON\",\"SearchFrames\":false,\"Attributes\":[{\"Key\":\"CLASS\",\"Value\":\"datepicker-filter_button\"}]}", 10000);
-      
+     app.MouseHover(new System.Drawing.Point(918, 392), 10000);
+		 
+		 
+
 	 }else{
 	   //Запускаем приложение MyCRM. Оно будет расположено в дополнительных материалах
-       System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, @"D:\Citizen\ДобавлениеНовыхКлиентовCRM\MyCRM.exe","", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
+       System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, System.IO.Path.Combine(Environment.CurrentDirectory, System.IO.Path.Combine(Environment.CurrentDirectory, @"Дополнительные материалы\MyCRM.exe")),"", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
 
         LTools.Desktop.DesktopApp appAttached = LTools.Desktop.DesktopApp.Init(wf, "", "My CRM (Sample App)", 10000, false, LTools.Desktop.Model.DesktopTypes.UIAUTOMATION);
         //Наведем курсор мыши на фамилию

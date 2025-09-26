@@ -44,7 +44,7 @@ public class PrimoScript
 	
 	public void main(LTools.Common.Model.WorkflowData wf)
     {
-      //Компонент позволяет ввести текст в выбранный элемент управления.
+      //Компонент производит поиск элемента управления.
 	  //Данный элемент может использовать,как и для браузерных приложений, так и десктопных.
 	  //Чтобы посмотреть работу бразуера используйте if (true)
 	  //Чтобы посмотреть работу бразуера используйте if (false)
@@ -64,14 +64,14 @@ public class PrimoScript
      
 	 }else{
 	   //Запускаем приложение MyCRM. Оно будет расположено в дополнительных материалах
-       System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, @"D:\Citizen\ДобавлениеНовыхКлиентовCRM\MyCRM.exe","", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
-
+       System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, System.IO.Path.Combine(Environment.CurrentDirectory, @"Дополнительные материалы\MyCRM.exe"),"", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
+	   //Присоединяемся к приложению
        LTools.Desktop.DesktopApp appAttached = LTools.Desktop.DesktopApp.Init(wf, "", "My CRM (Sample App)", 10000, false, LTools.Desktop.Model.DesktopTypes.UIAUTOMATION);
        //Проверим наличие контрола
 	   LTools.Desktop.Model.DUIControl el = appAttached.FindElement("{\"SearchFrames\":false,\"Attributes\":[{\"Key\":\"CLASS\",\"Value\":\"input-text\"}]}", 10000);
        List&lt;LTools.Desktop.Model.DUIControl&gt; els = appAttached.FindElements("{\"SearchFrames\":false,\"Attributes\":[{\"Key\":\"CLASS\",\"Value\":\"input-text\"}]}", 10000);
 
-	 }        
+	 }  
     }
 }</Value>
             </SerializationItem>

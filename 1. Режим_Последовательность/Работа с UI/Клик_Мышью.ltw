@@ -261,6 +261,16 @@
                                 <Properties>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
+                                        <Name>URL</Name>
+                                        <Value xsi:type="xsd:string">"https://cbr.ru/currency_base/monthly/?UniDbQuery.Posted=True&amp;UniDbQuery.To=01.2010"</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
+                                        <Name>BrowserType</Name>
+                                        <Value xsi:type="xsd:int">6</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
                                         <Name>ComponentName</Name>
                                         <Value xsi:type="xsd:string">Открыть браузер CBR</Value>
                                     </SerializationItem>
@@ -278,18 +288,8 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
-                                        <Name>BrowserType</Name>
-                                        <Value xsi:type="xsd:int">6</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
                                         <Name>Headless</Name>
                                         <Value xsi:type="xsd:boolean">false</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
-                                        <Name>URL</Name>
-                                        <Value xsi:type="xsd:string">"https://cbr.ru/currency_base/monthly/?UniDbQuery.Posted=True&amp;UniDbQuery.To=01.2010"</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -381,6 +381,10 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                         <Name>ShowAnnotation</Name>
                                         <Value xsi:type="xsd:boolean">true</Value>
                                     </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
+                                        <Name>LaunchArgs</Name>
+                                    </SerializationItem>
                                 </Properties>
                                 <IsBreakpoint>false</IsBreakpoint>
                                 <IsIgnore>false</IsIgnore>
@@ -391,8 +395,23 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                         <Properties>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
+                                                <Name>MouseButton</Name>
+                                                <Value xsi:type="xsd:int">1</Value>
+                                            </SerializationItem>
+                                            <SerializationItem>
+                                                <IsListValue>false</IsListValue>
+                                                <Name>Position</Name>
+                                                <Value xsi:type="xsd:int">0</Value>
+                                            </SerializationItem>
+                                            <SerializationItem>
+                                                <IsListValue>false</IsListValue>
+                                                <Name>KeyboardButton</Name>
+                                                <Value xsi:type="xsd:int">0</Value>
+                                            </SerializationItem>
+                                            <SerializationItem>
+                                                <IsListValue>false</IsListValue>
                                                 <Name>SearchPatterText</Name>
-                                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\".Tag\",\"Value\":\"BUTTON\"},{\"Key\":\".Text\",\"Value\":\"Январь 2010\"},{\"Key\":\".SearchFrames\",\"Value\":\"False\"}],\"Items\":[]}],\"ContainerID\":\"58b7e83f-7d66-43c8-89aa-16eab29933b5\",\"LastContainerName\":\"Открыть браузер CBR\",\"LastContainerType\":1,\"AppType\":5}"</Value>
+                                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\".Tag\",\"Value\":\"BUTTON\",\"ValueKind\":0},{\"Key\":\".Text\",\"Value\":\"Январь 2010\",\"ValueKind\":0},{\"Key\":\".SearchFrames\",\"Value\":\"False\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"58b7e83f-7d66-43c8-89aa-16eab29933b5\",\"LastContainerName\":\"Открыть браузер CBR\",\"LastContainerType\":1,\"AppType\":5}"</Value>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
@@ -427,22 +446,7 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
-                                                <Name>MouseButton</Name>
-                                                <Value xsi:type="xsd:int">1</Value>
-                                            </SerializationItem>
-                                            <SerializationItem>
-                                                <IsListValue>false</IsListValue>
-                                                <Name>KeyboardButton</Name>
-                                                <Value xsi:type="xsd:int">0</Value>
-                                            </SerializationItem>
-                                            <SerializationItem>
-                                                <IsListValue>false</IsListValue>
                                                 <Name>Area</Name>
-                                            </SerializationItem>
-                                            <SerializationItem>
-                                                <IsListValue>false</IsListValue>
-                                                <Name>Position</Name>
-                                                <Value xsi:type="xsd:int">0</Value>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
@@ -453,6 +457,11 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                                 <IsListValue>false</IsListValue>
                                                 <Name>TimeOut</Name>
                                                 <Value xsi:type="xsd:string">10000</Value>
+                                            </SerializationItem>
+                                            <SerializationItem>
+                                                <IsListValue>false</IsListValue>
+                                                <Name>ScrollIntoView</Name>
+                                                <Value xsi:type="xsd:boolean">false</Value>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
@@ -640,7 +649,7 @@ Invoke может кликать так, где контрол не видим �
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
                                         <Name>Process</Name>
-                                        <Value xsi:type="xsd:string">@"D:\Citizen\ДобавлениеНовыхКлиентовCRM\MyCRM.exe"</Value>
+                                        <Value xsi:type="xsd:string">System.IO.Path.Combine(Environment.CurrentDirectory, @"Дополнительные материалы\MyCRM.exe")</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -759,6 +768,11 @@ Invoke может кликать так, где контрол не видим �
                                 <Properties>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
+                                        <Name>AppTitle</Name>
+                                        <Value xsi:type="xsd:string">"My CRM (Sample App)"</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
                                         <Name>ComponentName</Name>
                                         <Value xsi:type="xsd:string">Присоединиться к приложению MyCRM</Value>
                                     </SerializationItem>
@@ -775,11 +789,6 @@ Invoke может кликать так, где контрол не видим �
                                         <IsListValue>false</IsListValue>
                                         <Name>IsCurrentUser</Name>
                                         <Value xsi:type="xsd:boolean">false</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
-                                        <Name>AppTitle</Name>
-                                        <Value xsi:type="xsd:string">"My CRM (Sample App)"</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -883,8 +892,23 @@ Invoke может кликать так, где контрол не видим �
                                         <Properties>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
+                                                <Name>MouseButton</Name>
+                                                <Value xsi:type="xsd:int">1</Value>
+                                            </SerializationItem>
+                                            <SerializationItem>
+                                                <IsListValue>false</IsListValue>
+                                                <Name>Position</Name>
+                                                <Value xsi:type="xsd:int">0</Value>
+                                            </SerializationItem>
+                                            <SerializationItem>
+                                                <IsListValue>false</IsListValue>
+                                                <Name>KeyboardButton</Name>
+                                                <Value xsi:type="xsd:int">0</Value>
+                                            </SerializationItem>
+                                            <SerializationItem>
+                                                <IsListValue>false</IsListValue>
                                                 <Name>SearchPatterText</Name>
-                                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\"Name\",\"Value\":\"Company \"},{\"Key\":\"ControlType\",\"Value\":\"ControlType.TabItem\"},{\"Key\":\"IsRoot\",\"Value\":\"False\"},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\"},{\"Key\":\"IsApplet\",\"Value\":\"False\"},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\"},{\"Key\":\"Text\",\"Value\":\"Company \"}],\"Items\":[]}],\"ContainerID\":\"bc33946b-2a89-46fe-abb2-6835816f3e39\",\"LastContainerName\":\"Присоединиться к приложению MyCRM\",\"LastContainerType\":0,\"AppType\":5}"</Value>
+                                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\"Name\",\"Value\":\"Company \",\"ValueKind\":0},{\"Key\":\"ControlType\",\"Value\":\"ControlType.TabItem\",\"ValueKind\":0},{\"Key\":\"IsRoot\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\",\"ValueKind\":0},{\"Key\":\"IsApplet\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\",\"ValueKind\":0},{\"Key\":\"Text\",\"Value\":\"Company \",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"bc33946b-2a89-46fe-abb2-6835816f3e39\",\"LastContainerName\":\"Присоединиться к приложению MyCRM\",\"LastContainerType\":0,\"AppType\":5}"</Value>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
@@ -921,22 +945,7 @@ Invoke может кликать так, где контрол не видим �
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
-                                                <Name>MouseButton</Name>
-                                                <Value xsi:type="xsd:int">1</Value>
-                                            </SerializationItem>
-                                            <SerializationItem>
-                                                <IsListValue>false</IsListValue>
-                                                <Name>KeyboardButton</Name>
-                                                <Value xsi:type="xsd:int">0</Value>
-                                            </SerializationItem>
-                                            <SerializationItem>
-                                                <IsListValue>false</IsListValue>
                                                 <Name>Area</Name>
-                                            </SerializationItem>
-                                            <SerializationItem>
-                                                <IsListValue>false</IsListValue>
-                                                <Name>Position</Name>
-                                                <Value xsi:type="xsd:int">0</Value>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
@@ -947,6 +956,11 @@ Invoke может кликать так, где контрол не видим �
                                                 <IsListValue>false</IsListValue>
                                                 <Name>TimeOut</Name>
                                                 <Value xsi:type="xsd:string">10000</Value>
+                                            </SerializationItem>
+                                            <SerializationItem>
+                                                <IsListValue>false</IsListValue>
+                                                <Name>ScrollIntoView</Name>
+                                                <Value xsi:type="xsd:boolean">false</Value>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>

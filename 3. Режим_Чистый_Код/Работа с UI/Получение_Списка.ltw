@@ -44,7 +44,7 @@ public class PrimoScript
 	
 	public void main(LTools.Common.Model.WorkflowData wf)
     {
-      //Компонент позволяет ввести текст в выбранный элемент управления.
+      //Компонент, получающий значения из комбобокса (поле ввода со списком подсказок) либо списка.
 	  //Данный элемент может использовать,как и для браузерных приложений, так и десктопных.
 	  //Чтобы посмотреть работу бразуера используйте if (true)
 	  //Чтобы посмотреть работу бразуера используйте if (false)   
@@ -57,16 +57,19 @@ public class PrimoScript
      //*Мы использовали Google Chrome, в настройках можно выбрать другой браузер, 
      //но в таком случае можно использовть установку другого расширения. 
      //Браузер IE установки расширения не требует
+		 
+	 //Запуск браузера:
      LTools.WebBrowser.BrowserApp app = LTools.WebBrowser.BrowserApp.Open(wf, LTools.WebBrowser.Model.BrowserTypes.Chrome, "https://www.html-code-generator.com/demo/html/select-option-list"); 
-     List&lt;String&gt; listItems = app.SelectGetItems("{\"Name\":\"State:\",\"ControlType\":\"ControlType.ComboBox\",\"AUIProperties\":[{\"Key\":\"Text\",\"Value\":\"NC\"}],\"TextSearchMode\":0,\"IsRoot\":false,\"IsQuickSearch\":true,\"IsApplet\":false,\"DesktopType\":0}", 10000);
-     List&lt;String&gt; usedItems = app.SelectGetSelItems("{\"Name\":\"State:\",\"ControlType\":\"ControlType.ComboBox\",\"AUIProperties\":[{\"Key\":\"Text\",\"Value\":\"NC\"}],\"TextSearchMode\":0,\"IsRoot\":false,\"IsQuickSearch\":true,\"IsApplet\":false,\"DesktopType\":0}", 10000);
-	 }else{
+	 //Получение списка:
+     List&lt;String&gt; listItems = app.SelectGetItems("{\"Items\":[{\"Values\":[{\"Key\":\".SearchFrames\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\"ID\",\"Value\":\"country\",\"ValueKind\":0},{\"Key\":\"CLASS\",\"Value\":\"input-text\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"b1579f77-eb42-4403-be60-064a5e7945d3\",\"LastContainerName\":\"Открыть браузер сайт выпадающих списков\",\"LastContainerType\":1,\"AppType\":5}", 10000);
+	 }else
+	 {
 	   //Запускаем приложение MyCRM. Оно будет расположено в дополнительных материалах
-       System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, @"D:\Citizen\ДобавлениеНовыхКлиентовCRM\MyCRM.exe","", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
-
-        LTools.Desktop.DesktopApp appAttached = LTools.Desktop.DesktopApp.Init(wf, "", "My CRM (Sample App)", 10000, false, LTools.Desktop.Model.DesktopTypes.UIAUTOMATION);
-        List&lt;String&gt; listItems = appAttached.SelectGetItems("{\"Name\":\"State:\",\"ControlType\":\"ControlType.ComboBox\",\"AUIProperties\":[{\"Key\":\"Text\",\"Value\":\"NC\"}],\"TextSearchMode\":0,\"IsRoot\":false,\"IsQuickSearch\":true,\"IsApplet\":false,\"DesktopType\":0}", 10000);
-        List&lt;String&gt; usedItems = appAttached.SelectGetSelItems("{\"Name\":\"State:\",\"ControlType\":\"ControlType.ComboBox\",\"AUIProperties\":[{\"Key\":\"Text\",\"Value\":\"NC\"}],\"TextSearchMode\":0,\"IsRoot\":false,\"IsQuickSearch\":true,\"IsApplet\":false,\"DesktopType\":0}", 10000);
+       System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, System.IO.Path.Combine(Environment.CurrentDirectory, @"Дополнительные материалы\MyCRM.exe"),"", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
+	   //Присоединяемся к приложению MyCRM
+       LTools.Desktop.DesktopApp appAttached = LTools.Desktop.DesktopApp.Init(wf, "", "My CRM (Sample App)", 10000, false, LTools.Desktop.Model.DesktopTypes.UIAUTOMATION);
+       //Получение списка:
+	   List&lt;String&gt; listItems = appAttached.SelectGetItems("{\"Name\":\"State:\",\"ControlType\":\"ControlType.ComboBox\",\"AUIProperties\":[{\"Key\":\"Text\",\"Value\":\"NC\"}],\"TextSearchMode\":0,\"IsRoot\":false,\"IsQuickSearch\":true,\"IsApplet\":false,\"DesktopType\":0}", 10000);
         
 
 	 }

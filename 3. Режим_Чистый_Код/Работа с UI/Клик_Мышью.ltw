@@ -44,7 +44,7 @@ public class PrimoScript
 	
 	public void main(LTools.Common.Model.WorkflowData wf)
     {
-      //Компонент позволяет ввести текст в выбранный элемент управления.
+      //Компонент, производящий клик мышью на выбранном элементе управления.
 	  //Данный элемент может использовать,как и для браузерных приложений, так и десктопных.
 	  //Чтобы посмотреть работу бразуера используйте if (true)
 	  //Чтобы посмотреть работу бразуера используйте if (false)
@@ -57,15 +57,19 @@ public class PrimoScript
      //*Мы использовали Google Chrome, в настройках можно выбрать другой браузер, 
      //но в таком случае можно использовть установку другого расширения. 
      //Браузер IE установки расширения не требует
+		 
+	 //Присоединяемся к браузеру, открытие сайта.
      LTools.WebBrowser.BrowserApp app = LTools.WebBrowser.BrowserApp.Open(wf, LTools.WebBrowser.Model.BrowserTypes.Chrome, "https://cbr.ru/currency_base/monthly/?UniDbQuery.Posted=True&amp;UniDbQuery.To=01.2010");
+	 //Клик по полю изменения даты
 	 app.Click("{\"Tag\":\"BUTTON\",\"Text\":\"Январь 2010\",\"SearchFrames\":false,\"Attributes\":[]}",10000,LTools.Desktop.Model.MouseButtons.BUTTON_LEFT);
      
 	 }else{
-	   //Запускаем приложение MyCRM. Оно будет расположено в дополнительных материалах
-       System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, @"D:\Citizen\ДобавлениеНовыхКлиентовCRM\MyCRM.exe","", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
-
-        LTools.Desktop.DesktopApp appAttached = LTools.Desktop.DesktopApp.Init(wf, "", "My CRM (Sample App)", 10000, false, LTools.Desktop.Model.DesktopTypes.UIAUTOMATION);
-        appAttached.Click("{\"Name\":\"Company \",\"ControlType\":\"ControlType.TabItem\",\"AUIProperties\":[{\"Key\":\"Text\",\"Value\":\"Company \"}],\"TextSearchMode\":0,\"IsRoot\":false,\"IsQuickSearch\":true,\"IsApplet\":false,\"DesktopType\":0}",LTools.Desktop.Model.MouseButtons.BUTTON_LEFT, LTools.Desktop.Model.KeyboardKeys.NONE, 10000);
+	  //Запускаем приложение MyCRM. Оно будет расположено в дополнительных материалах
+      System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, System.IO.Path.Combine(Environment.CurrentDirectory, @"Дополнительные материалы\MyCRM.exe"),"", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
+	  //Присоединяемся к приложению
+      LTools.Desktop.DesktopApp appAttached = LTools.Desktop.DesktopApp.Init(wf, "", "My CRM (Sample App)", 10000, false, LTools.Desktop.Model.DesktopTypes.UIAUTOMATION);
+      //Клик по вкладке "Company"
+	  appAttached.Click("{\"Name\":\"Company \",\"ControlType\":\"ControlType.TabItem\",\"AUIProperties\":[{\"Key\":\"Text\",\"Value\":\"Company \"}],\"TextSearchMode\":0,\"IsRoot\":false,\"IsQuickSearch\":true,\"IsApplet\":false,\"DesktopType\":0}",LTools.Desktop.Model.MouseButtons.BUTTON_LEFT, LTools.Desktop.Model.KeyboardKeys.NONE, 10000);
         
 
 	 }   

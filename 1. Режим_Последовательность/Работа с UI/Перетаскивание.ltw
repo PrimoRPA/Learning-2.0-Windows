@@ -210,6 +210,11 @@
                 <Properties>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
+                        <Name>AppTitle</Name>
+                        <Value xsi:type="xsd:string">"Безымянный - Paint"</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
                         <Name>ComponentName</Name>
                         <Value xsi:type="xsd:string">Присоединиться к приложению Paint</Value>
                     </SerializationItem>
@@ -226,11 +231,6 @@
                         <IsListValue>false</IsListValue>
                         <Name>IsCurrentUser</Name>
                         <Value xsi:type="xsd:boolean">false</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>AppTitle</Name>
-                        <Value xsi:type="xsd:string">"Безымянный - Paint"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -412,8 +412,23 @@
                         <Properties>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
+                                <Name>MouseButton</Name>
+                                <Value xsi:type="xsd:int">0</Value>
+                            </SerializationItem>
+                            <SerializationItem>
+                                <IsListValue>false</IsListValue>
+                                <Name>Position</Name>
+                                <Value xsi:type="xsd:int">0</Value>
+                            </SerializationItem>
+                            <SerializationItem>
+                                <IsListValue>false</IsListValue>
+                                <Name>KeyboardButton</Name>
+                                <Value xsi:type="xsd:int">0</Value>
+                            </SerializationItem>
+                            <SerializationItem>
+                                <IsListValue>false</IsListValue>
                                 <Name>SearchPatterText</Name>
-                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\"Name\",\"Value\":\"Сердце\"},{\"Key\":\"ControlType\",\"Value\":\"ControlType.ListItem\"},{\"Key\":\"IsRoot\",\"Value\":\"False\"},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\"},{\"Key\":\"IsApplet\",\"Value\":\"False\"},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\"},{\"Key\":\"Text\",\"Value\":\"Сердце\"}],\"Items\":[]}],\"ContainerID\":\"5e31d71c-d11d-4d17-ac00-ac90f11b3170\",\"LastContainerName\":\"Присоединиться к приложению\",\"LastContainerType\":0,\"AppType\":5}"</Value>
+                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\"Name\",\"Value\":\"Сердце\",\"ValueKind\":0},{\"Key\":\"ControlType\",\"Value\":\"ControlType.ListItem\",\"ValueKind\":0},{\"Key\":\"IsRoot\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\",\"ValueKind\":0},{\"Key\":\"IsApplet\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\",\"ValueKind\":0},{\"Key\":\"Text\",\"Value\":\"Сердце\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"5e31d71c-d11d-4d17-ac00-ac90f11b3170\",\"LastContainerName\":\"Присоединиться к приложению Paint\",\"LastContainerType\":0,\"AppType\":5}"</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -450,22 +465,7 @@
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
-                                <Name>MouseButton</Name>
-                                <Value xsi:type="xsd:int">0</Value>
-                            </SerializationItem>
-                            <SerializationItem>
-                                <IsListValue>false</IsListValue>
-                                <Name>KeyboardButton</Name>
-                                <Value xsi:type="xsd:int">0</Value>
-                            </SerializationItem>
-                            <SerializationItem>
-                                <IsListValue>false</IsListValue>
                                 <Name>Area</Name>
-                            </SerializationItem>
-                            <SerializationItem>
-                                <IsListValue>false</IsListValue>
-                                <Name>Position</Name>
-                                <Value xsi:type="xsd:int">0</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -476,6 +476,11 @@
                                 <IsListValue>false</IsListValue>
                                 <Name>TimeOut</Name>
                                 <Value xsi:type="xsd:string">10000</Value>
+                            </SerializationItem>
+                            <SerializationItem>
+                                <IsListValue>false</IsListValue>
+                                <Name>ScrollIntoView</Name>
+                                <Value xsi:type="xsd:boolean">false</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -568,7 +573,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>SearchPatter1Text</Name>
-                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\"Name\",\"Value\":\"Использование инструмента Сердце на Холст\"},{\"Key\":\"ClassName\",\"Value\":\"Afx:00007FF7E89A0000:8\"},{\"Key\":\"ControlType\",\"Value\":\"ControlType.Pane\"},{\"Key\":\"IsRoot\",\"Value\":\"False\"},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\"},{\"Key\":\"IsApplet\",\"Value\":\"False\"},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\"},{\"Key\":\"Text\",\"Value\":\"Использование инструмента Сердце на Холст\"}],\"Items\":[]}],\"ContainerID\":\"5e31d71c-d11d-4d17-ac00-ac90f11b3170\",\"LastContainerName\":\"Присоединиться к приложению Paint\",\"LastContainerType\":0,\"AppType\":5}"</Value>
+                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\"Name\",\"Value\":\"Сердце\",\"ValueKind\":0},{\"Key\":\"ControlType\",\"Value\":\"ControlType.ListItem\",\"ValueKind\":0},{\"Key\":\"IsRoot\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\",\"ValueKind\":0},{\"Key\":\"IsStrictSearch\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\"IsApplet\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\",\"ValueKind\":0},{\"Key\":\".TransientEditState\",\"Value\":\"{\\\"IsStrictSearch\\\":true}\",\"ValueKind\":0},{\"Key\":\"Text\",\"Value\":\"Сердце\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"5e31d71c-d11d-4d17-ac00-ac90f11b3170\",\"LastContainerName\":\"Присоединиться к приложению Paint\",\"LastContainerType\":0,\"AppType\":5}"</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -585,7 +590,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>SearchPatter2Text</Name>
-                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\"Name\",\"Value\":\"Использование инструмента Сердце на Холст\"},{\"Key\":\"ClassName\",\"Value\":\"Afx:00007FF7E89A0000:8\"},{\"Key\":\"ControlType\",\"Value\":\"ControlType.Pane\"},{\"Key\":\"IsRoot\",\"Value\":\"False\"},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\"},{\"Key\":\"IsApplet\",\"Value\":\"False\"},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\"},{\"Key\":\"Text\",\"Value\":\"Использование инструмента Сердце на Холст\"}],\"Items\":[]}],\"ContainerID\":\"5e31d71c-d11d-4d17-ac00-ac90f11b3170\",\"LastContainerName\":\"Присоединиться к приложению Paint\",\"LastContainerType\":0,\"AppType\":5}"</Value>
+                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\"Name\",\"Value\":\"Использование инструмента Сердце на Холст\",\"ValueKind\":0},{\"Key\":\"ClassName\",\"Value\":\"Afx:00007FF7E1470000:8\",\"ValueKind\":0},{\"Key\":\"ControlType\",\"Value\":\"ControlType.Pane\",\"ValueKind\":0},{\"Key\":\"IsRoot\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\",\"ValueKind\":0},{\"Key\":\"IsStrictSearch\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\"IsApplet\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\",\"ValueKind\":0},{\"Key\":\".TransientEditState\",\"Value\":\"{\\\"IsStrictSearch\\\":true}\",\"ValueKind\":0},{\"Key\":\"Text\",\"Value\":\"Использование инструмента Сердце на Холст\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"5e31d71c-d11d-4d17-ac00-ac90f11b3170\",\"LastContainerName\":\"Присоединиться к приложению Paint\",\"LastContainerType\":0,\"AppType\":5}"</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -602,22 +607,22 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>DiffX1</Name>
-                                <Value xsi:type="xsd:string">130</Value>
+                                <Value xsi:type="xsd:string">10</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>DiffY1</Name>
-                                <Value xsi:type="xsd:string">123</Value>
+                                <Value xsi:type="xsd:string">10</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>DiffX2</Name>
-                                <Value xsi:type="xsd:string">312</Value>
+                                <Value xsi:type="xsd:string">663</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>DiffY2</Name>
-                                <Value xsi:type="xsd:string">362</Value>
+                                <Value xsi:type="xsd:string">55</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>

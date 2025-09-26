@@ -264,6 +264,16 @@
                                 <Properties>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
+                                        <Name>URL</Name>
+                                        <Value xsi:type="xsd:string">"https://www.google.com/"</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
+                                        <Name>BrowserType</Name>
+                                        <Value xsi:type="xsd:int">6</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
                                         <Name>ComponentName</Name>
                                         <Value xsi:type="xsd:string">Открыть браузер www.google.com</Value>
                                     </SerializationItem>
@@ -281,18 +291,8 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
-                                        <Name>BrowserType</Name>
-                                        <Value xsi:type="xsd:int">6</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
                                         <Name>Headless</Name>
                                         <Value xsi:type="xsd:boolean">false</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
-                                        <Name>URL</Name>
-                                        <Value xsi:type="xsd:string">"https://www.google.com/"</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -384,6 +384,10 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                         <Name>ShowAnnotation</Name>
                                         <Value xsi:type="xsd:boolean">true</Value>
                                     </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
+                                        <Name>LaunchArgs</Name>
+                                    </SerializationItem>
                                 </Properties>
                                 <IsBreakpoint>false</IsBreakpoint>
                                 <IsIgnore>false</IsIgnore>
@@ -394,8 +398,18 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                         <Properties>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
+                                                <Name>Text</Name>
+                                                <Value xsi:type="xsd:string">"Привет"</Value>
+                                            </SerializationItem>
+                                            <SerializationItem>
+                                                <IsListValue>false</IsListValue>
+                                                <Name>Mode</Name>
+                                                <Value xsi:type="xsd:int">0</Value>
+                                            </SerializationItem>
+                                            <SerializationItem>
+                                                <IsListValue>false</IsListValue>
                                                 <Name>SearchPatterText</Name>
-                                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\".SearchFrames\",\"Value\":\"False\"},{\"Key\":\"title\",\"Value\":\"Search\"}],\"Items\":[]}],\"ContainerID\":\"ce36402b-5ed9-4c46-85ec-4ecb468ff079\",\"LastContainerName\":\"Открыть браузер www.google.com\",\"LastContainerType\":1,\"AppType\":5}"</Value>
+                                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\".Tag\",\"Value\":\"TEXTAREA\",\"ValueKind\":0},{\"Key\":\".CSSSelector\",\"Value\":\"BODY&gt;DIV&gt;DIV&gt;FORM&gt;DIV&gt;DIV&gt;DIV&gt;DIV&gt;DIV\",\"ValueKind\":0},{\"Key\":\".SearchFrames\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\".TransientEditState\",\"Value\":\"{}\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"ce36402b-5ed9-4c46-85ec-4ecb468ff079\",\"LastContainerName\":\"Открыть браузер www.google.com\",\"LastContainerType\":1,\"AppType\":5}"</Value>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
@@ -405,11 +419,6 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
                                                 <Name>ElementItem</Name>
-                                            </SerializationItem>
-                                            <SerializationItem>
-                                                <IsListValue>false</IsListValue>
-                                                <Name>Mode</Name>
-                                                <Value xsi:type="xsd:int">0</Value>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
@@ -440,11 +449,6 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                                 <IsListValue>false</IsListValue>
                                                 <Name>SClean</Name>
                                                 <Value xsi:type="xsd:boolean">false</Value>
-                                            </SerializationItem>
-                                            <SerializationItem>
-                                                <IsListValue>false</IsListValue>
-                                                <Name>Text</Name>
-                                                <Value xsi:type="xsd:string">"Привет"</Value>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
@@ -484,7 +488,7 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
                                                 <Name>Annotation</Name>
-                                                <Value xsi:type="xsd:string">Чтобы выбрать контрол, в который робот будет писать текст, нажми на "волшебую палочку"
+                                                <Value xsi:type="xsd:string">Чтобы выбрать поле, в которое робот будет писать текст, нажми на "волшебую палочку"
 
 После чего студия начнет подсвечивать все контролы на сайте/приложении.
 
@@ -498,7 +502,7 @@ Simulate - Имитация ввода как человек
 
 Два метода имеют свои плюсы и минусы.
 Invoke может вписать данные, даже когда контрол не видим глазу человека.
-Но бывает и так, что сайты и приложения не реагируют на программный ввод. Чаще всего это делается как защита от внешних автоматизаций или не умышлено.
+Но бывает и так, что сайты и приложения не реагируют на программный ввод. Чаще всего это делается как защита от внешних автоматизаций или не умышленно.
 
 Для настройки режима Simulate - есть раздел свойств Эмуляция.</Value>
                                             </SerializationItem>
@@ -642,7 +646,7 @@ Invoke может вписать данные, даже когда контро�
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
                                         <Name>Process</Name>
-                                        <Value xsi:type="xsd:string">@"D:\Citizen\ДобавлениеНовыхКлиентовCRM\MyCRM.exe"</Value>
+                                        <Value xsi:type="xsd:string">System.IO.Path.Combine(Environment.CurrentDirectory, @"Дополнительные материалы\MyCRM.exe")</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -761,6 +765,11 @@ Invoke может вписать данные, даже когда контро�
                                 <Properties>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
+                                        <Name>AppTitle</Name>
+                                        <Value xsi:type="xsd:string">"My CRM (Sample App)"</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
                                         <Name>ComponentName</Name>
                                         <Value xsi:type="xsd:string">Присоединиться к приложению MyCRM</Value>
                                     </SerializationItem>
@@ -777,11 +786,6 @@ Invoke может вписать данные, даже когда контро�
                                         <IsListValue>false</IsListValue>
                                         <Name>IsCurrentUser</Name>
                                         <Value xsi:type="xsd:boolean">false</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
-                                        <Name>AppTitle</Name>
-                                        <Value xsi:type="xsd:string">"My CRM (Sample App)"</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -885,8 +889,18 @@ Invoke может вписать данные, даже когда контро�
                                         <Properties>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
+                                                <Name>Text</Name>
+                                                <Value xsi:type="xsd:string">"Привет"</Value>
+                                            </SerializationItem>
+                                            <SerializationItem>
+                                                <IsListValue>false</IsListValue>
+                                                <Name>Mode</Name>
+                                                <Value xsi:type="xsd:int">1</Value>
+                                            </SerializationItem>
+                                            <SerializationItem>
+                                                <IsListValue>false</IsListValue>
                                                 <Name>SearchPatterText</Name>
-                                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\"AutomationID\",\"Value\":\"textBoxPeopleComments\"},{\"Key\":\"ControlType\",\"Value\":\"ControlType.Edit\"},{\"Key\":\"IsRoot\",\"Value\":\"False\"},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\"},{\"Key\":\"IsApplet\",\"Value\":\"False\"},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\"}],\"Items\":[]}],\"ContainerID\":\"1cc05ecc-a7d7-469c-a252-f340ef976f70\",\"LastContainerName\":\"Присоединиться к приложению MyCRM\",\"LastContainerType\":0,\"AppType\":5}"</Value>
+                                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\"AutomationID\",\"Value\":\"textBoxPeopleComments\",\"ValueKind\":0},{\"Key\":\"ControlType\",\"Value\":\"ControlType.Edit\",\"ValueKind\":0},{\"Key\":\"IsRoot\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\",\"ValueKind\":0},{\"Key\":\"IsApplet\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"1cc05ecc-a7d7-469c-a252-f340ef976f70\",\"LastContainerName\":\"Присоединиться к приложению MyCRM\",\"LastContainerType\":0,\"AppType\":5}"</Value>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
@@ -896,11 +910,6 @@ Invoke может вписать данные, даже когда контро�
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
                                                 <Name>ElementItem</Name>
-                                            </SerializationItem>
-                                            <SerializationItem>
-                                                <IsListValue>false</IsListValue>
-                                                <Name>Mode</Name>
-                                                <Value xsi:type="xsd:int">1</Value>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
@@ -931,10 +940,6 @@ Invoke может вписать данные, даже когда контро�
                                                 <IsListValue>false</IsListValue>
                                                 <Name>SClean</Name>
                                                 <Value xsi:type="xsd:boolean">false</Value>
-                                            </SerializationItem>
-                                            <SerializationItem>
-                                                <IsListValue>false</IsListValue>
-                                                <Name>Text</Name>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
@@ -974,7 +979,7 @@ Invoke может вписать данные, даже когда контро�
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
                                                 <Name>Annotation</Name>
-                                                <Value xsi:type="xsd:string">Чтобы выбрать контрол, в который робот будет писать текст, нажми на "волшебую палочку"
+                                                <Value xsi:type="xsd:string">Чтобы выбрать поле, в которое робот будет писать текст, нажми на "волшебую палочку"
 
 После чего студия начнет подсвечивать все контролы на сайте/приложении.
 
@@ -990,7 +995,7 @@ Simulate - Имитация ввода как человек
 Invoke может вписать данные, даже когда контрол не видим глазу человека.
 Но бывает и так, что сайты и приложения не реагируют на программный ввод. Чаще всего это делается как защита от внешних автоматизаций или не умышлено.
 
-Для настройки режима Simulate - есть разсдел свойств Эмуляция.</Value>
+Для настройки режима Simulate - есть раздел свойств Эмуляция.</Value>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>

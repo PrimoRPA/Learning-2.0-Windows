@@ -44,11 +44,11 @@ public class PrimoScript
 	
 	public void main(LTools.Common.Model.WorkflowData wf)
     {
-       //Компонент позволяет ввести текст в выбранный элемент управления.
+      //Компонент, ожидающий исчезновение элемента управления.
 	  //Данный элемент может использовать,как и для браузерных приложений, так и десктопных.
 	  //Чтобы посмотреть работу бразуера используйте if (true)
 	  //Чтобы посмотреть работу бразуера используйте if (false)
-	  if (false){
+	  if (true){
 		  //Открываем браузер, а странице "https://cbr.ru/currency_base/monthly/?UniDbQuery.Posted=True&amp;UniDbQuery.To=01.2010"
           //Для работы данного компонента вам нужно установить расширение.
           //Чтобы это сделать воспользуйтесь гайдом:
@@ -60,13 +60,17 @@ public class PrimoScript
         LTools.WebBrowser.BrowserApp app = LTools.WebBrowser.BrowserApp.Open(wf, LTools.WebBrowser.Model.BrowserTypes.Chrome, "https://cbr.ru/currency_base/monthly/?UniDbQuery.Posted=True&amp;UniDbQuery.To=01.2010");
 		
         System.Threading.Thread.Sleep(3000);
+		  //Нажимаем на дату и получаем выпадающий список. 
         app.Click("{\"Tag\":\"BUTTON\",\"Text\":\"Январь 2010\",\"SearchFrames\":false,\"Attributes\":[]}",10000,LTools.Desktop.Model.MouseButtons.BUTTON_LEFT);
-        app.WaitElementVanish("{\"SearchFrames\":false,\"Attributes\":[{\"Key\":\"CLASS\",\"Value\":\"datepicker-filter_modal\"}]}", 10000);
+		  //Выбери предыдущий год и любой месяц и окно закроется. Робот поймет что контрол исчез.
+        app.WaitElementVanish("{\"Tag\":\"BUTTON\",\"Text\":\"Январь 2010\",\"SearchFrames\":false,\"Attributes\":[]}", 10000);
 	  }else{
 		 
 		//Запускаем приложение MyCRM. Оно будет расположено в дополнительных материалах
-        System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, @"D:\Citizen\ДобавлениеНовыхКлиентовCRM\MyCRM.exe","", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
+        System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, System.IO.Path.Combine(Environment.CurrentDirectory, @"Дополнительные материалы\MyCRM.exe"),"", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
+		//Присоединяемся к приложению  My CRM
 		LTools.Desktop.DesktopApp appAttached = LTools.Desktop.DesktopApp.Init(wf, "", "My CRM (Sample App)", 10000, false, LTools.Desktop.Model.DesktopTypes.UIAUTOMATION);
+		//Проверяем элемент на исчезновение
 		appAttached.WaitElementVanish("{\"Name\":\"Name:\",\"AutomationID\":\"groupBox5\",\"ClassName\":\"WindowsForms10.Window.8.app.0.378734a\",\"ControlType\":\"ControlType.Group\",\"AUIProperties\":[{\"Key\":\"Text\",\"Value\":\"Name:\"}],\"TextSearchMode\":0,\"IsRoot\":false,\"IsQuickSearch\":true,\"IsApplet\":false,\"DesktopType\":0}", 10000);
 		
 	  }

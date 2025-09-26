@@ -262,6 +262,16 @@
                                 <Properties>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
+                                        <Name>URL</Name>
+                                        <Value xsi:type="xsd:string">"https://stevefaulkner.github.io/html-mapping-tests/browser-tests/checkbox-states.html"</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
+                                        <Name>BrowserType</Name>
+                                        <Value xsi:type="xsd:int">6</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
                                         <Name>ComponentName</Name>
                                         <Value xsi:type="xsd:string">Открыть браузер checkbox пример</Value>
                                     </SerializationItem>
@@ -279,18 +289,8 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
-                                        <Name>BrowserType</Name>
-                                        <Value xsi:type="xsd:int">6</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
                                         <Name>Headless</Name>
                                         <Value xsi:type="xsd:boolean">false</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
-                                        <Name>URL</Name>
-                                        <Value xsi:type="xsd:string">"https://stevefaulkner.github.io/html-mapping-tests/browser-tests/checkbox-states.html"</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -381,6 +381,10 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                         <Name>ShowAnnotation</Name>
                                         <Value xsi:type="xsd:boolean">true</Value>
                                     </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
+                                        <Name>LaunchArgs</Name>
+                                    </SerializationItem>
                                 </Properties>
                                 <IsBreakpoint>false</IsBreakpoint>
                                 <IsIgnore>false</IsIgnore>
@@ -391,8 +395,13 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                         <Properties>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
+                                                <Name>Text</Name>
+                                                <Value xsi:type="xsd:string">true</Value>
+                                            </SerializationItem>
+                                            <SerializationItem>
+                                                <IsListValue>false</IsListValue>
                                                 <Name>SearchPatterText</Name>
-                                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\".SearchFrames\",\"Value\":\"False\"},{\"Key\":\".Index\",\"Value\":\"1\"},{\"Key\":\"type\",\"Value\":\"checkbox\"}],\"Items\":[]}],\"ContainerID\":\"47f1bb91-ea27-4c60-9c1b-1c627cd05d11\",\"LastContainerName\":\"Открыть браузер\",\"LastContainerType\":1,\"AppType\":5}"</Value>
+                                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\".SearchFrames\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\".Index\",\"Value\":\"1\",\"ValueKind\":0},{\"Key\":\"type\",\"Value\":\"checkbox\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"47f1bb91-ea27-4c60-9c1b-1c627cd05d11\",\"LastContainerName\":\"Открыть браузер checkbox пример\",\"LastContainerType\":1,\"AppType\":5}"</Value>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
@@ -402,11 +411,6 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
                                                 <Name>ElementItem</Name>
-                                            </SerializationItem>
-                                            <SerializationItem>
-                                                <IsListValue>false</IsListValue>
-                                                <Name>Text</Name>
-                                                <Value xsi:type="xsd:string">true</Value>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
@@ -607,7 +611,7 @@ Simulate - Имитация ввода как человек.
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
                                         <Name>Process</Name>
-                                        <Value xsi:type="xsd:string">@"D:\Citizen\ДобавлениеНовыхКлиентовCRM\MyCRM.exe"</Value>
+                                        <Value xsi:type="xsd:string">System.IO.Path.Combine(Environment.CurrentDirectory, @"Дополнительные материалы\MyCRM.exe")</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -726,6 +730,11 @@ Simulate - Имитация ввода как человек.
                                 <Properties>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
+                                        <Name>AppTitle</Name>
+                                        <Value xsi:type="xsd:string">"My CRM (Sample App)"</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
                                         <Name>ComponentName</Name>
                                         <Value xsi:type="xsd:string">Присоединиться к приложению MyCRM</Value>
                                     </SerializationItem>
@@ -742,11 +751,6 @@ Simulate - Имитация ввода как человек.
                                         <IsListValue>false</IsListValue>
                                         <Name>IsCurrentUser</Name>
                                         <Value xsi:type="xsd:boolean">false</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
-                                        <Name>AppTitle</Name>
-                                        <Value xsi:type="xsd:string">"My CRM (Sample App)"</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -850,8 +854,13 @@ Simulate - Имитация ввода как человек.
                                         <Properties>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
+                                                <Name>Text</Name>
+                                                <Value xsi:type="xsd:string">true</Value>
+                                            </SerializationItem>
+                                            <SerializationItem>
+                                                <IsListValue>false</IsListValue>
                                                 <Name>SearchPatterText</Name>
-                                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\"Name\",\"Value\":\"Female\"},{\"Key\":\"AutomationID\",\"Value\":\"radioButtonFemale\"},{\"Key\":\"ControlType\",\"Value\":\"ControlType.RadioButton\"},{\"Key\":\"IsRoot\",\"Value\":\"False\"},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\"},{\"Key\":\"IsApplet\",\"Value\":\"False\"},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\"},{\"Key\":\"Text\",\"Value\":\"Female\"}],\"Items\":[]}],\"ContainerID\":\"ed4ab52a-6939-4f88-bc8c-233e4a4f022e\",\"LastContainerName\":\"Присоединиться к приложению MyCRM\",\"LastContainerType\":0,\"AppType\":5}"</Value>
+                                                <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\"Name\",\"Value\":\"Female\",\"ValueKind\":0},{\"Key\":\"AutomationID\",\"Value\":\"radioButtonFemale\",\"ValueKind\":0},{\"Key\":\"ControlType\",\"Value\":\"ControlType.RadioButton\",\"ValueKind\":0},{\"Key\":\"IsRoot\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\",\"ValueKind\":0},{\"Key\":\"IsApplet\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\",\"ValueKind\":0},{\"Key\":\"Text\",\"Value\":\"Female\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"ed4ab52a-6939-4f88-bc8c-233e4a4f022e\",\"LastContainerName\":\"Присоединиться к приложению MyCRM\",\"LastContainerType\":0,\"AppType\":5}"</Value>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
@@ -861,11 +870,6 @@ Simulate - Имитация ввода как человек.
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>
                                                 <Name>ElementItem</Name>
-                                            </SerializationItem>
-                                            <SerializationItem>
-                                                <IsListValue>false</IsListValue>
-                                                <Name>Text</Name>
-                                                <Value xsi:type="xsd:string">true</Value>
                                             </SerializationItem>
                                             <SerializationItem>
                                                 <IsListValue>false</IsListValue>

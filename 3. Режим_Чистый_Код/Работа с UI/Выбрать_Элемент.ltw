@@ -44,11 +44,11 @@ public class PrimoScript
 	
 	public void main(LTools.Common.Model.WorkflowData wf)
     {
-        //Компонент позволяет ввести текст в выбранный элемент управления.
+      //Компонент, производящий изменение состояния выбранного элемента управления (для чек-боксов и радио-кнопок).
 	  //Данный элемент может использовать,как и для браузерных приложений, так и десктопных.
 	  //Чтобы посмотреть работу бразуера используйте if (true)
 	  //Чтобы посмотреть работу бразуера используйте if (false)
-     if (false){
+     if (true){
 	 //Открываем браузер, а странице "https://stevefaulkner.github.io/html-mapping-tests/browser-tests/checkbox-states.html"
      //Для работы данного компонента вам нужно установить расширение.
      //Чтобы это сделать воспользуйтесь гайдом:
@@ -59,16 +59,17 @@ public class PrimoScript
      //Браузер IE установки расширения не требует
      LTools.WebBrowser.BrowserApp app = LTools.WebBrowser.BrowserApp.Open(wf, LTools.WebBrowser.Model.BrowserTypes.Chrome, "https://stevefaulkner.github.io/html-mapping-tests/browser-tests/checkbox-states.html");
      //Активируем не активный checkBox
-     //app.SetChecked("{\"Index\":1,\"IndexStr\":\"1\",\"SearchFrames\":false,\"Attributes\":[{\"Key\":\"type\",\"Value\":\"checkbox\"}]}", true, 10000);
+     app.SetChecked("{\"Index\":1,\"IndexStr\":\"1\",\"SearchFrames\":false,\"Attributes\":[{\"Key\":\"type\",\"Value\":\"checkbox\"}]}", true, 10000);
+
 
     }else{
 	   //Запускаем приложение MyCRM. Оно будет расположено в дополнительных материалах
-       System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, @"D:\Citizen\ДобавлениеНовыхКлиентовCRM\MyCRM.exe","", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
-
+       System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, System.IO.Path.Combine(Environment.CurrentDirectory, @"Дополнительные материалы\MyCRM.exe"),"", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
+	   //Присоединяемся к приложению  My CRM
        LTools.Desktop.DesktopApp appAttached = LTools.Desktop.DesktopApp.Init(wf, "", "My CRM (Sample App)", 10000, false, LTools.Desktop.Model.DesktopTypes.UIAUTOMATION);
-	   
+	   //Выбираем элемент
        System.Threading.Thread.Sleep(3000);
-	   appAttached.SetChecked("{\"Name\":\"Female\",\"AutomationID\":\"radioButtonFemale\",\"ControlType\":\"ControlType.RadioButton\",\"AUIProperties\":[{\"Key\":\"Text\",\"Value\":\"Female\"}],\"TextSearchMode\":0,\"IsRoot\":false,\"IsQuickSearch\":true,\"IsApplet\":false,\"DesktopType\":0}", true, 10000);
+	   appAttached.SetChecked("{\"Items\":[{\"Values\":[{\"Key\":\"Name\",\"Value\":\"Female\",\"ValueKind\":0},{\"Key\":\"AutomationID\",\"Value\":\"radioButtonFemale\",\"ValueKind\":0},{\"Key\":\"ControlType\",\"Value\":\"ControlType.RadioButton\",\"ValueKind\":0},{\"Key\":\"IsRoot\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\",\"ValueKind\":0},{\"Key\":\"IsApplet\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\",\"ValueKind\":0},{\"Key\":\"Text\",\"Value\":\"Female\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"ed4ab52a-6939-4f88-bc8c-233e4a4f022e\",\"LastContainerName\":\"Присоединиться к приложению MyCRM\",\"LastContainerType\":0,\"AppType\":5}", true, 10000);
 	}
 }
 }</Value>

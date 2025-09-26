@@ -267,20 +267,8 @@
                                 <Properties>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
-                                        <Name>ComponentName</Name>
-                                        <Value xsi:type="xsd:string">Открыть браузер</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
-                                        <Name>Annotation</Name>
-                                        <Value xsi:type="xsd:string">Для работы данного компонента 
-вам нужно установить расширение.
-Чтобы это сделать воспользуйтесь гайдом:
-https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chrome
-
-*Мы использовали Google Chrome, в настройках можно выбрать другой браузер, 
-но в таком случае можно использовть установку другого расширения. 
-Браузер IE установки расширения не требует</Value>
+                                        <Name>URL</Name>
+                                        <Value xsi:type="xsd:string">"https://www.html-code-generator.com/demo/html/select-option-list"</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -294,13 +282,12 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
-                                        <Name>URL</Name>
-                                        <Value xsi:type="xsd:string">"https://www.html-code-generator.com/demo/html/select-option-list"</Value>
+                                        <Name>Disp</Name>
+                                        <Value xsi:type="xsd:boolean">false</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
-                                        <Name>Disp</Name>
-                                        <Value xsi:type="xsd:boolean">false</Value>
+                                        <Name>LaunchArgs</Name>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -336,11 +323,28 @@ https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chr
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
+                                        <Name>ComponentName</Name>
+                                        <Value xsi:type="xsd:string">Открыть браузер</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
                                         <Name>WaitBefore</Name>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
                                         <Name>WaitAfter</Name>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
+                                        <Name>Annotation</Name>
+                                        <Value xsi:type="xsd:string">Для работы данного компонента 
+вам нужно установить расширение.
+Чтобы это сделать воспользуйтесь гайдом:
+https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/settings/plugin-install/chrome
+
+*Мы использовали Google Chrome, в настройках можно выбрать другой браузер, 
+но в таком случае можно использовть установку другого расширения. 
+Браузер IE установки расширения не требует</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -487,8 +491,17 @@ Bottom - положение элемента снизу от якоря</Value>
                                                 <Properties>
                                                     <SerializationItem>
                                                         <IsListValue>false</IsListValue>
+                                                        <Name>ListItem</Name>
+                                                        <Value xsi:type="xsd:string">"Albania"</Value>
+                                                    </SerializationItem>
+                                                    <SerializationItem>
+                                                        <IsListValue>false</IsListValue>
+                                                        <Name>ListIndex</Name>
+                                                    </SerializationItem>
+                                                    <SerializationItem>
+                                                        <IsListValue>false</IsListValue>
                                                         <Name>SearchPatterText</Name>
-                                                        <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\".Tag\",\"Value\":\"SELECT\"},{\"Key\":\".SearchFrames\",\"Value\":\"False\"}],\"Items\":[]}],\"ContainerID\":\"41e691cd-89ce-488a-8e9c-a46079b99b09\",\"LastContainerName\":\"Открыть браузер\",\"LastContainerType\":1,\"AppType\":5}"</Value>
+                                                        <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\".Tag\",\"Value\":\"SELECT\",\"ValueKind\":0},{\"Key\":\".SearchFrames\",\"Value\":\"False\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"41e691cd-89ce-488a-8e9c-a46079b99b09\",\"LastContainerName\":\"Открыть браузер\",\"LastContainerType\":1,\"AppType\":5}"</Value>
                                                     </SerializationItem>
                                                     <SerializationItem>
                                                         <IsListValue>false</IsListValue>
@@ -501,16 +514,7 @@ Bottom - положение элемента снизу от якоря</Value>
                                                     </SerializationItem>
                                                     <SerializationItem>
                                                         <IsListValue>false</IsListValue>
-                                                        <Name>ListItem</Name>
-                                                        <Value xsi:type="xsd:string">"Albania"</Value>
-                                                    </SerializationItem>
-                                                    <SerializationItem>
-                                                        <IsListValue>false</IsListValue>
                                                         <Name>ListItems</Name>
-                                                    </SerializationItem>
-                                                    <SerializationItem>
-                                                        <IsListValue>false</IsListValue>
-                                                        <Name>ListIndex</Name>
                                                     </SerializationItem>
                                                     <SerializationItem>
                                                         <IsListValue>false</IsListValue>
@@ -614,8 +618,12 @@ Bottom - положение элемента снизу от якоря</Value>
                                                 <Properties>
                                                     <SerializationItem>
                                                         <IsListValue>false</IsListValue>
+                                                        <Name>Exists</Name>
+                                                    </SerializationItem>
+                                                    <SerializationItem>
+                                                        <IsListValue>false</IsListValue>
                                                         <Name>SearchPatterText</Name>
-                                                        <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\".Tag\",\"Value\":\"H2\"},{\"Key\":\".Text\",\"Value\":\"country name select option list\"},{\"Key\":\".SearchFrames\",\"Value\":\"False\"}],\"Items\":[]}],\"ContainerID\":\"41e691cd-89ce-488a-8e9c-a46079b99b09\",\"LastContainerName\":\"Открыть браузер\",\"LastContainerType\":1,\"AppType\":5}"</Value>
+                                                        <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\".Tag\",\"Value\":\"H2\",\"ValueKind\":0},{\"Key\":\".Text\",\"Value\":\"country name select option list\",\"ValueKind\":0},{\"Key\":\".SearchFrames\",\"Value\":\"False\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"41e691cd-89ce-488a-8e9c-a46079b99b09\",\"LastContainerName\":\"Открыть браузер\",\"LastContainerType\":1,\"AppType\":5}"</Value>
                                                     </SerializationItem>
                                                     <SerializationItem>
                                                         <IsListValue>false</IsListValue>
@@ -644,10 +652,6 @@ Bottom - положение элемента снизу от якоря</Value>
                                                     <SerializationItem>
                                                         <IsListValue>false</IsListValue>
                                                         <Name>ElementItems</Name>
-                                                    </SerializationItem>
-                                                    <SerializationItem>
-                                                        <IsListValue>false</IsListValue>
-                                                        <Name>Exists</Name>
                                                     </SerializationItem>
                                                     <SerializationItem>
                                                         <IsListValue>false</IsListValue>
@@ -818,7 +822,7 @@ Bottom - положение элемента снизу от якоря</Value>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
                                         <Name>Process</Name>
-                                        <Value xsi:type="xsd:string">@"D:\Citizen\ДобавлениеНовыхКлиентовCRM\MyCRM.exe"</Value>
+                                        <Value xsi:type="xsd:string">System.IO.Path.Combine(Environment.CurrentDirectory, @"Дополнительные материалы\MyCRM.exe")</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -937,6 +941,11 @@ Bottom - положение элемента снизу от якоря</Value>
                                 <Properties>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
+                                        <Name>AppTitle</Name>
+                                        <Value xsi:type="xsd:string">"My CRM (Sample App)"</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
                                         <Name>ComponentName</Name>
                                         <Value xsi:type="xsd:string">Присоединиться к приложению MyCRM</Value>
                                     </SerializationItem>
@@ -954,11 +963,6 @@ Bottom - положение элемента снизу от якоря</Value>
                                         <IsListValue>false</IsListValue>
                                         <Name>IsCurrentUser</Name>
                                         <Value xsi:type="xsd:boolean">false</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
-                                        <Name>AppTitle</Name>
-                                        <Value xsi:type="xsd:string">"My CRM (Sample App)"</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -1152,8 +1156,13 @@ Bottom - положение элемента снизу от якоря</Value>
                                                 <Properties>
                                                     <SerializationItem>
                                                         <IsListValue>false</IsListValue>
+                                                        <Name>Text</Name>
+                                                        <Value xsi:type="xsd:string">text_example</Value>
+                                                    </SerializationItem>
+                                                    <SerializationItem>
+                                                        <IsListValue>false</IsListValue>
                                                         <Name>SearchPatterText</Name>
-                                                        <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\"ControlType\",\"Value\":\"ControlType.Edit\"},{\"Key\":\"IsRoot\",\"Value\":\"False\"},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\"},{\"Key\":\"IsApplet\",\"Value\":\"False\"},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\"}],\"Items\":[]}],\"ContainerID\":\"992e5886-7269-4936-a81e-18766bdb9975\",\"LastContainerName\":\"Присоединиться к приложению MyCRM\",\"LastContainerType\":0,\"AppType\":5}"</Value>
+                                                        <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\"ControlType\",\"Value\":\"ControlType.Edit\",\"ValueKind\":0},{\"Key\":\"IsRoot\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\",\"ValueKind\":0},{\"Key\":\"IsApplet\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"992e5886-7269-4936-a81e-18766bdb9975\",\"LastContainerName\":\"Присоединиться к приложению MyCRM\",\"LastContainerType\":0,\"AppType\":5}"</Value>
                                                     </SerializationItem>
                                                     <SerializationItem>
                                                         <IsListValue>false</IsListValue>
@@ -1188,11 +1197,6 @@ Bottom - положение элемента снизу от якоря</Value>
                                                         <IsListValue>false</IsListValue>
                                                         <Name>UseScreenScraping</Name>
                                                         <Value xsi:type="xsd:boolean">false</Value>
-                                                    </SerializationItem>
-                                                    <SerializationItem>
-                                                        <IsListValue>false</IsListValue>
-                                                        <Name>Text</Name>
-                                                        <Value xsi:type="xsd:string">text_example</Value>
                                                     </SerializationItem>
                                                     <SerializationItem>
                                                         <IsListValue>false</IsListValue>
@@ -1281,8 +1285,12 @@ Bottom - положение элемента снизу от якоря</Value>
                                                 <Properties>
                                                     <SerializationItem>
                                                         <IsListValue>false</IsListValue>
+                                                        <Name>Exists</Name>
+                                                    </SerializationItem>
+                                                    <SerializationItem>
+                                                        <IsListValue>false</IsListValue>
                                                         <Name>SearchPatterText</Name>
-                                                        <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\"Name\",\"Value\":\"First:\"},{\"Key\":\"AutomationID\",\"Value\":\"label2\"},{\"Key\":\"ControlType\",\"Value\":\"ControlType.Text\"},{\"Key\":\"IsRoot\",\"Value\":\"False\"},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\"},{\"Key\":\"IsApplet\",\"Value\":\"False\"},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\"},{\"Key\":\"Text\",\"Value\":\"First:\"}],\"Items\":[]}],\"ContainerID\":\"992e5886-7269-4936-a81e-18766bdb9975\",\"LastContainerName\":\"Присоединиться к приложению MyCRM\",\"LastContainerType\":0,\"AppType\":5}"</Value>
+                                                        <Value xsi:type="xsd:string">"{\"Items\":[{\"Values\":[{\"Key\":\"Name\",\"Value\":\"First:\",\"ValueKind\":0},{\"Key\":\"AutomationID\",\"Value\":\"label2\",\"ValueKind\":0},{\"Key\":\"ControlType\",\"Value\":\"ControlType.Text\",\"ValueKind\":0},{\"Key\":\"IsRoot\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\"IsQuickSearch\",\"Value\":\"True\",\"ValueKind\":0},{\"Key\":\"IsApplet\",\"Value\":\"False\",\"ValueKind\":0},{\"Key\":\".DesktopType\",\"Value\":\"UIAUTOMATION\",\"ValueKind\":0},{\"Key\":\"Text\",\"Value\":\"First:\",\"ValueKind\":0}],\"Items\":[]}],\"ContainerID\":\"992e5886-7269-4936-a81e-18766bdb9975\",\"LastContainerName\":\"Присоединиться к приложению MyCRM\",\"LastContainerType\":0,\"AppType\":5}"</Value>
                                                     </SerializationItem>
                                                     <SerializationItem>
                                                         <IsListValue>false</IsListValue>
@@ -1311,10 +1319,6 @@ Bottom - положение элемента снизу от якоря</Value>
                                                     <SerializationItem>
                                                         <IsListValue>false</IsListValue>
                                                         <Name>ElementItems</Name>
-                                                    </SerializationItem>
-                                                    <SerializationItem>
-                                                        <IsListValue>false</IsListValue>
-                                                        <Name>Exists</Name>
                                                     </SerializationItem>
                                                     <SerializationItem>
                                                         <IsListValue>false</IsListValue>
@@ -1481,7 +1485,7 @@ Bottom - положение элемента снизу от якоря</Value>
                         <Value xsi:type="xsd:boolean">false</Value>
                     </SerializationItem>
                 </Properties>
-                <IsBreakpoint>true</IsBreakpoint>
+                <IsBreakpoint>false</IsBreakpoint>
                 <IsIgnore>false</IsIgnore>
             </SerializationComponent>
         </Components>

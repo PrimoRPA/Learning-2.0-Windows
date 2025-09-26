@@ -44,7 +44,7 @@ public class PrimoScript
 	
 	public void main(LTools.Common.Model.WorkflowData wf)
     {
-      //Компонент позволяет ввести текст в выбранный элемент управления.
+      //Компонент, выбирающий значения в комбо-боксе либо списке.
 	  //Данный элемент может использовать,как и для браузерных приложений, так и десктопных.
 	  //Чтобы посмотреть работу бразуера используйте if (true)
 	  //Чтобы посмотреть работу бразуера используйте if (false)
@@ -63,11 +63,12 @@ public class PrimoScript
      app.SelectItem("{\"Tag\":\"SELECT\",\"SearchFrames\":false,\"Attributes\":[{\"Key\":\"NAME\",\"Value\":\"country\"}]}", lstContry, false, 20000);
 	 }else{
 	   //Запускаем приложение MyCRM. Оно будет расположено в дополнительных материалах
-       System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, @"D:\Citizen\ДобавлениеНовыхКлиентовCRM\MyCRM.exe","", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
-
-        LTools.Desktop.DesktopApp appAttached = LTools.Desktop.DesktopApp.Init(wf, "", "My CRM (Sample App)", 10000, false, LTools.Desktop.Model.DesktopTypes.UIAUTOMATION);
-		List&lt;String&gt; lstState = new List&lt;String&gt;() {"NC"};
-        appAttached.SelectItem("{\"Name\":\"State:\",\"AutomationID\":\"comboBoxPeopleAddressState\",\"ControlType\":\"ControlType.ComboBox\",\"AUIProperties\":[],\"TextSearchMode\":0,\"IsRoot\":false,\"IsQuickSearch\":false,\"IsApplet\":false,\"DesktopType\":0}", lstState, false, 20000);
+     System.Diagnostics.Process app = LTools.Desktop.DesktopApp.Start(wf, System.IO.Path.Combine(Environment.CurrentDirectory, @"Дополнительные материалы\MyCRM.exe"),"", "", LTools.Desktop.Model.DesktopTypes.UIAUTOMATION, true);
+	   //Присоединяемся к приложению  My CRM
+     LTools.Desktop.DesktopApp appAttached = LTools.Desktop.DesktopApp.Init(wf, "", "My CRM (Sample App)", 10000, false, LTools.Desktop.Model.DesktopTypes.UIAUTOMATION);
+	   //В выпадающем списке выбираем NC вместо NY
+	 List&lt;String&gt; lstState = new List&lt;String&gt;() {"NC"};
+     appAttached.SelectItem("{\"Name\":\"State:\",\"AutomationID\":\"comboBoxPeopleAddressState\",\"ControlType\":\"ControlType.ComboBox\",\"AUIProperties\":[],\"TextSearchMode\":0,\"IsRoot\":false,\"IsQuickSearch\":false,\"IsApplet\":false,\"DesktopType\":0}", lstState, false, 20000);
     }
 	}
 }
