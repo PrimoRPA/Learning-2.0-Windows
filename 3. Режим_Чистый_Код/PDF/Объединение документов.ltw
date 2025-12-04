@@ -54,7 +54,10 @@ public class PrimoScript
 		LTools.Office.PdfApp.Merge(wf, fileName1, fileName2, dest);
 	*/
 		
-	LTools.Office.PdfApp.Merge(wf, @".\Дополнительные материалы\PDF\Входные данные\PrimoInfo.pdf", @".\Дополнительные материалы\PDF\Входные данные\PrimoInfoNew.pdf", @".\Дополнительные материалы\PDF\Выходные данные\PrimoInfoAll.pdf");
+	LTools.Office.PdfApp.Merge(wf, 
+		/*Путь до файла 1*/@".\Дополнительные материалы\PDF\Входные данные\PrimoInfo.pdf", 
+		/*Путь до файла 2*/@".\Дополнительные материалы\PDF\Входные данные\PrimoInfoNew.pdf", 
+		/*Путь до итогового файла*/@".\Дополнительные материалы\PDF\Выходные данные\PrimoInfoAll.pdf");
     }
 }</Value>
             </SerializationItem>

@@ -60,7 +60,11 @@ public class PrimoScript
 	LTools.Office.Model.Pdf.PdfFileInfo txt = LTools.Office.PdfApp.FileInfo(wf, fileName, [password]);
 	*/
 		
-	LTools.Office.Model.Pdf.PdfFileInfo PdfFileInfo = LTools.Office.PdfApp.FileInfo(wf, @".\Дополнительные материалы\PDF\Входные данные\PrimoInfo.pdf");   
+		LTools.Office.Model.Pdf.PdfFileInfo PdfFileInfo = LTools.Office.PdfApp.FileInfo(wf, @".\Дополнительные материалы\PDF\Входные данные\PrimoInfo.pdf");   
+		//Компонент, производящий отображение окна с заданным сообщением.  Свойства
+		//wf: [LTools.Common.Model.WorkflowData] ссылка на вызывающий алгоритм
+		//text - Текст: [String] Отображаемое сообщение
+		LTools.Workflow.PrimoApp.MessageBox(wf, PdfFileInfo.Created.ToString() +Environment.NewLine+PdfFileInfo.Author.ToString());
     }
 }</Value>
             </SerializationItem>

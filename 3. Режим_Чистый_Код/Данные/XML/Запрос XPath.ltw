@@ -37,20 +37,71 @@ using System.Collections.Generic;
 using System.Text;
 using LTools.Scripting.Model;
 using LTools.Network.Model;
+using System.Xml;
 
 public class PrimoScript
 {
-	public static LTools.Scripting.CSharp.ScriptDebugger __debug;
-	
-	public void main(LTools.Common.Model.WorkflowData wf)
+    public static LTools.Scripting.CSharp.ScriptDebugger __debug;
+    
+    public void main(LTools.Common.Model.WorkflowData wf)
     {
-     	/*
-		Компонент, осуществляющий поиск в документе XML в соответствии с запросом XPath.  Свойства:
-		xml - Данные (строка): [String] Входные данные - XML строка
+        /*
+        Компонент, осуществляющий поиск в документе XML в соответствии с запросом XPath.
+        Свойства:
+		
+        xml - Данные (строка): [String] Входные данные - XML строка
+        xpath - Запрос XPath: [String] XPath выражение для поиска
+     
+		Примеры:
+		book - все элементы book
+		book[price &gt; 40] - книги с ценой &gt; 40
 		*/
-	System.Xml.XmlDocument ret = new System.Xml.XmlDocument();
-	et.LoadXml(xml);
-	System.Xml.XmlNodeList list = ret.SelectNodes(xp, LTools.Data.Helpers.XMLHelper.CreateNamespaceManager(ret));   
+		
+        // Пример XML строки
+        string xml = @"&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+&lt;bookstore xmlns:bk='http://example.com/books'&gt;
+    &lt;book category='cooking'&gt;
+        &lt;title lang='en'&gt;Everyday Italian&lt;/title&gt;
+        &lt;author&gt;Giada De Laurentiis&lt;/author&gt;
+        &lt;year&gt;2005&lt;/year&gt;
+        &lt;price&gt;30.00&lt;/price&gt;
+    &lt;/book&gt;
+    &lt;book category='children'&gt;
+        &lt;title lang='en'&gt;Harry Potter&lt;/title&gt;
+        &lt;author&gt;J.K. Rowling&lt;/author&gt;
+        &lt;year&gt;2005&lt;/year&gt;
+        &lt;price&gt;29.99&lt;/price&gt;
+    &lt;/book&gt;
+    &lt;book category='web'&gt;
+        &lt;title lang='en'&gt;XQuery Kick Start&lt;/title&gt;
+        &lt;author&gt;James McGovern&lt;/author&gt;
+        &lt;year&gt;2003&lt;/year&gt;
+        &lt;price&gt;49.99&lt;/price&gt;
+    &lt;/book&gt;
+    &lt;bk:specialBook category='limited'&gt;
+        &lt;bk:title lang='en'&gt;Special Edition&lt;/bk:title&gt;
+        &lt;bk:price&gt;99.99&lt;/bk:price&gt;
+    &lt;/bk:specialBook&gt;
+&lt;/bookstore&gt;";
+
+        // Создаем XML документ
+        System.Xml.XmlDocument doc = new System.Xml.XmlDocument();
+        doc.LoadXml(xml);
+
+        // Пример 1: Простой XPath запрос - все книги
+        string xpath1 = "//book";
+        System.Xml.XmlNodeList bookList = doc.SelectNodes(xpath1, LTools.Data.Helpers.XMLHelper.CreateNamespaceManager(doc));
+        
+        LTools.Workflow.PrimoApp.AddToLog(wf, $"Найдено книг: {bookList.Count}", LTools.Enums.LogMessageType.Info);
+        
+        foreach (XmlNode book in bookList)
+        {
+            string title = book.SelectSingleNode("title")?.InnerText ?? "нет названия";
+            string author = book.SelectSingleNode("author")?.InnerText ?? "нет автора";
+            string price = book.SelectSingleNode("price")?.InnerText ?? "нет цены";
+            
+            LTools.Workflow.PrimoApp.AddToLog(wf, $"Книга: {title}, Автор: {author}, Цена: {price}", LTools.Enums.LogMessageType.Info);
+        }		
     }
 }</Value>
             </SerializationItem>
@@ -61,4 +112,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -44,16 +44,20 @@ public class PrimoScript
 	
 	public void main(LTools.Common.Model.WorkflowData wf)
     {
-      	/*	
-		Компонент, создающий новый архив файлов.  Свойства
-	  - wf: [LTools.Common.Model.WorkflowData] ссылка на вызывающий алгоритм
-	  - path - Путь: Cтроковое значение, которое указывает путь к файлам, которые нужно архивировать.
-	  - file - Архив: Cтроковое значение, которое указывает путь к создаваемому архиву.
-	  - format - [LTools.Data.Model.ArchiveFormats] Формат: Формат архива
-	  - password - Пароль: Пароль архива. Указывется в том случае, если архив защищён паролем
-	  - szPath - Путь к 7-zip: [String] Путь к 7zip.dll (C:\Program Files\7-Zip\7z.dll)
-		*/
-	LTools.Data.ArchiveApp.Compress(wf, @".\Дополнительные материалы\Архив\Выходные данные\", @".\Дополнительные материалы\Архив\Выходные данные\", format, [password], "C:\Program Files\7-Zip\7z.dll");  
+		//Компонент, создающий новый архив файлов.  Свойства
+		//wf: [LTools.Common.Model.WorkflowData] ссылка на вызывающий алгоритм
+		//path - Путь: [String] Путь к файлам архива (c:\folder\)
+		//file - Архив: [String] Путь к создаваемому архиву (c:\folder\file.zip)
+		//format - [LTools.Data.Model.ArchiveFormats] Формат: Формат архива
+		//password - Пароль: [String] Пароль архива
+		//szPath - Путь к 7-zip: [String] Путь к 7zip.dll (C:\Program Files\7-Zip\7z.dll)
+		
+		LTools.Data.ArchiveApp.Compress(wf, 
+									/*Папка которую необходимо архивировать*/@".\Дополнительные материалы\Архив\Входные данные\Архивировать\", 
+									/*Путь до конечного результата*/@".\Дополнительные материалы\Архив\Выходные данные\Архивировать\OutArc.zip", 
+									/*Формат архива*/LTools.Data.Model.ArchiveFormats.Zip, 
+									/*Пароль к архиву (если необходим)*/"", 
+									/*путь до библиотеки  Путь к 7zip.dll*/@"C:\Program Files\7-Zip\7z.dll");
     }
 }</Value>
             </SerializationItem>

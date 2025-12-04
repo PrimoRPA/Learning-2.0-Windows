@@ -40,15 +40,27 @@ using LTools.Network.Model;
 
 public class PrimoScript
 {
-	public static LTools.Scripting.CSharp.ScriptDebugger __debug;
-	
-	public void main(LTools.Common.Model.WorkflowData wf)
+    public static LTools.Scripting.CSharp.ScriptDebugger __debug;
+    
+    public void main(LTools.Common.Model.WorkflowData wf)
     {
-     	/*
-		Компонент преобразует XML в объект.  Свойства
-		- xml - Данные: [String] Исходная строка XML, которую нужно преобразовать в объект
-		*/
-		System.Xml.XmlDocument ret = System.Xml.XmlDocument().LoadXml(xml);   
+        /*
+        Компонент преобразует XML в объект. Свойства
+        - xml - Данные: [String] Исходная строка XML, которую нужно преобразовать в объект
+        */
+        string str_xml = @"&lt;root&gt;
+                        &lt;tag id='tagId1'&gt;
+                            inner text 1
+                        &lt;/tag&gt;
+                        &lt;tag id='tagId2'&gt;
+                            inner text 2
+                        &lt;/tag&gt;
+                        &lt;/root&gt;";
+        
+        System.Xml.XmlDocument xmlDoc = new System.Xml.XmlDocument();
+        xmlDoc.LoadXml(str_xml);
+        
+        LTools.Workflow.PrimoApp.AddToLog(wf, "XML преобразован в объект: " + xmlDoc.OuterXml, LTools.Enums.LogMessageType.Info);
     }
 }</Value>
             </SerializationItem>
@@ -59,4 +71,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

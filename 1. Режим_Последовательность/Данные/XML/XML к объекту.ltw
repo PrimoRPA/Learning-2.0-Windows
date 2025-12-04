@@ -92,7 +92,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Variable</Name>
-                        <Value xsi:type="xsd:string">xml</Value>
+                        <Value xsi:type="xsd:string">str_xml</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -184,7 +184,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Data</Name>
-                        <Value xsi:type="xsd:string">xml</Value>
+                        <Value xsi:type="xsd:string">str_xml</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -212,6 +212,9 @@
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
                         <Value xsi:type="xsd:string">Компонент, осуществляющий преобразование XML в объект
+
+Вход: XML-строка (string)
+Выход: Динамический объект (object), представляющий иерархию XML
 
 Для работы с активность необходимо заполнить следующие обязательные свойства:
 
@@ -271,7 +274,7 @@
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>xml</Name>
+            <Name>str_xml</Name>
             <Group />
             <Comment>Строка XML</Comment>
             <DataTypeString>System.String</DataTypeString>
@@ -286,4 +289,5 @@
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

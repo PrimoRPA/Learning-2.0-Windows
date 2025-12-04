@@ -54,7 +54,9 @@ public class PrimoScript
 	  string txt = LTools.Office.PdfApp.ReadText(wf, fileName, [password], [pages]);
 	*/
 		
-	string txt = LTools.Office.PdfApp.ReadText(wf, @".\Дополнительные материалы\PDF\Входные данные\PrimoInfo.pdf", "", "1");
+		string textPdf = LTools.Office.PdfApp.ReadText(wf, @".\Дополнительные материалы\PDF\Входные данные\PrimoInfo.pdf", "", "1");
+		/*Вывод результата в консоль*/
+		LTools.Workflow.PrimoApp.AddToLog(wf, textPdf, LTools.Enums.LogMessageType.Info);
     }
 }</Value>
             </SerializationItem>

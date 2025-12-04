@@ -53,7 +53,11 @@ public class PrimoScript
 		int cnt = LTools.Office.PdfApp.PageCount(wf, fileName, [password]);	
 	*/
 		
-	int cnt = LTools.Office.PdfApp.PageCount(wf, @".\Дополнительные материалы\PDF\Входные данные\PrimoInfo.pdf");   
+		int pageCount = LTools.Office.PdfApp.PageCount(wf, @".\Дополнительные материалы\PDF\Входные данные\PrimoInfo.pdf");
+		//Компонент, производящий отображение окна с заданным сообщением.  Свойства
+		//wf: [LTools.Common.Model.WorkflowData] ссылка на вызывающий алгоритм
+		//text - Текст: [String] Отображаемое сообщение
+		LTools.Workflow.PrimoApp.MessageBox(wf, "Количество страниц в документе: "+pageCount.ToString());
     }
 }</Value>
             </SerializationItem>

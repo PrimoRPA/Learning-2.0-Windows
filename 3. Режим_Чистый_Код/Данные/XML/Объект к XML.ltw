@@ -37,25 +37,55 @@ using System.Collections.Generic;
 using System.Text;
 using LTools.Scripting.Model;
 using LTools.Network.Model;
+using System.Xml;
 
 public class PrimoScript
 {
-	public static LTools.Scripting.CSharp.ScriptDebugger __debug;
-	
-	public void main(LTools.Common.Model.WorkflowData wf)
+    public static LTools.Scripting.CSharp.ScriptDebugger __debug;
+    
+    public void main(LTools.Common.Model.WorkflowData wf)
     {
-     //Компонент преобразует объект в строку XML.  Свойства
-	//html - Данные: [Object] Исходный объект
-	System.Xml.XmlSerializer xsSubmit = new System.Xml.XmlSerializer(xml.GetType());
-	var xmlstr = "xml";
-	using (var sww = new StringWriter())
-	{
-    	using (System.Xml.XmlWriter writer = System.Xml.XmlWriter.Create(sww))
-    	{
-        	xsSubmit.Serialize(writer, xml);
-        	xmlstr = sww.ToString(); 
-   		}
-}   
+        // 1. Создаем XML строку вручную
+        string xmlContent = @"&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+		&lt;Person&gt;
+    	&lt;Name&gt;Анна&lt;/Name&gt;
+    	&lt;Age&gt;25&lt;/Age&gt;
+    	&lt;City&gt;Москва&lt;/City&gt;
+		&lt;/Person&gt;";
+
+        LTools.Workflow.PrimoApp.AddToLog(wf, "=== ИСХОДНАЯ XML СТРОКА ===", LTools.Enums.LogMessageType.Info);
+        LTools.Workflow.PrimoApp.AddToLog(wf, $"Тип: {xmlContent.GetType()}", LTools.Enums.LogMessageType.Info);
+        LTools.Workflow.PrimoApp.AddToLog(wf, xmlContent, LTools.Enums.LogMessageType.Info);
+
+        // 2. Преобразуем строку в XML объект
+        XmlDocument xmlDoc = new XmlDocument();
+        xmlDoc.LoadXml(xmlContent);
+        
+        LTools.Workflow.PrimoApp.AddToLog(wf, "=== XML ОБЪЕКТ ===", LTools.Enums.LogMessageType.Info);
+        LTools.Workflow.PrimoApp.AddToLog(wf, $"Тип: {xmlDoc.GetType()}", LTools.Enums.LogMessageType.Info);
+        LTools.Workflow.PrimoApp.AddToLog(wf, $"Корневой элемент: {xmlDoc.DocumentElement.Name}", LTools.Enums.LogMessageType.Info);
+
+        // 3. Извлекаем данные из XML
+        string name = xmlDoc.SelectSingleNode("/Person/Name").InnerText;
+        string age = xmlDoc.SelectSingleNode("/Person/Age").InnerText;
+        string city = xmlDoc.SelectSingleNode("/Person/City").InnerText;
+
+        LTools.Workflow.PrimoApp.AddToLog(wf, "=== ДАННЫЕ ИЗ XML ===", LTools.Enums.LogMessageType.Info);
+        LTools.Workflow.PrimoApp.AddToLog(wf, $"Имя: {name}", LTools.Enums.LogMessageType.Info);
+        LTools.Workflow.PrimoApp.AddToLog(wf, $"Возраст: {age}", LTools.Enums.LogMessageType.Info);
+        LTools.Workflow.PrimoApp.AddToLog(wf, $"Город: {city}", LTools.Enums.LogMessageType.Info);
+
+        // 4. Создаем объект из данных XML
+        object personObject = new
+        {
+            Name = name,
+            Age = int.Parse(age),
+            City = city
+        };
+
+        LTools.Workflow.PrimoApp.AddToLog(wf, "=== ОБЪЕКТ ИЗ XML ДАННЫХ ===", LTools.Enums.LogMessageType.Info);
+        LTools.Workflow.PrimoApp.AddToLog(wf, $"Тип: {personObject.GetType()}", LTools.Enums.LogMessageType.Info);
+        LTools.Workflow.PrimoApp.AddToLog(wf, $"Значение: {personObject}", LTools.Enums.LogMessageType.Info);
     }
 }</Value>
             </SerializationItem>
@@ -66,4 +96,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

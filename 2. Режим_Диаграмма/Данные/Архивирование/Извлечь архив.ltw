@@ -13,6 +13,15 @@
             <Properties>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ComponentName</Name>
+                    <Value xsi:type="xsd:string">Начало диаграммы</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TType</Name>
                     <Value xsi:type="xsd:int">1</Value>
                 </SerializationItem>
@@ -32,8 +41,7 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>ComponentName</Name>
-                    <Value xsi:type="xsd:string">Начало диаграммы</Value>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -42,10 +50,6 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -107,17 +111,35 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Для работы элементов из группы Архивирование необходимо иметь программу 7-Zip и заполнить следующие обязательные свойства:
+
+ - Архив*:  Cтроковое значение, которое указывает путь к архиву, который нужно распаковать.
+  - Путь*: Cтроковое значение, которое указывает путь к папке, в которую будут извлечены файлы.
+  - Путь к 7-zip*:  Строковое значение, которое указывает путь к 7zip.dll. Пример: @"C:\Program Files\7-Zip\7z.dll". 
+На данный момент программа 7-zip должна быть установлена только в эту папку
+
+Дополнительыне свойства заполняются в случае необходимости:
+
+- Пароль: Пароль архива. Указывется в том случае, если архив защищён паролем</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">443.03666666666663</Value>
+                    <Value xsi:type="xsd:double">443</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">237.04</Value>
+                    <Value xsi:type="xsd:double">145.03999999999996</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -136,20 +158,6 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Для работы элементов из группы Архивирование необходимо иметь программу 7-Zip и заполнить следующие обязательные свойства:
-
- - Архив*:  Cтроковое значение, которое указывает путь к архиву, который нужно распаковать.
-  - Путь*: Cтроковое значение, которое указывает путь к папке, в которую будут извлечены файлы.
-  - Путь к 7-zip*:  Строковое значение, которое указывает путь к 7zip.dll. Пример: @"C:\Program Files\7-Zip\7z.dll". 
-На данный момент программа 7-zip должна быть установлена только в эту папку
-
-Дополнительыне свойства заполняются в случае необходимости:
-
-- Пароль: Пароль архива. Указывется в том случае, если архив защищён паролем</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -306,140 +314,6 @@
             </Components>
         </SerializationComponent>
         <SerializationComponent xsi:type="SerializationContainer">
-            <ClassName>LTools.Workflow.Elements.Workflow.WFWorkflowPath</ClassName>
-            <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
-            <Properties>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>TextTag</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>true</IsListValue>
-                    <Name>PointsList</Name>
-                    <ListValue />
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Index</Name>
-                    <Value xsi:type="xsd:int">0</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>BeginItemPointIndex</Name>
-                    <Value xsi:type="xsd:int">2</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>EndItemPointIndex</Name>
-                    <Value xsi:type="xsd:int">0</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>StartElementID</Name>
-                    <Value xmlns:q4="http://microsoft.com/wsdl/types/" xsi:type="q4:guid">761875d1-601d-486f-87ac-030fae18d250</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>EndElementID</Name>
-                    <Value xmlns:q5="http://microsoft.com/wsdl/types/" xsi:type="q5:guid">137ea01a-f543-4864-8fa3-d921bbd6fdf7</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Result</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>PathType</Name>
-                    <Value xsi:type="xsd:int">0</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>X</Name>
-                    <Value xsi:type="xsd:double">-1</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Y</Name>
-                    <Value xsi:type="xsd:double">-1</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>IsSingleElemented</Name>
-                    <Value xsi:type="xsd:boolean">false</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Variables</Name>
-                    <Value xsi:type="ArrayOfScriptVariable" />
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>ComponentName</Name>
-                    <Value xsi:type="xsd:string">Связь</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>WaitBefore</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>ComponentID</Name>
-                    <Value xmlns:q6="http://microsoft.com/wsdl/types/" xsi:type="q6:guid">619ba42a-b9d7-4574-a383-5a5842608e17</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>ContinueOnException</Name>
-                    <Value xsi:type="xsd:boolean">false</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>PreventLogging</Name>
-                    <Value xsi:type="xsd:boolean">false</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>SSSuccess</Name>
-                    <Value xsi:type="xsd:boolean">false</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>SSFail</Name>
-                    <Value xsi:type="xsd:boolean">false</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>true</IsListValue>
-                    <Name>NoCodeProperties</Name>
-                    <ListValue />
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>NoCodeUsed</Name>
-                    <Value xsi:type="xsd:boolean">false</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>IsCollapsed</Name>
-                    <Value xsi:type="xsd:boolean">false</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>ShowAnnotation</Name>
-                    <Value xsi:type="xsd:boolean">false</Value>
-                </SerializationItem>
-            </Properties>
-            <IsBreakpoint>false</IsBreakpoint>
-            <IsIgnore>false</IsIgnore>
-            <Components />
-        </SerializationComponent>
-        <SerializationComponent xsi:type="SerializationContainer">
             <ClassName>LTools.Workflow.Elements.Workflow.WFWorkflowContainerSequence</ClassName>
             <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
             <Properties>
@@ -447,6 +321,17 @@
                     <IsListValue>false</IsListValue>
                     <Name>ComponentName</Name>
                     <Value xsi:type="xsd:string">Комментарий</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Компонент, распаковывающий архив файлов.
+
+На вход дается архив, расположенный по пути:
+.\Дополнительные материалы\Архив\Входные данные\123.rar
+
+На выход должен появиться файл по пути:
+.\Дополнительные материалы\Архив\Выходные данные\123.txt</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -461,6 +346,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
                     <Value xsi:type="xsd:double">145.04</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -482,13 +371,8 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Компонент, распаковывающий архив файлов.</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
                     <Name>ComponentID</Name>
-                    <Value xmlns:q7="http://microsoft.com/wsdl/types/" xsi:type="q7:guid">03b45f9c-64b2-4af8-b4f4-fcf475b72c1c</Value>
+                    <Value xmlns:q4="http://microsoft.com/wsdl/types/" xsi:type="q4:guid">03b45f9c-64b2-4af8-b4f4-fcf475b72c1c</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -566,7 +450,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>ComponentID</Name>
-                            <Value xmlns:q8="http://microsoft.com/wsdl/types/" xsi:type="q8:guid">e106b980-cfa9-4bca-b4be-1f4dc8fcdde2</Value>
+                            <Value xmlns:q5="http://microsoft.com/wsdl/types/" xsi:type="q5:guid">e106b980-cfa9-4bca-b4be-1f4dc8fcdde2</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -613,6 +497,149 @@
                     <IsIgnore>false</IsIgnore>
                 </SerializationComponent>
             </Components>
+        </SerializationComponent>
+        <SerializationComponent xsi:type="SerializationContainer">
+            <ClassName>LTools.Workflow.Elements.Workflow.WFWorkflowPath</ClassName>
+            <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+            <Properties>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Result</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>TextTag</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>true</IsListValue>
+                    <Name>PointsList</Name>
+                    <ListValue />
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Index</Name>
+                    <Value xsi:type="xsd:int">0</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>BeginItemPointIndex</Name>
+                    <Value xsi:type="xsd:int">2</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>EndItemPointIndex</Name>
+                    <Value xsi:type="xsd:int">0</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>StartElementID</Name>
+                    <Value xmlns:q6="http://microsoft.com/wsdl/types/" xsi:type="q6:guid">761875d1-601d-486f-87ac-030fae18d250</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>EndElementID</Name>
+                    <Value xmlns:q7="http://microsoft.com/wsdl/types/" xsi:type="q7:guid">137ea01a-f543-4864-8fa3-d921bbd6fdf7</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>PathType</Name>
+                    <Value xsi:type="xsd:int">0</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>X</Name>
+                    <Value xsi:type="xsd:double">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Y</Name>
+                    <Value xsi:type="xsd:double">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>IsSingleElemented</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Variables</Name>
+                    <Value xsi:type="ArrayOfScriptVariable" />
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ComponentName</Name>
+                    <Value xsi:type="xsd:string">Связь</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>WaitBefore</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>WaitAfter</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ComponentID</Name>
+                    <Value xmlns:q8="http://microsoft.com/wsdl/types/" xsi:type="q8:guid">619ba42a-b9d7-4574-a383-5a5842608e17</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ContinueOnException</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>PreventLogging</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>SSSuccess</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>SSFail</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>true</IsListValue>
+                    <Name>NoCodeProperties</Name>
+                    <ListValue />
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>NoCodeUsed</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>IsCollapsed</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ShowAnnotation</Name>
+                    <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+            </Properties>
+            <IsBreakpoint>false</IsBreakpoint>
+            <IsIgnore>false</IsIgnore>
+            <Components />
         </SerializationComponent>
     </Components>
     <GlobalVariables />

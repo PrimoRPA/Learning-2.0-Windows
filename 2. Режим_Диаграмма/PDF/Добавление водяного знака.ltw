@@ -92,6 +92,10 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -186,6 +190,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -291,7 +299,7 @@
   - Путь к файлу: Путь к файлу PDF, в который необходимо добавить водяной знак
   - Путь к результату: Путь к результирующему файлу PDF, представляющиму собой исходный текст и водяой знак
  
-Дополнительыне свойства заполняются в случае необходимости:
+Дополнительные свойства заполняются в случае необходимости:
  - Пароль: Пароль документа PDF. Указывется в том случае, если PDF документ защищён паролем
  - Защищенный пароль: Пароль документа PDF, указанный в формате защищенной строки. Получить можно, например, из «Диспетчера учетных данных» или "Primo RPA Orchestrator"
 - Страницы: Номера страниц документа, на которые необходимо добавить водяной знак. В случае, если параметр не указан водяно знак будет добавлен на все страницы документа</Value>
@@ -372,6 +380,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">true</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -631,6 +643,15 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>

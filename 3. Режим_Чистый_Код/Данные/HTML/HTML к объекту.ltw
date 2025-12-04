@@ -44,15 +44,29 @@ public class PrimoScript
 	
 	public void main(LTools.Common.Model.WorkflowData wf)
     {
-     //Компонент, отправляющий запрос на удаленный Web-сервис по протоколу HTTP(S).  Свойства
-//wf: [LTools.Common.Model.WorkflowData] ссылка на вызывающий алгоритм
-//request - Переменная запроса: [LTools.Network.Model.TrafficHistoryItem] Переменная, содержащая информацию о производимом запросе
-//to - Таймаут: [Int32] Предельное время ожидания завершения процесса (мс)
-LTools.Network.Model.TrafficEmitterResponse resp = LTools.Network.NetworkApp.WebRequest(wf, request, [to]);   
-    //Компонент, осуществляющий преобразование HTML в объект и поиск в нем. Если указан XPath, результат будет иметь тип List&lt;AngleSharp.Dom.INode&gt;,в противом случае AngleSharp.Html.Dom.IHtmlDocument  Свойства
-//html - Данные: [String] Строка HTML
-//xp - XPath: [String] Строка выражения XPath 'https://ru.wikipedia.org/wiki/XPath'
-List&lt;AngleSharp.Dom.INode&gt; ret = AngleSharp.XPath.Extensions.SelectNodes(new AngleSharp.Html.Parser.HtmlParser().ParseDocument(html).DocumentElement, xp);
+    	//Компонент, отправляющий запрос на удаленный Web-сервис по протоколу HTTP(S).  Свойства
+		//wf: [LTools.Common.Model.WorkflowData] ссылка на вызывающий алгоритм
+		//request - Переменная запроса: [LTools.Network.Model.TrafficHistoryItem] Переменная, содержащая информацию о производимом запросе
+		//to - Таймаут: [Int32] Предельное время ожидания завершения процесса (мс)
+		LTools.Network.Model.TrafficHistoryItem req = new LTools.Network.Model.TrafficHistoryItem();
+		req.URL = "https://www.w3schools.com/html/html_tables.asp";
+		req.Method = "GET";
+		LTools.Network.Model.TrafficEmitterResponse resp = LTools.Network.NetworkApp.WebRequest(wf, req, 10000);   
+		
+    	//Компонент, осуществляющий преобразование HTML в объект и поиск в нем. Если указан XPath, результат будет иметь тип List&lt;AngleSharp.Dom.INode&gt;,в противом случае AngleSharp.Html.Dom.IHtmlDocument  Свойства
+		//html - Данные: [String] Строка HTML
+		//xp - XPath: [String] Строка выражения XPath 'https://ru.wikipedia.org/wiki/XPath'
+		List&lt;AngleSharp.Dom.INode&gt; ret = AngleSharp.XPath.Extensions.SelectNodes(new AngleSharp.Html.Parser.HtmlParser().ParseDocument(resp.Body).DocumentElement, "//table[@id='customers']");
+		
+		//Компонент-цикл, перебирающий все значения выбранного массива.  Свойства
+		foreach (AngleSharp.Dom.INode val in ret)
+		{
+			//Компонент, производящий запись сообщения в пользовательский журнал.  Свойства
+			//wf: [LTools.Common.Model.WorkflowData] ссылка на вызывающий алгоритм
+			//msg - Текст: [String] Текст сообщения
+			//messageType - Тип: Тип сообщения
+			LTools.Workflow.PrimoApp.AddToLog(wf, val.TextContent, LTools.Enums.LogMessageType.Info);
+		}
 	}
 }</Value>
             </SerializationItem>

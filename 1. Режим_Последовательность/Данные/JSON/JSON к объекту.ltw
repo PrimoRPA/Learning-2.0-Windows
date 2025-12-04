@@ -221,7 +221,7 @@ X-Powered-By: Express
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Variable</Name>
-                        <Value xsi:type="xsd:string">ret</Value>
+                        <Value xsi:type="xsd:string">resp_request</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -305,12 +305,12 @@ X-Powered-By: Express
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Data</Name>
-                        <Value xsi:type="xsd:string">ret.Body</Value>
+                        <Value xsi:type="xsd:string">resp_request.Body</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Variable</Name>
-                        <Value xsi:type="xsd:string">obj</Value>
+                        <Value xsi:type="xsd:string">obj_result</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -332,7 +332,12 @@ X-Powered-By: Express
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Для работы с активность необходимо заполнить следующие обязательные свойства:
+                        <Value xsi:type="xsd:string">Компонент преобразует JSON в объект.
+
+Вход: JSON-строка (string)
+Выход: Динамический объект (object), представляющий иерархию JSON
+
+Для работы с активность необходимо заполнить следующие обязательные свойства:
 
  - Переменная*: [Newtonsoft.Json.Linq.JObject] Переменная, получающая результирующий объект 
 - Данные*: [String] Строка JSON, которую нужно преобразовать в объект. Может быть указана как строковая переменная</Value>
@@ -386,18 +391,102 @@ X-Powered-By: Express
                 <IsBreakpoint>false</IsBreakpoint>
                 <IsIgnore>false</IsIgnore>
             </SerializationComponent>
+            <SerializationComponent>
+                <ClassName>LTools.Workflow.Elements.WFAddToLog</ClassName>
+                <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
+                <Properties>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Message</Name>
+                        <Value xsi:type="xsd:string">obj_result.ToString()</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>MessageType</Name>
+                        <Value xsi:type="xsd:int">1</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>TextTag</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>ComponentName</Name>
+                        <Value xsi:type="xsd:string">Запись в журнал</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>WaitBefore</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>WaitAfter</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>Annotation</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>ComponentID</Name>
+                        <Value xmlns:q4="http://microsoft.com/wsdl/types/" xsi:type="q4:guid">62c219e5-08bd-428c-a4dc-76192151f68d</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>ContinueOnException</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>PreventLogging</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>SSSuccess</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>SSFail</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>true</IsListValue>
+                        <Name>NoCodeProperties</Name>
+                        <ListValue />
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>NoCodeUsed</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>IsCollapsed</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>ShowAnnotation</Name>
+                        <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                </Properties>
+                <IsBreakpoint>false</IsBreakpoint>
+                <IsIgnore>false</IsIgnore>
+            </SerializationComponent>
         </Components>
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>obj</Name>
+            <Name>obj_result</Name>
             <Group />
             <Comment>Объект JSON</Comment>
             <DataTypeString>Newtonsoft.Json.Linq.JObject</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>ret</Name>
+            <Name>resp_request</Name>
             <Group />
             <Comment>Ответ сервиса</Comment>
             <DataTypeString>LTools.Network.Model.TrafficEmitterResponse</DataTypeString>
@@ -405,4 +494,5 @@ X-Powered-By: Express
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

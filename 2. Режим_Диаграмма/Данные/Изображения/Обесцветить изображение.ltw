@@ -41,6 +41,10 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>WaitBefore</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -107,17 +111,26 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Помещаем изображение в переменную img</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">463.35833333333335</Value>
+                    <Value xsi:type="xsd:double">443</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">201.03999999999994</Value>
+                    <Value xsi:type="xsd:double">164.03999999999996</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -136,11 +149,6 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Помещаем изображение в переменную img</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -207,7 +215,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>VariableBitmap</Name>
-                            <Value xsi:type="xsd:string">img</Value>
+                            <Value xsi:type="xsd:string">imgInput</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -301,6 +309,14 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Для работы с активность необходимо заполнить следующие обязательные свойства:
+
+  - Изображение: Исходное изображение, которое нужно обесцветить.
+  - Результат: Полученное изображение</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -311,7 +327,11 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">377.03999999999996</Value>
+                    <Value xsi:type="xsd:double">410.03999999999996</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -330,14 +350,6 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Для работы с активность необходимо заполнить следующие обязательные свойства:
-
-  - Изображение: Исходное изображение, которое нужно обесцветить.
-  - Результат: Полученное изображение</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -395,12 +407,12 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Data</Name>
-                            <Value xsi:type="xsd:string">img</Value>
+                            <Value xsi:type="xsd:string">imgInput</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Variable</Name>
-                            <Value xsi:type="xsd:string">rimg</Value>
+                            <Value xsi:type="xsd:string">imgOut</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -491,17 +503,26 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Компонент, записывающий содержимое переменной rimg в файл</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">448.33500000000009</Value>
+                    <Value xsi:type="xsd:double">443</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">686.04</Value>
+                    <Value xsi:type="xsd:double">749.04</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -520,11 +541,6 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Компонент, записывающий содержимое переменной rimg в файл</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -595,7 +611,7 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>Bitmap</Name>
-                            <Value xsi:type="xsd:string">rimg</Value>
+                            <Value xsi:type="xsd:string">imgOut</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -685,17 +701,26 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Компонент, приводящий цвета изображения к шкале серого.</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">771</Value>
+                    <Value xsi:type="xsd:double">741</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">310.03999999999996</Value>
+                    <Value xsi:type="xsd:double">410.03999999999996</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -714,11 +739,6 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Компонент, приводящий цвета изображения к шкале серого.</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -978,6 +998,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1111,6 +1140,15 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
@@ -1246,6 +1284,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -1254,13 +1301,13 @@
     </Components>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>img</Name>
+            <Name>imgInput</Name>
             <Group />
             <DataTypeString>System.Drawing.Bitmap</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>rimg</Name>
+            <Name>imgOut</Name>
             <Group />
             <DataTypeString>System.Drawing.Bitmap</DataTypeString>
             <Direction>IN_OUT</Direction>

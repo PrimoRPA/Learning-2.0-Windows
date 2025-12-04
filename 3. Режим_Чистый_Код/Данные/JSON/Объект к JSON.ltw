@@ -38,19 +38,36 @@ using System.Text;
 using LTools.Scripting.Model;
 using LTools.Network.Model;
 
+/*	Создание анонимного объекта obj_userData с тестовыми данными
+	Преобразование объекта в JSON строку (SerializeObject)
+	Вывод отладочной информации в лог системы */
+
 public class PrimoScript
 {
-	public static LTools.Scripting.CSharp.ScriptDebugger __debug;
-	
-	public void main(LTools.Common.Model.WorkflowData wf)
+    public static LTools.Scripting.CSharp.ScriptDebugger __debug;
+    
+    public void main(LTools.Common.Model.WorkflowData wf)
     {
-    	/*
-		Компонент преобразует объект в строку JSON.  Свойства
-	 	- html - Данные: [Object] Исходный объект, который нужно преобразовать в строку JSON.
-		*/
-	string ret = Newtonsoft.Json.JsonConvert.SerializeObject(obj);   
-    }
-}</Value>
+        // Создаем объект с различными типами данных
+        object obj_userData = new
+        {
+            Id = 1,
+            Name = "Иван Иванов",
+            Age = 30,
+            IsActive = true,
+            Salary = 1500.50m,
+            Tags = new List&lt;string&gt; { "developer", "csharp", "json" },
+            LastLogin = DateTime.Now
+        };
+        
+        // Преобразуем объект в строку JSON
+        string jsonString = Newtonsoft.Json.JsonConvert.SerializeObject(obj_userData);
+        
+        LTools.Workflow.PrimoApp.AddToLog(wf, $"Тип переменной jsonString: {jsonString.GetType()}" , LTools.Enums.LogMessageType.Info);
+        LTools.Workflow.PrimoApp.AddToLog(wf, "Объект преобразован в JSON: " + jsonString, LTools.Enums.LogMessageType.Info);
+	}
+}	
+</Value>
             </SerializationItem>
         </Properties>
         <IsBreakpoint>false</IsBreakpoint>
@@ -59,4 +76,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

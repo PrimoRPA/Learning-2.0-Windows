@@ -46,9 +46,35 @@ public class PrimoScript
     {
     /*Компонент преобразует JSON в объект.  
 		Для работы с активность необходимо заполнить следующие обязательные свойства:
-		- html - Данные: [String] Строка JSON, которую нужно преобразовать в объект. Может быть указана как строковая переменная
+		- json - Данные: [String] Строка JSON, которую нужно преобразовать в объект. Может быть указана как строковая переменная
 		*/
-	dynamic ret = Newtonsoft.Json.JsonConvert.DeserializeObject(json);   
+	LTools.Network.Model.TrafficHistoryItem req = new LTools.Network.Model.TrafficHistoryItem();
+	req.URL = "http://api.mathjs.org/v4/";
+	req.Body = @"
+	{
+    ""expr"": [
+      ""a = 1.2 * (2 + 4.5)"",
+      ""a / 2"",
+      ""5.08 cm in inch"",
+      ""sin(45 deg) ^ 2"",
+      ""9 / 3 + 2i"",
+      ""b = [-1, 2; 3, 1]"",
+      ""det(b)""
+    ],
+    ""precision"": 14
+	}";
+	req.ContentType = "application/json";
+	req.Headers = new System.Collections.ObjectModel.ObservableCollection&lt;LTools.Network.Model.PackageHeader&gt;() 
+	{ 
+    new LTools.Network.Model.PackageHeader() { Name = "Header1", Value = "hdr" } 
+	};
+	req.Method = "POST";
+
+	LTools.Network.Model.TrafficEmitterResponse resp = LTools.Network.NetworkApp.WebRequest(wf, req, 10000);    
+
+	dynamic ret = Newtonsoft.Json.JsonConvert.DeserializeObject(resp.Body);
+	
+	LTools.Workflow.PrimoApp.AddToLog(wf, ret.ToString(), LTools.Enums.LogMessageType.Info);
     }
 }</Value>
             </SerializationItem>
@@ -59,4 +85,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

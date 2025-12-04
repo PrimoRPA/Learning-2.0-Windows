@@ -13,6 +13,15 @@
             <Properties>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>ComponentName</Name>
+                    <Value xsi:type="xsd:string">Начало диаграммы</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TType</Name>
                     <Value xsi:type="xsd:int">1</Value>
                 </SerializationItem>
@@ -32,8 +41,7 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
-                    <Name>ComponentName</Name>
-                    <Value xsi:type="xsd:string">Начало диаграммы</Value>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -42,10 +50,6 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -107,17 +111,34 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Для работы с активность необходимо заполнить следующие обязательные свойства:
+
+- Архив*:  Cтроковое значение, которое указывает путь к создаваемому архиву.
+  - Путь*:  Cтроковое значение, которое указывает путь к файлам, которые нужно архивировать.
+  - Формат*: Формат архива: по умолчанию установлен Zip. Чтобы выбрать другое значение, откройте выпадающий список.
+  - Путь к 7-zip*:  Путь к архиватору 7zip.dll 
+
+Дополнительные свойства заполняются в случае необходимости:
+- Пароль: Пароль архива</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>X</Name>
-                    <Value xsi:type="xsd:double">443.03666666666663</Value>
+                    <Value xsi:type="xsd:double">443</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
-                    <Value xsi:type="xsd:double">274.03999999999996</Value>
+                    <Value xsi:type="xsd:double">149.03999999999996</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -136,19 +157,6 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Для работы с активность необходимо заполнить следующие обязательные свойства:
-
-- Архив*:  Cтроковое значение, которое указывает путь к создаваемому архиву.
-  - Путь*:  Cтроковое значение, которое указывает путь к файлам, которые нужно архивировать.
-  - Формат*: Формат архива: по умолчанию установлен Zip. Чтобы выбрать другое значение, откройте выпадающий список.
-  - Путь к 7-zip*:  Путь к архиватору 7zip.dll 
-
-Дополнительные свойства заполняются в случае необходимости:
-- Пароль: Пароль архива</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -206,12 +214,17 @@
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>FileName</Name>
-                            <Value xsi:type="xsd:string">@".\Дополнительные материалы\Архив\Выходные данные\"</Value>
+                            <Value xsi:type="xsd:string">@".\Дополнительные материалы\Архив\Выходные данные\Архивировать\OutArc.zip"</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
                             <Name>FilesPath</Name>
-                            <Value xsi:type="xsd:string">@".\Дополнительные материалы\Архив\Входные данные\Архивировать"</Value>
+                            <Value xsi:type="xsd:string">@".\Дополнительные материалы\Архив\Входные данные\Архивировать\"</Value>
+                        </SerializationItem>
+                        <SerializationItem>
+                            <IsListValue>false</IsListValue>
+                            <Name>Format</Name>
+                            <Value xsi:type="xsd:int">1</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -221,11 +234,6 @@
                             <IsListValue>false</IsListValue>
                             <Name>SZPath</Name>
                             <Value xsi:type="xsd:string">@"C:\Program Files\7-Zip\7z.dll"</Value>
-                        </SerializationItem>
-                        <SerializationItem>
-                            <IsListValue>false</IsListValue>
-                            <Name>Format</Name>
-                            <Value xsi:type="xsd:int">1</Value>
                         </SerializationItem>
                         <SerializationItem>
                             <IsListValue>false</IsListValue>
@@ -321,6 +329,11 @@
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Annotation</Name>
+                    <Value xsi:type="xsd:string">Элемент предназначен для создания архива файлов. Используется, когда нужно сжать набор файлов для передачи или хранения.</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -332,6 +345,10 @@
                     <IsListValue>false</IsListValue>
                     <Name>Y</Name>
                     <Value xsi:type="xsd:double">149.04</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -350,11 +367,6 @@
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>WaitAfter</Name>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Annotation</Name>
-                    <Value xsi:type="xsd:string">Элемент предназначен для создания архива файлов. Используется, когда нужно сжать набор файлов для передачи или хранения.</Value>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -491,6 +503,10 @@
             <Properties>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
+                    <Name>Result</Name>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
                 </SerializationItem>
                 <SerializationItem>
@@ -522,10 +538,6 @@
                     <IsListValue>false</IsListValue>
                     <Name>EndElementID</Name>
                     <Value xmlns:q7="http://microsoft.com/wsdl/types/" xsi:type="q7:guid">f9ae196f-038a-4a74-bc58-dba60ac8c74e</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Result</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -614,6 +626,15 @@
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
                 </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
+                </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>
             <IsIgnore>false</IsIgnore>
@@ -623,6 +644,10 @@
             <ClassName>LTools.Workflow.Elements.Workflow.WFWorkflowPath</ClassName>
             <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
             <Properties>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>Result</Name>
+                </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
                     <Name>TextTag</Name>
@@ -656,10 +681,6 @@
                     <IsListValue>false</IsListValue>
                     <Name>EndElementID</Name>
                     <Value xmlns:q10="http://microsoft.com/wsdl/types/" xsi:type="q10:guid">f9ae196f-038a-4a74-bc58-dba60ac8c74e</Value>
-                </SerializationItem>
-                <SerializationItem>
-                    <IsListValue>false</IsListValue>
-                    <Name>Result</Name>
                 </SerializationItem>
                 <SerializationItem>
                     <IsListValue>false</IsListValue>
@@ -747,6 +768,15 @@
                     <IsListValue>false</IsListValue>
                     <Name>ShowAnnotation</Name>
                     <Value xsi:type="xsd:boolean">false</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionType</Name>
+                    <Value xsi:type="xsd:int">-1</Value>
+                </SerializationItem>
+                <SerializationItem>
+                    <IsListValue>false</IsListValue>
+                    <Name>ExceptionHandlerId</Name>
                 </SerializationItem>
             </Properties>
             <IsBreakpoint>false</IsBreakpoint>

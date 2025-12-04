@@ -54,7 +54,19 @@ public class PrimoScript
 		List&lt;System.Drawing.Bitmap&gt; img = LTools.Office.PdfApp.ReadImages(wf, fileName, [password], [pages]);
 	*/
 		
-	List&lt;System.Drawing.Bitmap&gt; img = LTools.Office.PdfApp.ReadImages(wf, @".\Дополнительные материалы\PDF\Входные данные\PrimoInfo.pdf");   
+		List&lt;System.Drawing.Bitmap&gt; listPdfImage = LTools.Office.PdfApp.ReadImages(wf, @".\Дополнительные материалы\PDF\Входные данные\PrimoInfo.pdf");   
+		int index = 0;
+		//Компонент-цикл, перебирающий все значения выбранного массива.  Свойства
+		foreach (System.Drawing.Bitmap item in listPdfImage)
+		{
+		    item.Save(@".\Дополнительные материалы\PDF\Входные данные\"+index.ToString()+".png", System.Drawing.Imaging.ImageFormat.Png);
+			//Компонент, производящий запись сообщения в пользовательский журнал.  Свойства
+			//wf: [LTools.Common.Model.WorkflowData] ссылка на вызывающий алгоритм
+			//msg - Текст: [String] Текст сообщения
+			//messageType - Тип: Тип сообщения
+			LTools.Workflow.PrimoApp.AddToLog(wf, "Файл сохранен по пути: "+@".\Дополнительные материалы\PDF\Входные данные\"+index.ToString()+".png", LTools.Enums.LogMessageType.Info);
+			index++;
+		}
     }
 }</Value>
             </SerializationItem>

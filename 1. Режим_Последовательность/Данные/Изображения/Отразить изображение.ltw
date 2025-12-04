@@ -101,7 +101,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>VariableBitmap</Name>
-                        <Value xsi:type="xsd:string">img</Value>
+                        <Value xsi:type="xsd:string">imgInput</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -189,12 +189,12 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Data</Name>
-                        <Value xsi:type="xsd:string">img</Value>
+                        <Value xsi:type="xsd:string">imgInput</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Variable</Name>
-                        <Value xsi:type="xsd:string">rimg</Value>
+                        <Value xsi:type="xsd:string">imgOut</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -297,7 +297,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Bitmap</Name>
-                        <Value xsi:type="xsd:string">rimg</Value>
+                        <Value xsi:type="xsd:string">imgOut</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -378,13 +378,13 @@
     </RootContainer>
     <GlobalVariables>
         <ScriptVariable>
-            <Name>rimg</Name>
+            <Name>imgOut</Name>
             <Group />
             <DataTypeString>System.Drawing.Bitmap</DataTypeString>
             <Direction>IN_OUT</Direction>
         </ScriptVariable>
         <ScriptVariable>
-            <Name>img</Name>
+            <Name>imgInput</Name>
             <Group />
             <DataTypeString>System.Drawing.Bitmap</DataTypeString>
             <Direction>IN_OUT</Direction>

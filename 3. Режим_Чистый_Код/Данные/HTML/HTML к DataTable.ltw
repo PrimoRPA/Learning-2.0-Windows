@@ -52,7 +52,17 @@ public class PrimoScript
 		
 		- html - HTML: [String] Докмуент HTML
 		*/		
-		List&lt;System.Data.DataTable&gt; ret = LTools.Data.Helpers.HTMLHelper.ParseTable(html);   
+		List&lt;System.Data.DataTable&gt; tables = LTools.Data.Helpers.HTMLHelper.ParseTable(html);   
+		
+		//Компонент-цикл, перебирающий все значения выбранного массива.
+		foreach (System.Data.DataTable table in tables)
+		{
+    		//Компонент, производящий запись сообщения в пользовательский журнал.  Свойства
+			//wf: [LTools.Common.Model.WorkflowData] ссылка на вызывающий алгоритм
+			//msg - Текст: [String] Текст сообщения
+			//messageType - Тип: Тип сообщения
+			LTools.Workflow.PrimoApp.AddToLog(wf, string.Join(Environment.NewLine, table.Rows.Cast&lt;DataRow&gt;().Select(row =&gt; string.Join("\t", row.ItemArray))), LTools.Enums.LogMessageType.Info);
+		}
     }
 }</Value>
             </SerializationItem>
