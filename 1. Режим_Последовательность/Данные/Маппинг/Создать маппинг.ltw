@@ -3,6 +3,7 @@
     <WorkflowType>0</WorkflowType>
     <IsTestCase>false</IsTestCase>
     <UseArgs>false</UseArgs>
+    <CsvDelimiter>44</CsvDelimiter>
     <ColumnsTableTestData />
     <RowsTableTestData />
     <ScriptType>CS</ScriptType>
@@ -18,7 +19,7 @@
             <SerializationItem>
                 <IsListValue>false</IsListValue>
                 <Name>Annotation</Name>
-                <Value xsi:type="xsd:string">Данный компонент позволяет занести в переменную "map" занести несколько 
+                <Value xsi:type="xsd:string">Данный компонент позволяет в переменную "map" занести несколько 
 переменных или аргументов и вызывать эти переменные по ключу.
 
 Например, в проекте существуют несколько переменных:
@@ -331,4 +332,5 @@ mapEmployee["Email"].Value+Environment.NewLine</Value>
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<SerializationRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<SerializationRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <WorkflowType>0</WorkflowType>
     <IsTestCase>false</IsTestCase>
     <UseArgs>false</UseArgs>
@@ -93,113 +93,14 @@
                         <IsListValue>false</IsListValue>
                         <Name>SerializedItem</Name>
                         <Value xsi:type="xsd:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;TrafficHistoryItem xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-    &lt;URL&gt;http://api.mathjs.org/v4/&lt;/URL&gt;
-    &lt;Method&gt;POST&lt;/Method&gt;
-    &lt;ContentType&gt;application/json&lt;/ContentType&gt;
+&lt;TrafficHistoryItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
     &lt;Headers /&gt;
-    &lt;Body&gt;{
-    "expr": [
-      "a = 1.2 * (2 + 4.5)",
-      "a / 2",
-      "5.08 cm in inch",
-      "sin(45 deg) ^ 2",
-      "9 / 3 + 2i",
-      "b = [-1, 2; 3, 1]",
-      "det(b)"
-    ],
-    "precision": 14
-  }&lt;/Body&gt;
-    &lt;Response&gt;
-        &lt;HttpMethod&gt;POST&lt;/HttpMethod&gt;
-        &lt;HttpVersion&gt;1.1&lt;/HttpVersion&gt;
-        &lt;FullUrl&gt;http://api.mathjs.org/v4/&lt;/FullUrl&gt;
-        &lt;IsHttps&gt;false&lt;/IsHttps&gt;
-        &lt;Headers&gt;
-            &lt;PackageHeader&gt;
-                &lt;Name&gt;Connection&lt;/Name&gt;
-                &lt;Value&gt;keep-alive &lt;/Value&gt;
-                &lt;Group&gt;Транспорт&lt;/Group&gt;
-            &lt;/PackageHeader&gt;
-            &lt;PackageHeader&gt;
-                &lt;Name&gt;Access-Control-Allow-Origin&lt;/Name&gt;
-                &lt;Value&gt;* &lt;/Value&gt;
-                &lt;Group&gt;Разное&lt;/Group&gt;
-            &lt;/PackageHeader&gt;
-            &lt;PackageHeader&gt;
-                &lt;Name&gt;Access-Control-Allow-Headers&lt;/Name&gt;
-                &lt;Value&gt;Content-Type, X-Requested-With &lt;/Value&gt;
-                &lt;Group&gt;Разное&lt;/Group&gt;
-            &lt;/PackageHeader&gt;
-            &lt;PackageHeader&gt;
-                &lt;Name&gt;Access-Control-Allow-Methods&lt;/Name&gt;
-                &lt;Value&gt;GET, POST, OPTIONS &lt;/Value&gt;
-                &lt;Group&gt;Разное&lt;/Group&gt;
-            &lt;/PackageHeader&gt;
-            &lt;PackageHeader&gt;
-                &lt;Name&gt;Vary&lt;/Name&gt;
-                &lt;Value&gt;Accept-Encoding &lt;/Value&gt;
-                &lt;Group&gt;Разное&lt;/Group&gt;
-            &lt;/PackageHeader&gt;
-            &lt;PackageHeader&gt;
-                &lt;Name&gt;Content-Length&lt;/Name&gt;
-                &lt;Value&gt;86 &lt;/Value&gt;
-                &lt;Group&gt;Разное&lt;/Group&gt;
-            &lt;/PackageHeader&gt;
-            &lt;PackageHeader&gt;
-                &lt;Name&gt;Content-Type&lt;/Name&gt;
-                &lt;Value&gt;application/json; charset=utf-8 &lt;/Value&gt;
-                &lt;Group&gt;Разное&lt;/Group&gt;
-            &lt;/PackageHeader&gt;
-            &lt;PackageHeader&gt;
-                &lt;Name&gt;Date&lt;/Name&gt;
-                &lt;Value&gt;Wed, 11 Mar 2020 19:26:26 GMT &lt;/Value&gt;
-                &lt;Group&gt;Разное&lt;/Group&gt;
-            &lt;/PackageHeader&gt;
-            &lt;PackageHeader&gt;
-                &lt;Name&gt;ETag&lt;/Name&gt;
-                &lt;Value&gt;W/"56-XsNiHipFWW5BidqMtM3rVfEyoIY" &lt;/Value&gt;
-                &lt;Group&gt;Разное&lt;/Group&gt;
-            &lt;/PackageHeader&gt;
-            &lt;PackageHeader&gt;
-                &lt;Name&gt;Server&lt;/Name&gt;
-                &lt;Value&gt;Cowboy &lt;/Value&gt;
-                &lt;Group&gt;Разное&lt;/Group&gt;
-            &lt;/PackageHeader&gt;
-            &lt;PackageHeader&gt;
-                &lt;Name&gt;Via&lt;/Name&gt;
-                &lt;Value&gt;1.1 vegur &lt;/Value&gt;
-                &lt;Group&gt;Разное&lt;/Group&gt;
-            &lt;/PackageHeader&gt;
-            &lt;PackageHeader&gt;
-                &lt;Name&gt;X-Powered-By&lt;/Name&gt;
-                &lt;Value&gt;Express &lt;/Value&gt;
-                &lt;Group&gt;Разное&lt;/Group&gt;
-            &lt;/PackageHeader&gt;
-        &lt;/Headers&gt;
-        &lt;HeadersAsString&gt;Connection: keep-alive
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Headers: Content-Type, X-Requested-With
-Access-Control-Allow-Methods: GET, POST, OPTIONS
-Vary: Accept-Encoding
-Content-Length: 86
-Content-Type: application/json; charset=utf-8
-Date: Wed, 11 Mar 2020 19:26:26 GMT
-ETag: W/"56-XsNiHipFWW5BidqMtM3rVfEyoIY"
-Server: Cowboy
-Via: 1.1 vegur
-X-Powered-By: Express
-
-&lt;/HeadersAsString&gt;
-        &lt;Body&gt;eyJyZXN1bHQiOlsiNy44IiwiMy45IiwiMiBpbmNoIiwiMC41IiwiMyArIDJpIiwiW1stMSwgMl0sIFszLCAxXV0iLCItNyJdLCJlcnJvciI6bnVsbH0=&lt;/Body&gt;
-        &lt;ResponseStatus&gt;200 / OK&lt;/ResponseStatus&gt;
-        &lt;ResponseCode&gt;200&lt;/ResponseCode&gt;
-    &lt;/Response&gt;
 &lt;/TrafficHistoryItem&gt;</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>URL</Name>
+                        <Value xsi:type="xsd:string">"http://api.open-notify.org/iss-now.json"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -247,12 +148,11 @@ X-Powered-By: Express
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Annotation</Name>
-                        <Value xsi:type="xsd:string">Компонент, осуществляет вызов веб-сервиса по протоколу HTTP(S)</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ComponentID</Name>
-                        <Value xmlns:q2="http://microsoft.com/wsdl/types/" xsi:type="q2:guid">653ff88e-669a-4d07-a9c0-780b14ba1ca3</Value>
+                        <Value xmlns:q2="http://microsoft.com/wsdl/types/" xsi:type="q2:guid">97516574-b6fe-4307-96e0-8602deba653a</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -292,7 +192,7 @@ X-Powered-By: Express
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ShowAnnotation</Name>
-                        <Value xsi:type="xsd:boolean">true</Value>
+                        <Value xsi:type="xsd:boolean">false</Value>
                     </SerializationItem>
                 </Properties>
                 <IsBreakpoint>false</IsBreakpoint>
@@ -392,18 +292,19 @@ X-Powered-By: Express
                 <IsIgnore>false</IsIgnore>
             </SerializationComponent>
             <SerializationComponent>
-                <ClassName>LTools.Workflow.Elements.WFAddToLog</ClassName>
+                <ClassName>LTools.Workflow.Elements.WFMessageBox</ClassName>
                 <AssemblyName>LTools.Workflow, Version=1.0.6.1, Culture=neutral, PublicKeyToken=null</AssemblyName>
                 <Properties>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>Message</Name>
-                        <Value xsi:type="xsd:string">obj_result.ToString()</Value>
-                    </SerializationItem>
-                    <SerializationItem>
-                        <IsListValue>false</IsListValue>
-                        <Name>MessageType</Name>
-                        <Value xsi:type="xsd:int">1</Value>
+                        <Value xsi:type="xsd:string">"Время UTC: "+DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(obj_result.Root["timestamp"].ToString())).DateTime.ToString("G")
++Environment.NewLine+
+"Долгота и широта: "
++Environment.NewLine+
+obj_result.Root["iss_position"].ToString()
++Environment.NewLine+
+"Статус: "+obj_result.Root["message"].ToString()</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -412,7 +313,7 @@ X-Powered-By: Express
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ComponentName</Name>
-                        <Value xsi:type="xsd:string">Запись в журнал</Value>
+                        <Value xsi:type="xsd:string">Окно сообщения</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -429,7 +330,7 @@ X-Powered-By: Express
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>ComponentID</Name>
-                        <Value xmlns:q4="http://microsoft.com/wsdl/types/" xsi:type="q4:guid">62c219e5-08bd-428c-a4dc-76192151f68d</Value>
+                        <Value xmlns:q4="http://microsoft.com/wsdl/types/" xsi:type="q4:guid">80d6c3d4-dd3b-4c6a-96b9-c68753060c13</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -494,5 +395,4 @@ X-Powered-By: Express
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
-    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>
