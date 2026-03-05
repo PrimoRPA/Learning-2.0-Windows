@@ -3,6 +3,7 @@
     <WorkflowType>0</WorkflowType>
     <IsTestCase>false</IsTestCase>
     <UseArgs>false</UseArgs>
+    <CsvDelimiter>44</CsvDelimiter>
     <ColumnsTableTestData />
     <RowsTableTestData />
     <ScriptType>CS</ScriptType>
@@ -199,6 +200,14 @@
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
+                        <Name>WritePassword</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>WritePasswordEncrypted</Name>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
                         <Name>Bytes</Name>
                     </SerializationItem>
                     <SerializationItem>
@@ -230,6 +239,11 @@
                         <IsListValue>false</IsListValue>
                         <Name>SaveChanges</Name>
                         <Value xsi:type="xsd:boolean">false</Value>
+                    </SerializationItem>
+                    <SerializationItem>
+                        <IsListValue>false</IsListValue>
+                        <Name>IsCloseExcel</Name>
+                        <Value xsi:type="xsd:boolean">true</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -341,7 +355,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>Annotation</Name>
-                                <Value xsi:type="xsd:string">Элемент используется для создания нового пустого листа в книге Excel, указанной в контенере "Приложение Excel".  При этом есть возможность указать название новой страницы и номер страницы по порядку.
+                                <Value xsi:type="xsd:string">Элемент используется для создания нового пустого листа в книге Excel, указанной в контейнере "Приложение Excel".  При этом есть возможность указать название новой страницы и номер страницы по порядку.
 
 Для работы с элементом необходимо заполнить 
 обязательные свойства:
@@ -408,6 +422,11 @@
                                 <IsListValue>false</IsListValue>
                                 <Name>FileName</Name>
                                 <Value xsi:type="xsd:string">@".\Дополнительные материалы\Приложение Excel\Выходные данные\PrimoLearningAddSheet.xlsx"</Value>
+                            </SerializationItem>
+                            <SerializationItem>
+                                <IsListValue>false</IsListValue>
+                                <Name>CloseApp</Name>
+                                <Value xsi:type="xsd:boolean">false</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>

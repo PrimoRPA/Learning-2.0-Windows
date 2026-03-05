@@ -3,6 +3,7 @@
     <WorkflowType>2</WorkflowType>
     <IsTestCase>false</IsTestCase>
     <UseArgs>false</UseArgs>
+    <CsvDelimiter>44</CsvDelimiter>
     <ColumnsTableTestData />
     <RowsTableTestData />
     <ScriptType>CS</ScriptType>
@@ -53,7 +54,7 @@ public class PrimoScript
       //Компонент позволяет ввести текст в выбранный элемент управления.
 	  //Данный элемент может использовать,как и для браузерных приложений, так и десктопных.
 	  //Чтобы посмотреть работу бразуера используйте if (true)
-	  //Чтобы посмотреть работу бразуера используйте if (false)
+	  //Чтобы посмотреть работу приложения используйте if (false)
      if (true){
 	 //Открываем браузер, а странице "https://www.google.com/"
      //Для работы данного компонента вам нужно установить расширение.
@@ -94,4 +95,5 @@ public class PrimoScript
     </RootContainer>
     <GlobalVariables />
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

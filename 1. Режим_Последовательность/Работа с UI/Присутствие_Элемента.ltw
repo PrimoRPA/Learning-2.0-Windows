@@ -3,6 +3,7 @@
     <WorkflowType>0</WorkflowType>
     <IsTestCase>false</IsTestCase>
     <UseArgs>false</UseArgs>
+    <CsvDelimiter>44</CsvDelimiter>
     <ColumnsTableTestData />
     <RowsTableTestData />
     <ScriptType>CS</ScriptType>
@@ -96,7 +97,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>On</Name>
-                        <Value xsi:type="xsd:boolean">true</Value>
+                        <Value xsi:type="xsd:boolean">false</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -274,6 +275,16 @@
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
+                                        <Name>LoadStatus</Name>
+                                        <Value xsi:type="xsd:int">0</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
+                                        <Name>InNewTab</Name>
+                                        <Value xsi:type="xsd:boolean">true</Value>
+                                    </SerializationItem>
+                                    <SerializationItem>
+                                        <IsListValue>false</IsListValue>
                                         <Name>Headless</Name>
                                         <Value xsi:type="xsd:boolean">false</Value>
                                     </SerializationItem>
@@ -294,11 +305,6 @@
                                         <IsListValue>false</IsListValue>
                                         <Name>TimeOut</Name>
                                         <Value xsi:type="xsd:string">50000</Value>
-                                    </SerializationItem>
-                                    <SerializationItem>
-                                        <IsListValue>false</IsListValue>
-                                        <Name>LoadStatus</Name>
-                                        <Value xsi:type="xsd:int">0</Value>
                                     </SerializationItem>
                                     <SerializationItem>
                                         <IsListValue>false</IsListValue>
@@ -1098,4 +1104,5 @@ elements может хранить похожие контролы, наприм
         </ScriptVariable>
     </GlobalVariables>
     <Arguments />
+    <UseCustomDiagramConnectorFormat>false</UseCustomDiagramConnectorFormat>
 </SerializationRoot>

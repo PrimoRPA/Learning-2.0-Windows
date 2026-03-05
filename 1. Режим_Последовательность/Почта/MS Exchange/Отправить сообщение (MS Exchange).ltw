@@ -3,6 +3,7 @@
     <WorkflowType>0</WorkflowType>
     <IsTestCase>false</IsTestCase>
     <UseArgs>false</UseArgs>
+    <CsvDelimiter>44</CsvDelimiter>
     <ColumnsTableTestData />
     <RowsTableTestData />
     <ScriptType>CS</ScriptType>
@@ -109,7 +110,7 @@
                                 <Value xsi:type="MultipleAssignItem">
                                     <Variable>strUserName</Variable>
                                     <IsNoCodeVariable>false</IsNoCodeVariable>
-                                    <Assign>"v.lozhechka@primo-rpa.ru"</Assign>
+                                    <Assign>"user@mail.ru"</Assign>
                                     <IsNoCodeAssign>false</IsNoCodeAssign>
                                 </Value>
                             </SerializationItem>
@@ -119,7 +120,7 @@
                                 <Value xsi:type="MultipleAssignItem">
                                     <Variable>strUserPass</Variable>
                                     <IsNoCodeVariable>false</IsNoCodeVariable>
-                                    <Assign>"[&amp;7zdDF-$9jK"</Assign>
+                                    <Assign>"userPassword"</Assign>
                                     <IsNoCodeAssign>false</IsNoCodeAssign>
                                 </Value>
                             </SerializationItem>
@@ -129,7 +130,7 @@
                                 <Value xsi:type="MultipleAssignItem">
                                     <Variable>strServerExchangeURL</Variable>
                                     <IsNoCodeVariable>false</IsNoCodeVariable>
-                                    <Assign>"https://mail.primo-rpa.ru"</Assign>
+                                    <Assign>"https://ms-exchange-server.ru"</Assign>
                                     <IsNoCodeAssign>false</IsNoCodeAssign>
                                 </Value>
                             </SerializationItem>
@@ -208,7 +209,7 @@
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
                         <Name>AutoUrl</Name>
-                        <Value xsi:type="xsd:string">"v.lozhechka@primo-rpa.ru"</Value>
+                        <Value xsi:type="xsd:string">"user@mail.ru"</Value>
                     </SerializationItem>
                     <SerializationItem>
                         <IsListValue>false</IsListValue>
@@ -339,7 +340,7 @@
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
                                 <Name>SendTo</Name>
-                                <Value xsi:type="xsd:string">"v.lozhechka@primo-rpa.ru"</Value>
+                                <Value xsi:type="xsd:string">"user@mail.ru"</Value>
                             </SerializationItem>
                             <SerializationItem>
                                 <IsListValue>false</IsListValue>
@@ -468,7 +469,7 @@
                                 <Value xsi:type="xsd:boolean">true</Value>
                             </SerializationItem>
                         </Properties>
-                        <IsBreakpoint>true</IsBreakpoint>
+                        <IsBreakpoint>false</IsBreakpoint>
                         <IsIgnore>false</IsIgnore>
                     </SerializationComponent>
                 </Components>
