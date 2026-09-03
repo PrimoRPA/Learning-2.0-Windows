@@ -1,34 +1,33 @@
-# 2. Режим_Диаграмма
+# 2. Режим - Диаграмма
 
-В данном репозитории вы сможете посмотреть примеры работы актиностей
+Логика строится как блок-схема: состояния, переходы, ветвления и циклы — подходит для сложных сценариев.
 
+> 📖 Полное описание всех элементов и режимов — в [README главной страницы репозитория](../README.md#-структура-репозитория).
 
-Google_Sheets
-Network
-OCR
-PDF
-SAP_Front_End
-Ассистент
-База_Данных
-Браузер
-Буфер_обмена
-Данные
-Диаграмма
-Диалоги
-Коллекции
-Криптография
-Мобильные_Устройства
-Оркестратор
-Очереди_Сообщений
-Почта
-Приложение_1С
-Приложение_Excel
-Приложение_Outlook
-Приложение_Word
-Программирование
-Работа_С_UI
-Рабочий_Стол
-Тестирование
-Управление
-Файловая_Система
-Nuget
+## 📂 Категории элементов
+
+| Категория | Описание | Кол-во примеров |
+| :--- | :--- | :--- |
+| [📁 **Google Sheets**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/Google%20Sheets) | Подключение к документу Google Sheets, чтение и запись диапазонов ячеек | 3 |
+| [📁 **PDF**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/PDF) | Чтение текста, извлечение и объединение страниц, водяные знаки, конвертация страниц в изображения | 8 |
+| [📁 **Ассистент**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%90%D1%81%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BD%D1%82) | Отправка запросов встроенному AI-ассистенту Primo и получение ответа | 1 |
+| [📁 **База данных**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%91%D0%B0%D0%B7%D0%B0%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85) | Подключение к БД (SQL, ODBC, Oracle, PostgreSQL), выполнение запросов и вставка данных | 4 |
+| [📁 **Браузер**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%91%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80) | Управление окном браузера, переходы по страницам, чтение таблиц, работа с элементами и атрибутами страницы | 16 |
+| [📁 **Буфер обмена**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%91%D1%83%D1%84%D0%B5%D1%80%20%D0%BE%D0%B1%D0%BC%D0%B5%D0%BD%D0%B0) | Копирование данных в буфер обмена и чтение из него | 2 |
+| [📁 **Данные**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%94%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5) | Обработка строк, дат, таблиц (DataTable), а также конвертация HTML/JSON/XML, изображений и архивов | 40 |
+| [📁 **Диаграмма**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0) | Элементы построения логики в режиме диаграммы: состояния, переходы, принятие решений | 4 |
+| [📁 **Диалоги**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%94%D0%B8%D0%B0%D0%BB%D0%BE%D0%B3%D0%B8) | Взаимодействие с пользователем: сообщения, формы ввода, звуковой сигнал, запись в журнал | 14 |
+| [📁 **Коллекции**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8) | Работа с массивами и таблицами данных: добавление элементов, фильтрация, экспорт в CSV | 3 |
+| [📁 **Криптография**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%9A%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F) | Шифрование строк (SecureString) и защищённое хранение учётных данных (Credentials) | 4 |
+| [📁 **Оркестратор**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%9E%D1%80%D0%BA%D0%B5%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%BE%D1%80) | Работа с очередями обмена данными, ресурсами и процессами через Оркестратор Primo RPA | 15 |
+| [📁 **Очереди сообщений**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%9E%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D0%B8%20%D1%81%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D0%B9) | Отправка и получение сообщений через брокеры ActiveMQ и Kafka | 4 |
+| [📁 **Почта**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%9F%D0%BE%D1%87%D1%82%D0%B0) | Отправка и получение писем по SMTP/IMAP/POP3, включая работу с MS Exchange | 14 |
+| [📁 **Приложение Excel**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20Excel) | Работа с книгами и листами Excel: чтение и запись ячеек/диапазонов, форматирование, макросы, VBA | 37 |
+| [📁 **Приложение Outlook**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20Outlook) | Работа с почтовым ящиком Outlook: письма, папки, вложения, адресная книга | 10 |
+| [📁 **Приложение Word**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20Word) | Работа с документами Word: текст, таблицы, изображения, форматирование, макросы | 19 |
+| [📁 **Программирование**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5) | Выполнение пользовательского кода: C#, Python, JavaScript, PowerShell, VB.NET, вызов методов .NET | 7 |
+| [📁 **Работа с UI**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20UI) | Взаимодействие с элементами интерфейса приложений: клик, ввод текста, поиск и ожидание элементов | 13 |
+| [📁 **Рабочий стол**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB) | Управление окнами и процессами ОС, снимки экрана, эмуляция ввода, чтение консоли | 19 |
+| [📁 **Тестирование**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%A2%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5) | Проверка условий и сравнение результатов (assert) для тестирования процессов | 6 |
+| [📁 **Управление**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5) | Базовые конструкции управления потоком: условия, циклы, обработка исключений, вызов подпроцессов | 23 |
+| [📁 **Файловая система**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/2.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0/%D0%A4%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0) | Работа с файлами и папками: создание, чтение, копирование, перемещение, удаление | 12 |
