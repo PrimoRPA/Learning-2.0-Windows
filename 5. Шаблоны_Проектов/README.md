@@ -17,7 +17,7 @@
 | [📁 **Mail process**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/5.%20%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B_%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B/eng/Mail%20process) (EN) | Шаблон процесса, инициируемого письмом — обработка входящей почты как триггера для основной логики робота. |
 | [📁 **Mail process_Ru**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/5.%20%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B_%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B/rus/Mail%20process_Ru) (RU) | Шаблон процесса, инициируемого письмом — обработка входящей почты как триггера для основной логики робота. |
 
-## 📁 Примеры_Шаблонов
+## 📁 Примеры Шаблонов
 
 Готовые проекты, собранные на основе шаблонов выше — показывают, как их использовать на практике:
 
