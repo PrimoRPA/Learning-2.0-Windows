@@ -6,7 +6,7 @@
 
 ## 📂 Подпапки — что выбрать по задаче
 
-| Подпапка | Когда сюда идти | Кол-во элементов |
+| Подпапка | Для чего нужен | Кол-во элементов |
 | :--- | :--- | :--- |
 | [📁 **HTML**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/1.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%9F%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C/%D0%94%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/HTML) | Нужно разобрать HTML, полученный не со страницы сайта (из письма, файла, API) | 2 |
 | [📁 **JSON**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/1.%20%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%9F%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C/%D0%94%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/JSON) | Нужно обменяться данными с API или другой системой в формате JSON | 2 |
