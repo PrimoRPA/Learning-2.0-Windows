@@ -1403,15 +1403,15 @@ git clone https://github.com/PrimoRPA/Learning-2.0-Windows.git
 
 ## 📋 Сценарии использования
 
-Примеры покрывают реальные бизнес-кейсы:
+Готовые проекты из раздела [4. Примеры проектов](#section-4) покрывают такие сценарии:
 
-| Сценарий | Используемые категории |
-| :--- | :--- |
-| 🏦 [Банки/Финансы] (https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/4.%20%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2/1%D0%A1_Project) | Выгрузка из 1С → Обработка Excel → Отправка по почте |
-| 🛒 Ритейл | Парсинг прайсов с сайтов → Загрузка в Google Sheets |
-| 🏛️ Госсектор | Работа с PDF-отчётами → Электронная подпись → Отправка |
-| 🏭 Производство | Чтение данных SQL → Отправка в RabbitMQ/Kafka → UI-уведомления |
-| 📱 AI-обработка документов | Классификация документов → Извлечение атрибутов через Primo AI Server |
+| Сценарий | Что делает робот | Проект |
+| :--- | :--- | :--- |
+| 🏦 Банки/Финансы | Получение курса валют ЦБ из входящих писем → Запись в Excel → Отправка результата по почте | [**📁 Interactive_Act**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/4.%20%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2/Interactive_Act) |
+| 🗂️ Работа с 1С | Запуск 1С → Добавление нового сотрудника из Excel-файла → Закрытие 1С | [**📁 1С_Project**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/4.%20%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2/1%D0%A1_Project) |
+| 🤖 AI-обработка документов | Классификация документов → Извлечение атрибутов через Primo AI Server → Выгрузка в Excel и JSON | [**📁 Primo_AI_Server**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/4.%20%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2/Primo_AI_Server) |
+| 👤 Взаимодействие с пользователем | Формы ввода, диалоги и уведомления → Отслеживание запуска приложений → Журнал действий | [**📁 UserActions**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/4.%20%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2/UserActions) |
+| 🖥️ Работа в фоне | Выполнение процесса в виртуальном окне (Picture-in-Picture) без блокировки основного рабочего стола | [**📁 Sand_Box**](https://github.com/PrimoRPA/Learning-2.0-Windows/tree/main/4.%20%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2/Sand_Box) |
 
 ---
 
