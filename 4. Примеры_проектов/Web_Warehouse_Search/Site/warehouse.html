@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Склад: каталог товаров</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { font-family: Segoe UI, Arial, sans-serif; background: #f1f4f1; color: #1e2b1e; margin: 0; }
+  header { background: #2d5a3d; color: #fff; padding: 16px 32px; }
+  header h1 { margin: 0; font-size: 26px; }
+  header p { margin: 4px 0 0; color: #cfe6d6; }
+  main { max-width: 900px; margin: 24px auto; padding: 0 16px; display: grid; gap: 24px; }
+  section { background: #fff; border-radius: 10px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+  h2 { margin-top: 0; color: #2d5a3d; }
+  .toolbar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 14px; }
+  .toolbar input[type=text] { flex: 1; min-width: 220px; padding: 8px; border: 1px solid #9db89f; border-radius: 6px; font: inherit; }
+  button { background: #2d5a3d; color: #fff; border: 0; border-radius: 6px; padding: 9px 20px; font: inherit; cursor: pointer; }
+  button:hover { background: #3f7a54; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #dde7de; }
+  th { background: #e1ede3; }
+  a { color: #1d6b3a; font-weight: 600; cursor: pointer; }
+  dl { display: grid; grid-template-columns: 160px 1fr; gap: 8px 16px; }
+  dt { font-weight: 600; color: #4d6b55; }
+  dd { margin: 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="page-title">Склад: каталог товаров</h1>
+  <p>Учебный стенд для примеров. Данные вымышлены.</p>
+</header>
+<main>
+  <section id="view-list">
+    <h2>Поиск по каталогу</h2>
+    <div class="toolbar">
+      <input type="text" id="search-input" placeholder="Название товара, например: кабель">
+      <input type="checkbox" id="only-in-stock"><label for="only-in-stock">Только в наличии</label>
+      <button type="button" id="search-button">Найти</button>
+    </div>
+    <p><span id="found-count"></span></p>
+    <table id="products-table">
+      <thead>
+        <tr><th>Артикул</th><th>Наименование</th><th>Категория</th><th>Остаток, шт</th><th>Цена</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section id="product-card" hidden>
+    <h2 id="product-title"></h2>
+    <dl>
+      <dt>Артикул</dt><dd><span id="product-sku"></span></dd>
+      <dt>Категория</dt><dd><span id="product-category"></span></dd>
+      <dt>Остаток на складе</dt><dd><span id="product-stock"></span></dd>
+      <dt>Цена</dt><dd><span id="product-price"></span></dd>
+    </dl>
+    <button type="button" id="back-to-list">К списку</button>
+  </section>
+</main>
+
+<script>
+  var PRODUCTS = [
+    { sku: 'A100', name: 'Мышь беспроводная', category: 'Периферия', stock: 42,  price: '890 ₽' },
+    { sku: 'A101', name: 'Клавиатура механическая', category: 'Периферия', stock: 15, price: '4 200 ₽' },
+    { sku: 'B200', name: 'Монитор 24"', category: 'Мониторы', stock: 8, price: '11 500 ₽' },
+    { sku: 'B201', name: 'Монитор 27"', category: 'Мониторы', stock: 0, price: '18 900 ₽' },
+    { sku: 'C300', name: 'Кабель HDMI 2 м', category: 'Кабели', stock: 120, price: '350 ₽' },
+    { sku: 'C301', name: 'Кабель USB-C 1 м', category: 'Кабели', stock: 75, price: '420 ₽' },
+    { sku: 'D400', name: 'Веб-камера Full HD', category: 'Периферия', stock: 0, price: '3 100 ₽' },
+    { sku: 'D401', name: 'Наушники с микрофоном', category: 'Периферия', stock: 23, price: '2 700 ₽' }
+  ];
+
+  function show(id, visible) { document.getElementById(id).hidden = !visible; }
+
+  function openProduct(product) {
+    document.getElementById('product-title').textContent = product.name;
+    document.getElementById('product-sku').textContent = product.sku;
+    document.getElementById('product-category').textContent = product.category;
+    document.getElementById('product-stock').textContent = product.stock + ' шт';
+    document.getElementById('product-price').textContent = product.price;
+    show('view-list', false);
+    show('product-card', true);
+  }
+
+  function render(items) {
+    var tbody = document.querySelector('#products-table tbody');
+    tbody.innerHTML = '';
+    items.forEach(function (p) {
+      var row = document.createElement('tr');
+      var skuCell = document.createElement('td');
+      var link = document.createElement('a');
+      link.id = 'product-link-' + p.sku;
+      link.textContent = p.sku;
+      link.addEventListener('click', function () { openProduct(p); });
+      skuCell.appendChild(link);
+      row.appendChild(skuCell);
+      [p.name, p.category, String(p.stock), p.price].forEach(function (value) {
+        var cell = document.createElement('td');
+        cell.textContent = value;
+        row.appendChild(cell);
+      });
+      tbody.appendChild(row);
+    });
+    document.getElementById('found-count').textContent = 'Найдено: ' + items.length;
+  }
+
+  function search() {
+    var query = document.getElementById('search-input').value.trim().toLowerCase();
+    var onlyInStock = document.getElementById('only-in-stock').checked;
+    render(PRODUCTS.filter(function (p) {
+      return (!query || p.name.toLowerCase().indexOf(query) !== -1) && (!onlyInStock || p.stock > 0);
+    }));
+  }
+
+  document.getElementById('search-button').addEventListener('click', search);
+  document.getElementById('back-to-list').addEventListener('click', function () {
+    show('product-card', false);
+    show('view-list', true);
+  });
+  render(PRODUCTS);
+</script>
+</body>
+</html>

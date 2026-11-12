@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Helpdesk «Опора»: служба поддержки</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { font-family: Segoe UI, Arial, sans-serif; background: #eef2f7; color: #1d2733; margin: 0; }
+  header { background: #1f3a5f; color: #fff; padding: 14px 32px; display: flex; align-items: center; gap: 16px; }
+  header .title { font-size: 22px; font-weight: 600; flex: 1; }
+  header button { margin: 0; background: #3d6aa5; }
+  main { max-width: 900px; margin: 24px auto; padding: 0 16px; display: grid; gap: 24px; }
+  section { background: #fff; border-radius: 10px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+  h2 { margin-top: 0; color: #1f3a5f; }
+  label { display: block; margin: 12px 0 4px; font-weight: 600; }
+  input, select, textarea { width: 100%; box-sizing: border-box; padding: 8px; border: 1px solid #9fb0c6; border-radius: 6px; font: inherit; }
+  button { margin-top: 16px; background: #1f3a5f; color: #fff; border: 0; border-radius: 6px; padding: 10px 22px; font: inherit; cursor: pointer; }
+  button:hover { background: #2f5a92; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #dbe3ee; }
+  th { background: #e3eaf4; }
+  .hint { color: #5b6b80; font-size: 14px; margin-top: 12px; }
+  .result { margin-top: 16px; padding: 12px 14px; background: #e4f3e1; border-left: 4px solid #3b8f3b; border-radius: 4px; }
+  .error { margin-top: 16px; padding: 12px 14px; background: #fbe4e1; border-left: 4px solid #c0392b; border-radius: 4px; }
+  .narrow { max-width: 420px; }
+</style>
+</head>
+<body>
+<header>
+  <span class="title" id="app-title">Helpdesk «Опора»</span>
+  <span id="current-user"></span>
+  <button type="button" id="logout-button" hidden>Выйти</button>
+</header>
+<main>
+  <section id="view-login" class="narrow">
+    <h2>Вход в систему</h2>
+    <label for="login-user">Логин</label>
+    <input type="text" id="login-user" autocomplete="off">
+    <label for="login-password">Пароль</label>
+    <input type="password" id="login-password" autocomplete="off">
+    <button type="button" id="login-button">Войти</button>
+    <div id="login-error" class="error" hidden>Неверный логин или пароль.</div>
+    <p class="hint">Учебный стенд. Демо-доступ: логин operator, пароль demo123.</p>
+  </section>
+
+  <section id="view-main" hidden>
+    <h2 id="welcome-title"></h2>
+
+    <h3>Новая заявка</h3>
+    <label for="ticket-category">Категория</label>
+    <select id="ticket-category">
+      <option>Принтер</option>
+      <option>Сеть</option>
+      <option>Доступ</option>
+      <option>Другое</option>
+    </select>
+
+    <label for="ticket-subject">Тема</label>
+    <input type="text" id="ticket-subject">
+
+    <label for="ticket-priority">Приоритет</label>
+    <select id="ticket-priority">
+      <option>Низкий</option>
+      <option>Средний</option>
+      <option>Высокий</option>
+    </select>
+
+    <label for="ticket-description">Описание</label>
+    <textarea id="ticket-description" rows="4"></textarea>
+
+    <button type="button" id="create-ticket">Создать заявку</button>
+    <div id="ticket-error" class="error" hidden></div>
+    <div id="ticket-created" class="result" hidden></div>
+
+    <h3>Последние заявки</h3>
+    <table id="tickets-table">
+      <thead>
+        <tr><th>Номер</th><th>Тема</th><th>Категория</th><th>Приоритет</th><th>Статус</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>HD-0001</td><td>Не открывается почта</td><td>Доступ</td><td>Средний</td><td>В работе</td></tr>
+        <tr><td>HD-0002</td><td>Нет сети в кабинете 305</td><td>Сеть</td><td>Высокий</td><td>Новая</td></tr>
+        <tr><td>HD-0003</td><td>Заменить картридж</td><td>Принтер</td><td>Низкий</td><td>Закрыта</td></tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<script>
+  var ticketNumber = 3;
+  var VALID_USER = 'operator', VALID_PASSWORD = 'demo123';
+
+  function show(id, visible) { document.getElementById(id).hidden = !visible; }
+
+  document.getElementById('login-button').addEventListener('click', function () {
+    var user = document.getElementById('login-user').value.trim();
+    var password = document.getElementById('login-password').value;
+    show('login-error', false);
+    if (user === VALID_USER && password === VALID_PASSWORD) {
+      document.getElementById('current-user').textContent = user;
+      document.getElementById('welcome-title').textContent = 'Добро пожаловать, ' + user + '!';
+      show('view-login', false);
+      show('view-main', true);
+      show('logout-button', true);
+    } else {
+      show('login-error', true);
+    }
+  });
+
+  document.getElementById('logout-button').addEventListener('click', function () {
+    document.getElementById('current-user').textContent = '';
+    document.getElementById('login-user').value = '';
+    document.getElementById('login-password').value = '';
+    show('view-main', false);
+    show('logout-button', false);
+    show('view-login', true);
+  });
+
+  document.getElementById('create-ticket').addEventListener('click', function () {
+    var subject = document.getElementById('ticket-subject').value.trim();
+    var category = document.getElementById('ticket-category').value;
+    var priority = document.getElementById('ticket-priority').value;
+    show('ticket-error', false);
+    show('ticket-created', false);
+    if (!subject) {
+      var err = document.getElementById('ticket-error');
+      err.textContent = 'Укажите тему заявки.';
+      err.hidden = false;
+      return;
+    }
+    ticketNumber += 1;
+    var number = 'HD-' + ('0000' + ticketNumber).slice(-4);
+    var row = document.createElement('tr');
+    [number, subject, category, priority, 'Новая'].forEach(function (value) {
+      var cell = document.createElement('td');
+      cell.textContent = value;
+      row.appendChild(cell);
+    });
+    document.querySelector('#tickets-table tbody').appendChild(row);
+    var box = document.getElementById('ticket-created');
+    box.textContent = 'Заявка ' + number + ' создана. Категория: ' + category + ', приоритет: ' + priority + '.';
+    box.hidden = false;
+  });
+</script>
+</body>
+</html>

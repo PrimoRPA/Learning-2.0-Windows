@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Кофейня «Зерно»: меню и заказ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { font-family: Segoe UI, Arial, sans-serif; background: #f6f1ea; color: #2b2118; margin: 0; }
+  header { background: #4a2f1b; color: #fff; padding: 18px 32px; }
+  header h1 { margin: 0; font-size: 26px; }
+  header p { margin: 4px 0 0; color: #e7d3bf; }
+  main { max-width: 860px; margin: 24px auto; padding: 0 16px; display: grid; gap: 24px; }
+  section { background: #fff; border-radius: 10px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+  h2 { margin-top: 0; color: #4a2f1b; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e6dccf; }
+  th { background: #efe3d3; }
+  label { display: block; margin: 12px 0 4px; font-weight: 600; }
+  input[type=text], select, textarea { width: 100%; box-sizing: border-box; padding: 8px; border: 1px solid #bba58d; border-radius: 6px; font: inherit; }
+  .inline label { display: inline-block; margin: 0 16px 0 4px; font-weight: normal; }
+  button { margin-top: 16px; background: #4a2f1b; color: #fff; border: 0; border-radius: 6px; padding: 10px 22px; font: inherit; cursor: pointer; }
+  button:hover { background: #6b452a; }
+  .result { margin-top: 16px; padding: 12px 14px; background: #e4f3e1; border-left: 4px solid #3b8f3b; border-radius: 4px; }
+  .error { margin-top: 16px; padding: 12px 14px; background: #fbe4e1; border-left: 4px solid #c0392b; border-radius: 4px; }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="shop-title">Кофейня «Зерно»</h1>
+  <p>Свежая обжарка каждое утро. Работаем с 8:00 до 22:00.</p>
+</header>
+<main>
+  <section id="menu-section">
+    <h2>Меню</h2>
+    <table id="menu-table">
+      <thead>
+        <tr><th>Напиток</th><th>Объём, мл</th><th>Цена, ₽</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Эспрессо</td><td>60</td><td>150</td></tr>
+        <tr><td>Американо</td><td>250</td><td>180</td></tr>
+        <tr><td>Капучино</td><td>300</td><td>230</td></tr>
+        <tr><td>Латте</td><td>350</td><td>250</td></tr>
+        <tr><td>Флэт уайт</td><td>200</td><td>270</td></tr>
+        <tr><td>Какао</td><td>300</td><td>210</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="order-section">
+    <h2>Сделать заказ</h2>
+    <label for="customer-name">Ваше имя</label>
+    <input type="text" id="customer-name" placeholder="Например, Анна">
+
+    <label for="drink">Напиток</label>
+    <select id="drink">
+      <option>Эспрессо</option>
+      <option>Американо</option>
+      <option>Капучино</option>
+      <option>Латте</option>
+      <option>Флэт уайт</option>
+      <option>Какао</option>
+    </select>
+
+    <label>Размер</label>
+    <div class="inline">
+      <input type="radio" name="size" id="size-s" value="S"><label for="size-s">S</label>
+      <input type="radio" name="size" id="size-m" value="M"><label for="size-m">M</label>
+      <input type="radio" name="size" id="size-l" value="L"><label for="size-l">L</label>
+    </div>
+
+    <label>Дополнительно</label>
+    <div class="inline">
+      <input type="checkbox" id="extra-syrup"><label for="extra-syrup">Добавить сироп</label>
+      <input type="checkbox" id="extra-takeaway"><label for="extra-takeaway">Заказ с собой</label>
+    </div>
+
+    <label for="order-comment">Комментарий</label>
+    <textarea id="order-comment" rows="3" placeholder="Пожелания к заказу"></textarea>
+
+    <button type="button" id="submit-order">Заказать</button>
+
+    <div id="order-error" class="error" hidden></div>
+    <div id="order-result" class="result" hidden></div>
+  </section>
+</main>
+
+<script>
+  var orderNumber = 1000;
+  document.getElementById('submit-order').addEventListener('click', function () {
+    var errorBox = document.getElementById('order-error');
+    var resultBox = document.getElementById('order-result');
+    errorBox.hidden = true;
+    resultBox.hidden = true;
+
+    var name = document.getElementById('customer-name').value.trim();
+    var drink = document.getElementById('drink').value;
+    var sizeInput = document.querySelector('input[name=size]:checked');
+    var syrup = document.getElementById('extra-syrup').checked;
+    var takeaway = document.getElementById('extra-takeaway').checked;
+
+    if (!name) { errorBox.textContent = 'Укажите имя.'; errorBox.hidden = false; return; }
+    if (!sizeInput) { errorBox.textContent = 'Выберите размер напитка.'; errorBox.hidden = false; return; }
+
+    orderNumber += 1;
+    var text = 'Заказ №K-' + orderNumber + ' принят: ' + drink + ', размер ' + sizeInput.value;
+    if (syrup) { text += ', с сиропом'; }
+    if (takeaway) { text += ', с собой'; }
+    text += '. Имя: ' + name + '.';
+    resultBox.textContent = text;
+    resultBox.hidden = false;
+  });
+</script>
+</body>
+</html>
